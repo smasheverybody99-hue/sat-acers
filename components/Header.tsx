@@ -13,8 +13,9 @@ export function Header() {
       <div className="container header-inner">
         <Logo />
         <nav className="nav">
-          <a href="/practice">Question bank</a>
-          <a href="/mistakes" className="hide-sm">Xatonoma</a>
+          <a href="/practice" title="Question bank">🎯 <span className="nav-label">Question bank</span></a>
+          <a href="/mock" title="Mock test">📝 <span className="nav-label">Mock test</span></a>
+          <a href="/mistakes" title="Xatonoma">📒 <span className="nav-label">Xatonoma</span></a>
           <span
             className={`streak-badge ${streak ? "" : "off"}`}
             title={streak ? `${streak} kun ketma-ket mashq qildingiz` : "Bugun bitta savol yeching — streak boshlanadi"}

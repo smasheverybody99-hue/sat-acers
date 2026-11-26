@@ -17,6 +17,7 @@ Brauzerda: http://localhost:3000
 |---|---|
 | `/` | Bosh sahifa |
 | `/practice` | Question bank: bo'lim, domen, qiyinlik, holat bo'yicha filtr; A–D va Enter tugmalari; o'zbekcha/inglizcha tushuntirish |
+| `/mock`, `/mock/[id]` | Mock testlar: Bluebook uslubida modullar, taymer, Mark for Review, navigator, tanaffus, taxminiy ball va savollar tahlili. Mocklar `data/mocks.json` da |
 | `/mistakes` | Xatonoma: xato savollar 1, 3, 7 kundan keyin qaytadi; streak va kunlik maqsad (5 ta) |
 
 Progress hozircha brauzerning `localStorage`'ida saqlanadi (`lib/progress.ts`). 2-kunda Supabase ulanganda faqat shu fayl ichi o'zgaradi.
@@ -46,7 +47,6 @@ CSV ustunlari va namunasi: `scripts/sample-import.csv`. Skript har bir qatorni t
 
 ## Keyingi qadamlar (2–3-kun)
 
-- [ ] Bluebook uslubidagi to'liq mock rejimi (4 modul, timer, tanaffus, Desmos)
 - [ ] Supabase: Google login, `attempts` jadvali
 - [ ] Natija sahifasi va taxminiy ball
 - [ ] Mobil sayqal, dark mode, ishga tushirish

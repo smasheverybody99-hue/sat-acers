@@ -49,7 +49,7 @@ export default function Home() {
             </p>
             <div className="hero-cta">
               <a className="btn btn-primary" href="/practice">Mashqni boshlash →</a>
-              <a className="btn btn-ghost" href="/mistakes">Xatonoma</a>
+              <a className="btn btn-ghost" href="/mock">Mock test topshirish</a>
             </div>
             <div className="hero-meta">
               <span><b>{QUESTIONS.length}+</b>savol</span>

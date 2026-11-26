@@ -31,6 +31,7 @@ function applyFilters(f: Filters): Question[] {
 export function Practice({ ids, onFinish }: { ids?: string[]; onFinish?: () => void }) {
   const reviewMode = Boolean(ids);
   const [filters, setFilters] = useState<Filters>(DEFAULT_FILTERS);
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const [queue, setQueue] = useState<Question[]>(() =>
     ids ? ids.map((id) => QUESTION_BY_ID[id]).filter(Boolean) : applyFilters(DEFAULT_FILTERS)
   );
@@ -110,7 +111,11 @@ export function Practice({ ids, onFinish }: { ids?: string[]; onFinish?: () => v
   return (
     <div className="practice" style={reviewMode ? { gridTemplateColumns: "1fr" } : undefined}>
       {!reviewMode && (
-        <aside className="filters" aria-label="Filtrlar">
+        <div className="filters-wrap">
+        <button className="btn btn-light filters-toggle" onClick={() => setFiltersOpen(!filtersOpen)} aria-expanded={filtersOpen}>
+          ⚙️ Filtrlar · {queue.length} ta savol {filtersOpen ? "▲" : "▼"}
+        </button>
+        <aside className={`filters ${filtersOpen ? "" : "collapsed"}`} aria-label="Filtrlar">
           <div className="filter-group">
             <h4>Bo'lim</h4>
             <div className="chips">
@@ -160,6 +165,7 @@ export function Practice({ ids, onFinish }: { ids?: string[]; onFinish?: () => v
             )}
           </div>
         </aside>
+        </div>
       )}
 
       <section>
