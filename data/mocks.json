@@ -1,0 +1,34 @@
+[
+  {
+    "id": "demo-1",
+    "title": "Demo mock #1",
+    "description": "Qisqa namunaviy mock: haqiqiy formatda, lekin savollar kamroq. Rejimni sinab ko'rish uchun.",
+    "breakMinutes": 3,
+    "modules": [
+      {
+        "section": "rw",
+        "number": 1,
+        "minutes": 7,
+        "questionIds": ["rw-cs-001", "rw-ii-001", "rw-sec-001", "rw-sec-003", "rw-cs-003", "rw-ii-002"]
+      },
+      {
+        "section": "rw",
+        "number": 2,
+        "minutes": 7,
+        "questionIds": ["rw-cs-002", "rw-ii-003", "rw-ii-004", "rw-eoi-001", "rw-eoi-002", "rw-sec-002"]
+      },
+      {
+        "section": "math",
+        "number": 1,
+        "minutes": 14,
+        "questionIds": ["m-alg-001", "m-alg-002", "m-alg-003", "m-alg-004", "m-adv-001", "m-psd-001", "m-psd-002", "m-psd-004", "m-geo-001"]
+      },
+      {
+        "section": "math",
+        "number": 2,
+        "minutes": 14,
+        "questionIds": ["m-alg-005", "m-alg-006", "m-adv-002", "m-adv-003", "m-adv-004", "m-psd-003", "m-geo-002", "m-geo-003", "m-geo-004"]
+      }
+    ]
+  }
+]
