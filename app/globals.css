@@ -248,7 +248,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; }
 .filters-toggle { display: none; width: 100%; margin-bottom: 12px; }
 
 /* ---------- Mock list ---------- */
-.mock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.mock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 16px; }
 .mock-card { display: flex; flex-direction: column; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); transition: transform .12s ease, border-color .12s ease; }
 .mock-card:hover { transform: translateY(-2px); border-color: var(--navy); }
 .mock-card-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
@@ -359,6 +359,9 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; }
   .ri-ans { grid-column: 3; grid-row: 2; font-size: 13px; }
   .score-big { font-size: 64px; }
   .nav .nav-label { display: none; }
+  .nav { gap: 0; }
+  .nav a { padding: 8px 7px; }
+  .header-inner { gap: 8px; }
 }
 
 /* ---------- Desmos panel ---------- */
@@ -373,3 +376,15 @@ body.dragging .desmos-frame { pointer-events: none; }
 @media (max-width: 620px) {
   .desmos-panel, .desmos-panel.wide { left: 8px !important; right: 8px; top: auto !important; bottom: 70px; width: auto; height: 55vh; resize: none; }
 }
+
+/* ---------- Official resources ---------- */
+.official-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 16px; }
+.official-card { position: relative; display: flex; flex-direction: column; gap: 8px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); transition: transform .12s ease, border-color .12s ease; }
+.official-card:hover { transform: translateY(-2px); border-color: var(--navy); }
+.official-card h3 { font-size: 19px; }
+.official-card p { margin: 0 0 6px; color: var(--muted); font-size: 15px; }
+.official-num { position: absolute; top: 18px; right: 18px; width: 30px; height: 30px; border-radius: 50%; background: var(--yellow); color: var(--navy-deep); font-weight: 700; display: grid; place-items: center; font-family: var(--font-display); }
+.feature-icon-lg { font-size: 30px; }
+.plan-box { margin-top: 28px; background: var(--navy-soft); border: 1px solid #c7d2fe; border-radius: 20px; padding: 28px; }
+.plan-box h2 { font-size: 24px; margin-bottom: 12px; }
+.plan-box ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }

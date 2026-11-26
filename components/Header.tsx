@@ -16,6 +16,7 @@ export function Header() {
           <a href="/practice" title="Question bank">🎯 <span className="nav-label">Question bank</span></a>
           <a href="/mock" title="Mock test">📝 <span className="nav-label">Mock test</span></a>
           <a href="/mistakes" title="Xatonoma">📒 <span className="nav-label">Xatonoma</span></a>
+          <a href="/official" title="Rasmiy resurslar">🏛 <span className="nav-label">Rasmiy</span></a>
           <span
             className={`streak-badge ${streak ? "" : "off"}`}
             title={streak ? `${streak} kun ketma-ket mashq qildingiz` : "Bugun bitta savol yeching — streak boshlanadi"}
