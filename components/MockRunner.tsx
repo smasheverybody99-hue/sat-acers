@@ -7,16 +7,13 @@ import { recordAnswer } from "@/lib/progress";
 import { isCorrect } from "@/lib/questions";
 import type { Question } from "@/lib/types";
 import { MockResults } from "./MockResults";
+import { DesmosPanel } from "./DesmosPanel";
 
 const SECTION_TITLE = { rw: "Reading and Writing", math: "Math" } as const;
 
 function fmt(ms: number) {
   const s = Math.max(0, Math.ceil(ms / 1000));
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
-}
-
-function openDesmos() {
-  window.open("https://www.desmos.com/calculator", "desmos", "width=560,height=680,noopener");
 }
 
 export function MockRunner({ mockId }: { mockId: string }) {
@@ -198,7 +195,7 @@ function MockIntro(props: {
         <ul className="intro-rules">
           <li>⏱ Har bir modulning o'z taymeri bor. Vaqt tugasa modul avtomatik topshiriladi.</li>
           <li>🚩 Ishonchingiz komil bo'lmagan savolni "Mark for Review" bilan belgilang va oxirida qaytib ko'ring.</li>
-          <li>🧮 Math bo'limida Desmos kalkulyatori alohida oynada ochiladi.</li>
+          <li>🧮 Math bo'limida Desmos kalkulyatori sayt ichida ochiladi: suring, kattalashtiring, yoping — grafiklar saqlanib qoladi.</li>
           <li>💾 Sahifani yopib qo'ysangiz ham test shu joyidan davom etadi, lekin taymer to'xtamaydi.</li>
         </ul>
         <button className="btn btn-primary" style={{ marginTop: 20 }} onClick={props.onStart}>
@@ -240,6 +237,7 @@ function ExamScreen(props: {
   onFinishModule: () => void;
 }) {
   const { session, setSession, questions, remaining, navOpen, setNavOpen } = props;
+  const [desmosOpen, setDesmosOpen] = useState(false);
   const inReview = session.phase === "review";
   const q = questions[session.qIndex];
   const total = questions.length;
@@ -291,7 +289,9 @@ function ExamScreen(props: {
         </div>
         <div className="exam-tools">
           {props.module.section === "math" && (
-            <button className="btn btn-light btn-sm" onClick={openDesmos}>🧮 Desmos</button>
+            <button className={`btn btn-sm ${desmosOpen ? "btn-navy" : "btn-light"}`} onClick={() => setDesmosOpen(!desmosOpen)}>
+              🧮 Desmos
+            </button>
           )}
         </div>
       </header>
@@ -385,6 +385,8 @@ function ExamScreen(props: {
           )}
         </div>
       </footer>
+
+      {props.module.section === "math" && <DesmosPanel open={desmosOpen} onClose={() => setDesmosOpen(false)} />}
 
       {navOpen && !inReview && (
         <div className="nav-pop" role="dialog" aria-label="Savollar">
