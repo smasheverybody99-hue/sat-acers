@@ -23,7 +23,12 @@ function greeting() {
 export function Dashboard() {
   const progress = useProgress();
   const [history, setHistory] = useState<MockResult[]>([]);
-  useEffect(() => setHistory(loadHistory()), []);
+  useEffect(() => {
+    const upd = () => setHistory(loadHistory());
+    upd();
+    window.addEventListener("acers:history", upd);
+    return () => window.removeEventListener("acers:history", upd);
+  }, []);
 
   if (!progress) return null;
 

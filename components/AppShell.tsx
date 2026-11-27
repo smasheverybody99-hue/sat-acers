@@ -5,6 +5,7 @@ import { Icon, type IconName } from "./Icons";
 import { LogoMark } from "./Logo";
 import { useProgress } from "@/lib/useProgress";
 import { currentStreak, todayAnswered } from "@/lib/progress";
+import { useAuth } from "./AuthProvider";
 
 const NAV: { href: string; label: string; short: string; icon: IconName }[] = [
   { href: "/dashboard", label: "Bosh panel", short: "Panel", icon: "home" },
@@ -23,6 +24,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const today = progress ? todayAnswered(progress) : 0;
   const due = progress ? Object.values(progress.mistakes).filter((m) => m.due <= Date.now()).length : 0;
   const goalPct = Math.min(100, (today / DAILY_GOAL) * 100);
+  const { user, status } = useAuth();
   const isActive = (href: string) => path === href || path.startsWith(href + "/");
 
   return (
@@ -44,6 +46,28 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             </a>
           ))}
         </nav>
+
+        {status !== "off" && (
+          user ? (
+            <a href="/login" className="side-user">
+              <span className="avatar">{(user.name || user.email || "?")[0].toUpperCase()}</span>
+              <div>
+                <b>{user.name || user.email}</b>
+                <small className={`sync-dot ${status}`}>
+                  <i /> {status === "synced" ? "Saqlangan" : status === "syncing" ? "Sinxronlanmoqda…" : "Sinx. xatosi"}
+                </small>
+              </div>
+            </a>
+          ) : (
+            <a href="/login" className="side-login">
+              <Icon name="sparkle" size={18} />
+              <div>
+                <b>Progressni saqlash</b>
+                <small>Kiring — telefon va kompyuterda bir xil</small>
+              </div>
+            </a>
+          )
+        )}
 
         <div className="side-streak">
           <div className="side-streak-top">
@@ -75,9 +99,16 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <small>SAT</small>Acers
             </span>
           </a>
-          <span className={`streak-badge ${streak ? "" : "off"}`}>
-            <Icon name="flame" size={16} /> {streak}
-          </span>
+          <div className="topbar-right">
+            <span className={`streak-badge ${streak ? "" : "off"}`}>
+              <Icon name="flame" size={16} /> {streak}
+            </span>
+            {status !== "off" && (
+              <a href="/login" className="avatar sm" aria-label={user ? "Hisob" : "Kirish"}>
+                {user ? (user.name || user.email || "?")[0].toUpperCase() : <Icon name="sparkle" size={16} />}
+              </a>
+            )}
+          </div>
         </header>
         <main className="shell-content">{children}</main>
       </div>

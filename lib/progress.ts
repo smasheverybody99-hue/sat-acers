@@ -54,10 +54,10 @@ export function loadProgress(): Progress {
   }
 }
 
-function save(p: Progress) {
+function save(p: Progress, fromSync = false) {
   try {
     window.localStorage.setItem(KEY, JSON.stringify(p));
-    window.dispatchEvent(new Event("acers:progress"));
+    window.dispatchEvent(new CustomEvent("acers:progress", { detail: { fromSync } }));
   } catch {
     /* storage yopiq bo'lsa ham sayt ishlashda davom etadi */
   }
@@ -115,6 +115,11 @@ export function recordAnswer(questionId: string, correct: boolean, now = Date.no
 
   save(p);
   return p;
+}
+
+/** Bulutdan kelgan ma'lumotni saqlash (qayta yuborishni boshlamaydi) */
+export function saveProgressRaw(p: Progress) {
+  save(p, true);
 }
 
 export function resetProgress() {

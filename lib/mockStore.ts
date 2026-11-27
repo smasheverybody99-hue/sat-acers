@@ -43,6 +43,21 @@ export const saveSession = (s: MockSession) => write(sessionKey(s.mockId), s);
 export const clearSession = (id: string) => write(sessionKey(id), null);
 
 export const loadHistory = () => read<MockResult[]>(HISTORY_KEY, []);
+function notify(fromSync: boolean) {
+  try {
+    window.dispatchEvent(new CustomEvent("acers:history", { detail: { fromSync } }));
+  } catch {
+    /* SSR */
+  }
+}
+
 export function addResult(r: MockResult) {
   write(HISTORY_KEY, [r, ...loadHistory()].slice(0, 50));
+  notify(false);
+}
+
+/** Bulutdan kelgan tarixni saqlash */
+export function saveHistoryRaw(list: MockResult[]) {
+  write(HISTORY_KEY, list);
+  notify(true);
 }
