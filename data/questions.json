@@ -2690,9 +2690,9 @@
     "passage": "Camels can travel for days without drinking water. ______ when water is available, a thirsty camel can drink more than 100 liters in just a few minutes.",
     "stem": "Which choice completes the text with the most logical transition?",
     "choices": [
-      "However,",
       "Instead,",
       "For example,",
+      "In other words,",
       "Moreover,"
     ],
     "answer": 3,
@@ -5025,17 +5025,17 @@
     "skill": "Rhetorical synthesis",
     "difficulty": "hard",
     "type": "mcq",
-    "passage": "While researching a topic, a student has taken the following notes:\n\n• Muhammad ibn Musa al-Khwarizmi was a ninth-century mathematician.\n• He came from the region of Khwarazm in Central Asia.\n• His book on solving equations gave the field of algebra its name.\n• The word \"algorithm\" comes from a Latin version of his name.",
+    "passage": "While researching a topic, a student has taken the following notes:\n\n• Muhammad ibn Musa al-Khwarizmi was a ninth-century mathematician.\n• He came from the region of Khwarazm in Central Asia.\n• His book on solving equations was studied by scholars for centuries.\n• The word \"algorithm\" comes from a Latin version of his name.",
     "stem": "The student wants to explain the origin of a common word. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "choices": [
       "Al-Khwarizmi was a ninth-century mathematician from Central Asia.",
-      "Al-Khwarizmi's book on solving equations gave algebra its name.",
+      "Al-Khwarizmi's book on solving equations was studied by scholars for centuries.",
       "Al-Khwarizmi came from the region of Khwarazm.",
       "The word \"algorithm\" comes from a Latin version of the name of al-Khwarizmi, a ninth-century mathematician from Central Asia."
     ],
     "answer": 3,
-    "explanation_uz": "Maqsad — so'zning kelib chiqishi. D \"algorithm\" so'zi al-Xorazmiy ismidan kelganini tushuntiradi. B ham so'z (algebra) haqida, lekin uning ismidan emas, kitobidan.",
-    "explanation_en": "D explains where \"algorithm\" comes from; B is about algebra's name coming from a book.",
+    "explanation_uz": "Maqsad — so'zning kelib chiqishi. Faqat D \"algorithm\" so'zi al-Xorazmiy ismidan kelganini tushuntiradi.",
+    "explanation_en": "Only D explains where the word \"algorithm\" comes from.",
     "id": "a3-rw2-25"
   },
   {
@@ -7913,17 +7913,17 @@
     "skill": "Boundaries",
     "difficulty": "hard",
     "type": "mcq",
-    "passage": "The engineers' conclusion was ______ the new bridge design could withstand earthquakes stronger than any ever recorded in the region.",
+    "passage": "The engineers' test results pointed to a single ______ the new bridge design's ability to withstand earthquakes stronger than any ever recorded in the region.",
     "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
     "choices": [
-      "clear;",
-      "clear,",
-      "clear",
-      "clear:"
+      "conclusion;",
+      "conclusion",
+      "conclusion, and",
+      "conclusion:"
     ],
     "answer": 3,
-    "explanation_uz": "Ikki nuqta xulosaning mazmunini kiritadi. Nuqtali vergul ham to'g'ri bo'lishi mumkin edi, lekin ma'no \"xulosa — quyidagicha\", shuning uchun ikki nuqta.",
-    "explanation_en": "A colon introduces what the conclusion was.",
+    "explanation_uz": "Ikki nuqta \"conclusion\" nima ekanini tushuntiruvchi ot birikmani kiritadi. Nuqtali vergul ortidan to'liq gap kerak, bu yerda esa yo'q.",
+    "explanation_en": "A colon introduces what the conclusion was; a semicolon would need a full independent clause after it.",
     "id": "a5-rw1-18"
   },
   {
@@ -9353,5 +9353,430 @@
     "explanation_uz": "Ichki burchaklar yig'indisi (6 − 2) · 180 = 720. Har biri 720 / 6 = 120°.",
     "explanation_en": "Sum = 720°; each = 120°.",
     "id": "a5-m2-22"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear functions",
+    "difficulty": "easy",
+    "type": "mcq",
+    "stem": "The graph of a line in the xy-plane is shown. What is the slope of the line?",
+    "choices": [
+      "−2",
+      "−1/2",
+      "1/2",
+      "2"
+    ],
+    "answer": 2,
+    "explanation_uz": "Chiziq (0, −2) va (4, 0) nuqtalardan o'tadi. Qiyalik = (0 − (−2)) / (4 − 0) = 2/4 = 1/2.",
+    "explanation_en": "The line passes through (0, −2) and (4, 0): slope = 2/4 = 1/2.",
+    "id": "g-01",
+    "figure": {
+      "x": [
+        -6,
+        6
+      ],
+      "y": [
+        -6,
+        6
+      ],
+      "lines": [
+        {
+          "m": 0.5,
+          "b": -2
+        }
+      ]
+    }
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear functions",
+    "difficulty": "easy",
+    "type": "mcq",
+    "stem": "The graph of the linear function f is shown. At what point does the graph of y = f(x) cross the x-axis?",
+    "choices": [
+      "(0, 6)",
+      "(3, 0)",
+      "(6, 0)",
+      "(−3, 0)"
+    ],
+    "answer": 1,
+    "explanation_uz": "Grafik x o'qini y = 0 bo'lgan nuqtada kesadi. Rasmda bu (3, 0). (0, 6) — y o'qini kesish nuqtasi.",
+    "explanation_en": "The graph crosses the x-axis where y = 0, at (3, 0). (0, 6) is the y-intercept.",
+    "id": "g-02",
+    "figure": {
+      "x": [
+        -2,
+        8
+      ],
+      "y": [
+        -4,
+        8
+      ],
+      "lines": [
+        {
+          "m": -2,
+          "b": 6
+        }
+      ]
+    }
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "The graph of the quadratic function g is shown. What is the minimum value of g(x)?",
+    "choices": [
+      "−9",
+      "−5",
+      "2",
+      "5"
+    ],
+    "answer": 0,
+    "explanation_uz": "Minimum qiymat — parabolaning eng past nuqtasining y koordinatasi. Uch (2, −9), demak minimum −9. (2 — x qiymat.)",
+    "explanation_en": "The minimum value is the y-coordinate of the vertex (2, −9): −9. (2 is the x-value.)",
+    "id": "g-03",
+    "figure": {
+      "x": [
+        -4,
+        8
+      ],
+      "y": [
+        -10,
+        6
+      ],
+      "parabolas": [
+        {
+          "a": 1,
+          "h": 2,
+          "k": -9
+        }
+      ]
+    }
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "The graph of y = h(x) is shown. Which of the following gives the x-intercepts of the graph?",
+    "choices": [
+      "(−1, 0) and (4, 0)",
+      "(−3, 0) and (1, 0)",
+      "(0, 3) and (0, 4)",
+      "(−4, 0) and (3, 0)"
+    ],
+    "answer": 1,
+    "explanation_uz": "Parabola x o'qini x = −3 va x = 1 da kesadi. Tekshiruv: uch (−1, 4), ildizlar uchdan 2 birlik chap va o'ngda.",
+    "explanation_en": "The parabola crosses the x-axis at x = −3 and x = 1, 2 units on either side of the vertex (−1, 4).",
+    "id": "g-04",
+    "figure": {
+      "x": [
+        -6,
+        4
+      ],
+      "y": [
+        -6,
+        6
+      ],
+      "parabolas": [
+        {
+          "a": -1,
+          "h": -1,
+          "k": 4
+        }
+      ]
+    }
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Systems of two linear equations",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "The graphs of two linear equations in a system are shown. What is the solution (x, y) to the system?",
+    "choices": [
+      "(0, 1)",
+      "(0, 5)",
+      "(2, 3)",
+      "(3, 2)"
+    ],
+    "answer": 2,
+    "explanation_uz": "Sistemaning yechimi — ikki chiziq kesishgan nuqta: (2, 3). Tekshiruv: 3 = 2 + 1 va 3 = −2 + 5 ✓.",
+    "explanation_en": "The solution is the intersection point, (2, 3): 3 = 2 + 1 and 3 = −2 + 5.",
+    "id": "g-05",
+    "figure": {
+      "x": [
+        -2,
+        6
+      ],
+      "y": [
+        -2,
+        6
+      ],
+      "lines": [
+        {
+          "m": 1,
+          "b": 1
+        },
+        {
+          "m": -1,
+          "b": 5
+        }
+      ]
+    }
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "The graph of the exponential function f is shown. The graph passes through the points (0, 2) and (1, 6). Which equation could define f?",
+    "choices": [
+      "f(x) = 2(3)^x",
+      "f(x) = 3(2)^x",
+      "f(x) = 4x + 2",
+      "f(x) = 6^x"
+    ],
+    "answer": 0,
+    "explanation_uz": "x = 0 da f(0) = 2 → boshlang'ich qiymat 2. x 1 ga oshganda 2 dan 6 ga — 3 baravar: f(x) = 2(3)^x. 3(2)^x da f(0) = 3 bo'lardi.",
+    "explanation_en": "f(0) = 2 gives the initial value, and the value triples from x = 0 to 1: f(x) = 2(3)^x.",
+    "id": "g-06",
+    "figure": {
+      "x": [
+        -3,
+        3
+      ],
+      "y": [
+        -1,
+        12
+      ],
+      "exps": [
+        {
+          "a": 2,
+          "b": 3
+        }
+      ],
+      "points": [
+        {
+          "x": 0,
+          "y": 2
+        },
+        {
+          "x": 1,
+          "y": 6
+        }
+      ]
+    }
+  },
+  {
+    "section": "math",
+    "domain": "Problem-Solving and Data Analysis",
+    "skill": "Two-variable data and probability",
+    "difficulty": "medium",
+    "type": "spr",
+    "stem": "The scatterplot shows data with a line of best fit, which passes through the points (0, 1) and (4, 9). Based on the line of best fit, what is the predicted value of y when x = 7?",
+    "answer": [
+      "15"
+    ],
+    "explanation_uz": "Chiziq qiyaligi (9 − 1) / 4 = 2, y-kesishma 1: y = 2x + 1. x = 7 da y = 15.",
+    "explanation_en": "The line is y = 2x + 1 (slope 8/4 = 2, intercept 1); at x = 7, y = 15.",
+    "id": "g-07",
+    "figure": {
+      "x": [
+        0,
+        8
+      ],
+      "y": [
+        0,
+        16
+      ],
+      "lines": [
+        {
+          "m": 2,
+          "b": 1
+        }
+      ],
+      "points": [
+        {
+          "x": 1,
+          "y": 2.2
+        },
+        {
+          "x": 2,
+          "y": 5.6
+        },
+        {
+          "x": 3,
+          "y": 6.4
+        },
+        {
+          "x": 4,
+          "y": 9.5
+        },
+        {
+          "x": 5,
+          "y": 10.6
+        },
+        {
+          "x": 6,
+          "y": 13.8
+        },
+        {
+          "x": 0.5,
+          "y": 1.4
+        },
+        {
+          "x": 3.5,
+          "y": 8.4
+        }
+      ]
+    }
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "Points A and B are shown in the xy-plane. What is the slope of the line that passes through A and B?",
+    "choices": [
+      "−3/2",
+      "−2/3",
+      "2/3",
+      "3/2"
+    ],
+    "answer": 1,
+    "explanation_uz": "A(−2, 3), B(4, −1). Qiyalik = (−1 − 3) / (4 − (−2)) = −4/6 = −2/3.",
+    "explanation_en": "A(−2, 3), B(4, −1): slope = −4/6 = −2/3.",
+    "id": "g-08",
+    "figure": {
+      "x": [
+        -4,
+        6
+      ],
+      "y": [
+        -4,
+        6
+      ],
+      "points": [
+        {
+          "x": -2,
+          "y": 3,
+          "label": "A"
+        },
+        {
+          "x": 4,
+          "y": -1,
+          "label": "B"
+        }
+      ]
+    }
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear equations in two variables",
+    "difficulty": "easy",
+    "type": "mcq",
+    "stem": "Which equation defines the line shown in the xy-plane?",
+    "choices": [
+      "y = 3",
+      "x = 3",
+      "y = 3x",
+      "y = x + 3"
+    ],
+    "answer": 0,
+    "explanation_uz": "Gorizontal chiziq: har bir nuqtada y = 3. (x = 3 — vertikal chiziq bo'lardi.)",
+    "explanation_en": "A horizontal line where every y-value is 3: y = 3. (x = 3 would be vertical.)",
+    "id": "g-09",
+    "figure": {
+      "x": [
+        -5,
+        5
+      ],
+      "y": [
+        -5,
+        5
+      ],
+      "lines": [
+        {
+          "m": 0,
+          "b": 3
+        }
+      ]
+    }
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": "hard",
+    "type": "spr",
+    "stem": "The graph of y = f(x), where f(x) = x² − 4x, is shown. For what value of x does f(x) reach its minimum?",
+    "answer": [
+      "2"
+    ],
+    "explanation_uz": "Parabola x = 0 va x = 4 da x o'qini kesadi. Minimum ular o'rtasida: x = 2. (f(2) = −4.)",
+    "explanation_en": "The parabola has x-intercepts 0 and 4; the minimum is halfway between, at x = 2.",
+    "id": "g-10",
+    "figure": {
+      "x": [
+        -2,
+        6
+      ],
+      "y": [
+        -6,
+        6
+      ],
+      "parabolas": [
+        {
+          "a": 1,
+          "h": 2,
+          "k": -4
+        }
+      ]
+    }
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "x — 1 — 2 — 3 — 4\nf(x) — 5 — 8 — 11 — 14\n\nThe table shows four values of x and their corresponding values of f(x). The function f is linear. Which equation defines f?",
+    "choices": [
+      "f(x) = 3x + 2",
+      "f(x) = 5x",
+      "f(x) = x + 4",
+      "f(x) = 3x + 5"
+    ],
+    "answer": 0,
+    "explanation_uz": "x 1 ga oshganda f(x) 3 ga oshadi → qiyalik 3. f(1) = 5 = 3 + 2 → f(x) = 3x + 2.",
+    "explanation_en": "f increases by 3 per unit of x, and f(1) = 5 = 3(1) + 2, so f(x) = 3x + 2.",
+    "id": "g-11"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "stem": "x — 0 — 1 — 2 — 3\ng(x) — 4 — 12 — 36 — 108\n\nThe table shows values of the exponential function g. Which equation defines g?",
+    "choices": [
+      "g(x) = 4x + 8",
+      "g(x) = 3(4)^x",
+      "g(x) = 4(3)^x",
+      "g(x) = 12x"
+    ],
+    "answer": 2,
+    "explanation_uz": "g(0) = 4 — boshlang'ich qiymat. Har qadamda 3 ga ko'payadi (12 / 4 = 3): g(x) = 4(3)^x.",
+    "explanation_en": "g(0) = 4 and each value is 3 times the previous: g(x) = 4(3)^x.",
+    "id": "g-12"
   }
 ]

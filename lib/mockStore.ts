@@ -8,6 +8,10 @@ export interface MockSession {
   qIndex: number;
   answers: Answers;
   flagged: Record<string, boolean>;
+  /** Chizib tashlangan variantlar (answer eliminator) */
+  eliminated?: Record<string, number[]>;
+  /** Matndagi bo'yalgan joylar: [boshi, oxiri] */
+  highlights?: Record<string, [number, number][]>;
   /** Joriy modul yoki tanaffus tugaydigan vaqt (ms) */
   endsAt: number;
 }

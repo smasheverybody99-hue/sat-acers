@@ -5,6 +5,8 @@ import { moduleQuestions, type Mock, type MockResult } from "@/lib/mocks";
 import { correctAnswerLabel, isCorrect } from "@/lib/questions";
 import { SECTION_LABEL, type Question } from "@/lib/types";
 import { Ring } from "./Ring";
+import { Figure } from "./Figure";
+import { RichText, renderMath } from "./MathText";
 
 function answerLabel(q: Question, a: number | string | undefined): string {
   if (a === undefined || a === "") return "—";
@@ -88,12 +90,13 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
                   </button>
                   {isOpen && (
                     <div className="ri-body">
-                      {q.passage && <div className="passage" style={{ marginBottom: 12 }}>{q.passage}</div>}
-                      <div className="stem">{q.stem}</div>
+                      {q.passage && <div className="passage" style={{ marginBottom: 12 }}><RichText text={q.passage} /></div>}
+                      {q.figure && <Figure spec={q.figure} />}
+                      <div className="stem"><RichText text={q.stem} math={q.section === "math"} /></div>
                       {q.choices && (
                         <ol className="ri-choices" type="A">
                           {q.choices.map((c, ci) => (
-                            <li key={ci} className={ci === q.answer ? "right" : ci === a ? "wrong" : ""}>{c}</li>
+                            <li key={ci} className={ci === q.answer ? "right" : ci === a ? "wrong" : ""}>{q.section === "math" ? renderMath(c) : c}</li>
                           ))}
                         </ol>
                       )}
@@ -105,7 +108,7 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
                             <button className={lang === "en" ? "on" : ""} onClick={() => setLang("en")}>English</button>
                           </span>
                         </div>
-                        <p>{lang === "uz" ? q.explanation_uz : q.explanation_en}</p>
+                        <p>{renderMath(lang === "uz" ? q.explanation_uz : q.explanation_en)}</p>
                       </div>
                     </div>
                   )}

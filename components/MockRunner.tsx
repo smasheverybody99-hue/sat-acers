@@ -9,6 +9,9 @@ import type { Question } from "@/lib/types";
 import { MockResults } from "./MockResults";
 import { DesmosSplit } from "./DesmosPanel";
 import { Icon } from "./Icons";
+import { Figure } from "./Figure";
+import { RichText, renderMath } from "./MathText";
+import { HighlightPassage, ReferenceSheet } from "./ExamTools";
 import { uzDate } from "@/lib/format";
 
 const SECTION_TITLE = { rw: "Reading and Writing", math: "Math" } as const;
@@ -256,6 +259,9 @@ function ExamScreen(props: {
 }) {
   const { session, setSession, questions, remaining, navOpen, setNavOpen } = props;
   const [desmosOpen, setDesmosOpen] = useState(false);
+  const [refOpen, setRefOpen] = useState(false);
+  const [elimMode, setElimMode] = useState(false);
+  const [hlMode, setHlMode] = useState(false);
   const inReview = session.phase === "review";
   const q = questions[session.qIndex];
   const total = questions.length;
@@ -275,6 +281,17 @@ function ExamScreen(props: {
     setSession({ ...session, phase: "review" });
   };
   const setAnswer = (v: number | string) => setSession({ ...session, answers: { ...session.answers, [q.id]: v } });
+  const elim = session.eliminated?.[q.id] ?? [];
+  const toggleElim = (i: number) => {
+    const next = elim.includes(i) ? elim.filter((x) => x !== i) : [...elim, i];
+    const answers = { ...session.answers };
+    if (next.includes(i) && answers[q.id] === i) delete answers[q.id];
+    setSession({ ...session, answers, eliminated: { ...(session.eliminated ?? {}), [q.id]: next } });
+  };
+  const pickChoice = (i: number) => {
+    const eliminated = { ...(session.eliminated ?? {}), [q.id]: elim.filter((x) => x !== i) };
+    setSession({ ...session, eliminated, answers: { ...session.answers, [q.id]: i } });
+  };
   const toggleFlag = () => setSession({ ...session, flagged: { ...session.flagged, [q.id]: !session.flagged[q.id] } });
 
   const grid = (
@@ -306,6 +323,16 @@ function ExamScreen(props: {
           </button>
         </div>
         <div className="exam-tools">
+          {props.module.section === "rw" && !inReview && q?.passage && !q.passage.includes(" — ") && (
+            <button className={`tool-btn ${hlMode ? "on" : ""}`} onClick={() => setHlMode(!hlMode)} title="Matnni belgilab bo'yash">
+              <span className="tool-ico">🖍</span> Highlight
+            </button>
+          )}
+          {props.module.section === "math" && (
+            <button className="tool-btn" onClick={() => setRefOpen(true)} title="Formulalar varag'i">
+              <span className="tool-ico">📐</span> Reference
+            </button>
+          )}
           {props.module.section === "math" && (
             <button className={`btn btn-sm ${desmosOpen ? "btn-navy" : "btn-light"}`} onClick={() => setDesmosOpen(!desmosOpen)}>
               🧮 Desmos
@@ -332,27 +359,51 @@ function ExamScreen(props: {
           </div>
         ) : (
           <div className={`exam-q ${q.passage ? "split" : ""}`}>
-            {q.passage && <div className="passage exam-pane">{q.passage}</div>}
+            {q.passage && (
+              <div className="passage exam-pane">
+                <HighlightPassage
+                  text={q.passage}
+                  enabled={hlMode}
+                  ranges={session.highlights?.[q.id] ?? []}
+                  onChange={(r) => setSession({ ...session, highlights: { ...(session.highlights ?? {}), [q.id]: r } })}
+                />
+              </div>
+            )}
             <div className="exam-pane">
               <div className="q-head">
                 <span className="q-num">{session.qIndex + 1}</span>
                 <button className={`mark ${session.flagged[q.id] ? "on" : ""}`} onClick={toggleFlag}>
                   {session.flagged[q.id] ? "🚩" : "⚐"} Mark for Review
                 </button>
+                {q.type === "mcq" && (
+                  <button className={`abc ${elimMode ? "on" : ""}`} onClick={() => setElimMode(!elimMode)} title="Answer eliminator: noto'g'ri variantlarni chizib tashlash">
+                    <s>ABC</s>
+                  </button>
+                )}
               </div>
-              <div className="stem">{q.stem}</div>
+              {q.figure && <Figure spec={q.figure} />}
+              <div className="stem"><RichText text={q.stem} math={q.section === "math"} /></div>
               {q.type === "mcq" && q.choices ? (
                 <div className="choices">
-                  {q.choices.map((c, i) => (
-                    <button
-                      key={i}
-                      className={`choice ${session.answers[q.id] === i ? "picked" : ""}`}
-                      onClick={() => setAnswer(i)}
-                    >
-                      <span className="letter">{String.fromCharCode(65 + i)}</span>
-                      <span>{c}</span>
-                    </button>
-                  ))}
+                  {q.choices.map((c, i) => {
+                    const out = elim.includes(i);
+                    return (
+                      <div key={i} className={`choice-row ${out ? "out" : ""}`}>
+                        <button
+                          className={`choice ${session.answers[q.id] === i ? "picked" : ""} ${out ? "struck" : ""}`}
+                          onClick={() => pickChoice(i)}
+                        >
+                          <span className="letter">{String.fromCharCode(65 + i)}</span>
+                          <span className="choice-text">{q.section === "math" ? renderMath(c) : c}</span>
+                        </button>
+                        {elimMode && (
+                          <button className="elim-btn" onClick={() => toggleElim(i)} aria-label={out ? "Qaytarish" : "Chizib tashlash"}>
+                            {out ? "Undo" : <s>{String.fromCharCode(65 + i)}</s>}
+                          </button>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               ) : (
                 <div>
@@ -405,6 +456,8 @@ function ExamScreen(props: {
           )}
         </div>
       </footer>
+
+      {refOpen && <ReferenceSheet onClose={() => setRefOpen(false)} />}
 
       {navOpen && !inReview && (
         <div className="nav-pop" role="dialog" aria-label="Savollar">

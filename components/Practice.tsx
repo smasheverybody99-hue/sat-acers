@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { Icon } from "./Icons";
+import { Figure } from "./Figure";
+import { RichText, renderMath } from "./MathText";
 import { QUESTIONS, QUESTION_BY_ID, correctAnswerLabel, isCorrect } from "@/lib/questions";
 import { loadProgress, recordAnswer } from "@/lib/progress";
 import { DIFFICULTY_LABEL, SECTION_LABEL, type Difficulty, type Question, type Section } from "@/lib/types";
@@ -253,7 +255,8 @@ function QuestionCard(props: CardProps) {
 
   const questionPart = (
     <div>
-      <div className="stem">{q.stem}</div>
+      {q.figure && <Figure spec={q.figure} />}
+      <div className="stem"><RichText text={q.stem} math={q.section === "math"} /></div>
       {q.type === "mcq" && q.choices ? (
         <div className="choices" role="radiogroup">
           {q.choices.map((c, i) => {
@@ -266,7 +269,7 @@ function QuestionCard(props: CardProps) {
             return (
               <button key={i} type="button" role="radio" aria-checked={picked === i} className={cls} disabled={checked} onClick={() => setPicked(i)}>
                 <span className="letter">{String.fromCharCode(65 + i)}</span>
-                <span>{c}</span>
+                <span>{q.section === "math" ? renderMath(c) : c}</span>
                 {checked && i === q.answer && <Icon name="check" size={18} className="choice-mark" />}
                 {checked && i === picked && i !== q.answer && <Icon name="x" size={18} className="choice-mark" />}
               </button>
@@ -289,7 +292,7 @@ function QuestionCard(props: CardProps) {
               <button className={lang === "en" ? "on" : ""} onClick={() => setLang("en")}>English</button>
             </span>
           </div>
-          <p>{lang === "uz" ? q.explanation_uz : q.explanation_en}</p>
+          <p>{renderMath(lang === "uz" ? q.explanation_uz : q.explanation_en)}</p>
           {!correct && <span className="chip-added">📒 Xatonomaga qo'shildi</span>}
         </div>
       )}
@@ -308,7 +311,7 @@ function QuestionCard(props: CardProps) {
 
       {q.passage ? (
         <div className="qbody split">
-          <div className="passage">{q.passage}</div>
+          <div className="passage"><RichText text={q.passage} /></div>
           {questionPart}
         </div>
       ) : (

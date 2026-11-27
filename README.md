@@ -50,3 +50,10 @@ CSV ustunlari va namunasi: `scripts/sample-import.csv`. Skript har bir qatorni t
 - [ ] Supabase: Google login, `attempts` jadvali
 - [ ] Natija sahifasi va taxminiy ball
 - [ ] Mobil sayqal, dark mode, ishga tushirish
+
+## Savollar sifati
+
+- 5 ta mock (490 savol) + 30 ta namuna + 12 ta grafikli savol = 532 ta original savol.
+- Math javob kalitlari to'liq qayta yechib tekshirilgan; R&W'da grammatika, so'z ma'nosi va o'tish so'zlari savollari ko'rib chiqilgan.
+- Savolga grafik qo'shish: `figure` maydoni (`lib/types.ts` dagi `Figure`). Jadval: matnda `A — B — C` qatorlari avtomatik jadvalga aylanadi.
+- Matematik yozuv: `a/b`, `x^(3/2)`, `√(x + 1)` avtomatik chiroyli ko'rsatiladi.
