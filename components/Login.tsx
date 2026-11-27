@@ -11,6 +11,8 @@ export function Login() {
   const [sent, setSent] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // With Google available, email sign-in is a fallback (the free email service sends only a few emails per hour)
+  const [showEmail, setShowEmail] = useState(!googleEnabled);
 
   if (status === "off") {
     return (
@@ -53,7 +55,14 @@ export function Login() {
     setBusy(true);
     const err = await signInEmail(email.trim());
     setBusy(false);
-    if (err) setError(err);
+    if (err)
+      setError(
+        /rate limit|too many|security purposes/i.test(err)
+          ? googleEnabled
+            ? "We can't send more sign-in emails right now. Please use Continue with Google, or try email again in an hour."
+            : "We can't send more sign-in emails right now. Please try again in an hour."
+          : err
+      );
     else setSent(true);
   }
 
@@ -85,7 +94,14 @@ export function Login() {
                   onClick={async () => {
                     setError(null);
                     const err = await signInGoogle();
-                    if (err) setError(err);
+                    if (err)
+      setError(
+        /rate limit|too many|security purposes/i.test(err)
+          ? googleEnabled
+            ? "We can't send more sign-in emails right now. Please use Continue with Google, or try email again in an hour."
+            : "We can't send more sign-in emails right now. Please try again in an hour."
+          : err
+      );
                   }}
                 >
                   <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
@@ -96,9 +112,15 @@ export function Login() {
                   </svg>
                   Continue with Google
                 </button>
-                <div className="login-or"><span>or</span></div>
+                {!showEmail && (
+                  <button className="link-btn login-alt" onClick={() => setShowEmail(true)}>
+                    Use email instead
+                  </button>
+                )}
+                {showEmail && <div className="login-or"><span>or</span></div>}
               </>
             )}
+            {showEmail && (
             <form onSubmit={submit} className="login-form">
               <label htmlFor="email">Email</label>
               <input
@@ -113,8 +135,9 @@ export function Login() {
                 {busy ? "Sending…" : "Email me a sign-in link"}
               </button>
             </form>
+            )}
             <p className="login-note">
-              No password needed: we'll email you a one-time link. By signing in, you agree to the{" "}
+              {showEmail ? "No password needed: we'll email you a one-time link. " : ""}By signing in, you agree to the{" "}
               <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.
             </p>
           </>

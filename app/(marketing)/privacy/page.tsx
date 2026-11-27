@@ -42,7 +42,8 @@ export default function PrivacyPage() {
       <h2>What we don&apos;t do</h2>
       <ul>
         <li>We don&apos;t sell your data or share it with advertisers.</li>
-        <li>We don&apos;t use advertising or tracking cookies.</li>
+        <li>We don&apos;t use advertising or tracking cookies. To count visits, we use Vercel Web Analytics, which is
+          cookieless and records only anonymous page views (such as the page, country and device type).</li>
         <li>We don&apos;t send marketing emails. The only email you get is the sign-in link you ask for.</li>
       </ul>
 
