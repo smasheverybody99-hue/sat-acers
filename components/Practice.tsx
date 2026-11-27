@@ -346,7 +346,7 @@ function QuestionCard(props: CardProps) {
         </span>
         {checked ? (
           <button className="btn btn-navy" onClick={onNext}>
-            {index + 1 === total ? "Yakunlash" : "Keyingi →"}
+            {index + 1 === total ? "Yakunlash" : "Keyingi savol"}
           </button>
         ) : (
           <button className="btn btn-navy" onClick={onCheck} disabled={!canCheck}>

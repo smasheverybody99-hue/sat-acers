@@ -1,28 +1,8 @@
+import { HeroDemo } from "@/components/HeroDemo";
 import { QUESTIONS } from "@/lib/questions";
+import { MOCKS } from "@/lib/mocks";
 
-const FEATURES = [
-  {
-    icon: "🎯",
-    title: "Question bank",
-    text: "Bo'lim, domen va qiyinlik bo'yicha filtr. Bluebook uslubidagi interfeys — imtihonda hech narsa yangi bo'lmaydi.",
-  },
-  {
-    icon: "🇺🇿",
-    title: "O'zbekcha tushuntirish",
-    text: "Savol inglizcha, yechim esa ona tilingizda. Bitta tugma bilan inglizchaga o'tasiz.",
-    highlight: true,
-  },
-  {
-    icon: "📒",
-    title: "Xatonoma",
-    text: "Har bir xatoingiz daftarga tushadi va 1, 3, 7 kundan keyin qaytib keladi — toki o'zlashtirmaguningizcha.",
-  },
-  {
-    icon: "🔥",
-    title: "Kunlik streak",
-    text: "Har kuni 5 ta savol. Kichik qadamlar — katta ball.",
-  },
-];
+const WEEK = ["Du", "Se", "Ch", "Pa", "Ju", "Sh", "Ya"];
 
 export default function Home() {
   return (
@@ -30,70 +10,70 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-inner">
           <div>
-            <span className="eyebrow">
-              <span className="dot" /> Digital SAT tayyorgarlik
-            </span>
-            <h1>
-              <span className="ace">
-                Ace it.
-                <svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true">
-                  <path d="M2 10 C 50 2, 150 2, 198 8" stroke="#FACC15" strokeWidth="4" fill="none" strokeLinecap="round" />
-                </svg>
-              </span>
-              <br />
-              Har kuni.
-            </h1>
+            <h1>Har kuni bir qadam 1600 ga.</h1>
             <p className="lead">
-              Xatoing — eng yaxshi ustozing. Savol yeching, o'zbekcha tushuntirishni o'qing, xatolaringizni Xatonoma
-              orqali o'zlashtiring va 1600 sari kunma-kun yaqinlashing.
+              Digital SAT'ga tayyorgarlik: Bluebook'dagidek mock testlar, o'zbekcha tushuntirishlar va
+              xatolaringizni o'zlashtirguningizcha qaytaradigan Xatonoma.
             </p>
             <div className="hero-cta">
-              <a className="btn btn-primary" href="/practice">Mashqni boshlash →</a>
+              <a className="btn btn-primary" href="/practice">Mashqni boshlash</a>
               <a className="btn btn-ghost" href="/mock">Mock test topshirish</a>
             </div>
-            <div className="hero-meta">
-              <span><b>{QUESTIONS.length}+</b>savol</span>
-              <span><b>8</b>domen</span>
-              <span><b>2 til</b>tushuntirish</span>
+            <div className="hero-proof">
+              <span><b>{QUESTIONS.length}</b>savol</span>
+              <span><b>{MOCKS.length}</b>mock test</span>
+              <span><b>2 tilda</b>tushuntirish</span>
             </div>
           </div>
-
-          <div className="preview" aria-hidden="true">
-            <div className="preview-card">
-              <div className="meta">
-                <span>Math · Algebra</span>
-                <span>3 / 20</span>
-              </div>
-              <div className="q">If 4x − 9 = 23, what is the value of x?</div>
-              <div className="choices">
-                <div className="choice"><span className="letter">A</span>6</div>
-                <div className="choice right"><span className="letter">B</span>8</div>
-                <div className="choice"><span className="letter">C</span>14</div>
-              </div>
-              <div className="result ok" style={{ marginTop: 14 }}>
-                <p><b>✅ To'g'ri!</b> Ikkala tomonga 9 qo'shamiz: 4x = 32, demak x = 8.</p>
-              </div>
-            </div>
-            <div className="preview-float streak">🔥 7 kun ketma-ket</div>
-            <div className="preview-float uz">🇺🇿 O'zbekcha tushuntirish</div>
-          </div>
+          <HeroDemo />
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" style={{ paddingTop: 24 }}>
         <div className="container">
           <div className="section-head">
-            <h2>Nega SAT Acers?</h2>
-            <p>Oddiy, tez va aynan sizga moslangan. Ortiqcha narsa yo'q — faqat ballingizni oshiradigan narsalar.</p>
+            <h2>Ballni nima oshiradi</h2>
+            <p>Ko'p savol yechish emas, xatodan o'rganish. SAT Acers shunga qurilgan.</p>
           </div>
-          <div className="features">
-            {FEATURES.map((f) => (
-              <div key={f.title} className={`feature ${f.highlight ? "hl" : ""}`}>
-                <div className="icon">{f.icon}</div>
-                <h3>{f.title}</h3>
-                <p>{f.text}</p>
+
+          <div className="bento">
+            <div className="tile xatonoma">
+              <h3>Xatonoma</h3>
+              <p>
+                Xato qilgan har bir savol daftarga tushadi va 1, 3, 7 kundan keyin qaytib keladi. Uch marta ketma-ket
+                to'g'ri yechsangiz, o'zlashtirilgan hisoblanadi.
+              </p>
+              <div className="tile-art mini-list" aria-hidden="true">
+                <div className="mini-row"><span>Subject-verb agreement</span><span className="when now">Bugun</span></div>
+                <div className="mini-row"><span>Circle equations</span><span className="when">Ertaga</span></div>
+                <div className="mini-row"><span>Words in context</span><span className="when">3 kundan keyin</span></div>
               </div>
-            ))}
+            </div>
+
+            <div className="tile uz">
+              <h3>O'zbekcha tushuntirish</h3>
+              <p>Savol inglizcha, yechim ona tilingizda. Bitta tugma bilan inglizchaga o'tasiz.</p>
+              <div className="tile-art" aria-hidden="true">
+                <div className="uz-bubble">Ega — "The team", birlik. Demak fe'l ham birlikda: inspects.</div>
+                <div className="uz-bubble">Tushunarli!</div>
+              </div>
+            </div>
+
+            <div className="tile mock">
+              <h3>Bluebook'dagidek mock</h3>
+              <p>Modullar, taymer, Mark for Review, Desmos va oxirida domenlar bo'yicha tahlil.</p>
+              <div className="tile-art timer-art" aria-hidden="true">31:58<small>Module 1</small></div>
+            </div>
+
+            <div className="tile streak">
+              <h3>Kunlik 5 savol</h3>
+              <p>Streak'ni uzmang: kichik qadamlar katta ball beradi.</p>
+              <div className="tile-art week" aria-hidden="true">
+                {WEEK.map((d, k) => (
+                  <span key={d} className={k < 5 ? "on" : ""}><i>{k < 5 ? "🔥" : ""}</i>{d}</span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -101,20 +81,20 @@ export default function Home() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="section-head">
-            <h2>Qanday ishlaydi</h2>
+            <h2>Qanday boshlash kerak</h2>
           </div>
           <div className="steps">
             <div className="step">
-              <h3>Savol tanlang</h3>
-              <p>Math yoki Reading &amp; Writing, kerakli domen va qiyinlikni tanlang.</p>
+              <h3>Mock test topshiring</h3>
+              <p>Boshlang'ich balingizni va eng zaif domenlaringizni bilib oling.</p>
             </div>
             <div className="step">
-              <h3>Yeching va tushuning</h3>
-              <p>Javobni darhol tekshiring, tushuntirishni o'zbekcha yoki inglizcha o'qing.</p>
+              <h3>Zaif joyni mashq qiling</h3>
+              <p>Question bank'da shu domenlarni filtrlab, har kuni 5 tadan savol yeching.</p>
             </div>
             <div className="step">
-              <h3>Xatoni qaytaring</h3>
-              <p>Xatonoma xato savollarni kerakli vaqtda qayta beradi — bilim mustahkam o'rnashadi.</p>
+              <h3>Xatonomani takrorlang</h3>
+              <p>Xatolar kerakli kunda o'zi qaytadi. Siz faqat ochib, yechasiz.</p>
             </div>
           </div>
         </div>
@@ -125,9 +105,9 @@ export default function Home() {
           <div className="cta-band">
             <div>
               <h2>Bugungi 5 ta savol sizni kutyapti</h2>
-              <p>Ro'yxatdan o'tish shart emas — hoziroq boshlang.</p>
+              <p>Ro'yxatdan o'tish shart emas.</p>
             </div>
-            <a className="btn btn-navy" href="/practice">Boshlash →</a>
+            <a className="btn btn-primary" href="/practice">Mashqni boshlash</a>
           </div>
         </div>
       </section>

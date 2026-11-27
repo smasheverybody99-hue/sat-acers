@@ -69,7 +69,7 @@ export default function OfficialPage() {
           <li><b>7-kun:</b> SAT Acers mock testini topshiring va ballni solishtiring.</li>
         </ol>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 16 }}>
-          <a className="btn btn-navy" href="/practice">Question bank →</a>
+          <a className="btn btn-navy" href="/practice">Question bank</a>
           <a className="btn btn-light" href="/mock">Mock testlar</a>
         </div>
       </div>

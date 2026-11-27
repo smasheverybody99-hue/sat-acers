@@ -7,7 +7,7 @@ import { recordAnswer } from "@/lib/progress";
 import { isCorrect } from "@/lib/questions";
 import type { Question } from "@/lib/types";
 import { MockResults } from "./MockResults";
-import { DesmosPanel } from "./DesmosPanel";
+import { DesmosSplit } from "./DesmosPanel";
 
 const SECTION_TITLE = { rw: "Reading and Writing", math: "Math" } as const;
 
@@ -142,7 +142,7 @@ export function MockRunner({ mockId }: { mockId: string }) {
           <div className="break-timer">{fmt(remaining)}</div>
           <p>Reading and Writing tugadi. Keyingisi — Math. Suv iching, ko'zingizga dam bering.</p>
           <button className="btn btn-primary" onClick={() => setSession(startModule(session.moduleIndex + 1, session))}>
-            Tanaffusni tugatib, Math'ni boshlash →
+            Tanaffusni tugatib, Math'ni boshlash
           </button>
         </div>
       </div>
@@ -195,11 +195,11 @@ function MockIntro(props: {
         <ul className="intro-rules">
           <li>⏱ Har bir modulning o'z taymeri bor. Vaqt tugasa modul avtomatik topshiriladi.</li>
           <li>🚩 Ishonchingiz komil bo'lmagan savolni "Mark for Review" bilan belgilang va oxirida qaytib ko'ring.</li>
-          <li>🧮 Math bo'limida Desmos kalkulyatori sayt ichida ochiladi: suring, kattalashtiring, yoping — grafiklar saqlanib qoladi.</li>
+          <li>🧮 Math bo'limida Desmos ochilganda ekran ikkiga bo'linadi: chapda kalkulyator, o'ngda savol. O'rtadagi chiziqni surib, nisbatni o'zgartirasiz.</li>
           <li>💾 Sahifani yopib qo'ysangiz ham test shu joyidan davom etadi, lekin taymer to'xtamaydi.</li>
         </ul>
         <button className="btn btn-primary" style={{ marginTop: 20 }} onClick={props.onStart}>
-          Testni boshlash →
+          Testni boshlash
         </button>
       </div>
 
@@ -297,6 +297,7 @@ function ExamScreen(props: {
       </header>
 
       <main className="exam-body">
+        <DesmosSplit open={props.module.section === "math" && desmosOpen} onClose={() => setDesmosOpen(false)}>
         {inReview ? (
           <div className="review">
             <h2>Check Your Work</h2>
@@ -351,6 +352,7 @@ function ExamScreen(props: {
             </div>
           </div>
         )}
+        </DesmosSplit>
       </main>
 
       <footer className="exam-bottom">
@@ -367,7 +369,7 @@ function ExamScreen(props: {
             <>
               <button className="btn btn-light" onClick={() => go(total - 1)}>Back</button>
               <button className="btn btn-navy" onClick={props.onFinishModule}>
-                {props.isLastModule ? "Testni yakunlash" : "Keyingi modul →"}
+                {props.isLastModule ? "Testni yakunlash" : "Keyingi modul"}
               </button>
             </>
           ) : (
@@ -385,8 +387,6 @@ function ExamScreen(props: {
           )}
         </div>
       </footer>
-
-      {props.module.section === "math" && <DesmosPanel open={desmosOpen} onClose={() => setDesmosOpen(false)} />}
 
       {navOpen && !inReview && (
         <div className="nav-pop" role="dialog" aria-label="Savollar">

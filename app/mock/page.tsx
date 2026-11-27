@@ -22,7 +22,7 @@ export default function MockListPage() {
               <span>📝 {mockQuestionCount(m)} savol</span>
               <span>⏱ {mockMinutes(m)} daqiqa</span>
             </div>
-            <span className="mock-go">Boshlash →</span>
+            <span className="mock-go">Boshlash</span>
           </a>
         ))}
       </div>

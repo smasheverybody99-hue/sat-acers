@@ -7,7 +7,12 @@
     "difficulty": "easy",
     "type": "mcq",
     "stem": "If 4x − 9 = 23, what is the value of x?",
-    "choices": ["6", "8", "14", "32"],
+    "choices": [
+      "6",
+      "8",
+      "14",
+      "32"
+    ],
     "answer": 1,
     "explanation_uz": "Ikkala tomonga 9 qo'shamiz: 4x = 32. Keyin 4 ga bo'lamiz: x = 8.",
     "explanation_en": "Add 9 to both sides: 4x = 32. Divide by 4: x = 8."
@@ -20,7 +25,12 @@
     "difficulty": "easy",
     "type": "mcq",
     "stem": "A gym charges a one-time $25 sign-up fee plus $12 per month. Which equation gives the total cost C, in dollars, of a membership for m months?",
-    "choices": ["C = 12m + 25", "C = 25m + 12", "C = 37m", "C = 12(m + 25)"],
+    "choices": [
+      "C = 12m + 25",
+      "C = 25m + 12",
+      "C = 37m",
+      "C = 12(m + 25)"
+    ],
     "answer": 0,
     "explanation_uz": "Har oy 12 dollar to'lanadi, ya'ni m oyda 12m. Bunga bir martalik 25 dollar qo'shiladi: C = 12m + 25.",
     "explanation_en": "Each month adds $12, so m months cost 12m. The one-time $25 fee is added once: C = 12m + 25."
@@ -33,7 +43,9 @@
     "difficulty": "medium",
     "type": "spr",
     "stem": "x + y = 14\nx − y = 4\n\nWhat is the value of x in the solution to the system of equations above?",
-    "answer": ["9"],
+    "answer": [
+      "9"
+    ],
     "explanation_uz": "Ikki tenglamani qo'shamiz: 2x = 18, demak x = 9. (y = 5 bo'ladi.)",
     "explanation_en": "Add the equations: 2x = 18, so x = 9. (Then y = 5.)"
   },
@@ -45,7 +57,12 @@
     "difficulty": "medium",
     "type": "mcq",
     "stem": "A delivery van can carry at most 1,200 kilograms. The driver weighs 80 kilograms, and each box weighs 35 kilograms. What is the greatest number of boxes the van can carry along with the driver?",
-    "choices": ["31", "32", "34", "35"],
+    "choices": [
+      "31",
+      "32",
+      "34",
+      "35"
+    ],
     "answer": 1,
     "explanation_uz": "Tengsizlik: 80 + 35b ≤ 1200. Bundan 35b ≤ 1120, ya'ni b ≤ 32. Eng ko'pi bilan 32 ta quti.",
     "explanation_en": "Set up 80 + 35b ≤ 1200, so 35b ≤ 1120 and b ≤ 32. The greatest whole number is 32."
@@ -58,7 +75,9 @@
     "difficulty": "medium",
     "type": "spr",
     "stem": "The function f is linear. If f(3) = 11 and f(7) = 27, what is the value of f(10)?",
-    "answer": ["39"],
+    "answer": [
+      "39"
+    ],
     "explanation_uz": "Qiyalik: (27 − 11) / (7 − 3) = 4. Demak f(x) = 4x + b, va 11 = 12 + b dan b = −1. f(10) = 40 − 1 = 39.",
     "explanation_en": "Slope = (27 − 11)/(7 − 3) = 4. So f(x) = 4x + b, and 11 = 12 + b gives b = −1. f(10) = 40 − 1 = 39."
   },
@@ -70,7 +89,9 @@
     "difficulty": "hard",
     "type": "spr",
     "stem": "3x + ky = 7\n6x + 10y = 5\n\nIn the system of equations above, k is a constant. For what value of k does the system have no solution?",
-    "answer": ["5"],
+    "answer": [
+      "5"
+    ],
     "explanation_uz": "Yechim yo'q bo'lishi uchun chiziqlar parallel bo'lishi kerak: x va y oldidagi koeffitsientlar proporsional, ozod hadlar esa yo'q. 3/6 = k/10 dan k = 5. Tekshiramiz: 7/5 ≠ 1/2, demak chiziqlar ustma-ust tushmaydi.",
     "explanation_en": "No solution means parallel lines: the x- and y-coefficients are proportional but the constants are not. 3/6 = k/10 gives k = 5. Check: 7/5 ≠ 1/2, so the lines are not the same."
   },
@@ -82,7 +103,12 @@
     "difficulty": "easy",
     "type": "mcq",
     "stem": "Which expression is equivalent to (x + 3)² − 9?",
-    "choices": ["x² + 6x", "x² + 9", "x² − 6x", "x² + 6x + 18"],
+    "choices": [
+      "x² + 6x",
+      "x² + 9",
+      "x² − 6x",
+      "x² + 6x + 18"
+    ],
     "answer": 0,
     "explanation_uz": "(x + 3)² = x² + 6x + 9. Undan 9 ni ayirsak: x² + 6x.",
     "explanation_en": "(x + 3)² = x² + 6x + 9. Subtracting 9 leaves x² + 6x."
@@ -95,7 +121,12 @@
     "difficulty": "medium",
     "type": "mcq",
     "stem": "A population of bacteria doubles every 3 hours. There are 500 bacteria now. Which function gives the number of bacteria, P(t), after t hours?",
-    "choices": ["P(t) = 500(2)^(t/3)", "P(t) = 500(2)^(3t)", "P(t) = 500(3)^(t/2)", "P(t) = 500 + 2t/3"],
+    "choices": [
+      "P(t) = 500(2)^(t/3)",
+      "P(t) = 500(2)^(3t)",
+      "P(t) = 500(3)^(t/2)",
+      "P(t) = 500 + 2t/3"
+    ],
     "answer": 0,
     "explanation_uz": "Har 3 soatda 2 ga ko'payadi, shuning uchun daraja ko'rsatkichi t/3 bo'ladi. Masalan t = 3 da 500 · 2 = 1000 chiqadi, bu to'g'ri.",
     "explanation_en": "The population multiplies by 2 once every 3 hours, so the exponent is t/3. Check: at t = 3, P = 500 · 2 = 1000."
@@ -108,7 +139,9 @@
     "difficulty": "medium",
     "type": "spr",
     "stem": "If (x − 2)(x + k) = x² + 3x − 10 for all values of x, where k is a constant, what is the value of k?",
-    "answer": ["5"],
+    "answer": [
+      "5"
+    ],
     "explanation_uz": "Qavslarni ochamiz: x² + (k − 2)x − 2k. Ozod hadlarni tenglaymiz: −2k = −10, demak k = 5. Tekshiruv: k − 2 = 3 ✓.",
     "explanation_en": "Expand: x² + (k − 2)x − 2k. Match constants: −2k = −10, so k = 5. Check: k − 2 = 3 ✓."
   },
@@ -120,7 +153,10 @@
     "difficulty": "hard",
     "type": "spr",
     "stem": "The function f is defined by f(x) = 2x² − 12x + 7. The minimum value of f occurs at x = a. What is the value of f(a)?",
-    "answer": ["-11", "−11"],
+    "answer": [
+      "-11",
+      "−11"
+    ],
     "explanation_uz": "Parabolaning uchi: x = −b/(2a) = 12/4 = 3. f(3) = 2·9 − 36 + 7 = −11.",
     "explanation_en": "The vertex is at x = −b/(2a) = 12/4 = 3. f(3) = 18 − 36 + 7 = −11."
   },
@@ -132,7 +168,12 @@
     "difficulty": "easy",
     "type": "mcq",
     "stem": "A jacket originally costs $80. It is on sale for 25% off the original price. What is the sale price of the jacket?",
-    "choices": ["$20", "$55", "$60", "$75"],
+    "choices": [
+      "$20",
+      "$55",
+      "$60",
+      "$75"
+    ],
     "answer": 2,
     "explanation_uz": "80 ning 25% i = 20. Chegirmali narx: 80 − 20 = 60 dollar. ($20 — bu chegirma miqdori, narx emas.)",
     "explanation_en": "25% of 80 is 20, so the sale price is 80 − 20 = $60. ($20 is the discount, not the price.)"
@@ -145,7 +186,9 @@
     "difficulty": "easy",
     "type": "spr",
     "stem": "A car travels 150 miles in 2.5 hours at a constant speed. At this speed, how many miles will the car travel in 4 hours?",
-    "answer": ["240"],
+    "answer": [
+      "240"
+    ],
     "explanation_uz": "Tezlik: 150 / 2.5 = 60 mil/soat. 4 soatda: 60 · 4 = 240 mil.",
     "explanation_en": "Speed = 150 / 2.5 = 60 miles per hour. In 4 hours: 60 × 4 = 240 miles."
   },
@@ -175,7 +218,12 @@
     "difficulty": "easy",
     "type": "mcq",
     "stem": "A bag contains 6 red marbles, 4 blue marbles, and 10 green marbles. One marble is chosen at random. What is the probability that the marble is NOT green?",
-    "choices": ["1/5", "3/10", "1/2", "2/3"],
+    "choices": [
+      "1/5",
+      "3/10",
+      "1/2",
+      "2/3"
+    ],
     "answer": 2,
     "explanation_uz": "Jami 20 ta shar, yashil bo'lmagani 6 + 4 = 10 ta. Ehtimollik: 10/20 = 1/2.",
     "explanation_en": "There are 20 marbles, and 6 + 4 = 10 are not green. Probability = 10/20 = 1/2."
@@ -188,7 +236,9 @@
     "difficulty": "easy",
     "type": "spr",
     "stem": "Two angles of a triangle measure 47° and 68°. What is the measure, in degrees, of the third angle?",
-    "answer": ["65"],
+    "answer": [
+      "65"
+    ],
     "explanation_uz": "Uchburchak burchaklari yig'indisi 180°. 180 − 47 − 68 = 65.",
     "explanation_en": "The angles of a triangle sum to 180°. 180 − 47 − 68 = 65."
   },
@@ -200,7 +250,9 @@
     "difficulty": "medium",
     "type": "spr",
     "stem": "A right circular cylinder has a radius of 3 centimeters and a volume of 72π cubic centimeters. What is the height, in centimeters, of the cylinder?",
-    "answer": ["8"],
+    "answer": [
+      "8"
+    ],
     "explanation_uz": "V = πr²h. 72π = π · 9 · h, demak h = 8.",
     "explanation_en": "V = πr²h, so 72π = π · 9 · h and h = 8."
   },
@@ -212,7 +264,12 @@
     "difficulty": "hard",
     "type": "mcq",
     "stem": "In right triangle ABC, angle C measures 90° and sin A = 3/5. What is the value of tan B?",
-    "choices": ["3/4", "4/5", "4/3", "5/3"],
+    "choices": [
+      "3/4",
+      "4/5",
+      "4/3",
+      "5/3"
+    ],
     "answer": 2,
     "explanation_uz": "sin A = 3/5 bo'lsa, A ga qarama-qarshi katet 3, gipotenuza 5, qolgan katet 4. B uchun qarama-qarshi katet 4, yopishgan katet 3: tan B = 4/3.",
     "explanation_en": "sin A = 3/5 means the side opposite A is 3 and the hypotenuse is 5, so the other leg is 4. For angle B, opposite = 4 and adjacent = 3, so tan B = 4/3."
@@ -225,7 +282,9 @@
     "difficulty": "hard",
     "type": "spr",
     "stem": "x² + y² − 6x + 8y = 0\n\nThe equation above defines a circle in the xy-plane. What is the radius of the circle?",
-    "answer": ["5"],
+    "answer": [
+      "5"
+    ],
     "explanation_uz": "To'liq kvadratga keltiramiz: (x − 3)² − 9 + (y + 4)² − 16 = 0, ya'ni (x − 3)² + (y + 4)² = 25. Radius √25 = 5.",
     "explanation_en": "Complete the square: (x − 3)² + (y + 4)² = 9 + 16 = 25. The radius is √25 = 5."
   },
@@ -238,7 +297,12 @@
     "type": "mcq",
     "passage": "The volunteers expected the cleanup to take a single afternoon, but the riverbank was so littered with plastic and debris that the work proved far more ______ than anyone had predicted.",
     "stem": "Which choice completes the text with the most logical and precise word or phrase?",
-    "choices": ["brief", "laborious", "decorative", "optional"],
+    "choices": [
+      "brief",
+      "laborious",
+      "decorative",
+      "optional"
+    ],
     "answer": 1,
     "explanation_uz": "Matnda ish kutilganidan ancha og'ir bo'lgani aytilgan (\"but\" — qarama-qarshilik). \"Laborious\" — mashaqqatli, ko'p mehnat talab qiladigan.",
     "explanation_en": "\"But\" signals the work was harder than expected. \"Laborious\" means requiring a lot of effort."
@@ -252,7 +316,12 @@
     "type": "mcq",
     "passage": "Although critics initially dismissed the architect's design as impractical, the building's dramatic energy savings over its first decade ______ her approach, prompting several cities to adopt similar standards.",
     "stem": "Which choice completes the text with the most logical and precise word or phrase?",
-    "choices": ["obscured", "vindicated", "imitated", "postponed"],
+    "choices": [
+      "obscured",
+      "vindicated",
+      "imitated",
+      "postponed"
+    ],
     "answer": 1,
     "explanation_uz": "Tanqidchilar avval rad etgan, keyin esa natijalar uning haqligini ko'rsatgan. \"Vindicated\" — to'g'ri ekanini isbotladi, oqladi.",
     "explanation_en": "The results proved the critics wrong. \"Vindicated\" means showed to be right or justified."
@@ -361,7 +430,12 @@
     "type": "mcq",
     "passage": "The museum's newest exhibit features more than two hundred ______ of them have never been displayed publicly before.",
     "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-    "choices": ["photographs, many", "photographs; many", "photographs many", "photographs, which many"],
+    "choices": [
+      "photographs, many",
+      "photographs; many",
+      "photographs many",
+      "photographs, which many"
+    ],
     "answer": 1,
     "explanation_uz": "Ikkala qism ham mustaqil gap. Ularni faqat vergul bilan ulab bo'lmaydi (comma splice), tinish belgisiz ham bo'lmaydi. Nuqtali vergul (;) ikki mustaqil gapni to'g'ri ajratadi.",
     "explanation_en": "Both parts are independent clauses. A comma alone creates a comma splice, and no punctuation creates a run-on. A semicolon correctly joins them."
@@ -375,7 +449,12 @@
     "type": "mcq",
     "passage": "The collection of rare maps, which the library acquired from a private donor last spring, ______ now available for public viewing.",
     "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-    "choices": ["are", "is", "have been", "were"],
+    "choices": [
+      "are",
+      "is",
+      "have been",
+      "were"
+    ],
     "answer": 1,
     "explanation_uz": "Ega — \"The collection\" (birlik), \"maps\" emas. Vergullar orasidagi qismni olib tashlasak: \"The collection ... is now available.\" Hozirgi zamon \"now\" bilan ham mos.",
     "explanation_en": "The subject is \"collection\" (singular), not \"maps.\" Removing the interrupting clause gives \"The collection ... is now available,\" and \"now\" calls for the present tense."
@@ -389,7 +468,12 @@
     "type": "mcq",
     "passage": "By the time the rescue team arrived at the trailhead, the stranded hikers ______ for nearly six hours.",
     "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-    "choices": ["wait", "had been waiting", "will wait", "are waiting"],
+    "choices": [
+      "wait",
+      "had been waiting",
+      "will wait",
+      "are waiting"
+    ],
     "answer": 1,
     "explanation_uz": "\"By the time ... arrived\" — o'tmishdagi bir nuqta. Undan oldin davom etgan harakat uchun Past Perfect Continuous kerak: \"had been waiting\".",
     "explanation_en": "\"By the time ... arrived\" sets a past reference point. An action continuing up to that point needs the past perfect progressive: \"had been waiting.\""
@@ -403,7 +487,12 @@
     "type": "mcq",
     "passage": "Many early bicycles were difficult and even dangerous to ride because their front wheels were enormous. ______ the \"safety bicycle\" of the 1880s, which had two wheels of equal size, was far easier to control and quickly became popular.",
     "stem": "Which choice completes the text with the most logical transition?",
-    "choices": ["For example,", "By contrast,", "Similarly,", "In other words,"],
+    "choices": [
+      "For example,",
+      "By contrast,",
+      "Similarly,",
+      "In other words,"
+    ],
     "answer": 1,
     "explanation_uz": "Birinchi gap qiyin va xavfli velosipedlar haqida, ikkinchisi esa boshqarish oson bo'lgan velosiped haqida. Bu qarama-qarshilik, shuning uchun \"By contrast\".",
     "explanation_en": "The first sentence describes hard-to-ride bicycles; the second describes an easy-to-control one. That's a contrast: \"By contrast.\""
@@ -426,5 +515,1771 @@
     "answer": 3,
     "explanation_uz": "Maqsad — ijobiy o'zgarishni ta'kidlash. Faqat D da yaxshi yangilik bor (to'g'on qurilgach suv sathi ko'tarildi). Qolganlari tarix yoki salbiy oqibat haqida.",
     "explanation_en": "The goal is a positive development. Only D describes one (water levels rising after the dam); the others are background or negative effects."
+  },
+  {
+    "section": "rw",
+    "domain": "Craft and Structure",
+    "skill": "Words in context",
+    "difficulty": "easy",
+    "type": "mcq",
+    "passage": "Although the new library's design drew some criticism at first, residents soon found its open reading rooms remarkably ______: people of all ages gathered there to study, talk, and attend free workshops.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "inviting",
+      "hostile",
+      "expensive",
+      "temporary"
+    ],
+    "answer": 0,
+    "explanation_uz": "Odamlar u yerga to'planishgan — demak joy jozibali, kirgisi keladigan: \"inviting\".",
+    "explanation_en": "People of all ages gathered there, so the rooms were welcoming: \"inviting.\"",
+    "id": "a1-rw1-01"
+  },
+  {
+    "section": "rw",
+    "domain": "Craft and Structure",
+    "skill": "Words in context",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "The marine biologist's notes were so ______ that her colleagues could reconstruct every step of the experiment years later, down to the water temperature at each hour.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "careless",
+      "meticulous",
+      "brief",
+      "persuasive"
+    ],
+    "answer": 1,
+    "explanation_uz": "Har bir qadamni, hatto har soatdagi haroratni tiklash mumkin bo'lgan — demak yozuvlar juda puxta: \"meticulous\".",
+    "explanation_en": "Every step, even hourly temperatures, could be reconstructed, so the notes were extremely careful and detailed: \"meticulous.\"",
+    "id": "a1-rw1-02"
+  },
+  {
+    "section": "rw",
+    "domain": "Craft and Structure",
+    "skill": "Words in context",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "Early critics described the composer's music as ______, arguing that its sudden shifts in key and rhythm made it hard to follow; today, however, those same shifts are praised as bold innovations.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "soothing",
+      "predictable",
+      "disjointed",
+      "conventional"
+    ],
+    "answer": 2,
+    "explanation_uz": "Tanqidchilar keskin o'zgarishlar tufayli musiqani kuzatish qiyin degan — ya'ni u uzuq-yuluq: \"disjointed\".",
+    "explanation_en": "Critics said sudden shifts made it hard to follow, so they found it fragmented: \"disjointed.\"",
+    "id": "a1-rw1-03"
+  },
+  {
+    "section": "rw",
+    "domain": "Craft and Structure",
+    "skill": "Words in context",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Rather than ______ the earlier findings, the new study refines them: it confirms the basic pattern but shows that the effect is much smaller in colder climates.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "fund",
+      "publish",
+      "memorize",
+      "overturn"
+    ],
+    "answer": 3,
+    "explanation_uz": "Yangi tadqiqot avvalgi natijalarni tasdiqlaydi va aniqlashtiradi — ya'ni ularni rad etmaydi. \"Rather than overturn\" — rad etish o'rniga.",
+    "explanation_en": "The study confirms and refines the findings instead of rejecting them: \"rather than overturn.\"",
+    "id": "a1-rw1-04"
+  },
+  {
+    "section": "rw",
+    "domain": "Craft and Structure",
+    "skill": "Text structure and purpose",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "In 2019, a mid-sized city replaced a downtown parking lot with a small park planted with shade trees and grass. Two summers later, city engineers measured surface temperatures on the site and found them, on average, 9°C lower than when the lot was paved.",
+    "stem": "Which choice best states the main purpose of the text?",
+    "choices": [
+      "To describe a change made to a city space and one measurable effect of that change",
+      "To argue that all parking lots should be converted into parks",
+      "To explain why engineers prefer grass to pavement",
+      "To compare the costs of building parks and parking lots"
+    ],
+    "answer": 0,
+    "explanation_uz": "Matn faqat o'zgarishni (parkovka → park) va uning bitta o'lchangan natijasini (harorat 9°C pasaygan) tasvirlaydi. Da'vat yoki xarajat haqida gap yo'q.",
+    "explanation_en": "The text describes one change (lot to park) and one measured result (9°C cooler); it doesn't argue, explain preferences, or compare costs.",
+    "id": "a1-rw1-05"
+  },
+  {
+    "section": "rw",
+    "domain": "Craft and Structure",
+    "skill": "Text structure and purpose",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Octopuses have long been described as solitary animals that avoid one another except to mate. Off the coast of eastern Australia, however, divers have repeatedly observed groups of more than a dozen octopuses sharing dens and interacting daily. Some researchers now suggest that, where shelter is scarce, octopuses may be more social than once believed.",
+    "stem": "Which choice best describes the function of the second sentence in the overall structure of the text?",
+    "choices": [
+      "It presents an observation that complicates the view described in the first sentence.",
+      "It offers a definition of a term used later in the text.",
+      "It summarizes the conclusion stated in the first sentence.",
+      "It describes a method researchers used to test the first sentence."
+    ],
+    "answer": 0,
+    "explanation_uz": "Birinchi gap: sakkizoyoqlar yolg'iz yashaydi. Ikkinchi gap (\"however\") bunga zid kuzatuvni keltiradi — ya'ni avvalgi qarashni murakkablashtiradi.",
+    "explanation_en": "Sentence 1 states the solitary view; sentence 2, introduced by \"however,\" gives an observation that complicates it.",
+    "id": "a1-rw1-06"
+  },
+  {
+    "section": "rw",
+    "domain": "Craft and Structure",
+    "skill": "Cross-text connections",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Text 1\nSome economists argue that a four-day workweek would reduce productivity. With fewer hours on the job, they reason, workers will inevitably produce less, and businesses will have to hire more staff to keep output steady.\n\nText 2\nIn a six-month trial, forty companies moved employees to a four-day week without cutting pay. Most companies reported that total output stayed the same, and employees took fewer sick days than in the previous year. Managers credited the results to fewer unnecessary meetings and more focused work.",
+    "stem": "Based on the texts, how would the author of Text 2 most likely respond to the economists' reasoning in Text 1?",
+    "choices": [
+      "By noting that a reduction in hours did not lead to the decline in output that the economists predict",
+      "By agreeing that companies in the trial had to hire additional staff",
+      "By arguing that sick days are a more important measure than output",
+      "By claiming that the economists' reasoning applies only to large companies"
+    ],
+    "answer": 0,
+    "explanation_uz": "1-matn: soat kamaysa, ish hajmi kamayadi. 2-matn: tajribada soat kamaydi, lekin ish hajmi o'zgarmadi. Demak 2-matn muallifi bu bashoratni rad etadi.",
+    "explanation_en": "Text 1 predicts lower output; Text 2 reports output stayed the same with fewer hours, directly contradicting that prediction.",
+    "id": "a1-rw1-07"
+  },
+  {
+    "section": "rw",
+    "domain": "Information and Ideas",
+    "skill": "Central ideas and details",
+    "difficulty": "easy",
+    "type": "mcq",
+    "passage": "In parts of East Africa, a bird called the greater honeyguide leads people to wild bees' nests. The bird calls and flies from tree to tree until the people find the nest. After the people open the nest and take the honey, the bird eats the leftover wax, which it cannot easily reach on its own.",
+    "stem": "Which choice best states the main idea of the text?",
+    "choices": [
+      "People and a wild bird cooperate in a way that benefits both of them.",
+      "Honeyguides are the only birds that can digest beeswax.",
+      "People in East Africa have trained honeyguides as pets.",
+      "Wild bees' nests are difficult to find without special tools."
+    ],
+    "answer": 0,
+    "explanation_uz": "Matnning asosiy fikri: odamlar asal oladi, qush esa mumni yeydi — ikkala tomon ham foyda ko'radi.",
+    "explanation_en": "People get honey and the bird gets wax: a cooperation that benefits both.",
+    "id": "a1-rw1-08"
+  },
+  {
+    "section": "rw",
+    "domain": "Information and Ideas",
+    "skill": "Central ideas and details",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "Mira had rehearsed her graduation speech for weeks, reading it aloud to her mirror, her brother, and even the cat. When she finally stood at the podium, a gust of wind swept her pages into the crowd. For a moment she froze. Then she took a breath and began, word for word, as if the pages were still in front of her. The audience, unaware of her lost notes, listened in silence until the final line.",
+    "stem": "Which choice best states the main idea of the text?",
+    "choices": [
+      "Mira's long preparation allowed her to give her speech successfully even after losing her notes.",
+      "Mira regretted not practicing her speech in front of more people.",
+      "The audience was distracted by the wind during Mira's speech.",
+      "Mira decided to change her speech after her pages blew away."
+    ],
+    "answer": 0,
+    "explanation_uz": "Varaqlar uchib ketdi, lekin Mira nutqni so'zma-so'z aytdi — bu haftalab tayyorgarlik natijasi.",
+    "explanation_en": "Despite losing her pages, Mira delivered the speech word for word because of her weeks of practice.",
+    "id": "a1-rw1-09"
+  },
+  {
+    "section": "rw",
+    "domain": "Information and Ideas",
+    "skill": "Command of evidence (textual)",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "The Salt Road is a novel about a boy named Tomás who grows up in a fishing village. A student claims that Tomás is drawn to the sea even though it frightens him.",
+    "stem": "Which quotation from The Salt Road most effectively illustrates the student's claim?",
+    "choices": [
+      "\"Tomás helped his mother mend the nets every morning before school.\"",
+      "\"He feared the dark water, yet every evening he walked to the end of the pier to watch the boats slip past the horizon.\"",
+      "\"The village was small, and everyone knew whose boat had the best catch.\"",
+      "\"In winter, storms kept the fishermen at home for weeks at a time.\""
+    ],
+    "answer": 1,
+    "explanation_uz": "Da'voda ikki qism bor: dengizdan qo'rqadi VA unga intiladi. Faqat B ikkalasini ko'rsatadi: \"feared ... yet every evening he walked to the pier\".",
+    "explanation_en": "The claim has two parts: fear and attraction. Only B shows both: he \"feared the dark water, yet\" went to watch the boats.",
+    "id": "a1-rw1-10"
+  },
+  {
+    "section": "rw",
+    "domain": "Information and Ideas",
+    "skill": "Command of evidence (textual)",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Researchers hypothesized that birds living in cities sing at a higher pitch than birds of the same species living in forests because higher-pitched songs are easier to hear over the low-frequency rumble of traffic.",
+    "stem": "Which finding, if true, would most directly support the researchers' hypothesis?",
+    "choices": [
+      "City birds of the species sang at higher pitches on weekdays, when traffic was heavy, than on quiet public holidays.",
+      "Forest birds of the species sang more often in the morning than in the evening.",
+      "City birds of the species built their nests higher in trees than forest birds did.",
+      "Some forest birds of the species had songs that were longer than those of city birds."
+    ],
+    "answer": 0,
+    "explanation_uz": "Gipoteza: baland ohang — transport shovqini sababli. A da shovqin ko'p kunlari ohang balandroq, shovqin kam kunlari pastroq — bu sababni bevosita qo'llaydi.",
+    "explanation_en": "If pitch rises when traffic is heavy and falls when it's quiet, that directly links pitch to traffic noise.",
+    "id": "a1-rw1-11"
+  },
+  {
+    "section": "rw",
+    "domain": "Information and Ideas",
+    "skill": "Command of evidence (quantitative)",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "Average yield (tons per hectare)\n\nCrop — without cover crops — with cover crops\nCorn — 9.1 — 9.8\nWheat — 3.2 — 3.6\nSoybeans — 2.9 — 3.1\n\nA farm cooperative tested whether planting cover crops between growing seasons affects the yields of its main crops. A member claims that cover crops were associated with higher yields for every crop in the test.",
+    "stem": "Which choice best uses data from the table to support the member's claim?",
+    "choices": [
+      "Corn had the highest yield of the three crops both with and without cover crops.",
+      "Soybeans had the lowest yield of the three crops without cover crops.",
+      "With cover crops, yields rose from 9.1 to 9.8 tons for corn, from 3.2 to 3.6 tons for wheat, and from 2.9 to 3.1 tons for soybeans.",
+      "With cover crops, wheat yields were 3.6 tons per hectare."
+    ],
+    "answer": 2,
+    "explanation_uz": "Da'vo \"har bir ekin\" haqida. Faqat C uchala ekin uchun ham qopqoq ekinli va ekinsiz natijani solishtiradi.",
+    "explanation_en": "The claim covers every crop, and only C compares both conditions for all three crops.",
+    "id": "a1-rw1-12"
+  },
+  {
+    "section": "rw",
+    "domain": "Information and Ideas",
+    "skill": "Command of evidence (quantitative)",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Share of survey respondents who read news in print at least weekly\n\nAge 18–29 — 8%\nAge 30–49 — 15%\nAge 50–64 — 27%\nAge 65 and older — 41%\n\nA media researcher surveyed adults about how they get their news. The results suggest that reading news in print is strongly related to age: ______",
+    "stem": "Which choice most effectively uses data from the table to complete the statement?",
+    "choices": [
+      "the share of respondents who read news in print rose with each older age group, from 8% of 18–29-year-olds to 41% of those 65 and older.",
+      "27% of respondents aged 50–64 read news in print at least weekly.",
+      "most respondents in every age group read news in print at least weekly.",
+      "respondents aged 30–49 were twice as likely as those aged 65 and older to read news in print."
+    ],
+    "answer": 0,
+    "explanation_uz": "Yoshga bog'liqlikni ko'rsatish uchun barcha guruhlardagi o'sishni ko'rsatish kerak: 8% → 41%. C noto'g'ri (hech bir guruhda ko'pchilik emas), D esa teskari.",
+    "explanation_en": "To show a link with age, you need the trend across groups: 8% rising to 41%. C is false (no group is a majority), and D reverses the data.",
+    "id": "a1-rw1-13"
+  },
+  {
+    "section": "rw",
+    "domain": "Information and Ideas",
+    "skill": "Inferences",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Dark particles such as dust absorb more sunlight than clean, white ice does. On a glacier in the Alps, researchers noticed that sections lying downwind of a busy gravel road melted noticeably faster each summer than sections the same height and orientation that were farther from the road. The researchers concluded that ______",
+    "stem": "Which choice most logically completes the text?",
+    "choices": [
+      "dust from the road likely darkened the nearby ice, causing it to absorb more sunlight and melt faster.",
+      "gravel roads are usually built at higher elevations than glaciers are.",
+      "the sections of the glacier farther from the road received less sunlight.",
+      "melting on the glacier has no connection to human activity."
+    ],
+    "answer": 0,
+    "explanation_uz": "Qorong'i zarralar ko'proq quyosh nuri yutadi + yo'l yonidagi muz tezroq eriydi (boshqa sharoitlar bir xil) → yo'l changi muzni qoraytirib, erishni tezlashtirgan.",
+    "explanation_en": "Dark dust absorbs more sunlight, and only the downwind sections (otherwise identical) melted faster, so road dust likely caused it.",
+    "id": "a1-rw1-14"
+  },
+  {
+    "section": "rw",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": "easy",
+    "type": "mcq",
+    "passage": "The first public library in the town opened in ______ it held fewer than five hundred books.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "1902, at that time",
+      "1902; at that time,",
+      "1902 at that time",
+      "1902, at that time,"
+    ],
+    "answer": 1,
+    "explanation_uz": "Ikki mustaqil gap: \"The library opened in 1902\" va \"it held fewer than...\". Ularni nuqtali vergul ajratadi; faqat vergul — xato (comma splice).",
+    "explanation_en": "Two independent clauses need a semicolon; a comma alone creates a comma splice.",
+    "id": "a1-rw1-15"
+  },
+  {
+    "section": "rw",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "Chef Daniyar Saidov builds every dish around one simple ______ fresh, local ingredients over complicated techniques.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "rule;",
+      "rule",
+      "rule:",
+      "rule, and"
+    ],
+    "answer": 2,
+    "explanation_uz": "Ikki nuqta oldingi so'zni (rule) tushuntiradigan qismni kiritadi. Nuqtali vergul ikkinchi qism to'liq gap bo'lganda kerak — bu yerda u to'liq gap emas.",
+    "explanation_en": "A colon introduces an explanation of \"rule\"; a semicolon would need a full independent clause after it.",
+    "id": "a1-rw1-16"
+  },
+  {
+    "section": "rw",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "The Amazon river dolphin—known locally as the ______ can turn its head almost ninety degrees, an unusual ability among dolphins.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "boto,",
+      "boto—",
+      "boto;",
+      "boto"
+    ],
+    "answer": 1,
+    "explanation_uz": "Qo'shimcha ma'lumot tire bilan boshlangan, demak tire bilan yopilishi kerak: \"—known locally as the boto—\".",
+    "explanation_en": "The interrupting phrase opens with a dash, so it must close with a dash.",
+    "id": "a1-rw1-17"
+  },
+  {
+    "section": "rw",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "In the experiment, the researchers compared three groups of ______ who studied with music, those who studied in silence, and those who studied with background conversation.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "students: those",
+      "students; those",
+      "students those",
+      "students. Those"
+    ],
+    "answer": 0,
+    "explanation_uz": "Ikki nuqta ro'yxatni kiritadi. Nuqtali vergul va nuqta keyingi qismni to'liq bo'lmagan gapga aylantiradi.",
+    "explanation_en": "A colon introduces the list of groups; a semicolon or period would leave a fragment.",
+    "id": "a1-rw1-18"
+  },
+  {
+    "section": "rw",
+    "domain": "Standard English Conventions",
+    "skill": "Form, structure, and sense",
+    "difficulty": "easy",
+    "type": "mcq",
+    "passage": "Each of the paintings in the gallery's new exhibit ______ a story about the artist's childhood in Bukhara.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "tell",
+      "are telling",
+      "tells",
+      "have told"
+    ],
+    "answer": 2,
+    "explanation_uz": "Ega — \"Each\" (birlik), \"paintings\" emas. Shuning uchun fe'l ham birlikda: tells.",
+    "explanation_en": "The subject is \"Each,\" which is singular, so the verb is \"tells.\"",
+    "id": "a1-rw1-19"
+  },
+  {
+    "section": "rw",
+    "domain": "Standard English Conventions",
+    "skill": "Form, structure, and sense",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "After months of planning, the city museum announced that ______ would extend its weekend hours during the summer festival.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "they",
+      "it",
+      "we",
+      "them"
+    ],
+    "answer": 1,
+    "explanation_uz": "Olmosh \"the city museum\" (birlik) ni almashtiradi va keyin \"its\" keladi — demak \"it\".",
+    "explanation_en": "The pronoun refers to \"the city museum\" (singular) and matches \"its,\" so \"it\" is correct.",
+    "id": "a1-rw1-20"
+  },
+  {
+    "section": "rw",
+    "domain": "Standard English Conventions",
+    "skill": "Form, structure, and sense",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Having studied the ancient map for months, ______",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "the route through the mountains finally became clear to the historian.",
+      "the historian finally understood the route through the mountains.",
+      "the route through the mountains finally made sense.",
+      "understanding of the route through the mountains finally came."
+    ],
+    "answer": 1,
+    "explanation_uz": "\"Having studied the map\" — xaritani kim o'rgangan? Tarixchi. Shuning uchun vergul ortidan darhol \"the historian\" kelishi kerak.",
+    "explanation_en": "The opening phrase describes who studied the map, so \"the historian\" must come right after the comma.",
+    "id": "a1-rw1-21"
+  },
+  {
+    "section": "rw",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": "easy",
+    "type": "mcq",
+    "passage": "Sea otters often float on their backs while they eat. ______ they sometimes use rocks as tools, balancing a stone on their chests and striking shellfish against it to crack them open.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "In addition,",
+      "However,",
+      "Instead,",
+      "In contrast,"
+    ],
+    "answer": 0,
+    "explanation_uz": "Ikkinchi gap dengiz qunduzlari haqida yana bir qiziq faktni qo'shadi — zidlik yo'q. Shuning uchun \"In addition\".",
+    "explanation_en": "The second sentence adds another fact about otters; there is no contrast, so \"In addition.\"",
+    "id": "a1-rw1-22"
+  },
+  {
+    "section": "rw",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "Many people believe that bats are blind. ______ most bat species can see quite well, and some rely on their eyesight as much as on echolocation.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "Similarly,",
+      "For instance,",
+      "In fact,",
+      "As a result,"
+    ],
+    "answer": 2,
+    "explanation_uz": "Ikkinchi gap keng tarqalgan noto'g'ri fikrni tuzatadi. \"In fact\" — aslida.",
+    "explanation_en": "The second sentence corrects a common belief: \"In fact.\"",
+    "id": "a1-rw1-23"
+  },
+  {
+    "section": "rw",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "The new bridge was expected to reduce traffic in the city center. ______ congestion increased, because the shorter route attracted drivers who had previously avoided the area altogether.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "Accordingly,",
+      "Instead,",
+      "Likewise,",
+      "Furthermore,"
+    ],
+    "answer": 1,
+    "explanation_uz": "Kutilgan natija: tirbandlik kamayadi. Haqiqat: ko'paydi. Kutilgan narsaning o'rniga boshqasi bo'lgan — \"Instead\".",
+    "explanation_en": "Traffic was expected to drop but rose: the opposite of the expectation, so \"Instead.\"",
+    "id": "a1-rw1-24"
+  },
+  {
+    "section": "rw",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical synthesis",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "While researching a topic, a student has taken the following notes:\n\n• Samarkand is a city in present-day Uzbekistan.\n• It is one of the oldest continuously inhabited cities in Central Asia.\n• For centuries, it was an important stop on the Silk Road trade routes.\n• Its Registan square is framed by three large madrasas.\n• The city was added to the UNESCO World Heritage List in 2001.",
+    "stem": "The student wants to emphasize Samarkand's role in historical trade. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": [
+      "Samarkand's Registan square is framed by three large madrasas.",
+      "Samarkand, a city in present-day Uzbekistan, was added to the UNESCO World Heritage List in 2001.",
+      "Samarkand is one of the oldest continuously inhabited cities in Central Asia.",
+      "For centuries, Samarkand, in present-day Uzbekistan, was an important stop on the Silk Road trade routes."
+    ],
+    "answer": 3,
+    "explanation_uz": "Maqsad — savdodagi rolini ta'kidlash. Faqat D Buyuk Ipak yo'li savdo yo'llari haqida gapiradi.",
+    "explanation_en": "The goal is trade; only D mentions the Silk Road trade routes.",
+    "id": "a1-rw1-25"
+  },
+  {
+    "section": "rw",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical synthesis",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "While researching a topic, a student has taken the following notes:\n\n• Venus and Mars are the two planets closest to Earth.\n• Venus has a thick atmosphere made mostly of carbon dioxide.\n• The average surface temperature on Venus is about 465°C.\n• Mars has a thin atmosphere.\n• The average surface temperature on Mars is about −60°C.",
+    "stem": "The student wants to contrast the surface temperatures of the two planets. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": [
+      "Venus and Mars, the two planets closest to Earth, both have atmospheres.",
+      "While the surface of Venus averages about 465°C, the surface of Mars averages about −60°C.",
+      "Venus has a thick atmosphere made mostly of carbon dioxide, while Mars has a thin one.",
+      "The average surface temperature on Venus is about 465°C."
+    ],
+    "answer": 1,
+    "explanation_uz": "Maqsad — harorat bo'yicha qarama-qarshi qo'yish. B ikkala sayyoraning haroratini \"While\" bilan solishtiradi. C atmosferani solishtiradi, haroratni emas.",
+    "explanation_en": "Only B contrasts both temperatures; C contrasts atmospheres, and D mentions only Venus.",
+    "id": "a1-rw1-26"
+  },
+  {
+    "section": "rw",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical synthesis",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "While researching a topic, a student has taken the following notes:\n\n• Lola Navarro is a textile artist born in Peru.\n• She weaves large tapestries from recycled fishing nets.\n• Her work has been shown in galleries in Lima and Madrid.\n• She collects the nets from beaches near her studio.",
+    "stem": "The student wants to introduce Lola Navarro and her work to an audience unfamiliar with her. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": [
+      "Navarro's work has been shown in galleries in Lima and Madrid.",
+      "Navarro collects fishing nets from beaches near her studio.",
+      "Lola Navarro, a Peruvian-born textile artist, weaves large tapestries from recycled fishing nets.",
+      "Galleries in Lima and Madrid have shown tapestries made from fishing nets."
+    ],
+    "answer": 2,
+    "explanation_uz": "Tanishtirish uchun kim ekanini (perulik to'qimachilik rassomi) va nima qilishini (eski baliq to'rlaridan gobelen) aytish kerak — bu C.",
+    "explanation_en": "An introduction needs who she is and what she makes; C gives both.",
+    "id": "a1-rw1-27"
+  },
+  {
+    "section": "rw",
+    "domain": "Craft and Structure",
+    "skill": "Words in context",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "The documentary does not simply ______ the coach's championship seasons; it also examines the costly mistakes and losing years that came before them.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "celebrate",
+      "conceal",
+      "criticize",
+      "postpone"
+    ],
+    "answer": 0,
+    "explanation_uz": "\"Not simply ..., it also examines mistakes\" — film faqat yutuqlarni maqtamaydi, xatolarni ham ko'rsatadi: \"celebrate\".",
+    "explanation_en": "The film does more than praise the wins; it also examines mistakes: \"celebrate.\"",
+    "id": "a1-rw2-01"
+  },
+  {
+    "section": "rw",
+    "domain": "Craft and Structure",
+    "skill": "Words in context",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Though the treaty was hailed as a breakthrough when it was signed, historians now regard it as largely ______: it was celebrated with great ceremony but changed almost nothing about how the two nations traded.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "ruinous",
+      "secretive",
+      "symbolic",
+      "spontaneous"
+    ],
+    "answer": 2,
+    "explanation_uz": "Katta marosim bo'ldi, lekin amalda hech narsa o'zgarmadi — demak shartnoma ramziy edi: \"symbolic\".",
+    "explanation_en": "Lots of ceremony but no practical change means it was mostly \"symbolic.\"",
+    "id": "a1-rw2-02"
+  },
+  {
+    "section": "rw",
+    "domain": "Craft and Structure",
+    "skill": "Words in context",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "The physicist's explanation was remarkably ______, compressing a century of scientific debate into a few clear sentences without sacrificing accuracy.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "verbose",
+      "succinct",
+      "speculative",
+      "evasive"
+    ],
+    "answer": 1,
+    "explanation_uz": "Bir asrlik bahsni bir necha aniq gapga sig'dirgan — qisqa va lo'nda: \"succinct\". \"Verbose\" — aksincha, ko'p so'zli.",
+    "explanation_en": "Compressing a century into a few clear sentences is \"succinct\"; \"verbose\" means the opposite.",
+    "id": "a1-rw2-03"
+  },
+  {
+    "section": "rw",
+    "domain": "Craft and Structure",
+    "skill": "Words in context",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Some ecologists warn that restoring forests by planting a single fast-growing tree species may prove ______, since a uniform forest can be wiped out by one pest or disease.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "unprecedented",
+      "lucrative",
+      "inevitable",
+      "shortsighted"
+    ],
+    "answer": 3,
+    "explanation_uz": "Hozir tez natija beradi, lekin keyinchalik bitta zararkunanda butun o'rmonni yo'q qilishi mumkin — kelajakni o'ylamaslik: \"shortsighted\".",
+    "explanation_en": "It ignores a long-term risk, so it is \"shortsighted.\"",
+    "id": "a1-rw2-04"
+  },
+  {
+    "section": "rw",
+    "domain": "Craft and Structure",
+    "skill": "Text structure and purpose",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "My grandmother's recipe notebook contains no measurements. \"A handful of flour,\" it says, or \"salt until it tastes right.\" For years I tried to follow it alone and failed. It was only after I spent a winter cooking beside her, watching how her hands moved and tasting as she tasted, that the notebook finally began to make sense to me.",
+    "stem": "Which choice best states the main purpose of the text?",
+    "choices": [
+      "To show how the narrator learned a skill that could not be fully captured in writing",
+      "To criticize the grandmother for keeping poor records",
+      "To explain why measurements are unnecessary in cooking",
+      "To describe the history of a family recipe"
+    ],
+    "answer": 0,
+    "explanation_uz": "Daftar o'lchovsiz edi, narrator uni faqat buvisining yonida kuzatib tushundi — ya'ni bu ko'nikmani yozuv orqali to'liq o'rgatib bo'lmaydi.",
+    "explanation_en": "The narrator only understood the notebook by watching and tasting alongside her grandmother: a skill writing alone couldn't teach.",
+    "id": "a1-rw2-05"
+  },
+  {
+    "section": "rw",
+    "domain": "Craft and Structure",
+    "skill": "Text structure and purpose",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "For decades, scientists believed that monarch butterflies migrating thousands of kilometers to Mexico relied only on the position of the sun to find their way. This explanation fit well with observations made on clear days. Laboratory experiments have since shown, however, that monarchs can also sense Earth's magnetic field, which may help them stay on course when clouds hide the sun.",
+    "stem": "Which choice best describes the overall structure of the text?",
+    "choices": [
+      "It presents a long-held explanation and then describes evidence that adds to it.",
+      "It describes an experiment and then explains why it failed.",
+      "It compares two species of butterflies and their migration routes.",
+      "It argues that sun-based navigation is a myth."
+    ],
+    "answer": 0,
+    "explanation_uz": "Avval uzoq yillik tushuntirish (faqat quyosh), keyin uni to'ldiruvchi dalil (magnit maydon ham). Quyosh nazariyasi rad etilmagan, faqat to'ldirilgan.",
+    "explanation_en": "It gives the long-held sun explanation, then evidence that adds magnetic sensing; it doesn't call the sun idea a myth.",
+    "id": "a1-rw2-06"
+  },
+  {
+    "section": "rw",
+    "domain": "Craft and Structure",
+    "skill": "Cross-text connections",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Text 1\nA growing number of novels are written entirely as text messages between characters. Some critics argue that this format cannot produce characters with real depth, since short messages leave no room for description or inner thoughts.\n\nText 2\nWriting a story only in text messages forces the reader to work. Because characters never explain their feelings directly, readers must infer what lies behind a delayed reply or an unfinished sentence. In my experience as a novelist, this kind of active reading makes readers feel closer to the characters, not further away.",
+    "stem": "Based on the texts, how would the author of Text 2 most likely respond to the critics in Text 1?",
+    "choices": [
+      "By agreeing that text-message novels should include longer descriptions",
+      "By arguing that the format's brevity can lead readers to engage more deeply with characters",
+      "By claiming that most readers prefer traditional novels",
+      "By noting that text-message novels are becoming less popular"
+    ],
+    "answer": 1,
+    "explanation_uz": "Tanqidchilar: qisqa xabarlar chuqur obraz yaratmaydi. 2-matn muallifi: aynan qisqalik o'quvchini o'ylashga majbur qiladi va qahramonlarga yaqinlashtiradi.",
+    "explanation_en": "Critics say brevity prevents depth; the novelist argues brevity makes readers infer feelings and feel closer to characters.",
+    "id": "a1-rw2-07"
+  },
+  {
+    "section": "rw",
+    "domain": "Information and Ideas",
+    "skill": "Central ideas and details",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "The claim that hot water can freeze faster than cold water has been debated for centuries. Some experiments have reported the effect, but others have failed to reproduce it. Researchers have pointed out that the outcome can depend on small details, such as the shape of the container, how the temperature is measured, and whether the water contains dissolved gases.",
+    "stem": "Which choice best states the main idea of the text?",
+    "choices": [
+      "Whether hot water freezes faster than cold water remains uncertain because results depend heavily on experimental conditions.",
+      "Hot water always freezes faster than cold water when the container is the right shape.",
+      "Scientists have proven that dissolved gases prevent water from freezing.",
+      "The debate about freezing water was settled several centuries ago."
+    ],
+    "answer": 0,
+    "explanation_uz": "Ba'zi tajribalar effektni ko'rsatgan, ba'zilari yo'q; natija sharoitga bog'liq. Demak masala hali ham noaniq.",
+    "explanation_en": "Results conflict and depend on conditions, so the question remains unsettled.",
+    "id": "a1-rw2-08"
+  },
+  {
+    "section": "rw",
+    "domain": "Information and Ideas",
+    "skill": "Central ideas and details",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "The town council had planned to vote on a new set of bus routes in March. However, dozens of residents asked for more time to study the proposed maps, especially in neighborhoods where some stops would be removed. The council agreed to hold three public meetings and to postpone the vote until May.",
+    "stem": "According to the text, why did the town council postpone the vote?",
+    "choices": [
+      "Because residents asked for more time to review the proposed routes",
+      "Because the bus company had not finished drawing the maps",
+      "Because council members disagreed about the cost of new buses",
+      "Because the March meeting was canceled due to weather"
+    ],
+    "answer": 0,
+    "explanation_uz": "Matnda ochiq yozilgan: aholi xaritalarni o'rganish uchun ko'proq vaqt so'ragan, shuning uchun ovoz berish may oyiga ko'chirilgan.",
+    "explanation_en": "The text states residents asked for more time to study the maps, so the vote was postponed.",
+    "id": "a1-rw2-09"
+  },
+  {
+    "section": "rw",
+    "domain": "Information and Ideas",
+    "skill": "Command of evidence (textual)",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "A historian studying the letters of Elif Kaya, an eighteenth-century silk merchant, claims that Kaya relied heavily on information from relatives in other cities when making business decisions.",
+    "stem": "Which quotation from Kaya's letters most effectively illustrates the historian's claim?",
+    "choices": [
+      "\"The new warehouse is finished at last, and it is larger than I had hoped.\"",
+      "\"I will not buy the spring silk until my cousin in Bursa writes to tell me whether prices there have fallen.\"",
+      "\"My eldest son has begun to keep the accounts, and his handwriting is very neat.\"",
+      "\"The roads have been muddy all month, and the carts arrive late.\""
+    ],
+    "answer": 1,
+    "explanation_uz": "Da'vo: boshqa shahardagi qarindoshlar ma'lumotiga tayangan. Faqat B buni ko'rsatadi — Bursadagi amakivachchasining xatini kutmasdan sotib olmaydi.",
+    "explanation_en": "Only B shows Kaya waiting for a relative in another city before making a buying decision.",
+    "id": "a1-rw2-10"
+  },
+  {
+    "section": "rw",
+    "domain": "Information and Ideas",
+    "skill": "Command of evidence (textual)",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "A team of psychologists claims that students who take notes by hand remember lecture content better than students who type their notes, and that this advantage comes from the physical act of handwriting itself rather than from how the notes are organized.",
+    "stem": "Which finding, if true, would most directly weaken the psychologists' claim?",
+    "choices": [
+      "Students who handwrote notes wrote fewer words than students who typed.",
+      "Students who typed notes while being told to summarize, rather than copy, the lecture remembered as much as students who handwrote notes.",
+      "Students who handwrote notes reported enjoying the lecture more.",
+      "Students in both groups forgot some of the lecture content within a week."
+    ],
+    "answer": 1,
+    "explanation_uz": "Da'vo: ustunlik aynan qo'lda yozishning o'zidan keladi. Agar yozuvni xulosalab yozgan \"klaviaturachilar\" ham shuncha eslab qolsa, demak sabab — qo'lda yozish emas, xulosalash.",
+    "explanation_en": "If typists who summarized remembered just as much, the advantage comes from summarizing, not handwriting, which weakens the claim.",
+    "id": "a1-rw2-11"
+  },
+  {
+    "section": "rw",
+    "domain": "Information and Ideas",
+    "skill": "Command of evidence (quantitative)",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Bike-share trips and average temperature by month\n\nJanuary — 2°C — 1,200 trips\nApril — 14°C — 3,900 trips\nJuly — 26°C — 5,100 trips\nOctober — 12°C — 3,400 trips\n\nA transportation analyst claims that use of the city's bike-share system tends to drop in colder months.",
+    "stem": "Which choice best uses data from the table to support the analyst's claim?",
+    "choices": [
+      "Riders took 3,900 trips in April.",
+      "Trips were lowest in January, the coldest month shown at 2°C, with 1,200 trips, compared with 5,100 trips in July, the warmest month at 26°C.",
+      "October was warmer than January.",
+      "More trips were taken in April than in October."
+    ],
+    "answer": 1,
+    "explanation_uz": "Da'vo harorat va safarlar o'rtasidagi bog'liqlik haqida. B eng sovuq va eng issiq oylarni ikkala ko'rsatkich bo'yicha solishtiradi.",
+    "explanation_en": "B links both variables, comparing the coldest month (fewest trips) with the warmest (most trips).",
+    "id": "a1-rw2-12"
+  },
+  {
+    "section": "rw",
+    "domain": "Information and Ideas",
+    "skill": "Command of evidence (quantitative)",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Average reading scores before and after a tutoring program\n\nSchool A — before: 61 — after: 74\nSchool B — before: 68 — after: 70\n\nTwo schools adopted the same after-school tutoring program, and average reading scores rose at both schools. However, the data also show that ______",
+    "stem": "Which choice most effectively uses data from the table to complete the statement?",
+    "choices": [
+      "School B had a higher average score than School A before the program.",
+      "both schools had average scores above 60 after the program.",
+      "the increase at School A (13 points) was much larger than the increase at School B (2 points).",
+      "School A's average score after the program was 74."
+    ],
+    "answer": 2,
+    "explanation_uz": "\"However\" — avvalgi fikrga (ikkalasida ham o'sdi) qo'shimcha farqni ko'rsatish kerak: A da +13, B da faqat +2.",
+    "explanation_en": "After \"However,\" you need a contrast with \"scores rose at both\": A rose 13 points but B only 2.",
+    "id": "a1-rw2-13"
+  },
+  {
+    "section": "rw",
+    "domain": "Information and Ideas",
+    "skill": "Inferences",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Archaeologists excavating a coastal settlement found hundreds of pottery fragments made from a type of clay that occurs naturally only in valleys about 300 kilometers inland. No kilns or other pottery-making tools were found at the coastal site, although several kilns have been discovered at inland sites in those valleys. This evidence suggests that ______",
+    "stem": "Which choice most logically completes the text?",
+    "choices": [
+      "the coastal residents traveled inland to dig the clay and then made the pottery at home.",
+      "the pottery was most likely made inland and later brought to the coast.",
+      "the inland valleys were settled after the coastal settlement.",
+      "pottery was not important to the people of the coastal settlement."
+    ],
+    "answer": 1,
+    "explanation_uz": "Loy faqat ichkarida bor, sohilda xumdon topilmagan, ichkarida esa xumdonlar bor → kulolchilik ichkarida yasalib, sohilga olib kelingan.",
+    "explanation_en": "The clay and kilns are inland, and there are no kilns on the coast, so the pottery was likely made inland and carried there.",
+    "id": "a1-rw2-14"
+  },
+  {
+    "section": "rw",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "Malika ______ sells her honey at three farmers' markets in the region.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "Yusupova, a beekeeper in the Fergana Valley,",
+      "Yusupova, a beekeeper in the Fergana Valley",
+      "Yusupova a beekeeper in the Fergana Valley,",
+      "Yusupova; a beekeeper in the Fergana Valley,"
+    ],
+    "answer": 0,
+    "explanation_uz": "\"a beekeeper in the Fergana Valley\" — izoh (appositive), ikki tomondan vergul bilan ajratiladi.",
+    "explanation_en": "The appositive \"a beekeeper in the Fergana Valley\" must be set off by commas on both sides.",
+    "id": "a1-rw2-15"
+  },
+  {
+    "section": "rw",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "The committee's report identified three concerns: the project's cost, which had doubled since 2020; its timeline, which had slipped by a ______ and its staffing, which remained incomplete.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "year,",
+      "year",
+      "year;",
+      "year:"
+    ],
+    "answer": 2,
+    "explanation_uz": "Ro'yxat elementlari ichida vergul bor, shuning uchun elementlar nuqtali vergul bilan ajratiladi — birinchi element ham \"2020;\" bilan tugagan.",
+    "explanation_en": "List items that contain commas are separated by semicolons, matching \"2020;\" earlier.",
+    "id": "a1-rw2-16"
+  },
+  {
+    "section": "rw",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "The novel's final ______ which takes place forty years after the rest of the story, surprised many readers.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "chapter;",
+      "chapter—",
+      "chapter,",
+      "chapter"
+    ],
+    "answer": 2,
+    "explanation_uz": "\"which takes place ... story\" — qo'shimcha izoh, uning oxirida vergul turibdi, demak boshida ham vergul bo'lishi kerak.",
+    "explanation_en": "The nonessential clause ends with a comma, so it must also begin with a comma.",
+    "id": "a1-rw2-17"
+  },
+  {
+    "section": "rw",
+    "domain": "Standard English Conventions",
+    "skill": "Boundaries",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "Biologists counted forty peregrine falcons in the canyon this spring. Most of the ______ nests were found along the cliff's eastern edge.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "falcon's",
+      "falcons",
+      "falcons'",
+      "falcons's"
+    ],
+    "answer": 2,
+    "explanation_uz": "Uyalar ko'plab lochinlarga tegishli — ko'plik egalik shakli: falcons'.",
+    "explanation_en": "The nests belong to many falcons, so use the plural possessive \"falcons'.\"",
+    "id": "a1-rw2-18"
+  },
+  {
+    "section": "rw",
+    "domain": "Standard English Conventions",
+    "skill": "Form, structure, and sense",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "Last spring, the robotics club at Tashkent's School No. 110 designed a machine that sorts recycling and ______ it at the national science fair.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "presents",
+      "presented",
+      "will present",
+      "has presented"
+    ],
+    "answer": 1,
+    "explanation_uz": "\"Last spring ... designed\" — o'tgan zamon. Ikkinchi fe'l ham o'tgan zamonda bo'lishi kerak: presented.",
+    "explanation_en": "\"Last spring\" and \"designed\" set the past tense, so use \"presented.\"",
+    "id": "a1-rw2-19"
+  },
+  {
+    "section": "rw",
+    "domain": "Standard English Conventions",
+    "skill": "Form, structure, and sense",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Among the artifacts recovered from the shipwreck ______ a bronze compass and two silver coins bearing the image of a lion.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "was",
+      "is",
+      "were",
+      "has been"
+    ],
+    "answer": 2,
+    "explanation_uz": "Gap teskari tartibda: haqiqiy ega — \"a bronze compass and two silver coins\" (ko'plik). Shuning uchun \"were\".",
+    "explanation_en": "The sentence is inverted; the subject is \"a bronze compass and two silver coins\" (plural), so \"were.\"",
+    "id": "a1-rw2-20"
+  },
+  {
+    "section": "rw",
+    "domain": "Standard English Conventions",
+    "skill": "Form, structure, and sense",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "The national orchestra announced that ______ next season will feature works by living composers from Central Asia.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "their",
+      "it's",
+      "its",
+      "they're"
+    ],
+    "answer": 2,
+    "explanation_uz": "\"Orchestra\" — birlik, egalik olmoshi \"its\". \"It's\" — \"it is\" ning qisqartmasi.",
+    "explanation_en": "\"Orchestra\" is singular, so the possessive is \"its\"; \"it's\" means \"it is.\"",
+    "id": "a1-rw2-21"
+  },
+  {
+    "section": "rw",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "passage": "Many recipes for plov call for saffron, one of the most expensive spices in the world. ______ many home cooks use a pinch of turmeric instead, which gives the rice a similar golden color at a fraction of the cost.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "For this reason,",
+      "Nevertheless,",
+      "Similarly,",
+      "Meanwhile,"
+    ],
+    "answer": 0,
+    "explanation_uz": "Za'faron qimmat → shuning uchun zarchava ishlatiladi. Sabab-natija: \"For this reason\".",
+    "explanation_en": "Saffron is expensive, so cooks substitute turmeric: cause and effect, \"For this reason.\"",
+    "id": "a1-rw2-22"
+  },
+  {
+    "section": "rw",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "The first trial of the new treatment produced encouraging results. ______ the researchers urged caution, noting that the trial was small and that patients had been followed for only three months.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "Therefore,",
+      "For example,",
+      "Still,",
+      "Likewise,"
+    ],
+    "answer": 2,
+    "explanation_uz": "Natijalar yaxshi, LEKIN tadqiqotchilar ehtiyotkorlikka chaqirdi — kutilganga qarshi: \"Still\".",
+    "explanation_en": "Despite good results, they urged caution: a concession, so \"Still.\"",
+    "id": "a1-rw2-23"
+  },
+  {
+    "section": "rw",
+    "domain": "Expression of Ideas",
+    "skill": "Transitions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "Most desert plants survive dry periods by storing water in thick stems or leaves. The creosote bush, ______ survives droughts by doing almost the opposite: it drops many of its leaves and slows its growth nearly to a stop.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "for instance,",
+      "in other words,",
+      "as a result,",
+      "by contrast,"
+    ],
+    "answer": 3,
+    "explanation_uz": "Ko'pchilik o'simliklar suv to'playdi, kreozot butasi esa teskarisini qiladi — qarama-qarshilik: \"by contrast\".",
+    "explanation_en": "The creosote bush does the opposite of most desert plants: \"by contrast.\"",
+    "id": "a1-rw2-24"
+  },
+  {
+    "section": "rw",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical synthesis",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "While researching a topic, a student has taken the following notes:\n\n• Ulugh Beg was a fifteenth-century ruler and astronomer in Samarkand.\n• In the 1420s, he built a large observatory in the city.\n• His astronomers compiled a star catalog using the observatory.\n• The catalog recorded the positions of more than 1,000 stars.\n• It was one of the most accurate star catalogs of its time.",
+    "stem": "The student wants to emphasize the scale of the star catalog. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": [
+      "Ulugh Beg was a fifteenth-century ruler and astronomer.",
+      "In the 1420s, Ulugh Beg built a large observatory in Samarkand.",
+      "Ulugh Beg's star catalog was one of the most accurate of its time.",
+      "Compiled at Ulugh Beg's observatory in Samarkand, the star catalog recorded the positions of more than 1,000 stars."
+    ],
+    "answer": 3,
+    "explanation_uz": "Maqsad — katalog hajmini ta'kidlash. Hajmni faqat D ko'rsatadi: 1 000 dan ortiq yulduz. C aniqlik haqida, hajm haqida emas.",
+    "explanation_en": "The goal is scale; only D gives the size (more than 1,000 stars). C is about accuracy.",
+    "id": "a1-rw2-25"
+  },
+  {
+    "section": "rw",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical synthesis",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "While researching a topic, a student has taken the following notes:\n\n• An astrolabe is an instrument that was used for centuries by astronomers and navigators.\n• It measures how high the sun or a star is above the horizon.\n• Those measurements allowed users to determine the time and their latitude.\n• Many astrolabes were made of brass and decorated with detailed engravings.",
+    "stem": "The student wants to explain what an astrolabe was used for to an audience unfamiliar with the instrument. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": [
+      "Many astrolabes were made of brass and decorated with detailed engravings.",
+      "An astrolabe measures how high the sun or a star is above the horizon, which allowed users to determine the time and their latitude.",
+      "For centuries, astronomers and navigators used astrolabes.",
+      "Astrolabes, which were often made of brass, were used for centuries."
+    ],
+    "answer": 1,
+    "explanation_uz": "Maqsad — nima uchun ishlatilganini tushuntirish. B ikkalasini aytadi: nimani o'lchaydi va bu nimaga kerak (vaqt va kenglik).",
+    "explanation_en": "B explains both what it measures and why that mattered (time and latitude).",
+    "id": "a1-rw2-26"
+  },
+  {
+    "section": "rw",
+    "domain": "Expression of Ideas",
+    "skill": "Rhetorical synthesis",
+    "difficulty": "hard",
+    "type": "mcq",
+    "passage": "While researching a topic, a student has taken the following notes:\n\n• A team of researchers surveyed 2,000 adults who commute to work.\n• Commuters who cycled or walked reported lower stress levels than those who drove.\n• The difference remained even when commute length was taken into account.\n• The researchers concluded that active commuting may improve well-being.",
+    "stem": "The student wants to present the study's conclusion. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": [
+      "A team of researchers surveyed 2,000 adults who commute to work.",
+      "Commuters who cycled or walked reported lower stress than those who drove, even when commute length was considered.",
+      "After surveying 2,000 commuters, researchers concluded that active commuting, such as cycling or walking, may improve well-being.",
+      "Some commuters cycle or walk, while others drive."
+    ],
+    "answer": 2,
+    "explanation_uz": "Maqsad — xulosani taqdim etish. Faqat C tadqiqotchilarning xulosasini aytadi: faol qatnov farovonlikni yaxshilashi mumkin.",
+    "explanation_en": "Only C states the researchers' conclusion; B gives a finding, not the conclusion.",
+    "id": "a1-rw2-27"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear equations in one variable",
+    "difficulty": "easy",
+    "type": "mcq",
+    "stem": "If 5x − 7 = 18, what is the value of x?",
+    "choices": [
+      "3",
+      "5",
+      "11",
+      "25"
+    ],
+    "answer": 1,
+    "explanation_uz": "7 ni qo'shamiz: 5x = 25, keyin 5 ga bo'lamiz: x = 5.",
+    "explanation_en": "Add 7: 5x = 25, so x = 5.",
+    "id": "a1-m1-01"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear functions",
+    "difficulty": "easy",
+    "type": "mcq",
+    "stem": "The function f is defined by f(x) = 3x − 4. What is the value of f(6)?",
+    "choices": [
+      "2",
+      "10",
+      "14",
+      "22"
+    ],
+    "answer": 2,
+    "explanation_uz": "f(6) = 3·6 − 4 = 18 − 4 = 14.",
+    "explanation_en": "f(6) = 3(6) − 4 = 14.",
+    "id": "a1-m1-02"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear equations in two variables",
+    "difficulty": "easy",
+    "type": "mcq",
+    "stem": "A plumber charges a $45 call-out fee plus $30 for each hour of work. Which equation gives the total charge C, in dollars, for a job that takes h hours?",
+    "choices": [
+      "C = 45h + 30",
+      "C = 30h + 45",
+      "C = 75h",
+      "C = 30(h + 45)"
+    ],
+    "answer": 1,
+    "explanation_uz": "Har soat uchun 30 dollar → 30h, bunga bir martalik 45 dollar qo'shiladi: C = 30h + 45.",
+    "explanation_en": "Each hour adds $30 (30h), plus the one-time $45 fee: C = 30h + 45.",
+    "id": "a1-m1-03"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear equations in one variable",
+    "difficulty": "easy",
+    "type": "spr",
+    "stem": "If 2(x + 3) = 20, what is the value of x?",
+    "answer": [
+      "7"
+    ],
+    "explanation_uz": "Ikkiga bo'lamiz: x + 3 = 10, demak x = 7.",
+    "explanation_en": "Divide by 2: x + 3 = 10, so x = 7.",
+    "id": "a1-m1-04"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear inequalities",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "Which of the following values of x satisfies the inequality 4x + 3 > 27?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": 3,
+    "explanation_uz": "4x > 24 → x > 6. Variantlar ichida 6 dan kattasi faqat 7. (6 mos emas — tengsizlik qat'iy.)",
+    "explanation_en": "4x > 24, so x > 6. Only 7 is greater than 6 (6 itself does not work).",
+    "id": "a1-m1-05"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Systems of two linear equations",
+    "difficulty": "medium",
+    "type": "spr",
+    "stem": "2x + y = 11\nx − y = 1\n\nIf (x, y) is the solution to the system of equations above, what is the value of x?",
+    "answer": [
+      "4"
+    ],
+    "explanation_uz": "Tenglamalarni qo'shamiz: 3x = 12, x = 4.",
+    "explanation_en": "Add the equations: 3x = 12, so x = 4.",
+    "id": "a1-m1-06"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "A line in the xy-plane passes through the points (0, 3) and (2, 11). What is the slope of the line?",
+    "choices": [
+      "3",
+      "4",
+      "7",
+      "8"
+    ],
+    "answer": 1,
+    "explanation_uz": "Qiyalik = (11 − 3) / (2 − 0) = 8 / 2 = 4.",
+    "explanation_en": "Slope = (11 − 3)/(2 − 0) = 4.",
+    "id": "a1-m1-07"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Systems of two linear equations",
+    "difficulty": "hard",
+    "type": "mcq",
+    "stem": "A theater sold 40 tickets for a total of $380. Adult tickets cost $12 each and child tickets cost $7 each. How many adult tickets were sold?",
+    "choices": [
+      "16",
+      "18",
+      "20",
+      "24"
+    ],
+    "answer": 2,
+    "explanation_uz": "a + c = 40, 12a + 7c = 380. c = 40 − a ni qo'yamiz: 12a + 280 − 7a = 380 → 5a = 100 → a = 20.",
+    "explanation_en": "a + c = 40 and 12a + 7c = 380. Substitute c = 40 − a: 5a + 280 = 380, so a = 20.",
+    "id": "a1-m1-08"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Equivalent expressions",
+    "difficulty": "easy",
+    "type": "mcq",
+    "stem": "Which expression is equivalent to 3x(x − 4) + 2x?",
+    "choices": [
+      "3x² − 10x",
+      "3x² − 12x",
+      "3x² − 14x",
+      "5x² − 12x"
+    ],
+    "answer": 0,
+    "explanation_uz": "3x(x − 4) = 3x² − 12x. Unga 2x qo'shsak: 3x² − 10x.",
+    "explanation_en": "3x(x − 4) = 3x² − 12x; adding 2x gives 3x² − 10x.",
+    "id": "a1-m1-09"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear equations",
+    "difficulty": "medium",
+    "type": "spr",
+    "stem": "x² − 5x − 14 = 0\n\nWhat is the positive solution to the equation above?",
+    "answer": [
+      "7"
+    ],
+    "explanation_uz": "Ko'paytuvchilarga ajratamiz: (x − 7)(x + 2) = 0. Yechimlar 7 va −2, musbati 7.",
+    "explanation_en": "Factor: (x − 7)(x + 2) = 0. The solutions are 7 and −2; the positive one is 7.",
+    "id": "a1-m1-10"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "A car is worth $20,000 and loses 15% of its value each year. Which function gives the value V, in dollars, of the car t years from now?",
+    "choices": [
+      "V(t) = 20,000(0.15)^t",
+      "V(t) = 20,000(0.85)^t",
+      "V(t) = 20,000(1.15)^t",
+      "V(t) = 20,000 − 0.15t"
+    ],
+    "answer": 1,
+    "explanation_uz": "Har yili 15% yo'qotsa, qiymatning 85% i qoladi: ko'paytuvchi 0.85. V(t) = 20 000(0.85)^t.",
+    "explanation_en": "Losing 15% each year leaves 85%, so the factor is 0.85.",
+    "id": "a1-m1-11"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "The function g is defined by g(x) = x² + 2x. What is the value of g(−3)?",
+    "choices": [
+      "−15",
+      "−3",
+      "3",
+      "15"
+    ],
+    "answer": 2,
+    "explanation_uz": "g(−3) = (−3)² + 2·(−3) = 9 − 6 = 3.",
+    "explanation_en": "g(−3) = 9 − 6 = 3.",
+    "id": "a1-m1-12"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear equations",
+    "difficulty": "hard",
+    "type": "spr",
+    "stem": "If √(2x + 5) = 7, what is the value of x?",
+    "answer": [
+      "22"
+    ],
+    "explanation_uz": "Ikkala tomonni kvadratga ko'taramiz: 2x + 5 = 49 → 2x = 44 → x = 22.",
+    "explanation_en": "Square both sides: 2x + 5 = 49, so x = 22.",
+    "id": "a1-m1-13"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Equivalent expressions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "stem": "Which expression is equivalent to (x² − 9)/(x + 3) for x ≠ −3?",
+    "choices": [
+      "x + 3",
+      "x − 3",
+      "x − 9",
+      "x² − 3"
+    ],
+    "answer": 1,
+    "explanation_uz": "x² − 9 = (x − 3)(x + 3). (x + 3) qisqaradi: x − 3.",
+    "explanation_en": "x² − 9 = (x − 3)(x + 3); cancel (x + 3) to get x − 3.",
+    "id": "a1-m1-14"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "stem": "The function h is defined by h(x) = (x − 2)(x + 6). For what value of x does h(x) reach its minimum value?",
+    "choices": [
+      "−16",
+      "−6",
+      "−2",
+      "2"
+    ],
+    "answer": 2,
+    "explanation_uz": "Parabolaning uchi ildizlar o'rtasida: ildizlar 2 va −6, o'rtasi (2 + (−6)) / 2 = −2. (−16 — bu minimal qiymat, x emas.)",
+    "explanation_en": "The vertex is midway between the roots 2 and −6: x = −2. (−16 is the minimum value, not the x-value.)",
+    "id": "a1-m1-15"
+  },
+  {
+    "section": "math",
+    "domain": "Problem-Solving and Data Analysis",
+    "skill": "Percentages",
+    "difficulty": "easy",
+    "type": "mcq",
+    "stem": "What is 30% of 250?",
+    "choices": [
+      "25",
+      "75",
+      "80",
+      "175"
+    ],
+    "answer": 1,
+    "explanation_uz": "250 · 0.30 = 75.",
+    "explanation_en": "0.30 × 250 = 75.",
+    "id": "a1-m1-16"
+  },
+  {
+    "section": "math",
+    "domain": "Problem-Solving and Data Analysis",
+    "skill": "Ratios, rates, and proportions",
+    "difficulty": "medium",
+    "type": "spr",
+    "stem": "A recipe uses 3 cups of flour for every 2 cups of sugar. How many cups of flour are needed if 10 cups of sugar are used?",
+    "answer": [
+      "15"
+    ],
+    "explanation_uz": "Nisbat 3:2. Shakar 5 baravar ko'p (10 = 2·5), demak un ham 5 baravar: 3·5 = 15.",
+    "explanation_en": "The ratio is 3:2; 10 cups of sugar is 5 times 2, so flour is 5 × 3 = 15.",
+    "id": "a1-m1-17"
+  },
+  {
+    "section": "math",
+    "domain": "Problem-Solving and Data Analysis",
+    "skill": "One-variable data",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "The data set 6, 8, 8, 10, 13 lists the number of books five students read last year. What is the mean of the data set?",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 2,
+    "explanation_uz": "Yig'indi: 6 + 8 + 8 + 10 + 13 = 45. O'rtacha: 45 / 5 = 9.",
+    "explanation_en": "Sum = 45; mean = 45/5 = 9.",
+    "id": "a1-m1-18"
+  },
+  {
+    "section": "math",
+    "domain": "Problem-Solving and Data Analysis",
+    "skill": "Probability",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "In a class survey, 25 students chose math as their favorite subject, 20 chose science, and 15 chose art. If one of these students is selected at random, what is the probability that the student chose science?",
+    "choices": [
+      "1/4",
+      "1/3",
+      "5/12",
+      "1/2"
+    ],
+    "answer": 1,
+    "explanation_uz": "Jami: 25 + 20 + 15 = 60. Fan tanlaganlar 20 ta: 20/60 = 1/3.",
+    "explanation_en": "Total = 60; science = 20; 20/60 = 1/3.",
+    "id": "a1-m1-19"
+  },
+  {
+    "section": "math",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Lines, angles, and triangles",
+    "difficulty": "easy",
+    "type": "spr",
+    "stem": "Two angles are supplementary. If one angle measures 47°, what is the measure, in degrees, of the other angle?",
+    "answer": [
+      "133"
+    ],
+    "explanation_uz": "Qo'shni (supplementary) burchaklar yig'indisi 180°: 180 − 47 = 133.",
+    "explanation_en": "Supplementary angles sum to 180°: 180 − 47 = 133.",
+    "id": "a1-m1-20"
+  },
+  {
+    "section": "math",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Area and volume",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "A rectangle has an area of 72 square inches and a length of 9 inches. What is the perimeter of the rectangle, in inches?",
+    "choices": [
+      "26",
+      "30",
+      "34",
+      "72"
+    ],
+    "answer": 2,
+    "explanation_uz": "Eni: 72 / 9 = 8. Perimetr: 2(9 + 8) = 34.",
+    "explanation_en": "Width = 72/9 = 8, so perimeter = 2(9 + 8) = 34.",
+    "id": "a1-m1-21"
+  },
+  {
+    "section": "math",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Right triangles and trigonometry",
+    "difficulty": "hard",
+    "type": "mcq",
+    "stem": "A right triangle has a hypotenuse of length 26 and one leg of length 10. What is the area of the triangle?",
+    "choices": [
+      "120",
+      "130",
+      "240",
+      "260"
+    ],
+    "answer": 0,
+    "explanation_uz": "Ikkinchi katet: √(26² − 10²) = √(676 − 100) = √576 = 24. Yuza: (10 · 24) / 2 = 120.",
+    "explanation_en": "Other leg = √(676 − 100) = 24. Area = (10 × 24)/2 = 120.",
+    "id": "a1-m1-22"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear equations in one variable",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "If 3(2x − 5) = 4x + 9, what is the value of x?",
+    "choices": [
+      "3",
+      "6",
+      "12",
+      "24"
+    ],
+    "answer": 2,
+    "explanation_uz": "6x − 15 = 4x + 9 → 2x = 24 → x = 12.",
+    "explanation_en": "6x − 15 = 4x + 9, so 2x = 24 and x = 12.",
+    "id": "a1-m2-01"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear functions",
+    "difficulty": "medium",
+    "type": "spr",
+    "stem": "The graph of y = mx + b in the xy-plane passes through the points (1, 5) and (4, 17). What is the value of b?",
+    "answer": [
+      "1"
+    ],
+    "explanation_uz": "Qiyalik m = (17 − 5) / (4 − 1) = 4. (1, 5) ni qo'yamiz: 5 = 4 + b → b = 1.",
+    "explanation_en": "m = 12/3 = 4. Using (1, 5): 5 = 4 + b, so b = 1.",
+    "id": "a1-m2-02"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Systems of two linear equations",
+    "difficulty": "hard",
+    "type": "mcq",
+    "stem": "2x + 3y = 8\n4x + ky = 16\n\nIn the system of equations above, k is a constant. For what value of k does the system have infinitely many solutions?",
+    "choices": [
+      "3",
+      "4",
+      "6",
+      "8"
+    ],
+    "answer": 2,
+    "explanation_uz": "Cheksiz ko'p yechim — ikkinchi tenglama birinchisining 2 baravari bo'lishi kerak: 4 = 2·2, 16 = 2·8, demak k = 2·3 = 6.",
+    "explanation_en": "The second equation must be 2 times the first: 4 = 2(2) and 16 = 2(8), so k = 2(3) = 6.",
+    "id": "a1-m2-03"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear equations in two variables",
+    "difficulty": "hard",
+    "type": "spr",
+    "stem": "Phone plan A costs $25 per month plus $0.10 per text message. Phone plan B costs $40 per month with unlimited texts. For how many text messages in a month do the two plans cost the same amount?",
+    "answer": [
+      "150"
+    ],
+    "explanation_uz": "25 + 0.10t = 40 → 0.10t = 15 → t = 150.",
+    "explanation_en": "25 + 0.10t = 40, so 0.10t = 15 and t = 150.",
+    "id": "a1-m2-04"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear equations in two variables",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "The equation C = 18 + 2.5m gives the cost C, in dollars, of renting a kayak for m hours. What is the best interpretation of 2.5 in this context?",
+    "choices": [
+      "The total cost of renting a kayak for one hour",
+      "The additional cost for each hour of rental",
+      "The number of hours a kayak can be rented",
+      "The fixed fee charged before any time is used"
+    ],
+    "answer": 1,
+    "explanation_uz": "2.5 — m (soatlar) oldidagi koeffitsient, ya'ni har bir qo'shimcha soat narxi. 18 — qat'iy to'lov.",
+    "explanation_en": "2.5 multiplies m, so it's the cost per additional hour; 18 is the fixed fee.",
+    "id": "a1-m2-05"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Linear inequalities",
+    "difficulty": "hard",
+    "type": "mcq",
+    "stem": "Sardor has $60 saved and plans to save $15 each week. He wants to have at least $240. Which inequality gives the number of weeks, w, that Sardor needs to save to reach his goal?",
+    "choices": [
+      "60 + 15w ≥ 240",
+      "15 + 60w ≥ 240",
+      "60 + 15w ≤ 240",
+      "60w + 15 ≤ 240"
+    ],
+    "answer": 0,
+    "explanation_uz": "Boshlang'ich 60, har hafta +15 → 60 + 15w. \"Kamida 240\" → ≥ 240.",
+    "explanation_en": "He starts with 60 and adds 15 per week; \"at least 240\" means ≥ 240.",
+    "id": "a1-m2-06"
+  },
+  {
+    "section": "math",
+    "domain": "Algebra",
+    "skill": "Systems of two linear equations",
+    "difficulty": "hard",
+    "type": "spr",
+    "stem": "3x + 2y = 12\nx + 2y = 8\n\nIf (x, y) is the solution to the system of equations above, what is the value of x + y?",
+    "answer": [
+      "5"
+    ],
+    "explanation_uz": "Ikkinchini birinchidan ayiramiz: 2x = 4 → x = 2. Keyin 2 + 2y = 8 → y = 3. x + y = 5.",
+    "explanation_en": "Subtract: 2x = 4, so x = 2; then y = 3, and x + y = 5.",
+    "id": "a1-m2-07"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "The function f is defined by f(x) = 3 · 2^x. What is the value of f(4)?",
+    "choices": [
+      "24",
+      "36",
+      "48",
+      "96"
+    ],
+    "answer": 2,
+    "explanation_uz": "2⁴ = 16, 3 · 16 = 48.",
+    "explanation_en": "2⁴ = 16 and 3 × 16 = 48.",
+    "id": "a1-m2-08"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear equations",
+    "difficulty": "hard",
+    "type": "mcq",
+    "stem": "In the equation x² + bx + 16 = 0, b is a positive constant. If the equation has exactly one real solution, what is the value of b?",
+    "choices": [
+      "4",
+      "8",
+      "16",
+      "32"
+    ],
+    "answer": 1,
+    "explanation_uz": "Bitta yechim → diskriminant 0: b² − 4·16 = 0 → b² = 64 → b = 8.",
+    "explanation_en": "One solution means b² − 64 = 0, so b = 8.",
+    "id": "a1-m2-09"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear equations",
+    "difficulty": "hard",
+    "type": "spr",
+    "stem": "x² + y² = 25\ny = x + 1\n\nOne solution (x, y) to the system above has x > 0. What is the value of x for this solution?",
+    "answer": [
+      "3"
+    ],
+    "explanation_uz": "y ni qo'yamiz: x² + (x + 1)² = 25 → 2x² + 2x − 24 = 0 → x² + x − 12 = 0 → (x + 4)(x − 3) = 0. Musbat yechim x = 3.",
+    "explanation_en": "Substitute: 2x² + 2x − 24 = 0, so (x + 4)(x − 3) = 0; the positive solution is 3.",
+    "id": "a1-m2-10"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Equivalent expressions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "Which expression is equivalent to (2x + 3)²?",
+    "choices": [
+      "4x² + 9",
+      "4x² + 6x + 9",
+      "4x² + 12x + 9",
+      "2x² + 12x + 9"
+    ],
+    "answer": 2,
+    "explanation_uz": "(a + b)² = a² + 2ab + b²: 4x² + 2·2x·3 + 9 = 4x² + 12x + 9.",
+    "explanation_en": "(2x + 3)² = 4x² + 12x + 9.",
+    "id": "a1-m2-11"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "stem": "The height h, in feet, of a ball t seconds after it is thrown is modeled by h(t) = −16t² + 64t + 5. What is the maximum height of the ball, in feet?",
+    "choices": [
+      "64",
+      "69",
+      "74",
+      "133"
+    ],
+    "answer": 1,
+    "explanation_uz": "Uch: t = −64 / (2·(−16)) = 2. h(2) = −64 + 128 + 5 = 69.",
+    "explanation_en": "The vertex is at t = 2; h(2) = −64 + 128 + 5 = 69.",
+    "id": "a1-m2-12"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Equivalent expressions",
+    "difficulty": "hard",
+    "type": "spr",
+    "stem": "If (x^a)(x³) = x¹¹ and (x^b)² = x¹⁰ for all positive values of x, what is the value of a + b?",
+    "answer": [
+      "13"
+    ],
+    "explanation_uz": "a + 3 = 11 → a = 8. 2b = 10 → b = 5. a + b = 13.",
+    "explanation_en": "a + 3 = 11 gives a = 8; 2b = 10 gives b = 5; a + b = 13.",
+    "id": "a1-m2-13"
+  },
+  {
+    "section": "math",
+    "domain": "Advanced Math",
+    "skill": "Nonlinear functions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "stem": "The population of a town t years after 2020 is modeled by P(t) = 800(1.05)^t. Which statement best describes the model?",
+    "choices": [
+      "The population increases by 5 people each year.",
+      "The population increases by 5% each year.",
+      "The population increases by 105% each year.",
+      "The population decreases by 5% each year."
+    ],
+    "answer": 1,
+    "explanation_uz": "1.05 = 1 + 0.05, ya'ni har yili 5% o'sish (aholi soni emas, foiz).",
+    "explanation_en": "The factor 1.05 means 5% growth each year.",
+    "id": "a1-m2-14"
+  },
+  {
+    "section": "math",
+    "domain": "Problem-Solving and Data Analysis",
+    "skill": "Percentages",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "The price of a shirt increased from $40 to $50. By what percent did the price increase?",
+    "choices": [
+      "10%",
+      "20%",
+      "25%",
+      "50%"
+    ],
+    "answer": 2,
+    "explanation_uz": "O'sish 10 dollar. Foiz boshlang'ich narxdan: 10 / 40 = 0.25 = 25%. (20% — 50 dan hisoblangan xato.)",
+    "explanation_en": "The increase is $10; 10/40 = 25%. (20% wrongly uses 50 as the base.)",
+    "id": "a1-m2-15"
+  },
+  {
+    "section": "math",
+    "domain": "Problem-Solving and Data Analysis",
+    "skill": "One-variable data",
+    "difficulty": "hard",
+    "type": "spr",
+    "stem": "The mean of five numbers is 12. Four of the numbers are 8, 10, 14, and 15. What is the fifth number?",
+    "answer": [
+      "13"
+    ],
+    "explanation_uz": "Jami yig'indi 5 · 12 = 60. To'rttasining yig'indisi 47. Beshinchisi: 60 − 47 = 13.",
+    "explanation_en": "Total = 60; the four sum to 47; 60 − 47 = 13.",
+    "id": "a1-m2-16"
+  },
+  {
+    "section": "math",
+    "domain": "Problem-Solving and Data Analysis",
+    "skill": "Ratios, rates, and proportions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "stem": "A runner covers 400 meters in 80 seconds. What is the runner's average speed, in kilometers per hour?",
+    "choices": [
+      "12",
+      "15",
+      "18",
+      "20"
+    ],
+    "answer": 2,
+    "explanation_uz": "400 / 80 = 5 m/s. 1 m/s = 3.6 km/soat, demak 5 · 3.6 = 18 km/soat.",
+    "explanation_en": "5 m/s × 3.6 = 18 km/h.",
+    "id": "a1-m2-17"
+  },
+  {
+    "section": "math",
+    "domain": "Problem-Solving and Data Analysis",
+    "skill": "Two-variable data and probability",
+    "difficulty": "hard",
+    "type": "mcq",
+    "stem": "In a survey of 200 people, 120 said they own a cat, 90 said they own a dog, and 40 said they own both a cat and a dog. How many of the people surveyed own neither a cat nor a dog?",
+    "choices": [
+      "10",
+      "30",
+      "40",
+      "70"
+    ],
+    "answer": 1,
+    "explanation_uz": "Mushuk yoki it egalari: 120 + 90 − 40 = 170 (ikkalasi bor odamlar ikki marta sanalmasin). Hech biri yo'q: 200 − 170 = 30.",
+    "explanation_en": "Cat or dog: 120 + 90 − 40 = 170. Neither: 200 − 170 = 30.",
+    "id": "a1-m2-18"
+  },
+  {
+    "section": "math",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Circles",
+    "difficulty": "medium",
+    "type": "mcq",
+    "stem": "A circle has a radius of 6 centimeters. What is the circumference of the circle, in centimeters?",
+    "choices": [
+      "6π",
+      "12π",
+      "36π",
+      "72π"
+    ],
+    "answer": 1,
+    "explanation_uz": "C = 2πr = 2π · 6 = 12π. (36π — yuza.)",
+    "explanation_en": "C = 2πr = 12π. (36π is the area.)",
+    "id": "a1-m2-19"
+  },
+  {
+    "section": "math",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Area and volume",
+    "difficulty": "hard",
+    "type": "spr",
+    "stem": "A cube has a total surface area of 150 square centimeters. What is the volume of the cube, in cubic centimeters?",
+    "answer": [
+      "125"
+    ],
+    "explanation_uz": "6 ta yon: 150 / 6 = 25, demak qirra 5. Hajm: 5³ = 125.",
+    "explanation_en": "Each face is 150/6 = 25, so the edge is 5 and the volume is 125.",
+    "id": "a1-m2-20"
+  },
+  {
+    "section": "math",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Circles",
+    "difficulty": "hard",
+    "type": "mcq",
+    "stem": "(x − 2)² + (y + 5)² = 49\n\nThe equation above defines a circle in the xy-plane. What are the coordinates of the center and the radius of the circle?",
+    "choices": [
+      "Center (−2, 5), radius 7",
+      "Center (2, −5), radius 7",
+      "Center (2, −5), radius 49",
+      "Center (−2, 5), radius 49"
+    ],
+    "answer": 1,
+    "explanation_uz": "(x − h)² + (y − k)² = r² ko'rinishi: h = 2, k = −5, r = √49 = 7.",
+    "explanation_en": "In (x − h)² + (y − k)² = r², h = 2, k = −5, and r = 7.",
+    "id": "a1-m2-21"
+  },
+  {
+    "section": "math",
+    "domain": "Geometry and Trigonometry",
+    "skill": "Lines, angles, and triangles",
+    "difficulty": "hard",
+    "type": "mcq",
+    "stem": "Triangle ABC is similar to triangle DEF, where A corresponds to D, B to E, and C to F. If AB = 6, DE = 15, and BC = 8, what is the length of EF?",
+    "choices": [
+      "12",
+      "17",
+      "20",
+      "24"
+    ],
+    "answer": 2,
+    "explanation_uz": "O'xshashlik koeffitsienti: 15 / 6 = 2.5. EF = 8 · 2.5 = 20.",
+    "explanation_en": "Scale factor = 15/6 = 2.5, so EF = 8 × 2.5 = 20.",
+    "id": "a1-m2-22"
   }
 ]

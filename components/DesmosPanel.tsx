@@ -3,33 +3,38 @@
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Bluebook'dagidek sayt ichidagi Desmos kalkulyatori.
- * Sarlavhadan ushlab suriladi, pastki o'ng burchakdan kattalashtiriladi.
- * Yopilganda ham iframe saqlanib qoladi — kiritilgan grafiklar yo'qolmaydi.
+ * Bluebook'dagidek: Desmos ochilganda ekran ikkiga bo'linadi — chapda kalkulyator, o'ngda savol.
+ * O'rtadagi ajratgichni surib, nisbatni o'zgartirish mumkin. Yopilganda ham kalkulyator
+ * xotirada qoladi — chizilgan grafiklar yo'qolmaydi.
  */
-export function DesmosPanel({ open, onClose }: { open: boolean; onClose: () => void }) {
+export function DesmosSplit({
+  open,
+  onClose,
+  children,
+}: {
+  open: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+}) {
   const [mounted, setMounted] = useState(false);
-  const [pos, setPos] = useState({ x: 24, y: 80 });
-  const [wide, setWide] = useState(false);
-  const drag = useRef<{ dx: number; dy: number } | null>(null);
+  const [pct, setPct] = useState(50);
+  const wrap = useRef<HTMLDivElement>(null);
+  const dragging = useRef(false);
 
   useEffect(() => {
-    if (open && !mounted) {
-      // Birinchi ochilishda ekranning o'ng tomoniga joylashadi
-      setPos({ x: Math.max(8, window.innerWidth - 444), y: 80 });
-      setMounted(true);
-    }
-  }, [open, mounted]);
+    if (open) setMounted(true);
+  }, [open]);
 
   useEffect(() => {
     function move(e: PointerEvent) {
-      if (!drag.current) return;
-      const x = Math.min(Math.max(0, e.clientX - drag.current.dx), window.innerWidth - 120);
-      const y = Math.min(Math.max(0, e.clientY - drag.current.dy), window.innerHeight - 60);
-      setPos({ x, y });
+      if (!dragging.current || !wrap.current) return;
+      const r = wrap.current.getBoundingClientRect();
+      const vertical = window.innerWidth <= 760;
+      const p = vertical ? ((e.clientY - r.top) / r.height) * 100 : ((e.clientX - r.left) / r.width) * 100;
+      setPct(Math.min(75, Math.max(25, p)));
     }
     function up() {
-      drag.current = null;
+      dragging.current = false;
       document.body.classList.remove("dragging");
     }
     window.addEventListener("pointermove", move);
@@ -40,36 +45,39 @@ export function DesmosPanel({ open, onClose }: { open: boolean; onClose: () => v
     };
   }, []);
 
-  if (!mounted) return null;
-
   return (
-    <div
-      className={`desmos-panel ${wide ? "wide" : ""}`}
-      style={{ left: pos.x, top: pos.y, display: open ? "flex" : "none" }}
-      role="dialog"
-      aria-label="Desmos kalkulyatori"
-    >
-      <div
-        className="desmos-head"
-        onPointerDown={(e) => {
-          if ((e.target as HTMLElement).closest("button, a")) return;
-          drag.current = { dx: e.clientX - pos.x, dy: e.clientY - pos.y };
-          document.body.classList.add("dragging");
-        }}
-      >
-        <span>⠿ Desmos kalkulyatori</span>
-        <div className="desmos-actions">
-          <a href="https://www.desmos.com/calculator" target="_blank" rel="noopener noreferrer" title="Yangi oynada ochish">↗</a>
-          <button onClick={() => setWide(!wide)} title={wide ? "Kichraytirish" : "Kattalashtirish"}>{wide ? "⤡" : "⤢"}</button>
-          <button onClick={onClose} title="Yopish">✕</button>
+    <div className={`split-wrap ${open ? "with-calc" : ""}`} ref={wrap}>
+      {mounted && (
+        <section className="calc-pane" style={{ display: open ? "flex" : "none", flexBasis: `${pct}%` }} aria-label="Desmos kalkulyatori">
+          <div className="calc-head">
+            <span>🧮 Desmos Graphing Calculator</span>
+            <div className="calc-actions">
+              <button onClick={() => setPct(pct >= 60 ? 50 : 65)} title="Kenglikni o'zgartirish">{pct >= 60 ? "⇤" : "⇥"}</button>
+              <button onClick={onClose} title="Yopish">✕</button>
+            </div>
+          </div>
+          <iframe
+            src="https://www.desmos.com/calculator?lang=en"
+            title="Desmos Graphing Calculator"
+            className="calc-frame"
+            allow="clipboard-write"
+          />
+        </section>
+      )}
+      {open && (
+        <div
+          className="split-divider"
+          role="separator"
+          aria-orientation="vertical"
+          onPointerDown={() => {
+            dragging.current = true;
+            document.body.classList.add("dragging");
+          }}
+        >
+          <span />
         </div>
-      </div>
-      <iframe
-        src="https://www.desmos.com/calculator?lang=en"
-        title="Desmos Graphing Calculator"
-        className="desmos-frame"
-        allow="clipboard-write"
-      />
+      )}
+      <div className="split-main">{children}</div>
     </div>
   );
 }
