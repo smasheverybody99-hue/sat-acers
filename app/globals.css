@@ -824,3 +824,14 @@ mark.hl { background: #fde68a; color: inherit; border-radius: 2px; cursor: point
 .login-sent { padding: 16px; border-radius: 16px; background: var(--green-soft); border: 1px solid rgba(61,220,151,.4); text-align: left; }
 .login-sent p { margin: 6px 0 8px; color: var(--ink); font-size: 14px; }
 .sync-pill { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,.06); font-weight: 700; font-size: 14px; }
+
+/* Legal pages */
+.legal { max-width: 720px; padding-top: 56px; padding-bottom: 40px; line-height: 1.7; }
+.legal h1 { font-family: var(--font-display, inherit); font-size: clamp(28px, 4vw, 40px); margin: 0 0 6px; }
+.legal h2 { font-size: 19px; margin: 32px 0 8px; }
+.legal p, .legal li { color: var(--muted); }
+.legal b { color: var(--ink); }
+.legal ul { padding-left: 20px; }
+.legal li { margin: 6px 0; }
+.legal a, .footer a, .login-note a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.legal-updated { font-size: 13px; }

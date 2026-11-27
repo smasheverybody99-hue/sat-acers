@@ -113,7 +113,10 @@ export function Login() {
                 {busy ? "Yuborilmoqda…" : "Kirish havolasini yuborish"}
               </button>
             </form>
-            <p className="login-note">Parol kerak emas: emailingizga bir martalik havola keladi.</p>
+            <p className="login-note">
+              Parol kerak emas: emailingizga bir martalik havola keladi. Kirish orqali{" "}
+              <a href="/terms">shartlar</a> va <a href="/privacy">maxfiylik siyosati</a>ga rozilik bildirasiz.
+            </p>
           </>
         )}
         {error && <p className="login-error">{error}</p>}
