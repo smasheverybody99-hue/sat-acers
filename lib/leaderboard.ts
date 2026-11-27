@@ -73,7 +73,7 @@ export async function pushLeaderboard(sb: SupabaseClient, userId: string): Promi
     const p = loadProgress();
     const now = Date.now();
     const streak = currentStreak(p, now);
-    const { error } = await sb.from("leaderboard").upsert({
+    const row: Record<string, unknown> = {
       user_id: userId,
       display_name: cleanName(profile.name || "") || defaultName(userId),
       week_start: weekKey(now),
@@ -82,7 +82,8 @@ export async function pushLeaderboard(sb: SupabaseClient, userId: string): Promi
       last_day: p.streak.lastDay ?? dayKey(now),
       total_answered: totalAnswered(p),
       updated_at: new Date().toISOString(),
-    });
+    };
+    const { error } = await sb.from("leaderboard").upsert(row);
     if (error) console.warn("[leaderboard]", error.message);
   } catch (e) {
     console.warn("[leaderboard]", e);
@@ -100,5 +101,5 @@ export async function fetchBoard(sb: SupabaseClient, board: Board): Promise<Lead
       : sb.from("leaderboard").select(cols).gte("last_day", dayKey(now - 86_400_000)).gt("streak", 0).order("streak", { ascending: false });
   const { data, error } = await q.limit(50);
   if (error) throw error;
-  return (data ?? []) as LeaderRow[];
+  return ((data ?? []) as unknown) as LeaderRow[];
 }

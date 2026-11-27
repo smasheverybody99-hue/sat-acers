@@ -87,7 +87,7 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
         <div key={mi} style={{ marginBottom: 18 }}>
           <div className="module-label">
             {SECTION_LABEL[mod.section]} — Module {mod.number}
-            {mod.number === 2 && result.routes?.[mod.section] && ` (${result.routes[mod.section] === "harder" ? "harder" : "easier"})`}
+            {mod.number === 2 && result.routes?.[mod.section] ? ` (${result.routes?.[mod.section]})` : ""}
           </div>
           <div className="mistake-list">
             {moduleQuestions(mod, result.routes).map((q, i) => {
@@ -103,7 +103,7 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
                     <span className="ri-ans">
                       You: <b>{answerLabel(q, a)}</b> · Correct: <b>{correctAnswerLabel(q)}</b>
                     </span>
-                    {result.times?.[q.id] !== undefined && <span className="ri-time">{fmtSec(result.times[q.id])}</span>}
+                    {typeof result.times?.[q.id] === "number" && <span className="ri-time">{fmtSec(result.times?.[q.id] ?? 0)}</span>}
                     <span className="ri-chev">{isOpen ? "▲" : "▼"}</span>
                   </button>
                   {isOpen && (

@@ -84,8 +84,10 @@ const missingColumn = (e: { message?: string; code?: string } | null) =>
   !!e && (e.code === "42703" || e.code === "PGRST204" || /column/i.test(e.message ?? ""));
 
 /** After sign-in: pull from cloud → merge → save to both */
+type DbResult = { data: unknown; error: { message?: string; code?: string } | null };
+
 export async function pullAndMerge(sb: SupabaseClient, userId: string): Promise<void> {
-  let res = await sb
+  let res: DbResult = await sb
     .from("user_data")
     .select(extraColumns ? "progress, mock_history, vocab, profile" : "progress, mock_history")
     .eq("user_id", userId)
@@ -107,18 +109,17 @@ export async function pullAndMerge(sb: SupabaseClient, userId: string): Promise<
 }
 
 export async function push(sb: SupabaseClient, userId: string): Promise<void> {
-  const base = {
+  const base: Record<string, unknown> = {
     user_id: userId,
     progress: loadProgress(),
     mock_history: loadHistory(),
     updated_at: new Date().toISOString(),
   };
-  let { error } = await sb
-    .from("user_data")
-    .upsert(extraColumns ? { ...base, vocab: loadVocab(), profile: loadProfile() } : base);
+  const row: Record<string, unknown> = extraColumns ? { ...base, vocab: loadVocab(), profile: loadProfile() } : base;
+  let { error }: DbResult = await sb.from("user_data").upsert(row);
   if (error && extraColumns && missingColumn(error)) {
     extraColumns = false;
-    ({ error } = await sb.from("user_data").upsert(base));
+    ({ error } = (await sb.from("user_data").upsert(base)) as DbResult);
   }
   if (error) throw error;
   await pushLeaderboard(sb, userId);
