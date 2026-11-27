@@ -1,7 +1,7 @@
 /**
- * Bulut bilan sinxronlash.
- * Asosiy manba — brauzer xotirasi (internet bo'lmasa ham ishlaydi). Kirilganda bulutdagi ma'lumot
- * mahalliy ma'lumot bilan BIRLASHTIRILADI (hech narsa o'chib ketmaydi), keyin har o'zgarishda bulutga yuboriladi.
+ * Cloud sync.
+ * The source of truth is browser storage (works offline). On sign-in, cloud data is
+ * MERGED with local data (nothing is lost), then every change is pushed to the cloud.
  */
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { loadProgress, saveProgressRaw, type Progress } from "./progress";
@@ -30,7 +30,7 @@ export function mergeProgress(a: Progress, b: Progress): Progress {
     }
   }
 
-  // Xatonoma: oxirgi urinish natijasiga qarab qaror qilamiz
+  // Mistake Log: decide based on the latest attempt
   const mistakes: Progress["mistakes"] = {};
   const ids = new Set([...Object.keys(a.mistakes), ...Object.keys(b.mistakes)]);
   for (const id of ids) {
@@ -40,13 +40,13 @@ export function mergeProgress(a: Progress, b: Progress): Progress {
     const lastAtB = b.attempts[id]?.lastAt ?? 0;
     const fromNewer = lastAtA >= lastAtB ? ma : mb;
     const fromOther = lastAtA >= lastAtB ? mb : ma;
-    // Yangiroq qurilmada savol xatonomadan chiqarilgan bo'lsa (o'zlashtirilgan), uni qaytarmaymiz
+    // If the newer device removed a question from the Mistake Log (mastered), don't bring it back
     const newerHasAttempt = (lastAtA >= lastAtB ? lastAtA : lastAtB) > 0;
     if (fromNewer) mistakes[id] = fromNewer;
     else if (!newerHasAttempt && fromOther) mistakes[id] = fromOther;
   }
 
-  // Streak: eng so'nggi kun ustun, bir xil kun bo'lsa — kattasi
+  // Streak: the latest day wins; on the same day, take the larger count
   let streak = a.streak;
   const sa = a.streak, sb = b.streak;
   if (!sa.lastDay || (sb.lastDay && sb.lastDay > sa.lastDay)) streak = sb;
@@ -67,7 +67,7 @@ export function mergeHistory(a: MockResult[], b: MockResult[]): MockResult[] {
 
 const isEmpty = (p: Progress) => !Object.keys(p.attempts).length && !p.streak.lastDay;
 
-/** Kirgandan keyin: bulutdan olish → birlashtirish → ikkala joyga saqlash */
+/** After sign-in: pull from cloud → merge → save to both */
 export async function pullAndMerge(sb: SupabaseClient, userId: string): Promise<void> {
   const { data, error } = await sb.from("user_data").select("progress, mock_history").eq("user_id", userId).maybeSingle();
   if (error) throw error;

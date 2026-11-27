@@ -5,7 +5,7 @@ import type { Question, Section } from "./types";
 export interface MockModule {
   section: Section;
   number: number;
-  /** Haqiqiy SAT: R&W — 32 daqiqa (27 savol), Math — 35 daqiqa (22 savol) */
+  /** Real SAT: R&W is 32 min (27 questions), Math is 35 min (22 questions) */
   minutes: number;
   questionIds: string[];
 }
@@ -14,7 +14,7 @@ export interface Mock {
   id: string;
   title: string;
   description?: string;
-  /** Haqiqiy SAT'da R&W va Math orasida 10 daqiqa tanaffus */
+  /** The real SAT has a 10-minute break between R&W and Math */
   breakMinutes: number;
   modules: MockModule[];
 }
@@ -40,7 +40,7 @@ export interface SectionResult {
   section: Section;
   correct: number;
   total: number;
-  /** Taxminiy ball, 200–800. Haqiqiy SAT adaptiv, shuning uchun bu faqat mo'ljal. */
+  /** Estimated score, 200–800. The real SAT is adaptive, so this is only a guide. */
   score: number;
 }
 

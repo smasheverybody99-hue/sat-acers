@@ -1,42 +1,42 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Rasmiy mashq resurslari — SAT Acers" };
+export const metadata: Metadata = { title: "Official practice resources — SAT Acers" };
 
 const STEPS = [
   {
     icon: "💻",
-    title: "Bluebook: to'liq practice testlar",
-    text: "College Board'ning rasmiy ilovasi. Bepul to'liq adaptiv testlar haqiqiy imtihondagidek ishlaydi. Avval bitta test topshirib, boshlang'ich balingizni bilib oling.",
+    title: "Bluebook: full-length practice tests",
+    text: "College Board's official testing app. Its free, full-length adaptive tests work exactly like the real exam. Take one first to find your starting score.",
     href: "https://bluebook.collegeboard.org/students",
-    cta: "Bluebook'ni yuklab olish",
+    cta: "Download Bluebook",
   },
   {
     icon: "📊",
-    title: "My Practice: natijalar tahlili",
-    text: "Bluebook testidan keyin shu yerda balingiz, har bir savol, to'g'ri javob va tushuntirishlarni ko'rasiz.",
+    title: "My Practice: score reports",
+    text: "After a Bluebook test, see your score here along with every question, the correct answer, and explanations.",
     href: "https://mypractice.collegeboard.org/login",
-    cta: "My Practice'ni ochish",
+    cta: "Open My Practice",
   },
   {
     icon: "🗂",
-    title: "Question Bank: rasmiy savollar bazasi",
-    text: "Minglab rasmiy savollar: bo'lim, domen va qiyinlik bo'yicha filtr bor. Akkaunt shart emas.",
+    title: "Question Bank: official questions",
+    text: "Thousands of official questions you can filter by section, domain and difficulty. No account needed.",
     href: "https://satsuitequestionbank.collegeboard.org/",
-    cta: "Question Bank'ni ochish",
+    cta: "Open the Question Bank",
   },
   {
     icon: "🎓",
-    title: "Khan Academy: rasmiy kurs",
-    text: "College Board bilan birga tayyorlangan bepul kurs: video darslar, maqolalar, har bir ko'nikma bo'yicha mashqlar.",
+    title: "Khan Academy: official course",
+    text: "A free course built with College Board: video lessons, articles, and practice for every skill.",
     href: "https://www.khanacademy.org/test-prep/digital-sat",
-    cta: "Kursni boshlash",
+    cta: "Start the course",
   },
   {
     icon: "☀️",
     title: "Question of the Day",
-    text: "Har kuni bitta rasmiy savol. SAT Acers'dagi kunlik 5 savol bilan birga zo'r odat bo'ladi.",
+    text: "One official question every day. Paired with your 5 daily questions on SAT Acers, it makes a great habit.",
     href: "https://qotd.collegeboard.org/",
-    cta: "Bugungi savol",
+    cta: "Today's question",
   },
 ];
 
@@ -45,8 +45,8 @@ export default function OfficialPage() {
     <div className="official">
       <div className="page-head">
         <div>
-          <h1>Rasmiy mashq resurslari</h1>
-          <p>College Board'ning bepul rasmiy materiallari — bir joyda, o'zbekcha izoh bilan.</p>
+          <h1>Official practice resources</h1>
+          <p>College Board's free official materials, all in one place, with notes on how to use each one.</p>
         </div>
       </div>
 
@@ -63,21 +63,21 @@ export default function OfficialPage() {
       </div>
 
       <div className="plan-box">
-        <h2>Haftalik reja: rasmiy resurslar + SAT Acers</h2>
+        <h2>Weekly plan: official resources + SAT Acers</h2>
         <ol>
-          <li><b>1-kun:</b> Bluebook'da bitta to'liq test topshiring va My Practice'da natijani ko'ring.</li>
-          <li><b>2–6-kunlar:</b> eng zaif 2 ta domeningizni SAT Acers question bank'ida mashq qiling (kuniga kamida 5 savol 🔥).</li>
-          <li><b>Har kuni:</b> Xatonomadagi savollarni takrorlang.</li>
-          <li><b>7-kun:</b> SAT Acers mock testini topshiring va ballni solishtiring.</li>
+          <li><b>Day 1:</b> Take one full test in Bluebook and review the results in My Practice.</li>
+          <li><b>Days 2–6:</b> Practice your 2 weakest domains in the SAT Acers question bank (at least 5 questions a day 🔥).</li>
+          <li><b>Every day:</b> Review the questions in your Mistake Log.</li>
+          <li><b>Day 7:</b> Take an SAT Acers mock test and compare your score.</li>
         </ol>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 16 }}>
           <a className="btn btn-navy" href="/practice">Question bank</a>
-          <a className="btn btn-light" href="/mock">Mock testlar</a>
+          <a className="btn btn-light" href="/mock">Mock tests</a>
         </div>
       </div>
 
       <p className="score-note" style={{ marginTop: 20 }}>
-        Bu havolalar College Board va Khan Academy saytlariga olib boradi. SAT Acers ular bilan bog'liq emas.
+        These links go to the College Board and Khan Academy websites. SAT Acers is not affiliated with them.
       </p>
     </div>
   );

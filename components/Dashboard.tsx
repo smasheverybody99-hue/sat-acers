@@ -10,14 +10,14 @@ import { domainStats, overall } from "@/lib/stats";
 import { loadHistory } from "@/lib/mockStore";
 import { MOCK_BY_ID, type MockResult } from "@/lib/mocks";
 import { SECTION_LABEL } from "@/lib/types";
-import { uzDate, uzDateLong } from "@/lib/format";
+import { shortDate, longDate } from "@/lib/format";
 
 function greeting() {
   const h = new Date().getHours();
-  if (h < 5) return "Xayrli tun";
-  if (h < 12) return "Xayrli tong";
-  if (h < 18) return "Xayrli kun";
-  return "Xayrli kech";
+  if (h < 5) return "Good night";
+  if (h < 12) return "Good morning";
+  if (h < 18) return "Good afternoon";
+  return "Good evening";
 }
 
 export function Dashboard() {
@@ -48,20 +48,20 @@ export function Dashboard() {
         <div>
           <h1>{greeting()}! 👋</h1>
           <p>
-            {uzDateLong(Date.now())} ·{" "}
-            {goalDone ? "Bugungi maqsad bajarildi" : `Bugun yana ${DAILY_GOAL - today} ta savol qoldi`}
+            {longDate(Date.now())} ·{" "}
+            {goalDone ? "Daily goal complete" : `${DAILY_GOAL - today} ${DAILY_GOAL - today === 1 ? "question" : "questions"} left today`}
           </p>
         </div>
         <a className="btn btn-primary" href="/practice?daily=1">
-          <Icon name="play" size={16} /> Kunlik 5 savol
+          <Icon name="play" size={16} /> Daily 5
         </a>
       </div>
 
       <div className="dash-grid">
-        {/* Ball */}
+        {/* Score */}
         <section className="tile-card score-card">
           <div className="card-label">
-            <Icon name="target" size={18} /> Taxminiy ball
+            <Icon name="target" size={18} /> Estimated score
           </div>
           <div className="score-card-body">
             <Ring value={est ? (est - 400) / 1200 : 0} size={150} stroke={12} id="ring-score">
@@ -71,7 +71,7 @@ export function Dashboard() {
             <div className="score-card-side">
               {latest ? (
                 <>
-                  <p className="muted-s">Oxirgi mock: {MOCK_BY_ID[latest.mockId]?.title ?? "Mock"}</p>
+                  <p className="muted-s">Latest mock: {MOCK_BY_ID[latest.mockId]?.title ?? "Mock"}</p>
                   {latest.sections.map((s) => (
                     <div key={s.section} className="mini-score">
                       <span>{SECTION_LABEL[s.section]}</span>
@@ -82,10 +82,10 @@ export function Dashboard() {
               ) : (
                 <>
                   <p className="muted-s">
-                    {est ? "Yechgan savollaringiz asosida hisoblandi." : "Ballni bilish uchun mock topshiring yoki 10 ta savol yeching."}
+                    {est ? "Based on the questions you've answered." : "Take a mock or answer 10 questions to see your score."}
                   </p>
                   <a className="btn btn-ghost btn-sm" href="/mock">
-                    Mock topshirish
+                    Take a mock
                   </a>
                 </>
               )}
@@ -103,63 +103,63 @@ export function Dashboard() {
               <Icon name="flame" size={44} />
             </span>
             <b>{streak}</b>
-            <small>kun ketma-ket</small>
+            <small>{streak === 1 ? "day in a row" : "days in a row"}</small>
           </div>
           <WeekDots progressDay={progress.streak.lastDay} streak={streak} />
         </section>
 
-        {/* Kunlik maqsad */}
+        {/* Daily goal */}
         <section className="tile-card goal-card">
           <div className="card-label">
-            <Icon name="check" size={18} /> Bugungi maqsad
+            <Icon name="check" size={18} /> Today's goal
           </div>
           <Ring value={today / DAILY_GOAL} size={118} stroke={11} from="#3ddc97" to="#4c7dff" id="ring-goal">
             <b className="ring-num sm">
               {Math.min(today, DAILY_GOAL)}/{DAILY_GOAL}
             </b>
           </Ring>
-          <p className="muted-s center">{goalDone ? "Barakalla! 🎉" : "savol yechildi"}</p>
+          <p className="muted-s center">{goalDone ? "Well done! 🎉" : "questions answered"}</p>
         </section>
 
-        {/* Statistika */}
+        {/* Stats */}
         <section className="tile-card stats-card">
           <div className="card-label">
-            <Icon name="chart" size={18} /> Statistika
+            <Icon name="chart" size={18} /> Stats
           </div>
           <div className="stat-rows">
-            <div><span>Yechilgan</span><b>{solved}</b></div>
-            <div><span>Aniqlik</span><b>{accuracy}%</b></div>
-            <div><span>Mocklar</span><b>{history.length}</b></div>
+            <div><span>Answered</span><b>{solved}</b></div>
+            <div><span>Accuracy</span><b>{accuracy}%</b></div>
+            <div><span>Mocks</span><b>{history.length}</b></div>
           </div>
         </section>
 
-        {/* Xatonoma */}
+        {/* Mistake Log */}
         <a href="/mistakes" className={`tile-card due-card ${due ? "hot" : ""}`}>
           <div className="card-label">
-            <Icon name="notebook" size={18} /> Xatonoma
+            <Icon name="notebook" size={18} /> Mistake Log
           </div>
           <b className="due-num">{due}</b>
-          <p>{due ? "ta savolni bugun takrorlash kerak" : totalMistakes ? "Bugun takrorlash yo'q — ertaga qaytadi" : "Hali xato yo'q. Zo'r!"}</p>
+          <p>{due ? (due === 1 ? "question to review today" : "questions to review today") : totalMistakes ? "Nothing to review today. More comes back tomorrow." : "No mistakes yet. Nice!"}</p>
           <span className="card-link">
-            Ochish <Icon name="arrowRight" size={16} />
+            Open <Icon name="arrowRight" size={16} />
           </span>
         </a>
 
-        {/* Oxirgi mocklar */}
+        {/* Recent mocks */}
         <section className="tile-card recent-card">
           <div className="card-head-row">
             <div className="card-label">
-              <Icon name="trophy" size={18} /> Oxirgi mocklar
+              <Icon name="trophy" size={18} /> Recent mocks
             </div>
             <a className="card-link" href="/mock">
-              Barchasi <Icon name="arrowRight" size={16} />
+              View all <Icon name="arrowRight" size={16} />
             </a>
           </div>
           {history.length === 0 ? (
             <div className="recent-empty">
-              <p>Hali mock topshirilmagan. Birinchisi bilan boshlang va zaif joylaringizni bilib oling.</p>
+              <p>No mocks yet. Take your first one to find your weak spots.</p>
               <a className="btn btn-navy btn-sm" href="/mock/acers-1">
-                Mock #1 ni boshlash
+                Start Mock #1
               </a>
             </div>
           ) : (
@@ -168,7 +168,7 @@ export function Dashboard() {
                 <div key={r.finishedAt} className="recent-row">
                   <div>
                     <b>{MOCK_BY_ID[r.mockId]?.title ?? "Mock"}</b>
-                    <small>{uzDate(r.finishedAt)}</small>
+                    <small>{shortDate(r.finishedAt)}</small>
                   </div>
                   <span className="recent-score">{r.total}</span>
                 </div>
@@ -176,11 +176,11 @@ export function Dashboard() {
             </div>
           )}
         </section>
-        {/* Domenlar */}
+        {/* Domains */}
         <section className="tile-card mastery-card">
           <div className="card-head-row">
             <div className="card-label">
-              <Icon name="sparkle" size={18} /> Domenlar bo'yicha o'zlashtirish
+              <Icon name="sparkle" size={18} /> Mastery by domain
             </div>
             <a className="card-link" href="/practice">
               Question bank <Icon name="arrowRight" size={16} />
@@ -203,7 +203,7 @@ export function Dashboard() {
                         <div className="mastery-name">
                           <span>{d.domain}</span>
                           <small>
-                            {d.attempted}/{d.total} yechildi
+                            {d.attempted}/{d.total} answered
                           </small>
                         </div>
                         <div className="bar">
@@ -227,9 +227,9 @@ export function Dashboard() {
 }
 
 function WeekDots({ progressDay, streak }: { progressDay: string | null; streak: number }) {
-  // Oxirgi 7 kun: streak davomidagi kunlar yonadi
+  // Last 7 days: days within the streak light up
   const days: { label: string; on: boolean; today: boolean }[] = [];
-  const names = ["Ya", "Du", "Se", "Ch", "Pa", "Ju", "Sh"];
+  const names = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
   const now = Date.now();
   const last = progressDay;
   for (let i = 6; i >= 0; i--) {

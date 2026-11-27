@@ -1,59 +1,53 @@
-# SAT Acers — Ace it. Har kuni.
+# SAT Acers — Ace it. Every day.
 
-Digital SAT tayyorgarlik sayti (MVP, 1-kun).
+A free Digital SAT prep site: 5 full-length mocks, 500+ original questions with explanations, a Mistake Log with spaced review, and a daily streak.
 
-## Ishga tushirish
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Brauzerda: http://localhost:3000
+Open http://localhost:3000
 
-## Sahifalar
+For sign-in and cloud sync, copy `.env.example` to `.env.local` and fill in the Supabase values. Without them, the site still works and saves progress in the browser only.
 
-| Yo'l | Nima |
+## Pages
+
+| Path | What |
 |---|---|
-| `/` | Bosh sahifa |
-| `/practice` | Question bank: bo'lim, domen, qiyinlik, holat bo'yicha filtr; A–D va Enter tugmalari; o'zbekcha/inglizcha tushuntirish |
-| `/mock`, `/mock/[id]` | Mock testlar: Bluebook uslubida modullar, taymer, Mark for Review, navigator, tanaffus, taxminiy ball va savollar tahlili. Mocklar `data/mocks.json` da |
-| `/mistakes` | Xatonoma: xato savollar 1, 3, 7 kundan keyin qaytadi; streak va kunlik maqsad (5 ta) |
+| `/` | Landing page |
+| `/dashboard` | Estimated score, streak, daily goal, recent mocks, mastery by domain |
+| `/practice` | Question bank: filter by section, domain, skill, difficulty and status; A–D and Enter shortcuts |
+| `/mock`, `/mock/[id]` | Bluebook-style mocks: modules, timer, Mark for Review, highlighter, answer eliminator, Desmos, reference sheet, break, score estimate and review. Mocks live in `data/mocks.json` |
+| `/mistakes` | Mistake Log: missed questions come back after 1, 3 and 7 days |
+| `/official` | Links to official College Board and Khan Academy resources |
+| `/login` | Email magic link and Google sign-in (Supabase) |
+| `/privacy`, `/terms` | Privacy Policy and Terms of Service |
 
-Progress hozircha brauzerning `localStorage`'ida saqlanadi (`lib/progress.ts`). 2-kunda Supabase ulanganda faqat shu fayl ichi o'zgaradi.
+Progress is stored in `localStorage` (`lib/progress.ts`). When signed in, `lib/sync.ts` merges it with the `user_data` table in Supabase (schema: `supabase/schema.sql`).
 
-## Savollar qo'shish
+## Adding questions
 
-Barcha savollar: `data/questions.json`. Ko'plab savolni CSV yoki JSON fayldan import qilish:
+All questions are in `data/questions.json`. To import many at once from CSV or JSON:
 
 ```bash
-npm run import -- savollar.csv --dry-run   # avval faqat tekshiradi
-npm run import -- savollar.csv             # mavjudlariga qo'shadi (bir xil id bo'lsa yangilaydi)
-npm run import -- savollar.json --replace  # eskilarini o'chirib, faqat yangilarini qoldiradi
+npm run import -- questions.csv --dry-run   # validate only
+npm run import -- questions.csv             # add to the bank (same id = update)
+npm run import -- questions.json --replace  # replace the whole bank
 ```
 
-CSV ustunlari va namunasi: `scripts/sample-import.csv`. Skript har bir qatorni tekshiradi (bo'lim, domen nomi, javob variantlar orasida ekanligi va h.k.) va xatolarini ko'rsatadi.
+See `scripts/sample-import.csv` for the columns. The script validates each row (section, domain name, answer within the choices, etc.) and reports errors.
 
-- `section`: `math` yoki `rw`
+- `section`: `math` or `rw`
 - `domain`: Math — `Algebra`, `Advanced Math`, `Problem-Solving and Data Analysis`, `Geometry and Trigonometry`; R&W — `Information and Ideas`, `Craft and Structure`, `Expression of Ideas`, `Standard English Conventions`
 - `difficulty`: `easy` / `medium` / `hard`
-- `type`: `mcq` (A–D) yoki `spr` (javobni o'zi yozadi)
-- `answer`: mcq uchun `A`–`D`; spr uchun javob(lar) `|` bilan: `2.5|5/2`
+- `type`: `mcq` (A–D) or `spr` (student-produced response)
+- `answer`: `A`–`D` for mcq; for spr, accepted answers separated by `|`: `2.5|5/2`
+- Graphs: the `figure` field (`Figure` in `lib/types.ts`). Tables: lines like `A — B — C` in the text become a table.
+- Math notation: `a/b`, `x^(3/2)`, `√(x + 1)` render automatically.
 
-## Deploy (Vercel)
+## Deploy
 
-1. Loyihani GitHub'ga yuklang.
-2. vercel.com → New Project → repo'ni tanlang → Deploy. Sozlash kerak emas.
-
-## Keyingi qadamlar (2–3-kun)
-
-- [ ] Supabase: Google login, `attempts` jadvali
-- [ ] Natija sahifasi va taxminiy ball
-- [ ] Mobil sayqal, dark mode, ishga tushirish
-
-## Savollar sifati
-
-- 5 ta mock (490 savol) + 30 ta namuna + 12 ta grafikli savol = 532 ta original savol.
-- Math javob kalitlari to'liq qayta yechib tekshirilgan; R&W'da grammatika, so'z ma'nosi va o'tish so'zlari savollari ko'rib chiqilgan.
-- Savolga grafik qo'shish: `figure` maydoni (`lib/types.ts` dagi `Figure`). Jadval: matnda `A — B — C` qatorlari avtomatik jadvalga aylanadi.
-- Matematik yozuv: `a/b`, `x^(3/2)`, `√(x + 1)` avtomatik chiroyli ko'rsatiladi.
+Pushing to `main` deploys to Vercel. Set `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` and (optionally) `NEXT_PUBLIC_GOOGLE_LOGIN=1` in the Vercel project settings.

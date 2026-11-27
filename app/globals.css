@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap");
 
 /* =========================================================
-   SAT Acers — "tungi osmon" mavzusi
-   Sayt qorong'i; test ekrani (.exam) Bluebook kabi oq.
+   SAT Acers — "night sky" theme
+   The site is dark; the test screen (.exam) is white like Bluebook.
    ========================================================= */
 :root {
   --bg: #0a1230;
@@ -97,7 +97,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; fon
 .hero-proof { display: flex; gap: 26px; margin-top: 40px; color: var(--muted); font-size: 14px; flex-wrap: wrap; }
 .hero-proof b { display: block; font-family: var(--font-display); font-size: 22px; color: var(--ink); font-weight: 600; }
 
-/* Jonli savol */
+/* Live question */
 .demo { position: relative; background: linear-gradient(180deg, var(--card-2), var(--card)); border: 1px solid var(--line-2); border-radius: var(--radius-l); padding: 24px; box-shadow: 0 40px 80px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.06); }
 .demo-top { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); font-weight: 600; margin-bottom: 14px; }
 .demo-live { display: inline-flex; align-items: center; gap: 8px; color: var(--green); }
@@ -108,7 +108,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; fon
 .demo-note b { color: var(--ink); }
 .chip-added { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 4px 10px; border-radius: 999px; background: var(--yellow-soft); color: var(--yellow); font-size: 12px; font-weight: 700; }
 
-/* 400–1600 shkala */
+/* 400–1600 scale */
 .track { margin-top: 22px; padding-top: 18px; border-top: 1px dashed var(--line-2); }
 .track-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 13px; color: var(--muted); margin-bottom: 12px; }
 .track-head b { font-family: var(--font-display); font-size: 26px; color: var(--yellow); font-weight: 600; }
@@ -297,7 +297,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; fon
 .plan-box ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
 
 /* =========================================================
-   Test ekrani — Bluebook kabi oq (o'z o'zgaruvchilari bilan)
+   Test screen — white like Bluebook (with its own variables)
    ========================================================= */
 .exam {
   --bg: #ffffff; --bg-2: #f8fafc; --card: #ffffff; --card-2: #f1f5f9;
@@ -354,7 +354,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; fon
 .break-card p { color: #9aa6d1; margin: 8px 0 24px; }
 .exam.break .btn-primary { background: #ffd23f; color: #14182e; }
 
-/* Desmos — ekranni ikkiga bo'lish */
+/* Desmos — split screen */
 .split-wrap { flex: 1; display: flex; min-height: 0; }
 .split-main { flex: 1; min-width: 0; overflow: auto; }
 .calc-pane { flex-shrink: 0; flex-direction: column; min-width: 0; background: #fff; border-right: 1px solid var(--line); }
@@ -414,7 +414,7 @@ body.dragging .calc-frame { pointer-events: none; }
 }
 
 /* =========================================================
-   ILOVA (app) — yon panel, kartalar, bo'limlar
+   APP — sidebar, cards, sections
    ========================================================= */
 :root {
   --rw: #a78bfa;
@@ -458,7 +458,7 @@ body.dragging .calc-frame { pointer-events: none; }
 .page-head h1 { font-size: clamp(26px, 3vw, 34px); font-weight: 700; letter-spacing: -0.02em; }
 .page-head p { color: var(--muted); margin: 8px 0 0; max-width: 44em; }
 
-/* Kartalar */
+/* Cards */
 .tile-card { position: relative; background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,0)), var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 20px; overflow: hidden; }
 .card-label { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-weight: 700; font-size: 14px; }
 .card-head-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; }
@@ -527,7 +527,7 @@ body.dragging .calc-frame { pointer-events: none; }
 .bar i.solid { background: linear-gradient(90deg, var(--blue), var(--blue-2)); }
 .bar.wide { width: 100%; }
 
-/* Segment boshqaruvi */
+/* Segmented control */
 .seg { display: inline-flex; gap: 4px; padding: 4px; border-radius: 14px; background: var(--bg-2); border: 1px solid var(--line); }
 .seg button { border: 0; background: transparent; color: var(--muted); font-weight: 700; padding: 8px 14px; border-radius: 10px; font-size: 14px; transition: background .15s, color .15s; }
 .seg button:hover { color: var(--ink); }
@@ -536,7 +536,7 @@ body.dragging .calc-frame { pointer-events: none; }
 .seg.small button { padding: 6px 12px; font-size: 13px; }
 .seg-count { margin-left: 6px; padding: 2px 8px; border-radius: 999px; background: rgba(255,255,255,.08); font-size: 12px; }
 
-/* Question bank brauzeri */
+/* Question bank browser */
 .quick-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 26px; }
 .quick { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 18px; border: 1px solid var(--line); background: var(--card); transition: transform .15s, border-color .15s; }
 .quick:hover { transform: translateY(-2px); border-color: var(--line-2); }
@@ -569,7 +569,7 @@ body.dragging .calc-frame { pointer-events: none; }
 .skill-list svg { color: var(--muted); }
 .domain-go { margin-top: auto; align-self: flex-start; }
 
-/* Mashq sessiyasi */
+/* Practice session */
 .session { max-width: 1080px; }
 .session-top { display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
 .session-title { display: grid; gap: 6px; }
@@ -610,7 +610,7 @@ kbd { display: inline-block; padding: 1px 6px; border-radius: 6px; border: 1px s
 .finish-card p { color: var(--muted); max-width: 32em; margin: 10px auto 0; }
 .finish-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 
-/* Mock ro'yxati */
+/* Mock list */
 .sub-h { font-size: 18px; margin: 34px 0 14px; color: var(--muted); }
 .mock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 18px; }
 .mock-card { display: flex; flex-direction: column; border-radius: 24px; overflow: hidden; background: var(--card); border: 1px solid var(--line); transition: transform .18s, border-color .18s, box-shadow .18s; }
@@ -657,14 +657,14 @@ kbd { display: inline-block; padding: 1px 6px; border-radius: 6px; border: 1px s
 .rule svg { color: var(--blue-2); flex: none; margin-top: 2px; }
 .rule p { margin: 0; color: var(--muted); font-size: 14px; }
 
-/* Natija */
+/* Results */
 .results { max-width: 1080px; }
 .score-hero { background: radial-gradient(460px 260px at 0% 0%, rgba(76,125,255,.35), transparent 70%), radial-gradient(360px 240px at 100% 100%, rgba(255,210,63,.18), transparent 70%), var(--card); }
 .score-hero-main { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
 .score-hero .score-big { font-size: 44px; margin: 0; }
 .score-title { font-size: 26px; margin: 10px 0 4px; }
 
-/* Xatonoma kanban */
+/* Mistake Log kanban */
 .xn-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 22px; }
 .xn-stat { display: flex; align-items: baseline; gap: 10px; padding: 18px 20px; border-radius: 18px; background: var(--card); border: 1px solid var(--line); }
 .xn-stat b { font-family: var(--font-display); font-size: 32px; }
@@ -692,13 +692,13 @@ kbd { display: inline-block; padding: 1px 6px; border-radius: 6px; border: 1px s
 .kcard-foot { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 .kcard-foot small { color: var(--muted); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-/* Rasmiy sahifa */
+/* Official page */
 .official { max-width: 1100px; }
 
 /* Marketing header CTA */
 .nav-cta { margin-left: 8px; }
 
-/* ---------- Ilova: responsive ---------- */
+/* ---------- App: responsive ---------- */
 @media (max-width: 1100px) {
   .score-card { grid-column: span 12; }
   .streak-card, .goal-card { grid-column: span 6; }
@@ -733,7 +733,7 @@ kbd { display: inline-block; padding: 1px 6px; border-radius: 6px; border: 1px s
   .nav .hide-sm { display: none; }
 }
 
-/* ---------- Matematik yozuv, jadvallar, grafiklar ---------- */
+/* ---------- Math notation, tables, graphs ---------- */
 .frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 2px; line-height: 1.15; font-size: .92em; }
 .frac .num { padding: 0 3px 1px; border-bottom: 1.5px solid currentColor; }
 .frac .den { padding: 1px 3px 0; }
@@ -755,7 +755,7 @@ sup { font-size: .72em; line-height: 0; }
 .figure svg { width: min(100%, 320px); height: auto; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 .exam .figure svg { box-shadow: none; }
 
-/* ---------- Bluebook vositalari ---------- */
+/* ---------- Bluebook tools ---------- */
 .tool-btn { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; border: 0; background: none; color: var(--ink); font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 8px; }
 .tool-btn:hover { background: #eef2f7; }
 .tool-btn.on { background: #fef3c7; }
@@ -788,7 +788,7 @@ mark.hl { background: #fde68a; color: inherit; border-radius: 2px; cursor: point
   .tool-btn { padding: 4px 6px; }
 }
 
-/* ---------- Login va foydalanuvchi ---------- */
+/* ---------- Login and user ---------- */
 .avatar { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; flex: none; background: linear-gradient(135deg, var(--blue), #a78bfa); color: #fff; font-weight: 800; font-family: var(--font-display); }
 .avatar.sm { width: 34px; height: 34px; border-radius: 10px; font-size: 14px; }
 .avatar.xl { width: 72px; height: 72px; border-radius: 22px; font-size: 30px; margin: 0 auto 6px; }

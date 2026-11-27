@@ -16,9 +16,9 @@ export function Login() {
     return (
       <div className="login-wrap">
         <div className="login-card">
-          <h1>Kirish hozircha yoqilmagan</h1>
-          <p className="muted-s">Progressingiz shu brauzerda saqlanmoqda. Bulutda saqlash tez orada ishga tushadi.</p>
-          <a className="btn btn-navy" href="/dashboard">Bosh panelga</a>
+          <h1>Sign-in isn't available yet</h1>
+          <p className="muted-s">Your progress is saved in this browser. Cloud sync is coming soon.</p>
+          <a className="btn btn-navy" href="/dashboard">Go to dashboard</a>
         </div>
       </div>
     );
@@ -31,13 +31,13 @@ export function Login() {
       <div className="login-wrap">
         <div className="login-card">
           <span className="avatar xl">{(user.name || user.email || "?")[0].toUpperCase()}</span>
-          <h1>{user.name || "Xush kelibsiz!"}</h1>
+          <h1>{user.name || "Welcome!"}</h1>
           <p className="muted-s">{user.email}</p>
           <div className={`sync-pill ${status}`}>
-            <i /> {status === "synced" ? "Progress bulutda saqlangan" : status === "syncing" ? "Sinxronlanmoqda…" : "Sinxronlashda xato — keyinroq qayta urinadi"}
+            <i /> {status === "synced" ? "Progress saved to the cloud" : status === "syncing" ? "Syncing…" : "Sync failed. We'll retry shortly."}
           </div>
-          <a className="btn btn-primary" href="/dashboard">Bosh panelga o'tish</a>
-          <button className="btn btn-light" onClick={signOut}>Chiqish</button>
+          <a className="btn btn-primary" href="/dashboard">Go to dashboard</a>
+          <button className="btn btn-light" onClick={signOut}>Sign out</button>
         </div>
       </div>
     );
@@ -47,7 +47,7 @@ export function Login() {
     e.preventDefault();
     setError(null);
     if (!/^\S+@\S+\.\S+$/.test(email)) {
-      setError("Email manzilini to'g'ri kiriting.");
+      setError("Enter a valid email address.");
       return;
     }
     setBusy(true);
@@ -61,20 +61,20 @@ export function Login() {
     <div className="login-wrap">
       <div className="login-card">
         <div className="login-badge"><Icon name="sparkle" size={22} /></div>
-        <h1>Progressingizni saqlang</h1>
+        <h1>Save your progress</h1>
         <p className="muted-s">
-          Kirsangiz, yechgan savollaringiz, Xatonoma, streak va mock natijalaringiz bulutda saqlanadi — telefon va
-          kompyuterda bir xil bo'ladi. Shu paytgacha qilgan ishingiz ham yo'qolmaydi.
+          Sign in to save your answers, Mistake Log, streak and mock results to the cloud, so they stay the same on
+          your phone and computer. Nothing you've done so far will be lost.
         </p>
 
         {sent ? (
           <div className="login-sent">
-            <b>📬 Emailingizni tekshiring</b>
+            <b>📬 Check your email</b>
             <p>
-              <b>{email}</b> manziliga kirish havolasi yuborildi. Havolani shu qurilmada oching. Xat ko'rinmasa,
-              "Spam" papkasini tekshiring.
+              We sent a sign-in link to <b>{email}</b>. Open it on this device. If you don't see it, check your
+              spam folder.
             </p>
-            <button className="link-btn" onClick={() => setSent(false)}>Boshqa email kiritish</button>
+            <button className="link-btn" onClick={() => setSent(false)}>Use a different email</button>
           </div>
         ) : (
           <>
@@ -94,9 +94,9 @@ export function Login() {
                     <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z" />
                     <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z" />
                   </svg>
-                  Google orqali kirish
+                  Continue with Google
                 </button>
-                <div className="login-or"><span>yoki</span></div>
+                <div className="login-or"><span>or</span></div>
               </>
             )}
             <form onSubmit={submit} className="login-form">
@@ -105,17 +105,17 @@ export function Login() {
                 id="email"
                 type="email"
                 autoComplete="email"
-                placeholder="siz@gmail.com"
+                placeholder="you@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <button className="btn btn-primary" disabled={busy}>
-                {busy ? "Yuborilmoqda…" : "Kirish havolasini yuborish"}
+                {busy ? "Sending…" : "Email me a sign-in link"}
               </button>
             </form>
             <p className="login-note">
-              Parol kerak emas: emailingizga bir martalik havola keladi. Kirish orqali{" "}
-              <a href="/terms">shartlar</a> va <a href="/privacy">maxfiylik siyosati</a>ga rozilik bildirasiz.
+              No password needed: we'll email you a one-time link. By signing in, you agree to the{" "}
+              <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.
             </p>
           </>
         )}

@@ -1,7 +1,7 @@
 export type Section = "math" | "rw";
 export type Difficulty = "easy" | "medium" | "hard";
 
-/** Koordinata tekisligidagi chizma (SVG). y = a(x − h)² + k — parabola; y = a·b^x — eksponenta */
+/** Coordinate-plane figure (SVG). y = a(x − h)² + k is a parabola; y = a·b^x is an exponential */
 export interface Figure {
   x: [number, number];
   y: [number, number];
@@ -10,7 +10,7 @@ export interface Figure {
   parabolas?: { a: number; h: number; k: number }[];
   exps?: { a: number; b: number }[];
   points?: { x: number; y: number; label?: string }[];
-  /** Har nechta birlikda son yoziladi (standart: 2) */
+  /** Label every N units (default: 2) */
   step?: number;
 }
 
@@ -20,15 +20,14 @@ export interface Question {
   domain: string;
   skill: string;
   difficulty: Difficulty;
-  /** mcq = variantli, spr = javobni o'zi yozadi (faqat Math) */
+  /** mcq = multiple choice, spr = student-produced response (Math only) */
   type: "mcq" | "spr";
   passage?: string;
   figure?: Figure;
   stem: string;
   choices?: string[];
-  /** mcq: to'g'ri variant indeksi (0 = A). spr: qabul qilinadigan javoblar ro'yxati */
+  /** mcq: index of the correct choice (0 = A). spr: list of accepted answers */
   answer: number | string[];
-  explanation_uz: string;
   explanation_en: string;
 }
 
@@ -53,7 +52,7 @@ export const SECTION_LABEL: Record<Section, string> = {
 };
 
 export const DIFFICULTY_LABEL: Record<Difficulty, string> = {
-  easy: "Oson",
-  medium: "O'rta",
-  hard: "Qiyin",
+  easy: "Easy",
+  medium: "Medium",
+  hard: "Hard",
 };

@@ -8,21 +8,21 @@ const DEMO = [
     q: "If 3x + 5 = 26, what is the value of x?",
     choices: ["5", "7", "9", "21"],
     answer: 1,
-    uz: "5 ni o'ngga o'tkazamiz: 3x = 21. Keyin 3 ga bo'lamiz: x = 7.",
+    expl: "Subtract 5 from both sides: 3x = 21. Then divide by 3: x = 7.",
   },
   {
     tag: "Reading & Writing · Grammar",
     q: "The team of engineers ___ the bridge every spring.",
     choices: ["inspect", "inspects", "are inspecting", "have inspected"],
     answer: 1,
-    uz: "Ega — \"The team\" (birlik), \"engineers\" emas. Shuning uchun fe'l ham birlikda: inspects.",
+    expl: "The subject is \"The team\" (singular), not \"engineers.\" So the verb is singular too: inspects.",
   },
   {
     tag: "Math · Percentages",
     q: "A $40 book is on sale for 15% off. What is the sale price?",
     choices: ["$6", "$25", "$34", "$46"],
     answer: 2,
-    uz: "40 ning 15% i = 6. Chegirmali narx: 40 − 6 = 34 dollar.",
+    expl: "15% of 40 is 6. The sale price is 40 − 6 = $34.",
   },
 ];
 
@@ -50,9 +50,9 @@ export function HeroDemo() {
   }
 
   return (
-    <div className="demo" aria-label="Jonli savol">
+    <div className="demo" aria-label="Live sample question">
       <div className="demo-top">
-        <span className="demo-live"><i /> Hoziroq sinab ko'ring</span>
+        <span className="demo-live"><i /> Try it now</span>
         <span>{d.tag}</span>
       </div>
       <div className="q">{d.q}</div>
@@ -73,13 +73,13 @@ export function HeroDemo() {
       </div>
 
       <div className="demo-note" aria-live="polite">
-        {!answered && "Javobni tanlang: to'g'ri bo'lsa, ballingiz o'sadi."}
-        {answered && correct && <><b>To'g'ri!</b> {d.uz}</>}
+        {!answered && "Pick an answer. Get it right and your score goes up."}
+        {answered && correct && <><b>Correct!</b> {d.expl}</>}
         {answered && !correct && (
           <>
-            <b>Xato, lekin bu yaxshi.</b> {d.uz}
+            <b>Not quite, and that's useful.</b> {d.expl}
             <br />
-            <span className="chip-added">📒 Xatonomaga qo'shildi — 1 kundan keyin qaytadi</span>
+            <span className="chip-added">📒 Added to your Mistake Log. It comes back tomorrow</span>
           </>
         )}
       </div>
@@ -93,13 +93,13 @@ export function HeroDemo() {
             setI(i + 1);
           }}
         >
-          Keyingi savol
+          Next question
         </button>
       )}
 
       <div className="track">
         <div className="track-head">
-          <span>Taxminiy ballingiz</span>
+          <span>Estimated score</span>
           <b>{score}</b>
         </div>
         <div className="track-bar">

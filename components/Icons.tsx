@@ -1,4 +1,4 @@
-/** Yengil SVG ikonlar to'plami (tashqi kutubxonasiz) */
+/** Lightweight SVG icon set (no external library) */
 const PATHS: Record<string, string> = {
   home: "M3 10.5 12 3l9 7.5M5.5 9v11.5h13V9M10 20.5v-6h4v6",
   book: "M4 4.5A1.5 1.5 0 0 1 5.5 3H20v15H5.5A1.5 1.5 0 0 0 4 19.5v-15ZM4 19.5A1.5 1.5 0 0 0 5.5 21H20v-3M8 7h8M8 11h6",

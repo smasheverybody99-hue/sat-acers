@@ -1,6 +1,6 @@
 import type { Answers, MockResult } from "./mocks";
 
-/** Davom etayotgan mock — sahifa yangilansa yoki yopilsa ham shu yerdan davom etadi */
+/** An in-progress mock; resumes here even after a reload or closing the page */
 export interface MockSession {
   mockId: string;
   phase: "module" | "review" | "break";
@@ -10,9 +10,9 @@ export interface MockSession {
   flagged: Record<string, boolean>;
   /** Chizib tashlangan variantlar (answer eliminator) */
   eliminated?: Record<string, number[]>;
-  /** Matndagi bo'yalgan joylar: [boshi, oxiri] */
+  /** Highlighted ranges in the passage: [start, end] */
   highlights?: Record<string, [number, number][]>;
-  /** Joriy modul yoki tanaffus tugaydigan vaqt (ms) */
+  /** When the current module or break ends (ms) */
   endsAt: number;
 }
 
@@ -34,7 +34,7 @@ function write(key: string, value: unknown) {
     if (value === null) window.localStorage.removeItem(key);
     else window.localStorage.setItem(key, JSON.stringify(value));
   } catch {
-    /* storage yopiq bo'lsa ham test davom etadi */
+    /* the test continues even if storage is blocked */
   }
 }
 

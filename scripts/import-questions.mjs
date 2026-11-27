@@ -1,22 +1,22 @@
 #!/usr/bin/env node
 /**
- * Savollarni CSV yoki JSON fayldan data/questions.json ga import qiladi.
+ * Imports questions from a CSV or JSON file into data/questions.json.
  *
  *   npm run import -- path/to/file.csv
- *   npm run import -- path/to/file.json --replace     (eski savollarni o'chirib, faqat yangilarini qoldiradi)
- *   npm run import -- path/to/file.csv --dry-run      (faqat tekshiradi, hech narsa yozmaydi)
+ *   npm run import -- path/to/file.json --replace     (removes existing questions, keeps only the new ones)
+ *   npm run import -- path/to/file.csv --dry-run      (validates only, writes nothing)
  *
- * CSV ustunlari (birinchi qator — sarlavha):
+ * CSV columns (first row is the header):
  *   id, section, domain, skill, difficulty, type, passage, stem,
- *   choice_a, choice_b, choice_c, choice_d, answer, explanation_uz, explanation_en
+ *   choice_a, choice_b, choice_c, choice_d, answer, explanation_en
  *
  *   section:    math | rw
  *   difficulty: easy | medium | hard
  *   type:       mcq | spr
- *   answer:     mcq uchun A/B/C/D, spr uchun javob(lar) "|" bilan ajratilgan, masalan: 2.5|5/2
+ *   answer:     A/B/C/D for mcq; for spr, accepted answers separated by "|", e.g. 2.5|5/2
  *
- * JSON: Question obyektlari massivi (lib/types.ts dagi format), yoki yuqoridagi CSV ustunlari bilan bir xil
- * kalitli obyektlar massivi.
+ * JSON: an array of Question objects (the format in lib/types.ts), or an array of objects with the same
+ * keys as the CSV columns above.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -61,7 +61,7 @@ function parseCSV(text) {
   return body.map((r) => Object.fromEntries(keys.map((k, i) => [k, (r[i] ?? "").trim()])));
 }
 
-// ---------- Normalizatsiya ----------
+// ---------- Normalization ----------
 function fromFlat(r) {
   const type = (r.type || (r.choice_a ? "mcq" : "spr")).toLowerCase();
   const q = {
@@ -72,7 +72,6 @@ function fromFlat(r) {
     difficulty: (r.difficulty || "medium").toLowerCase(),
     type,
     stem: r.stem,
-    explanation_uz: r.explanation_uz || "",
     explanation_en: r.explanation_en || "",
   };
   if (r.passage) q.passage = r.passage;
@@ -87,7 +86,7 @@ function fromFlat(r) {
 }
 
 function normalize(item) {
-  // Allaqachon to'g'ri formatda bo'lsa (choices massivi bor yoki answer massiv)
+  // Already in the right format (has a choices array or an answer array)
   if (Array.isArray(item.choices) || Array.isArray(item.answer)) {
     const q = { ...item };
     if (q.type === "mcq" && typeof q.answer === "string" && /^[A-Da-d]$/.test(q.answer)) {
@@ -98,22 +97,22 @@ function normalize(item) {
   return fromFlat(item);
 }
 
-// ---------- Tekshiruv ----------
+// ---------- Validation ----------
 function validate(q) {
   const errs = [];
-  if (!q.id) errs.push("id yo'q");
-  if (!["math", "rw"].includes(q.section)) errs.push(`section noto'g'ri: "${q.section}"`);
-  else if (!DOMAINS[q.section].includes(q.domain)) errs.push(`domain noto'g'ri: "${q.domain}"`);
-  if (!["easy", "medium", "hard"].includes(q.difficulty)) errs.push(`difficulty noto'g'ri: "${q.difficulty}"`);
-  if (!["mcq", "spr"].includes(q.type)) errs.push(`type noto'g'ri: "${q.type}"`);
-  if (!q.stem) errs.push("stem bo'sh");
+  if (!q.id) errs.push("missing id");
+  if (!["math", "rw"].includes(q.section)) errs.push(`invalid section: "${q.section}"`);
+  else if (!DOMAINS[q.section].includes(q.domain)) errs.push(`invalid domain: "${q.domain}"`);
+  if (!["easy", "medium", "hard"].includes(q.difficulty)) errs.push(`invalid difficulty: "${q.difficulty}"`);
+  if (!["mcq", "spr"].includes(q.type)) errs.push(`invalid type: "${q.type}"`);
+  if (!q.stem) errs.push("empty stem");
   if (q.type === "mcq") {
-    if (!Array.isArray(q.choices) || q.choices.length < 2) errs.push("variantlar yetarli emas");
+    if (!Array.isArray(q.choices) || q.choices.length < 2) errs.push("not enough choices");
     if (!Number.isInteger(q.answer) || q.answer < 0 || q.answer >= (q.choices?.length ?? 0))
-      errs.push(`answer variantlar orasida emas: "${q.answer}"`);
+      errs.push(`answer is not one of the choices: "${q.answer}"`);
   }
-  if (q.type === "spr" && (!Array.isArray(q.answer) || q.answer.length === 0)) errs.push("spr javobi yo'q");
-  if (!q.explanation_uz && !q.explanation_en) errs.push("tushuntirish yo'q (ogohlantirish)");
+  if (q.type === "spr" && (!Array.isArray(q.answer) || q.answer.length === 0)) errs.push("missing spr answer");
+  if (!q.explanation_en) errs.push("missing explanation (warning)");
   return errs;
 }
 
@@ -124,14 +123,14 @@ const replace = args.includes("--replace");
 const dryRun = args.includes("--dry-run");
 
 if (!file) {
-  console.error("Foydalanish: npm run import -- <fayl.csv|fayl.json> [--replace] [--dry-run]");
+  console.error("Usage: npm run import -- <file.csv|file.json> [--replace] [--dry-run]");
   process.exit(1);
 }
 
 const text = fs.readFileSync(file, "utf8");
 const rawItems = file.toLowerCase().endsWith(".csv") ? parseCSV(text) : JSON.parse(text);
 if (!Array.isArray(rawItems)) {
-  console.error("Fayl ichida savollar massivi bo'lishi kerak.");
+  console.error("The file must contain an array of questions.");
   process.exit(1);
 }
 
@@ -141,10 +140,10 @@ let warned = 0;
 rawItems.forEach((item, i) => {
   const q = normalize(item);
   const errs = validate(q);
-  const fatal = errs.filter((e) => !e.includes("ogohlantirish"));
+  const fatal = errs.filter((e) => !e.includes("warning"));
   if (fatal.length) {
     bad++;
-    console.warn(`✗ ${i + 1}-qator (${q.id || "id yo'q"}): ${fatal.join("; ")}`);
+    console.warn(`✗ row ${i + 1} (${q.id || "no id"}): ${fatal.join("; ")}`);
   } else {
     if (errs.length) { warned++; console.warn(`! ${q.id}: ${errs.join("; ")}`); }
     good.push(q);
@@ -161,13 +160,13 @@ for (const q of good) {
 const merged = [...byId.values()];
 
 console.log(
-  `\nO'qildi: ${rawItems.length} · to'g'ri: ${good.length} · xato: ${bad} · ogohlantirish: ${warned}` +
-    `\nYangi: ${good.length - updated} · yangilangan: ${updated} · jami bazada: ${merged.length}`
+  `\nRead: ${rawItems.length} · valid: ${good.length} · errors: ${bad} · warnings: ${warned}` +
+    `\nNew: ${good.length - updated} · updated: ${updated} · total in bank: ${merged.length}`
 );
 
 if (dryRun) {
-  console.log("--dry-run: hech narsa yozilmadi.");
+  console.log("--dry-run: nothing was written.");
 } else {
   fs.writeFileSync(OUT, JSON.stringify(merged, null, 2) + "\n");
-  console.log(`✓ Yozildi: ${path.relative(process.cwd(), OUT)}`);
+  console.log(`✓ Wrote ${path.relative(process.cwd(), OUT)}`);
 }

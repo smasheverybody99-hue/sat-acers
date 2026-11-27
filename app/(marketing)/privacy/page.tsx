@@ -1,55 +1,55 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/LegalPage";
 
-export const metadata: Metadata = { title: "Maxfiylik siyosati — SAT Acers" };
+export const metadata: Metadata = { title: "Privacy Policy — SAT Acers" };
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Maxfiylik siyosati" updated="27-noyabr, 2026">
+    <LegalPage title="Privacy Policy" updated="November 27, 2026">
       <p>
-        SAT Acers — Digital SAT'ga tayyorlanish uchun bepul sayt. Bu sahifa qaysi ma'lumotlarni saqlashimiz va ular
-        bilan nima qilishimizni tushuntiradi.
+        SAT Acers is a free website for Digital SAT prep. This page explains what data we store and what we do with
+        it.
       </p>
 
-      <h2>Qanday ma'lumot saqlanadi</h2>
+      <h2>What we store</h2>
       <ul>
         <li>
-          <b>Akkauntsiz foydalansangiz:</b> javoblaringiz, Xatonoma, streak va mock natijalari faqat brauzeringizda
-          (localStorage) saqlanadi. Ular bizga yuborilmaydi.
+          <b>If you use the site without an account:</b> your answers, Mistake Log, streak and mock results are stored
+          only in your browser (localStorage). They are never sent to us.
         </li>
         <li>
-          <b>Email yoki Google orqali kirsangiz:</b> email manzilingiz, Google akkauntidagi ismingiz va yuqoridagi
-          mashq ma'lumotlari bulutda saqlanadi, shunda ular barcha qurilmalaringizda bir xil bo'ladi.
+          <b>If you sign in with email or Google:</b> your email address, the name on your Google account, and the
+          practice data above are stored in the cloud so they stay the same on all your devices.
         </li>
       </ul>
       <p>
-        Google orqali kirganda biz faqat ismingiz, email manzilingiz va profil rasmingizni olamiz. Google
-        Drive, kontaktlar yoki boshqa ma'lumotlaringizga kirmaymiz.
+        When you sign in with Google, we only receive your name, email address and profile picture. We never access
+        your Google Drive, contacts or any other data.
       </p>
 
-      <h2>Ma'lumotlar qayerda turadi</h2>
+      <h2>Where your data is kept</h2>
       <p>
-        Akkaunt va mashq ma'lumotlari Supabase xizmatida saqlanadi. Sayt Vercel'da joylashgan. Har bir foydalanuvchi
-        faqat o'z ma'lumotlarini ko'ra oladi.
+        Account and practice data are stored with Supabase. The site is hosted on Vercel. Each user can only access
+        their own data.
       </p>
 
-      <h2>Nima qilmaymiz</h2>
+      <h2>What we don&apos;t do</h2>
       <ul>
-        <li>Ma'lumotlaringizni sotmaymiz va reklama uchun bermaymiz.</li>
-        <li>Reklama yoki kuzatuv cookie'larini ishlatmaymiz.</li>
-        <li>Sizga reklama xatlari yubormaymiz. Faqat siz so'ragan kirish havolasi yuboriladi.</li>
+        <li>We don&apos;t sell your data or share it with advertisers.</li>
+        <li>We don&apos;t use advertising or tracking cookies.</li>
+        <li>We don&apos;t send marketing emails. The only email you get is the sign-in link you ask for.</li>
       </ul>
 
-      <h2>Ma'lumotni o'chirish</h2>
+      <h2>Deleting your data</h2>
       <p>
-        Akkauntingiz va undagi barcha ma'lumotlarni o'chirish uchun{" "}
-        <a href="mailto:inomovhusan5@gmail.com">inomovhusan5@gmail.com</a> manziliga yozing. 7 kun ichida
-        o'chiramiz. Brauzerdagi ma'lumotlarni sayt ma'lumotlarini tozalash orqali o'zingiz o'chira olasiz.
+        To delete your account and all its data, email{" "}
+        <a href="mailto:inomovhusan5@gmail.com">inomovhusan5@gmail.com</a>. We&apos;ll delete it within 7 days. You
+        can remove the data stored in your browser yourself by clearing this site&apos;s data.
       </p>
 
-      <h2>Bog'lanish</h2>
+      <h2>Contact</h2>
       <p>
-        Savollar bo'lsa: <a href="mailto:inomovhusan5@gmail.com">inomovhusan5@gmail.com</a>
+        Questions? Email <a href="mailto:inomovhusan5@gmail.com">inomovhusan5@gmail.com</a>
       </p>
     </LegalPage>
   );

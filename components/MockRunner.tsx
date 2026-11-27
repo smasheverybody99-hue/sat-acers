@@ -12,7 +12,7 @@ import { Icon } from "./Icons";
 import { Figure } from "./Figure";
 import { RichText, renderMath } from "./MathText";
 import { HighlightPassage, ReferenceSheet } from "./ExamTools";
-import { uzDate } from "@/lib/format";
+import { shortDate } from "@/lib/format";
 
 const SECTION_TITLE = { rw: "Reading and Writing", math: "Math" } as const;
 
@@ -62,7 +62,7 @@ export function MockRunner({ mockId }: { mockId: string }) {
     (s: MockSession) => {
       const r = scoreMock(mock, s.answers);
       addResult(r);
-      // Har bir savol natijasini Xatonoma va statistikaga yozamiz
+      // Record every answer in the Mistake Log and stats
       for (const mod of mock.modules) {
         for (const q of moduleQuestions(mod)) {
           const a = s.answers[q.id];
@@ -95,14 +95,14 @@ export function MockRunner({ mockId }: { mockId: string }) {
     [mock, finishMock, startModule]
   );
 
-  // Vaqt tugaganda: modul avtomatik topshiriladi, tanaffus avtomatik tugaydi
+  // When time runs out: the module is submitted and the break ends automatically
   useEffect(() => {
     if (!session || now < session.endsAt) return;
     if (session.phase === "break") setSession(startModule(session.moduleIndex + 1, session));
     else finishModule(session);
   }, [now, session, finishModule, startModule]);
 
-  if (!mock) return <div className="empty"><h3>Mock topilmadi</h3></div>;
+  if (!mock) return <div className="empty"><h3>Mock not found</h3></div>;
   if (!loaded) return null;
 
   if (result) {
@@ -143,11 +143,11 @@ export function MockRunner({ mockId }: { mockId: string }) {
       <div className="exam break">
         <div className="break-card">
           <div className="big">☕</div>
-          <h2>Tanaffus</h2>
+          <h2>Break</h2>
           <div className="break-timer">{fmt(remaining)}</div>
-          <p>Reading and Writing tugadi. Keyingisi — Math. Suv iching, ko'zingizga dam bering.</p>
+          <p>Reading and Writing is done. Math is next. Drink some water and rest your eyes.</p>
           <button className="btn btn-primary" onClick={() => setSession(startModule(session.moduleIndex + 1, session))}>
-            Tanaffusni tugatib, Math'ni boshlash
+            End break and start Math
           </button>
         </div>
       </div>
@@ -187,20 +187,20 @@ function MockIntro(props: {
   const best = props.history.length ? Math.max(...props.history.map((r) => r.total)) : null;
   return (
     <div className="mock-intro">
-      <a className="back" href="/mock"><Icon name="arrowLeft" size={18} /> Mock testlar</a>
+      <a className="back" href="/mock"><Icon name="arrowLeft" size={18} /> Mock tests</a>
       <section className="intro-hero">
         <div>
           <h1>{props.title}</h1>
           {props.description && <p>{props.description}</p>}
           <div className="intro-chips">
-            <span><Icon name="book" size={16} /> {props.questions} savol</span>
-            <span><Icon name="clock" size={16} /> {props.minutes} daqiqa</span>
-            <span>☕ {props.breakMinutes} daqiqa tanaffus</span>
-            {best !== null && <span className="gold"><Icon name="trophy" size={16} /> Eng yaxshi: {best}</span>}
+            <span><Icon name="book" size={16} /> {props.questions} questions</span>
+            <span><Icon name="clock" size={16} /> {props.minutes} minutes</span>
+            <span>☕ {props.breakMinutes}-minute break</span>
+            {best !== null && <span className="gold"><Icon name="trophy" size={16} /> Best: {best}</span>}
           </div>
         </div>
         <button className="btn btn-primary btn-lg" onClick={props.onStart}>
-          <Icon name="play" size={18} /> Testni boshlash
+          <Icon name="play" size={18} /> Start test
         </button>
       </section>
 
@@ -210,27 +210,27 @@ function MockIntro(props: {
             <span className="tl-dot">{i + 1}</span>
             <div>
               <b>{SECTION_TITLE[m.section]}</b>
-              <small>Module {m.number} · {m.count} savol · {m.minutes} daq</small>
+              <small>Module {m.number} · {m.count} questions · {m.minutes} min</small>
             </div>
-            {i === 1 && props.breakMinutes > 0 && <span className="tl-break">☕ {props.breakMinutes} daq</span>}
+            {i === 1 && props.breakMinutes > 0 && <span className="tl-break">☕ {props.breakMinutes} min</span>}
           </div>
         ))}
       </div>
 
       <div className="rules-grid">
-        <div className="rule"><Icon name="clock" /><p>Har bir modulning o'z taymeri bor. Vaqt tugasa modul avtomatik topshiriladi.</p></div>
-        <div className="rule"><Icon name="target" /><p>Ishonchingiz komil bo'lmagan savolni "Mark for Review" bilan belgilab, oxirida qayting.</p></div>
-        <div className="rule"><Icon name="calc" /><p>Math'da Desmos ochilsa ekran ikkiga bo'linadi: chapda kalkulyator, o'ngda savol.</p></div>
-        <div className="rule"><Icon name="repeat" /><p>Sahifani yopsangiz ham test shu joyidan davom etadi, lekin taymer to'xtamaydi.</p></div>
+        <div className="rule"><Icon name="clock" /><p>Each module has its own timer. When time runs out, the module is submitted automatically.</p></div>
+        <div className="rule"><Icon name="target" /><p>Not sure about a question? Use "Mark for Review" and come back to it at the end.</p></div>
+        <div className="rule"><Icon name="calc" /><p>In Math, opening Desmos splits the screen: calculator on the left, question on the right.</p></div>
+        <div className="rule"><Icon name="repeat" /><p>If you close the page, the test picks up where you left off, but the timer keeps running.</p></div>
       </div>
 
       {props.history.length > 0 && (
         <section className="tile-card" style={{ marginTop: 20 }}>
-          <div className="card-label"><Icon name="trophy" size={18} /> Oldingi urinishlar</div>
+          <div className="card-label"><Icon name="trophy" size={18} /> Previous attempts</div>
           <div className="recent-list">
             {props.history.map((r) => (
               <div key={r.finishedAt} className="recent-row">
-                <div><b>{uzDate(r.finishedAt)}</b><small>{r.sections.map((s) => s.score).join(" + ")}</small></div>
+                <div><b>{shortDate(r.finishedAt)}</b><small>{r.sections.map((s) => s.score).join(" + ")}</small></div>
                 <span className="recent-score">{r.total}</span>
               </div>
             ))}
@@ -301,7 +301,7 @@ function ExamScreen(props: {
           key={x.id}
           className={`nav-cell ${answered[i] ? "done" : ""} ${!inReview && i === session.qIndex ? "current" : ""}`}
           onClick={() => go(i)}
-          aria-label={`Savol ${i + 1}`}
+          aria-label={`Question ${i + 1}`}
         >
           {i + 1}
           {session.flagged[x.id] && <span className="flag">🚩</span>}
@@ -324,12 +324,12 @@ function ExamScreen(props: {
         </div>
         <div className="exam-tools">
           {props.module.section === "rw" && !inReview && q?.passage && !q.passage.includes(" — ") && (
-            <button className={`tool-btn ${hlMode ? "on" : ""}`} onClick={() => setHlMode(!hlMode)} title="Matnni belgilab bo'yash">
+            <button className={`tool-btn ${hlMode ? "on" : ""}`} onClick={() => setHlMode(!hlMode)} title="Highlight text">
               <span className="tool-ico">🖍</span> Highlight
             </button>
           )}
           {props.module.section === "math" && (
-            <button className="tool-btn" onClick={() => setRefOpen(true)} title="Formulalar varag'i">
+            <button className="tool-btn" onClick={() => setRefOpen(true)} title="Reference sheet">
               <span className="tool-ico">📐</span> Reference
             </button>
           )}
@@ -347,13 +347,13 @@ function ExamScreen(props: {
           <div className="review">
             <h2>Check Your Work</h2>
             <p>
-              Javob berilmagan: <b>{answered.filter((a) => !a).length}</b> ta · Belgilangan:{" "}
-              <b>{questions.filter((x) => session.flagged[x.id]).length}</b> ta. Raqamni bosib, savolga qayting.
+              Unanswered: <b>{answered.filter((a) => !a).length}</b> · For review:{" "}
+              <b>{questions.filter((x) => session.flagged[x.id]).length}</b>. Select a number to go back to that question.
             </p>
             <div className="review-legend">
-              <span><i className="lg done" /> Javob berilgan</span>
-              <span><i className="lg" /> Javob berilmagan</span>
-              <span>🚩 Belgilangan</span>
+              <span><i className="lg done" /> Answered</span>
+              <span><i className="lg" /> Unanswered</span>
+              <span>🚩 For Review</span>
             </div>
             {grid}
           </div>
@@ -376,7 +376,7 @@ function ExamScreen(props: {
                   {session.flagged[q.id] ? "🚩" : "⚐"} Mark for Review
                 </button>
                 {q.type === "mcq" && (
-                  <button className={`abc ${elimMode ? "on" : ""}`} onClick={() => setElimMode(!elimMode)} title="Answer eliminator: noto'g'ri variantlarni chizib tashlash">
+                  <button className={`abc ${elimMode ? "on" : ""}`} onClick={() => setElimMode(!elimMode)} title="Answer eliminator: cross out wrong choices">
                     <s>ABC</s>
                   </button>
                 )}
@@ -411,11 +411,11 @@ function ExamScreen(props: {
                     className="spr-input"
                     value={String(session.answers[q.id] ?? "")}
                     onChange={(e) => setAnswer(e.target.value)}
-                    placeholder="Javobingiz"
+                    placeholder="Your answer"
                     inputMode="decimal"
-                    aria-label="Javobingiz"
+                    aria-label="Your answer"
                   />
-                  <div className="spr-hint">Butun son, o'nli kasr (2.5) yoki oddiy kasr (5/2).</div>
+                  <div className="spr-hint">Enter an integer, a decimal (2.5) or a fraction (5/2).</div>
                 </div>
               )}
             </div>
@@ -438,7 +438,7 @@ function ExamScreen(props: {
             <>
               <button className="btn btn-light" onClick={() => go(total - 1)}>Back</button>
               <button className="btn btn-navy" onClick={props.onFinishModule}>
-                {props.isLastModule ? "Testni yakunlash" : "Keyingi modul"}
+                {props.isLastModule ? "Finish test" : "Next module"}
               </button>
             </>
           ) : (
@@ -460,7 +460,7 @@ function ExamScreen(props: {
       {refOpen && <ReferenceSheet onClose={() => setRefOpen(false)} />}
 
       {navOpen && !inReview && (
-        <div className="nav-pop" role="dialog" aria-label="Savollar">
+        <div className="nav-pop" role="dialog" aria-label="Questions">
           <div className="nav-pop-head">
             Section {props.sectionNumber}, Module {props.module.number}: {SECTION_TITLE[props.module.section]}
           </div>

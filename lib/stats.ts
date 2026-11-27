@@ -16,7 +16,7 @@ export interface SkillStat {
   attempted: number;
 }
 
-/** Har bir domen bo'yicha: jami savol, yechilgan va to'g'ri (oxirgi urinish) */
+/** Per domain: total questions, answered, and correct (latest attempt) */
 export function domainStats(p: Progress | null): DomainStat[] {
   const out: DomainStat[] = [];
   for (const section of ["rw", "math"] as Section[]) {
@@ -54,7 +54,7 @@ export function overall(p: Progress | null) {
   return { solved, correct, accuracy: solved ? Math.round((correct / solved) * 100) : 0 };
 }
 
-/** Kun bo'yicha barqaror "tasodifiy" tanlov — bir kunda hamma uchun bir xil 5 ta savol */
+/** Stable daily "random" pick: the same 5 questions for everyone on a given day */
 export function dailyIds(p: Progress | null, day: string, n = 5): string[] {
   let seed = [...day].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
   const rand = () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 2 ** 32);

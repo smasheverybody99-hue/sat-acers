@@ -15,15 +15,15 @@ export function Header() {
         <Logo />
         <nav className="nav">
           <a href="/practice" className="hide-sm">Question bank</a>
-          <a href="/mock" className="hide-sm">Mock testlar</a>
-          <a href="/official" className="hide-sm">Rasmiy</a>
+          <a href="/mock" className="hide-sm">Mock tests</a>
+          <a href="/official" className="hide-sm">Official</a>
           {streak > 0 && (
             <span className="streak-badge">
               <Icon name="flame" size={16} /> {streak}
             </span>
           )}
           <a href="/dashboard" className="btn btn-primary btn-sm nav-cta">
-            Bosh panel
+            Dashboard
           </a>
         </nav>
       </div>

@@ -1,11 +1,11 @@
 /**
- * Progress hozircha brauzerning localStorage'ida saqlanadi.
- * 2-kunda Supabase ulanganda shu funksiyalar ichi almashtiriladi, sahifalar o'zgarmaydi.
+ * Progress is stored in the browser's localStorage.
+ * Cloud sync (lib/sync.ts) builds on these functions; pages don't need to change.
  */
 
 const KEY = "acers:v1";
 const DAY = 24 * 60 * 60 * 1000;
-/** Xatonoma: xato savol 1, 3 va 7 kundan keyin qayta chiqadi */
+/** Mistake Log: a missed question comes back after 1, 3 and 7 days */
 export const REVIEW_INTERVALS_DAYS = [1, 3, 7];
 
 export interface AttemptStat {
@@ -16,7 +16,7 @@ export interface AttemptStat {
 }
 
 export interface MistakeEntry {
-  /** 0..2 — nechanchi takrorlash bosqichida turibdi */
+  /** 0..2 — which review stage the question is at */
   stage: number;
   due: number;
   addedAt: number;
@@ -59,11 +59,11 @@ function save(p: Progress, fromSync = false) {
     window.localStorage.setItem(KEY, JSON.stringify(p));
     window.dispatchEvent(new CustomEvent("acers:progress", { detail: { fromSync } }));
   } catch {
-    /* storage yopiq bo'lsa ham sayt ishlashda davom etadi */
+    /* the site keeps working even if storage is blocked */
   }
 }
 
-/** Streak hisoblanadi: bugun yechgan bo'lsa saqlanadi, kecha yechgan bo'lsa davom etadi, aks holda o'chadi */
+/** Streak: kept if you practiced today, continues if you practiced yesterday, otherwise resets */
 export function currentStreak(p: Progress, now = Date.now()): number {
   const { lastDay, count } = p.streak;
   if (!lastDay) return 0;
@@ -98,7 +98,7 @@ export function recordAnswer(questionId: string, correct: boolean, now = Date.no
   } else if (m && m.due <= now) {
     const next = m.stage + 1;
     if (next >= REVIEW_INTERVALS_DAYS.length) {
-      delete p.mistakes[questionId]; // o'zlashtirildi 🎉
+      delete p.mistakes[questionId]; // mastered 🎉
     } else {
       p.mistakes[questionId] = { ...m, stage: next, due: now + REVIEW_INTERVALS_DAYS[next] * DAY };
     }
@@ -117,7 +117,7 @@ export function recordAnswer(questionId: string, correct: boolean, now = Date.no
   return p;
 }
 
-/** Bulutdan kelgan ma'lumotni saqlash (qayta yuborishni boshlamaydi) */
+/** Save data that came from the cloud (doesn't trigger another push) */
 export function saveProgressRaw(p: Progress) {
   save(p, true);
 }

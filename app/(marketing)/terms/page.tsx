@@ -1,45 +1,45 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/LegalPage";
 
-export const metadata: Metadata = { title: "Foydalanish shartlari — SAT Acers" };
+export const metadata: Metadata = { title: "Terms of Service — SAT Acers" };
 
 export default function TermsPage() {
   return (
-    <LegalPage title="Foydalanish shartlari" updated="27-noyabr, 2026">
-      <p>SAT Acers'dan foydalanish orqali quyidagi shartlarga rozilik bildirasiz.</p>
+    <LegalPage title="Terms of Service" updated="November 27, 2026">
+      <p>By using SAT Acers, you agree to the following terms.</p>
 
-      <h2>Xizmat</h2>
+      <h2>The service</h2>
       <p>
-        SAT Acers — Digital SAT'ga tayyorlanish uchun bepul mashq sayti. Savollar, mock testlar va ball baholari
-        faqat mashq uchun. Ular rasmiy SAT natijasini bashorat qilmaydi.
+        SAT Acers is a free practice site for the Digital SAT. Its questions, mock tests and score estimates are for
+        practice only and do not predict your official SAT score.
       </p>
 
-      <h2>Akkaunt</h2>
+      <h2>Your account</h2>
       <ul>
-        <li>Akkauntingizga kirishni boshqalarga bermang.</li>
-        <li>Saytni buzishga, boshqa foydalanuvchilarning ma'lumotlariga kirishga yoki ortiqcha yuk berishga urinmang.</li>
-        <li>Bu shartlar buzilsa, akkauntni o'chirib qo'yishimiz mumkin.</li>
+        <li>Don&apos;t share access to your account with others.</li>
+        <li>Don&apos;t try to break the site, access other users&apos; data, or overload it.</li>
+        <li>We may disable accounts that break these terms.</li>
       </ul>
 
-      <h2>Kontent</h2>
+      <h2>Content</h2>
       <p>
-        Saytdagi savollar va izohlar SAT Acers jamoasi tomonidan yozilgan. Ularni shaxsiy tayyorgarlik uchun
-        bemalol ishlating, lekin ruxsatsiz boshqa saytga ko'chirmang yoki sotmang.
+        The questions and explanations on this site were written by the SAT Acers team. You&apos;re welcome to use
+        them for your own prep, but don&apos;t copy them to other sites or sell them without permission.
       </p>
       <p>
-        SAT® — College Board'ning ro'yxatdan o'tgan savdo belgisi. College Board bu sayt bilan bog'liq emas va uni
-        qo'llab-quvvatlamaydi.
-      </p>
-
-      <h2>Javobgarlik</h2>
-      <p>
-        Sayt "boricha" taqdim etiladi. Uzluksiz ishlashi yoki xatosiz bo'lishiga kafolat bermaymiz, lekin topilgan
-        xatolarni tez tuzatishga harakat qilamiz.
+        SAT® is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this
+        website.
       </p>
 
-      <h2>O'zgarishlar</h2>
+      <h2>No warranty</h2>
       <p>
-        Shartlar o'zgarsa, shu sahifa yangilanadi. Savollar uchun:{" "}
+        The site is provided &quot;as is.&quot; We can&apos;t guarantee it will always be available or error-free, but
+        we work to fix problems quickly.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        If these terms change, we&apos;ll update this page. Questions:{" "}
         <a href="mailto:inomovhusan5@gmail.com">inomovhusan5@gmail.com</a>
       </p>
     </LegalPage>

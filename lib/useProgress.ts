@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { loadProgress, type Progress } from "./progress";
 
-/** Progress'ni o'qiydi va boshqa komponentlar yangilaganda avtomatik yangilanadi */
+/** Reads progress and re-renders when other components update it */
 export function useProgress(): Progress | null {
   const [progress, setProgress] = useState<Progress | null>(null);
 

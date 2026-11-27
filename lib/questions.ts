@@ -7,7 +7,7 @@ export const QUESTION_BY_ID: Record<string, Question> = Object.fromEntries(
   QUESTIONS.map((q) => [q.id, q])
 );
 
-/** SPR javoblarini solishtirish: bo'sh joylar, unicode minus va 0.50 = .5 kabi farqlarni hisobga oladi */
+/** Normalizes SPR answers: handles spaces, unicode minus, and equivalents like 0.50 = .5 */
 export function normalizeAnswer(value: string): string {
   const s = value.trim().replace(/−/g, "-").replace(/\s+/g, "");
   if (/^-?\d*\.?\d+$/.test(s)) return String(Number(s));

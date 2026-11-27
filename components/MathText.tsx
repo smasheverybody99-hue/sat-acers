@@ -1,11 +1,11 @@
 import { Fragment, type ReactNode } from "react";
 
 /**
- * Oddiy matndagi matematik yozuvni chiroyli ko'rsatadi:
- *   a/b, (x + 1)/(x − 2)  → ustma-ust kasr
- *   x^(3/2), 2^x          → daraja
- *   √(2x + 5), ∛(x²)      → ildiz ustida chiziq
- * Bo'sh joy bilan ajratilgan "/" (masalan "12 / 4") o'zgarmaydi.
+ * Renders math notation written in plain text:
+ *   a/b, (x + 1)/(x − 2)  → stacked fraction
+ *   x^(3/2), 2^x          → exponent
+ *   √(2x + 5), ∛(x²)      → radical with overline
+ * A "/" surrounded by spaces (e.g. "12 / 4") is left as is.
  */
 const GROUP = String.raw`\((?:[^()]|\([^()]*\))*\)`;
 const ATOM = String.raw`[A-Za-z0-9.π²³⁴⁵⁶⁷⁸⁹⁰¹]+`;
@@ -25,7 +25,7 @@ export function renderMath(text: string, keyPrefix = "m"): ReactNode[] {
   const out: ReactNode[] = [];
   let last = 0;
   let i = 0;
-  // Har chaqiruvda yangi RegExp: rekursiya tashqi siklning lastIndex'ini buzmasligi uchun
+  // Fresh RegExp per call so recursion doesn't clobber the outer loop's lastIndex
   const RE = new RegExp(SOURCE, "g");
   let m: RegExpExecArray | null;
   while ((m = RE.exec(text))) {
@@ -61,8 +61,8 @@ export function MathText({ text }: { text: string }) {
 }
 
 /**
- * Matn ichidagi "A — B — C" qatorlarini haqiqiy jadvalga aylantiradi.
- * Jadvaldan oldingi qator sarlavha (caption) bo'ladi. Birinchi qatorda raqam bo'lmasa — ustun nomlari.
+ * Turns "A — B — C" lines in the text into a real table.
+ * The line before a table is its caption. If the first row has no numbers, it holds the column names.
  */
 export function RichText({ text, math = false }: { text: string; math?: boolean }) {
   const lines = text.split("\n");

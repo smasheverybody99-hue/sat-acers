@@ -17,9 +17,9 @@ function bucket(due: number, now: number): "now" | "soon" | "later" {
 }
 
 function dueLabel(due: number, now: number) {
-  if (due <= now) return "Hozir";
+  if (due <= now) return "Now";
   const d = Math.ceil((due - now) / DAY);
-  return d === 1 ? "Ertaga" : `${d} kundan keyin`;
+  return d === 1 ? "Tomorrow" : `In ${d} days`;
 }
 
 export function Mistakes() {
@@ -27,7 +27,7 @@ export function Mistakes() {
   const [reviewIds, setReviewIds] = useState<string[] | null>(null);
 
   if (!progress) return null;
-  if (reviewIds) return <Practice ids={reviewIds} title="Xatonoma: takrorlash" onFinish={() => setReviewIds(null)} />;
+  if (reviewIds) return <Practice ids={reviewIds} title="Mistake Log review" onFinish={() => setReviewIds(null)} />;
 
   const now = Date.now();
   const entries = Object.entries(progress.mistakes)
@@ -44,32 +44,32 @@ export function Mistakes() {
     <div className="xn">
       <div className="page-head">
         <div>
-          <h1>Xatonoma</h1>
-          <p>Xatoing — eng yaxshi ustozing. Har bir xato 1, 3 va 7 kundan keyin qaytib keladi; uch marta to'g'ri yechsangiz, o'zlashtirilgan bo'ladi.</p>
+          <h1>Mistake Log</h1>
+          <p>Your mistakes are your best teacher. Each one comes back after 1, 3 and 7 days. Get it right three times and it's mastered.</p>
         </div>
         <button className="btn btn-primary" disabled={!cols.now.length} onClick={() => setReviewIds(cols.now.map(([id]) => id))}>
-          <Icon name="play" size={16} /> {cols.now.length ? `${cols.now.length} ta savolni takrorlash` : "Bugun takrorlash yo'q"}
+          <Icon name="play" size={16} /> {cols.now.length ? `Review ${cols.now.length} ${cols.now.length === 1 ? "question" : "questions"}` : "Nothing to review today"}
         </button>
       </div>
 
       <div className="xn-stats">
-        <div className="xn-stat hot"><b>{cols.now.length}</b><span>bugun</span></div>
-        <div className="xn-stat"><b>{entries.length}</b><span>daftarda</span></div>
-        <div className="xn-stat good"><b>{mastered}</b><span>o'zlashtirilgan</span></div>
+        <div className="xn-stat hot"><b>{cols.now.length}</b><span>due today</span></div>
+        <div className="xn-stat"><b>{entries.length}</b><span>in the log</span></div>
+        <div className="xn-stat good"><b>{mastered}</b><span>mastered</span></div>
       </div>
 
       {entries.length === 0 ? (
         <div className="empty">
           <div className="big">📒</div>
-          <h3>Xatonoma hozircha bo'sh</h3>
-          <p>Xato qilgan har bir savolingiz shu yerga tushadi va kerakli kunda qaytib keladi.</p>
-          <a className="btn btn-navy" href="/practice">Mashqni boshlash</a>
+          <h3>Your Mistake Log is empty</h3>
+          <p>Every question you miss lands here and comes back on the right day.</p>
+          <a className="btn btn-navy" href="/practice">Start practicing</a>
         </div>
       ) : (
         <div className="kanban">
-          <Column title="Bugun" tone="now" items={cols.now} now={now} />
-          <Column title="Ertaga" tone="soon" items={cols.soon} now={now} />
-          <Column title="Keyinroq" tone="later" items={cols.later} now={now} />
+          <Column title="Today" tone="now" items={cols.now} now={now} />
+          <Column title="Tomorrow" tone="soon" items={cols.soon} now={now} />
+          <Column title="Later" tone="later" items={cols.later} now={now} />
         </div>
       )}
     </div>
@@ -85,7 +85,7 @@ function Column({ title, tone, items, now }: { title: string; tone: string; item
         <span className="kcount">{items.length}</span>
       </header>
       <div className="kitems">
-        {items.length === 0 && <p className="kempty">Bo'sh</p>}
+        {items.length === 0 && <p className="kempty">Empty</p>}
         {items.map(([id, m]) => {
           const q = QUESTION_BY_ID[id];
           return (
@@ -97,7 +97,7 @@ function Column({ title, tone, items, now }: { title: string; tone: string; item
               <p className="ktext">{q.passage ?? q.stem}</p>
               <div className="kcard-foot">
                 <small>{q.skill}</small>
-                <span className="stage-dots" title={`${m.stage}/${REVIEW_INTERVALS_DAYS.length} bosqich`}>
+                <span className="stage-dots" title={`Stage ${m.stage} of ${REVIEW_INTERVALS_DAYS.length}`}>
                   {REVIEW_INTERVALS_DAYS.map((_, i) => <i key={i} className={i < m.stage ? "on" : ""} />)}
                 </span>
               </div>

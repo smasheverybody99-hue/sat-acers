@@ -1,4 +1,4 @@
-/** Aylana progress (0–1). Markazdagi matn children orqali beriladi. */
+/** Circular progress (0–1). Center content is passed as children. */
 export function Ring({
   value,
   size = 120,

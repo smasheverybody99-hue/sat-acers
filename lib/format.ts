@@ -1,15 +1,14 @@
-const DAYS = ["yakshanba", "dushanba", "seshanba", "chorshanba", "payshanba", "juma", "shanba"];
-const MONTHS = ["yanvar", "fevral", "mart", "aprel", "may", "iyun", "iyul", "avgust", "sentabr", "oktabr", "noyabr", "dekabr"];
+const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-/** Brauzer tiliga bog'liq bo'lmagan o'zbekcha sana: "27-noyabr" */
-export function uzDate(ts: number | Date): string {
+/** Locale-independent short date: "Nov 27" */
+export function shortDate(ts: number | Date): string {
   const d = new Date(ts);
-  return `${d.getDate()}-${MONTHS[d.getMonth()]}`;
+  return `${MONTHS[d.getMonth()]} ${d.getDate()}`;
 }
 
-/** "Juma, 27-noyabr" */
-export function uzDateLong(ts: number | Date): string {
+/** "Friday, Nov 27" */
+export function longDate(ts: number | Date): string {
   const d = new Date(ts);
-  const day = DAYS[d.getDay()];
-  return `${day[0].toUpperCase()}${day.slice(1)}, ${uzDate(d)}`;
+  return `${DAYS[d.getDay()]}, ${shortDate(d)}`;
 }

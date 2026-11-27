@@ -3,14 +3,14 @@ import "./globals.css";
 import { AuthProvider } from "@/components/AuthProvider";
 
 export const metadata: Metadata = {
-  title: "SAT Acers — Ace it. Har kuni.",
+  title: "SAT Acers — Ace it. Every day.",
   description:
-    "Digital SAT'ga tayyorgarlik: 5 ta to'liq mock, 500+ savol, o'zbekcha tushuntirishlar, Xatonoma va kunlik streak.",
+    "Free Digital SAT prep: 5 full-length mocks, 500+ questions with explanations, a Mistake Log and a daily streak.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="uz">
+    <html lang="en">
       <body>
         <AuthProvider>{children}</AuthProvider>
       </body>

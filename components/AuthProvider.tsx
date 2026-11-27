@@ -25,8 +25,8 @@ const Ctx = createContext<AuthCtx>({
   user: null,
   status: "off",
   ready: true,
-  signInEmail: async () => "Login sozlanmagan",
-  signInGoogle: async () => "Login sozlanmagan",
+  signInEmail: async () => "Sign-in is not configured",
+  signInGoogle: async () => "Sign-in is not configured",
   signOut: async () => {},
 });
 
@@ -80,7 +80,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return () => sub.subscription.unsubscribe();
   }, []);
 
-  // Har o'zgarishdan keyin (1.5 soniya kutib) bulutga yuborish
+  // Push to the cloud 1.5 s after each change
   useEffect(() => {
     const sb = getSupabase();
     if (!sb || !user) return;
@@ -108,14 +108,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signInEmail = useCallback(async (email: string) => {
     const sb = getSupabase();
-    if (!sb) return "Login sozlanmagan";
+    if (!sb) return "Sign-in is not configured";
     const { error } = await sb.auth.signInWithOtp({ email, options: { emailRedirectTo: redirectUrl() } });
     return error ? error.message : null;
   }, []);
 
   const signInGoogle = useCallback(async () => {
     const sb = getSupabase();
-    if (!sb) return "Login sozlanmagan";
+    if (!sb) return "Sign-in is not configured";
     const { error } = await sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: redirectUrl() } });
     return error ? error.message : null;
   }, []);

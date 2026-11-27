@@ -2,7 +2,7 @@ import { HeroDemo } from "@/components/HeroDemo";
 import { QUESTIONS } from "@/lib/questions";
 import { MOCKS } from "@/lib/mocks";
 
-const WEEK = ["Du", "Se", "Ch", "Pa", "Ju", "Sh", "Ya"];
+const WEEK = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
 
 export default function Home() {
   return (
@@ -10,19 +10,19 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-inner">
           <div>
-            <h1>Har kuni bir qadam 1600 ga.</h1>
+            <h1>One step closer to 1600, every day.</h1>
             <p className="lead">
-              Digital SAT'ga tayyorgarlik: Bluebook'dagidek mock testlar, o'zbekcha tushuntirishlar va
-              xatolaringizni o'zlashtirguningizcha qaytaradigan Xatonoma.
+              Digital SAT prep with Bluebook-style mock tests, clear step-by-step explanations, and a Mistake Log
+              that brings your errors back until you've mastered them.
             </p>
             <div className="hero-cta">
-              <a className="btn btn-primary" href="/practice">Mashqni boshlash</a>
-              <a className="btn btn-ghost" href="/mock">Mock test topshirish</a>
+              <a className="btn btn-primary" href="/practice">Start practicing</a>
+              <a className="btn btn-ghost" href="/mock">Take a mock test</a>
             </div>
             <div className="hero-proof">
-              <span><b>{QUESTIONS.length}</b>savol</span>
-              <span><b>{MOCKS.length}</b>mock test</span>
-              <span><b>2 tilda</b>tushuntirish</span>
+              <span><b>{QUESTIONS.length}</b>questions</span>
+              <span><b>{MOCKS.length}</b>mock tests</span>
+              <span><b>Free</b>no sign-up needed</span>
             </div>
           </div>
           <HeroDemo />
@@ -32,42 +32,42 @@ export default function Home() {
       <section className="section" style={{ paddingTop: 24 }}>
         <div className="container">
           <div className="section-head">
-            <h2>Ballni nima oshiradi</h2>
-            <p>Ko'p savol yechish emas, xatodan o'rganish. SAT Acers shunga qurilgan.</p>
+            <h2>What actually raises your score</h2>
+            <p>Not solving more questions, but learning from the ones you miss. SAT Acers is built around that.</p>
           </div>
 
           <div className="bento">
             <div className="tile xatonoma">
-              <h3>Xatonoma</h3>
+              <h3>Mistake Log</h3>
               <p>
-                Xato qilgan har bir savol daftarga tushadi va 1, 3, 7 kundan keyin qaytib keladi. Uch marta ketma-ket
-                to'g'ri yechsangiz, o'zlashtirilgan hisoblanadi.
+                Every question you miss is saved and comes back after 1, 3 and 7 days. Get it right three times in a
+                row and it counts as mastered.
               </p>
               <div className="tile-art mini-list" aria-hidden="true">
-                <div className="mini-row"><span>Subject-verb agreement</span><span className="when now">Bugun</span></div>
-                <div className="mini-row"><span>Circle equations</span><span className="when">Ertaga</span></div>
-                <div className="mini-row"><span>Words in context</span><span className="when">3 kundan keyin</span></div>
+                <div className="mini-row"><span>Subject-verb agreement</span><span className="when now">Today</span></div>
+                <div className="mini-row"><span>Circle equations</span><span className="when">Tomorrow</span></div>
+                <div className="mini-row"><span>Words in context</span><span className="when">In 3 days</span></div>
               </div>
             </div>
 
             <div className="tile uz">
-              <h3>O'zbekcha tushuntirish</h3>
-              <p>Savol inglizcha, yechim ona tilingizda. Bitta tugma bilan inglizchaga o'tasiz.</p>
+              <h3>Explanations that teach</h3>
+              <p>Every question shows why the right answer works and why the traps don't.</p>
               <div className="tile-art" aria-hidden="true">
-                <div className="uz-bubble">Ega — "The team", birlik. Demak fe'l ham birlikda: inspects.</div>
-                <div className="uz-bubble">Tushunarli!</div>
+                <div className="uz-bubble">The subject is "The team," which is singular, so the verb is too: inspects.</div>
+                <div className="uz-bubble">Got it!</div>
               </div>
             </div>
 
             <div className="tile mock">
-              <h3>Bluebook'dagidek mock</h3>
-              <p>Modullar, taymer, Mark for Review, Desmos va oxirida domenlar bo'yicha tahlil.</p>
+              <h3>Bluebook-style mocks</h3>
+              <p>Modules, a timer, Mark for Review, Desmos, and a breakdown by domain at the end.</p>
               <div className="tile-art timer-art" aria-hidden="true">31:58<small>Module 1</small></div>
             </div>
 
             <div className="tile streak">
-              <h3>Kunlik 5 savol</h3>
-              <p>Streak'ni uzmang: kichik qadamlar katta ball beradi.</p>
+              <h3>5 questions a day</h3>
+              <p>Keep your streak alive. Small daily steps add up to big score gains.</p>
               <div className="tile-art week" aria-hidden="true">
                 {WEEK.map((d, k) => (
                   <span key={d} className={k < 5 ? "on" : ""}><i>{k < 5 ? "🔥" : ""}</i>{d}</span>
@@ -81,20 +81,20 @@ export default function Home() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="section-head">
-            <h2>Qanday boshlash kerak</h2>
+            <h2>How to get started</h2>
           </div>
           <div className="steps">
             <div className="step">
-              <h3>Mock test topshiring</h3>
-              <p>Boshlang'ich balingizni va eng zaif domenlaringizni bilib oling.</p>
+              <h3>Take a mock test</h3>
+              <p>Find your starting score and your weakest domains.</p>
             </div>
             <div className="step">
-              <h3>Zaif joyni mashq qiling</h3>
-              <p>Question bank'da shu domenlarni filtrlab, har kuni 5 tadan savol yeching.</p>
+              <h3>Practice your weak spots</h3>
+              <p>Filter the question bank to those domains and solve 5 questions a day.</p>
             </div>
             <div className="step">
-              <h3>Xatonomani takrorlang</h3>
-              <p>Xatolar kerakli kunda o'zi qaytadi. Siz faqat ochib, yechasiz.</p>
+              <h3>Review your Mistake Log</h3>
+              <p>Missed questions come back on the right day. You just open the log and solve them.</p>
             </div>
           </div>
         </div>
@@ -104,10 +104,10 @@ export default function Home() {
         <div className="container">
           <div className="cta-band">
             <div>
-              <h2>Bugungi 5 ta savol sizni kutyapti</h2>
-              <p>Ro'yxatdan o'tish shart emas.</p>
+              <h2>Today's 5 questions are waiting</h2>
+              <p>No sign-up needed.</p>
             </div>
-            <a className="btn btn-primary" href="/practice">Mashqni boshlash</a>
+            <a className="btn btn-primary" href="/practice">Start practicing</a>
           </div>
         </div>
       </section>

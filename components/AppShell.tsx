@@ -8,11 +8,11 @@ import { currentStreak, todayAnswered } from "@/lib/progress";
 import { useAuth } from "./AuthProvider";
 
 const NAV: { href: string; label: string; short: string; icon: IconName }[] = [
-  { href: "/dashboard", label: "Bosh panel", short: "Panel", icon: "home" },
-  { href: "/practice", label: "Question bank", short: "Savollar", icon: "book" },
-  { href: "/mock", label: "Mock testlar", short: "Mock", icon: "clipboard" },
-  { href: "/mistakes", label: "Xatonoma", short: "Xatonoma", icon: "notebook" },
-  { href: "/official", label: "Rasmiy resurslar", short: "Rasmiy", icon: "landmark" },
+  { href: "/dashboard", label: "Dashboard", short: "Home", icon: "home" },
+  { href: "/practice", label: "Question bank", short: "Practice", icon: "book" },
+  { href: "/mock", label: "Mock tests", short: "Mocks", icon: "clipboard" },
+  { href: "/mistakes", label: "Mistake Log", short: "Mistakes", icon: "notebook" },
+  { href: "/official", label: "Official resources", short: "Official", icon: "landmark" },
 ];
 
 export const DAILY_GOAL = 5;
@@ -30,7 +30,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="shell">
       <aside className="side">
-        <a href="/" className="side-logo" aria-label="SAT Acers bosh sahifa">
+        <a href="/" className="side-logo" aria-label="SAT Acers home">
           <LogoMark size={34} />
           <span className="logo-word">
             <small>SAT</small>Acers
@@ -54,7 +54,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <div>
                 <b>{user.name || user.email}</b>
                 <small className={`sync-dot ${status}`}>
-                  <i /> {status === "synced" ? "Saqlangan" : status === "syncing" ? "Sinxronlanmoqda…" : "Sinx. xatosi"}
+                  <i /> {status === "synced" ? "Synced" : status === "syncing" ? "Syncing…" : "Sync error"}
                 </small>
               </div>
             </a>
@@ -62,8 +62,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             <a href="/login" className="side-login">
               <Icon name="sparkle" size={18} />
               <div>
-                <b>Progressni saqlash</b>
-                <small>Kiring — telefon va kompyuterda bir xil</small>
+                <b>Save your progress</b>
+                <small>Sign in to sync across your phone and computer</small>
               </div>
             </a>
           )
@@ -75,12 +75,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <Icon name="flame" size={22} />
             </span>
             <div>
-              <b>{streak} kun</b>
-              <small>{streak ? "ketma-ket mashq" : "streak'ni boshlang"}</small>
+              <b>{streak} {streak === 1 ? "day" : "days"}</b>
+              <small>{streak ? "practice streak" : "start your streak"}</small>
             </div>
           </div>
           <div className="goal-label">
-            <span>Bugungi maqsad</span>
+            <span>Today's goal</span>
             <span>
               {Math.min(today, DAILY_GOAL)}/{DAILY_GOAL}
             </span>
@@ -104,7 +104,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <Icon name="flame" size={16} /> {streak}
             </span>
             {status !== "off" && (
-              <a href="/login" className="avatar sm" aria-label={user ? "Hisob" : "Kirish"}>
+              <a href="/login" className="avatar sm" aria-label={user ? "Account" : "Sign in"}>
                 {user ? (user.name || user.email || "?")[0].toUpperCase() : <Icon name="sparkle" size={16} />}
               </a>
             )}
@@ -113,7 +113,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <main className="shell-content">{children}</main>
       </div>
 
-      <nav className="tabbar" aria-label="Asosiy menyu">
+      <nav className="tabbar" aria-label="Main menu">
         {NAV.slice(0, 4).map((n) => (
           <a key={n.href} href={n.href} className={isActive(n.href) ? "on" : ""}>
             <Icon name={n.icon} size={22} />

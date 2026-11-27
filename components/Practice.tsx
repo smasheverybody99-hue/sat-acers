@@ -54,7 +54,6 @@ export function Practice({
   const [spr, setSpr] = useState("");
   const [checked, setChecked] = useState(false);
   const [correct, setCorrect] = useState(false);
-  const [lang, setLang] = useState<"uz" | "en">("uz");
   const [session, setSession] = useState({ answered: 0, correct: 0 });
   const [results, setResults] = useState<boolean[]>([]);
 
@@ -65,7 +64,7 @@ export function Practice({
     setCorrect(false);
   }
 
-  // Filtr o'zgarganda navbat qayta tuziladi
+  // Rebuild the queue when filters change
   useEffect(() => {
     if (fixedList) return;
     setQueue(applyFilters(filters));
@@ -118,12 +117,12 @@ export function Practice({
   const set = (patch: Partial<Filters>) => setFilters((f) => ({ ...f, ...patch }));
 
   const crumbs = fixedList
-    ? [title ?? "Mashq"]
+    ? [title ?? "Practice"]
     : [
-        filters.section === "all" ? "Barcha bo'limlar" : SECTION_LABEL[filters.section],
+        filters.section === "all" ? "All sections" : SECTION_LABEL[filters.section],
         ...(filters.domain !== "all" ? [filters.domain] : []),
         ...(filters.skill !== "all" ? [filters.skill] : []),
-        ...(filters.status === "wrong" && filters.section === "all" ? ["Xato qilinganlar"] : []),
+        ...(filters.status === "wrong" && filters.section === "all" ? ["Missed questions"] : []),
       ];
 
   const progressPct = queue.length ? (Math.min(index + (checked ? 1 : 0), queue.length) / queue.length) * 100 : 0;
@@ -133,7 +132,7 @@ export function Practice({
       <div className="session-top">
         <div className="session-title">
           {onFinish ? (
-            <button className="back" onClick={onFinish}><Icon name="arrowLeft" size={18} /> Xatonoma</button>
+            <button className="back" onClick={onFinish}><Icon name="arrowLeft" size={18} /> Mistake Log</button>
           ) : (
             <a className="back" href="/practice"><Icon name="arrowLeft" size={18} /> Question bank</a>
           )}
@@ -154,12 +153,12 @@ export function Practice({
           <div className="seg small">
             {(["all", "easy", "medium", "hard"] as const).map((d) => (
               <button key={d} className={filters.difficulty === d ? "on" : ""} onClick={() => set({ difficulty: d })}>
-                {d === "all" ? "Barcha qiyinlik" : DIFFICULTY_LABEL[d]}
+                {d === "all" ? "All levels" : DIFFICULTY_LABEL[d]}
               </button>
             ))}
           </div>
           <div className="seg small">
-            {([["all", "Hammasi"], ["new", "Yechilmagan"], ["wrong", "Xatolar"]] as const).map(([v, l]) => (
+            {([["all", "All"], ["new", "Unanswered"], ["wrong", "Missed"]] as const).map(([v, l]) => (
               <button key={v} className={filters.status === v ? "on" : ""} onClick={() => set({ status: v })}>
                 {l}
               </button>
@@ -186,29 +185,29 @@ export function Practice({
       {queue.length === 0 ? (
         <div className="empty">
           <div className="big">🔍</div>
-          <h3>Bu tanlov bo'yicha savol yo'q</h3>
-          <p>Qiyinlik yoki holat filtrini o'zgartirib ko'ring.</p>
-          <button className="btn btn-navy" onClick={() => set({ difficulty: "all", status: "all" })}>Filtrlarni tozalash</button>
+          <h3>No questions match these filters</h3>
+          <p>Try changing the difficulty or status filter.</p>
+          <button className="btn btn-navy" onClick={() => set({ difficulty: "all", status: "all" })}>Clear filters</button>
         </div>
       ) : finished ? (
         <div className="finish-card">
           <div className="finish-emoji">{session.correct === session.answered ? "🏆" : "💪"}</div>
-          <h2>{session.correct}/{session.answered} to'g'ri</h2>
+          <h2>{session.correct}/{session.answered} correct</h2>
           <p>
             {session.correct === session.answered
-              ? "Hammasi to'g'ri — siz haqiqiy Acer'siz!"
-              : "Xato qilgan savollaringiz Xatonomaga tushdi: ular 1, 3 va 7 kundan keyin qaytib keladi."}
+              ? "All correct. You're a true Acer!"
+              : "The questions you missed went to your Mistake Log. They'll come back after 1, 3 and 7 days."}
           </p>
           <div className="dots big">
             {results.map((r, i) => <i key={i} className={r ? "ok" : "no"} />)}
           </div>
           <div className="finish-actions">
             {onFinish ? (
-              <button className="btn btn-navy" onClick={onFinish}>Xatonomaga qaytish</button>
+              <button className="btn btn-navy" onClick={onFinish}>Back to Mistake Log</button>
             ) : (
               <>
-                <a className="btn btn-primary" href="/practice">Boshqa mavzu tanlash</a>
-                <a className="btn btn-light" href="/mistakes">Xatonomani ochish</a>
+                <a className="btn btn-primary" href="/practice">Pick another topic</a>
+                <a className="btn btn-light" href="/mistakes">Open Mistake Log</a>
               </>
             )}
           </div>
@@ -222,8 +221,6 @@ export function Practice({
           setSpr={setSpr}
           checked={checked}
           correct={correct}
-          lang={lang}
-          setLang={setLang}
           canCheck={Boolean(canCheck)}
           onCheck={check}
           onNext={next}
@@ -242,8 +239,6 @@ interface CardProps {
   setSpr: (v: string) => void;
   checked: boolean;
   correct: boolean;
-  lang: "uz" | "en";
-  setLang: (l: "uz" | "en") => void;
   canCheck: boolean;
   onCheck: () => void;
   onNext: () => void;
@@ -251,7 +246,7 @@ interface CardProps {
 }
 
 function QuestionCard(props: CardProps) {
-  const { q, picked, setPicked, spr, setSpr, checked, correct, lang, setLang, canCheck, onCheck, onNext, isLast } = props;
+  const { q, picked, setPicked, spr, setSpr, checked, correct, canCheck, onCheck, onNext, isLast } = props;
 
   const questionPart = (
     <div>
@@ -278,22 +273,18 @@ function QuestionCard(props: CardProps) {
         </div>
       ) : (
         <div>
-          <input className="spr-input" value={spr} onChange={(e) => setSpr(e.target.value)} disabled={checked} placeholder="Javobingiz" inputMode="decimal" aria-label="Javobingiz" />
-          <div className="spr-hint">Butun son, o'nli kasr (2.5) yoki oddiy kasr (5/2) yozishingiz mumkin.</div>
+          <input className="spr-input" value={spr} onChange={(e) => setSpr(e.target.value)} disabled={checked} placeholder="Your answer" inputMode="decimal" aria-label="Your answer" />
+          <div className="spr-hint">You can enter an integer, a decimal (2.5) or a fraction (5/2).</div>
         </div>
       )}
 
       {checked && (
         <div className={`result ${correct ? "ok" : "no"}`} aria-live="polite">
           <div className="result-head">
-            <strong>{correct ? "To'g'ri! 🎉" : `Javob: ${correctAnswerLabel(q)}`}</strong>
-            <span className="lang-toggle">
-              <button className={lang === "uz" ? "on" : ""} onClick={() => setLang("uz")}>O'zbekcha</button>
-              <button className={lang === "en" ? "on" : ""} onClick={() => setLang("en")}>English</button>
-            </span>
+            <strong>{correct ? "Correct! 🎉" : `Answer: ${correctAnswerLabel(q)}`}</strong>
           </div>
-          <p>{renderMath(lang === "uz" ? q.explanation_uz : q.explanation_en)}</p>
-          {!correct && <span className="chip-added">📒 Xatonomaga qo'shildi</span>}
+          <p>{renderMath(q.explanation_en)}</p>
+          {!correct && <span className="chip-added">📒 Added to your Mistake Log</span>}
         </div>
       )}
     </div>
@@ -319,13 +310,13 @@ function QuestionCard(props: CardProps) {
       )}
 
       <div className="qactions">
-        <span className="kbd-hint"><kbd>A</kbd>–<kbd>D</kbd> tanlash · <kbd>Enter</kbd> tekshirish</span>
+        <span className="kbd-hint"><kbd>A</kbd>–<kbd>D</kbd> to select · <kbd>Enter</kbd> to check</span>
         {checked ? (
           <button className="btn btn-navy" onClick={onNext}>
-            {isLast ? "Yakunlash" : "Keyingi savol"} <Icon name="arrowRight" size={16} />
+            {isLast ? "Finish" : "Next question"} <Icon name="arrowRight" size={16} />
           </button>
         ) : (
-          <button className="btn btn-navy" onClick={onCheck} disabled={!canCheck}>Tekshirish</button>
+          <button className="btn btn-navy" onClick={onCheck} disabled={!canCheck}>Check</button>
         )}
       </div>
     </article>

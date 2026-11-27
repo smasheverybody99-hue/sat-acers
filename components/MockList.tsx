@@ -14,7 +14,7 @@ interface Status {
 function fmtTime(min: number) {
   const h = Math.floor(min / 60);
   const m = min % 60;
-  return h ? `${h} soat ${m} daq` : `${m} daq`;
+  return h ? `${h} hr ${m} min` : `${m} min`;
 }
 
 export function MockList() {
@@ -41,8 +41,8 @@ export function MockList() {
     <div className="mocks">
       <div className="page-head">
         <div>
-          <h1>Mock testlar</h1>
-          <p>Bluebook formatida: 4 modul, haqiqiy taymer, 10 daqiqalik tanaffus, Desmos va oxirida domenlar bo'yicha tahlil.</p>
+          <h1>Mock tests</h1>
+          <p>In the Bluebook format: 4 modules, a real timer, a 10-minute break, Desmos, and a breakdown by domain at the end.</p>
         </div>
       </div>
 
@@ -53,13 +53,13 @@ export function MockList() {
             <a key={m.id} href={`/mock/${m.id}`} className={`mock-card v${(i % 5) + 1}`}>
               <div className="mock-art">
                 <span className="mock-no">#{i + 1}</span>
-                {st?.inProgress && <span className="mock-flag live">Davom etmoqda</span>}
-                {!st?.inProgress && st?.best !== undefined && <span className="mock-flag done">Eng yaxshi: {st.best}</span>}
+                {st?.inProgress && <span className="mock-flag live">In progress</span>}
+                {!st?.inProgress && st?.best !== undefined && <span className="mock-flag done">Best: {st.best}</span>}
               </div>
               <div className="mock-body">
                 <h3>{m.title}</h3>
                 <div className="mock-meta">
-                  <span><Icon name="book" size={15} /> {mockQuestionCount(m)} savol</span>
+                  <span><Icon name="book" size={15} /> {mockQuestionCount(m)} questions</span>
                   <span><Icon name="clock" size={15} /> {fmtTime(mockMinutes(m))}</span>
                 </div>
                 <div className="mock-sections">
@@ -67,7 +67,7 @@ export function MockList() {
                   <span className="sec math">Math · 2 × 22</span>
                 </div>
                 <span className="mock-cta">
-                  {st?.inProgress ? "Davom ettirish" : st?.attempts ? "Qayta topshirish" : "Boshlash"} <Icon name="arrowRight" size={16} />
+                  {st?.inProgress ? "Resume" : st?.attempts ? "Retake" : "Start"} <Icon name="arrowRight" size={16} />
                 </span>
               </div>
             </a>
@@ -77,7 +77,7 @@ export function MockList() {
 
       {demo.length > 0 && (
         <>
-          <h2 className="sub-h">Tez sinov</h2>
+          <h2 className="sub-h">Quick try</h2>
           <div className="mock-grid">
             {demo.map((m) => (
               <a key={m.id} href={`/mock/${m.id}`} className="mock-card mini">
@@ -85,7 +85,7 @@ export function MockList() {
                   <h3>{m.title}</h3>
                   <p className="muted-s">{m.description}</p>
                   <div className="mock-meta">
-                    <span><Icon name="book" size={15} /> {mockQuestionCount(m)} savol</span>
+                    <span><Icon name="book" size={15} /> {mockQuestionCount(m)} questions</span>
                     <span><Icon name="clock" size={15} /> {fmtTime(mockMinutes(m))}</span>
                   </div>
                 </div>

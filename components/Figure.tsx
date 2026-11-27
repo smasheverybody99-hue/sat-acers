@@ -1,6 +1,6 @@
 import type { Figure as FigureSpec } from "@/lib/types";
 
-/** SAT uslubidagi koordinata tekisligi: oq fon, kulrang to'r, qora chiziqlar */
+/** SAT-style coordinate plane: white background, gray grid, black lines */
 export function Figure({ spec }: { spec: FigureSpec }) {
   const W = 320;
   const H = 320;
@@ -36,7 +36,7 @@ export function Figure({ spec }: { spec: FigureSpec }) {
 
   return (
     <div className="figure">
-      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Koordinata tekisligidagi grafik">
+      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Graph in the xy-plane">
         <rect x="0" y="0" width={W} height={H} fill="#fff" rx="8" />
         {xs.map((x) => (
           <line key={`gx${x}`} x1={sx(x)} x2={sx(x)} y1={sy(y0)} y2={sy(y1)} stroke="#e5e7eb" strokeWidth="1" />
@@ -44,7 +44,7 @@ export function Figure({ spec }: { spec: FigureSpec }) {
         {ys.map((y) => (
           <line key={`gy${y}`} y1={sy(y)} y2={sy(y)} x1={sx(x0)} x2={sx(x1)} stroke="#e5e7eb" strokeWidth="1" />
         ))}
-        {/* o'qlar */}
+        {/* axes */}
         {x0 <= 0 && x1 >= 0 && <line x1={sx(0)} x2={sx(0)} y1={sy(y0)} y2={sy(y1)} stroke="#111827" strokeWidth="1.5" />}
         {y0 <= 0 && y1 >= 0 && <line x1={sx(x0)} x2={sx(x1)} y1={sy(0)} y2={sy(0)} stroke="#111827" strokeWidth="1.5" />}
         {xs.filter((x) => x !== 0 && x % step === 0).map((x) => (

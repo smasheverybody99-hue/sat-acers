@@ -18,15 +18,15 @@ const DOMAIN_ICON: Record<string, IconName> = {
   "Geometry and Trigonometry": "landmark",
 };
 
-const DOMAIN_UZ: Record<string, string> = {
-  "Information and Ideas": "Ma'lumot va g'oyalar",
-  "Craft and Structure": "Uslub va tuzilma",
-  "Expression of Ideas": "Fikrni ifodalash",
-  "Standard English Conventions": "Grammatika va tinish belgilari",
-  Algebra: "Chiziqli tenglamalar va funksiyalar",
-  "Advanced Math": "Kvadrat, darajali va nochiziqli",
-  "Problem-Solving and Data Analysis": "Foiz, nisbat, statistika",
-  "Geometry and Trigonometry": "Shakllar, burchaklar, trigonometriya",
+const DOMAIN_HINT: Record<string, string> = {
+  "Information and Ideas": "Central ideas, evidence, inferences",
+  "Craft and Structure": "Word choice, text structure, purpose",
+  "Expression of Ideas": "Transitions and rhetorical synthesis",
+  "Standard English Conventions": "Grammar and punctuation",
+  Algebra: "Linear equations and functions",
+  "Advanced Math": "Quadratic, exponential and nonlinear",
+  "Problem-Solving and Data Analysis": "Percentages, ratios, statistics",
+  "Geometry and Trigonometry": "Shapes, angles, trigonometry",
 };
 
 const q = (o: Record<string, string>) => "/practice?" + new URLSearchParams(o).toString();
@@ -44,8 +44,8 @@ export function BankBrowser() {
         <div>
           <h1>Question bank</h1>
           <p>
-            {QUESTIONS.length} ta savol, 8 ta domen. Mavzuni tanlang yoki aralash mashq qiling — har bir savolda o'zbekcha
-            tushuntirish bor.
+            {QUESTIONS.length} questions across 8 domains. Pick a topic or practice a mix. Every question comes with a
+            step-by-step explanation.
           </p>
         </div>
       </div>
@@ -53,15 +53,15 @@ export function BankBrowser() {
       <div className="quick-row">
         <a className="quick daily" href={q({ daily: "1" })}>
           <span className="quick-ico"><Icon name="flame" /></span>
-          <div><b>Kunlik 5 savol</b><small>Streak'ni saqlang</small></div>
+          <div><b>Daily 5</b><small>Keep your streak going</small></div>
         </a>
         <a className="quick mix" href={q({ section: tab })}>
           <span className="quick-ico"><Icon name="shuffle" /></span>
-          <div><b>Aralash: {SECTION_LABEL[tab]}</b><small>Bo'limning barcha savollari</small></div>
+          <div><b>Mixed: {SECTION_LABEL[tab]}</b><small>Every question in this section</small></div>
         </a>
         <a className={`quick wrong ${wrongCount ? "" : "disabled"}`} href={wrongCount ? q({ status: "wrong" }) : undefined}>
           <span className="quick-ico"><Icon name="repeat" /></span>
-          <div><b>Xatolarni qayta yechish</b><small>{wrongCount} ta savol</small></div>
+          <div><b>Retry missed questions</b><small>{wrongCount} {wrongCount === 1 ? "question" : "questions"}</small></div>
         </a>
       </div>
 
@@ -83,14 +83,14 @@ export function BankBrowser() {
                 <span className="domain-ico"><Icon name={DOMAIN_ICON[d.domain]} size={22} /></span>
                 <div className="domain-title">
                   <h3>{d.domain}</h3>
-                  <small>{DOMAIN_UZ[d.domain]}</small>
+                  <small>{DOMAIN_HINT[d.domain]}</small>
                 </div>
                 {acc !== null && <span className={`acc-pill ${acc >= 70 ? "good" : acc >= 40 ? "mid" : "low"}`}>{acc}%</span>}
               </header>
 
               <div className="domain-progress">
                 <div className="bar thin"><i className="solid" style={{ width: `${solvedPct}%` }} /></div>
-                <span>{d.attempted}/{d.total} yechildi</span>
+                <span>{d.attempted}/{d.total} answered</span>
               </div>
 
               <ul className="skill-list">
@@ -108,7 +108,7 @@ export function BankBrowser() {
               </ul>
 
               <a className="btn btn-light btn-sm domain-go" href={q({ section: tab, domain: d.domain })}>
-                Butun domenni mashq qilish
+                Practice this domain
               </a>
             </article>
           );

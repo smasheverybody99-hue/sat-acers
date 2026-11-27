@@ -15,7 +15,6 @@ function answerLabel(q: Question, a: number | string | undefined): string {
 
 export function MockResults({ mock, result, onRetake }: { mock: Mock; result: MockResult; onRetake: () => void }) {
   const [open, setOpen] = useState<string | null>(null);
-  const [lang, setLang] = useState<"uz" | "en">("uz");
   const correct = result.sections.reduce((n, s) => n + s.correct, 0);
   const total = result.sections.reduce((n, s) => n + s.total, 0);
 
@@ -25,14 +24,14 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
         <div className="score-hero-main">
           <Ring value={(result.total - 400) / 1200} size={180} stroke={14} id="ring-result">
             <b className="score-big">{result.total}</b>
-            <small>taxminiy ball</small>
+            <small>estimated score</small>
           </Ring>
           <div>
             <span className="eyebrow"><span className="dot" /> {mock.title}</span>
             <h2 className="score-title">
-              {result.total >= 1400 ? "Ajoyib natija! 🏆" : result.total >= 1100 ? "Yaxshi natija! 💪" : "Boshlanish yaxshi! 🌱"}
+              {result.total >= 1400 ? "Outstanding! 🏆" : result.total >= 1100 ? "Solid result! 💪" : "Good start! 🌱"}
             </h2>
-            <div className="score-sub">{correct}/{total} to'g'ri javob</div>
+            <div className="score-sub">{correct}/{total} correct</div>
           </div>
         </div>
         <div className="score-sections">
@@ -40,16 +39,16 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
             <div key={s.section} className="score-sec">
               <span>{SECTION_LABEL[s.section]}</span>
               <b>{s.score}</b>
-              <small>{s.correct}/{s.total} to'g'ri</small>
+              <small>{s.correct}/{s.total} correct</small>
             </div>
           ))}
         </div>
       </div>
       <p className="score-note">
-        Bu ball taxminiy: haqiqiy SAT adaptiv va savollarning og'irligi har xil. Mo'ljal sifatida foydalaning.
+        This score is an estimate. The real SAT is adaptive and weights questions differently, so use it as a guide.
       </p>
 
-      <h3 className="results-h">Domenlar bo'yicha</h3>
+      <h3 className="results-h">By domain</h3>
       <div className="domain-list">
         {result.domains.map((d) => {
           const pct = Math.round((d.correct / d.total) * 100);
@@ -66,7 +65,7 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
         })}
       </div>
 
-      <h3 className="results-h">Savollar tahlili</h3>
+      <h3 className="results-h">Question review</h3>
       {mock.modules.map((mod, mi) => (
         <div key={mi} style={{ marginBottom: 18 }}>
           <div className="module-label">
@@ -84,7 +83,7 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
                     <span className="ri-mark">{ok ? "✅" : "❌"}</span>
                     <span className="ri-text">{q.domain} · {q.skill}</span>
                     <span className="ri-ans">
-                      Siz: <b>{answerLabel(q, a)}</b> · To'g'ri: <b>{correctAnswerLabel(q)}</b>
+                      You: <b>{answerLabel(q, a)}</b> · Correct: <b>{correctAnswerLabel(q)}</b>
                     </span>
                     <span className="ri-chev">{isOpen ? "▲" : "▼"}</span>
                   </button>
@@ -102,13 +101,9 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
                       )}
                       <div className={`result ${ok ? "ok" : "no"}`}>
                         <div className="result-head">
-                          <strong>Tushuntirish</strong>
-                          <span className="lang-toggle">
-                            <button className={lang === "uz" ? "on" : ""} onClick={() => setLang("uz")}>O'zbekcha</button>
-                            <button className={lang === "en" ? "on" : ""} onClick={() => setLang("en")}>English</button>
-                          </span>
+                          <strong>Explanation</strong>
                         </div>
-                        <p>{renderMath(lang === "uz" ? q.explanation_uz : q.explanation_en)}</p>
+                        <p>{renderMath(q.explanation_en)}</p>
                       </div>
                     </div>
                   )}
@@ -120,9 +115,9 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
       ))}
 
       <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 24 }}>
-        <a className="btn btn-primary" href="/mistakes">📒 Xatonomani ochish</a>
-        <button className="btn btn-light" onClick={onRetake}>Qayta topshirish</button>
-        <a className="btn btn-light" href="/mock">Boshqa mocklar</a>
+        <a className="btn btn-primary" href="/mistakes">📒 Open Mistake Log</a>
+        <button className="btn btn-light" onClick={onRetake}>Retake</button>
+        <a className="btn btn-light" href="/mock">Other mocks</a>
       </div>
     </div>
   );

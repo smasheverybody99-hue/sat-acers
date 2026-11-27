@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Bluebook'dagidek: Desmos ochilganda ekran ikkiga bo'linadi — chapda kalkulyator, o'ngda savol.
- * O'rtadagi ajratgichni surib, nisbatni o'zgartirish mumkin. Yopilganda ham kalkulyator
- * xotirada qoladi — chizilgan grafiklar yo'qolmaydi.
+ * Like Bluebook: opening Desmos splits the screen, calculator on the left and question on the right.
+ * Drag the divider to change the ratio. The calculator stays in memory when closed,
+ * so graphs aren't lost.
  */
 export function DesmosSplit({
   open,
@@ -48,12 +48,12 @@ export function DesmosSplit({
   return (
     <div className={`split-wrap ${open ? "with-calc" : ""}`} ref={wrap}>
       {mounted && (
-        <section className="calc-pane" style={{ display: open ? "flex" : "none", flexBasis: `${pct}%` }} aria-label="Desmos kalkulyatori">
+        <section className="calc-pane" style={{ display: open ? "flex" : "none", flexBasis: `${pct}%` }} aria-label="Desmos calculator">
           <div className="calc-head">
             <span>🧮 Desmos Graphing Calculator</span>
             <div className="calc-actions">
-              <button onClick={() => setPct(pct >= 60 ? 50 : 65)} title="Kenglikni o'zgartirish">{pct >= 60 ? "⇤" : "⇥"}</button>
-              <button onClick={onClose} title="Yopish">✕</button>
+              <button onClick={() => setPct(pct >= 60 ? 50 : 65)} title="Resize">{pct >= 60 ? "⇤" : "⇥"}</button>
+              <button onClick={onClose} title="Close">✕</button>
             </div>
           </div>
           <iframe

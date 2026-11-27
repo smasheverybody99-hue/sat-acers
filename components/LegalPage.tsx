@@ -10,7 +10,7 @@ export function LegalPage({
   return (
     <section className="container legal">
       <h1>{title}</h1>
-      <p className="legal-updated">Oxirgi yangilanish: {updated}</p>
+      <p className="legal-updated">Last updated: {updated}</p>
       {children}
     </section>
   );

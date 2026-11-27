@@ -1,5 +1,5 @@
--- SAT Acers: foydalanuvchi ma'lumotlari jadvali
--- Supabase → SQL Editor → New query → shu faylni to'liq joylashtirib "Run" bosing.
+-- SAT Acers: user data table
+-- Supabase → SQL Editor → New query → paste this whole file and click "Run".
 
 create table if not exists public.user_data (
   user_id      uuid primary key references auth.users (id) on delete cascade,
@@ -10,7 +10,7 @@ create table if not exists public.user_data (
 
 alter table public.user_data enable row level security;
 
--- Har bir foydalanuvchi faqat o'z qatorini ko'radi va o'zgartiradi
+-- Each user can only read and change their own row
 drop policy if exists "own row select" on public.user_data;
 drop policy if exists "own row insert" on public.user_data;
 drop policy if exists "own row update" on public.user_data;

@@ -17,8 +17,8 @@ function merge(ranges: Range2[]): Range2[] {
 }
 
 /**
- * Bo'yaladigan matn: highlighter yoqilganda belgilangan matn sariq bo'ladi,
- * bo'yalgan joyni bosish uni o'chiradi. Jadvalli matnlarda bo'yash o'chiriladi.
+ * Highlightable text: with the highlighter on, selected text turns yellow;
+ * clicking a highlight removes it. Highlighting is disabled for passages with tables.
  */
 export function HighlightPassage({
   text,
@@ -58,7 +58,7 @@ export function HighlightPassage({
       <mark
         key={i}
         className="hl"
-        title="O'chirish uchun bosing"
+        title="Click to remove"
         onClick={() => onChange(ranges.filter((r) => !(r[0] < e && r[1] > s)))}
       >
         {text.slice(s, e)}
@@ -75,14 +75,14 @@ export function HighlightPassage({
   );
 }
 
-/** SAT Math formulalar varag'i (umumiy geometriya formulalari) */
+/** SAT Math reference sheet (common geometry formulas) */
 export function ReferenceSheet({ onClose }: { onClose: () => void }) {
   return (
     <div className="ref-backdrop" onClick={onClose}>
       <div className="ref-sheet" role="dialog" aria-label="Reference sheet" onClick={(e) => e.stopPropagation()}>
         <div className="ref-head">
           <b>Reference Sheet</b>
-          <button onClick={onClose} aria-label="Yopish">✕</button>
+          <button onClick={onClose} aria-label="Close">✕</button>
         </div>
         <div className="ref-grid">
           <RefItem title="Circle">

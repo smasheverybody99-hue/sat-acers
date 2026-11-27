@@ -12,7 +12,7 @@ type Mode =
   | { kind: "filtered"; filters: Partial<Filters> }
   | { kind: "daily"; ids: string[] };
 
-/** /practice — parametrsiz: mavzular ro'yxati; parametr bilan: mashq sessiyasi */
+/** /practice — no params: topic list; with params: practice session */
 export function PracticeRoot() {
   const [mode, setMode] = useState<Mode | null>(null);
 
@@ -36,6 +36,6 @@ export function PracticeRoot() {
 
   if (!mode) return null;
   if (mode.kind === "browse") return <BankBrowser />;
-  if (mode.kind === "daily") return <Practice ids={mode.ids} title="Kunlik 5 savol" />;
+  if (mode.kind === "daily") return <Practice ids={mode.ids} title="Daily 5" />;
   return <Practice initial={mode.filters} />;
 }
