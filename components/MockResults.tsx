@@ -8,6 +8,14 @@ import { Ring } from "./Ring";
 import { Figure } from "./Figure";
 import { RichText, renderMath } from "./MathText";
 
+/** Target pace on the real SAT: R&W 32 min / 27 questions, Math 35 min / 22 questions */
+export const PACE_SEC = { rw: 71, math: 95 } as const;
+
+export function fmtSec(ms: number): string {
+  const s = Math.round(ms / 1000);
+  return s >= 60 ? `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}` : `${s}s`;
+}
+
 function answerLabel(q: Question, a: number | string | undefined): string {
   if (a === undefined || a === "") return "—";
   return q.type === "mcq" ? String.fromCharCode(65 + (a as number)) : String(a);
@@ -40,13 +48,22 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
               <span>{SECTION_LABEL[s.section]}</span>
               <b>{s.score}</b>
               <small>{s.correct}/{s.total} correct</small>
+              {s.route && (
+                <span className={`route-chip ${s.route}`} title="Which Module 2 you were routed to">
+                  Module 2: {s.route === "harder" ? "Harder" : "Easier"}
+                </span>
+              )}
             </div>
           ))}
         </div>
       </div>
       <p className="score-note">
-        This score is an estimate. The real SAT is adaptive and weights questions differently, so use it as a guide.
+        {result.routes && Object.values(result.routes).includes("easier")
+          ? "This score is an estimate. You got the easier Module 2 in at least one section, which caps the score a little below 600 there, just like the real SAT. Aim for about 55% or more on Module 1 to unlock the harder Module 2."
+          : "This score is an estimate based on an adaptive model of the real SAT. Use it as a guide."}
       </p>
+
+      {result.times && <TimeSummary mock={mock} result={result} onOpen={setOpen} />}
 
       <h3 className="results-h">By domain</h3>
       <div className="domain-list">
@@ -70,14 +87,15 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
         <div key={mi} style={{ marginBottom: 18 }}>
           <div className="module-label">
             {SECTION_LABEL[mod.section]} — Module {mod.number}
+            {mod.number === 2 && result.routes?.[mod.section] && ` (${result.routes[mod.section] === "harder" ? "harder" : "easier"})`}
           </div>
           <div className="mistake-list">
-            {moduleQuestions(mod).map((q, i) => {
+            {moduleQuestions(mod, result.routes).map((q, i) => {
               const a = result.answers[q.id];
               const ok = a !== undefined && a !== "" && isCorrect(q, a);
               const isOpen = open === q.id;
               return (
-                <div key={q.id} className={`review-item ${ok ? "ok" : "no"}`}>
+                <div key={q.id} id={`ri-${q.id}`} className={`review-item ${ok ? "ok" : "no"}`}>
                   <button className="review-row" onClick={() => setOpen(isOpen ? null : q.id)}>
                     <span className="ri-num">{i + 1}</span>
                     <span className="ri-mark">{ok ? "✅" : "❌"}</span>
@@ -85,6 +103,7 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
                     <span className="ri-ans">
                       You: <b>{answerLabel(q, a)}</b> · Correct: <b>{correctAnswerLabel(q)}</b>
                     </span>
+                    {result.times?.[q.id] !== undefined && <span className="ri-time">{fmtSec(result.times[q.id])}</span>}
                     <span className="ri-chev">{isOpen ? "▲" : "▼"}</span>
                   </button>
                   {isOpen && (
@@ -120,5 +139,65 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
         <a className="btn btn-light" href="/mock">Other mocks</a>
       </div>
     </div>
+  );
+}
+
+function TimeSummary({ mock, result, onOpen }: { mock: Mock; result: MockResult; onOpen: (id: string) => void }) {
+  const times = result.times ?? {};
+  const sections = (["rw", "math"] as const)
+    .map((sec) => {
+      const qs = mock.modules.filter((m) => m.section === sec).flatMap((m) => moduleQuestions(m, result.routes));
+      const timed = qs.filter((q) => times[q.id] !== undefined);
+      const total = timed.reduce((n, q) => n + times[q.id], 0);
+      return { sec, count: timed.length, total, avg: timed.length ? total / timed.length : 0 };
+    })
+    .filter((s) => s.count > 0);
+  const all = mock.modules.flatMap((m) => moduleQuestions(m, result.routes));
+  const slowest = all
+    .filter((q) => times[q.id] !== undefined)
+    .sort((a, b) => times[b.id] - times[a.id])
+    .slice(0, 5);
+  if (!sections.length) return null;
+
+  return (
+    <>
+      <h3 className="results-h">Timing</h3>
+      <div className="time-grid">
+        {sections.map((s) => {
+          const pace = PACE_SEC[s.sec] * 1000;
+          const ratio = s.avg / pace;
+          return (
+            <div key={s.sec} className="time-card">
+              <span>{SECTION_LABEL[s.sec]}</span>
+              <b>{fmtSec(s.avg)}</b>
+              <small>average per question · target {fmtSec(pace)}</small>
+              <div className="bar"><i style={{ width: `${Math.min(100, ratio * 100)}%` }} className={ratio <= 1 ? "good" : ratio <= 1.25 ? "mid" : "low"} /></div>
+              <small>Total: {fmtSec(s.total)}</small>
+            </div>
+          );
+        })}
+        <div className="time-card slow">
+          <span>Slowest questions</span>
+          <ol>
+            {slowest.map((q) => {
+              const a = result.answers[q.id];
+              const ok = a !== undefined && a !== "" && isCorrect(q, a);
+              return (
+                <li key={q.id}>
+                  <button
+                    onClick={() => {
+                      onOpen(q.id);
+                      setTimeout(() => document.getElementById(`ri-${q.id}`)?.scrollIntoView({ behavior: "smooth", block: "center" }), 50);
+                    }}
+                  >
+                    <b>{fmtSec(times[q.id])}</b> {ok ? "✅" : "❌"} {q.skill}
+                  </button>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      </div>
+    </>
   );
 }

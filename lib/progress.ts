@@ -13,6 +13,8 @@ export interface AttemptStat {
   correct: number;
   lastCorrect: boolean;
   lastAt: number;
+  /** Time spent on the latest attempt, in ms (when measured) */
+  ms?: number;
 }
 
 export interface MistakeEntry {
@@ -27,6 +29,8 @@ export interface Progress {
   mistakes: Record<string, MistakeEntry>;
   streak: { count: number; lastDay: string | null };
   daily: { day: string | null; answered: number };
+  /** Questions answered per day ("YYYY-MM-DD" → count) */
+  days: Record<string, number>;
 }
 
 const empty = (): Progress => ({
@@ -34,6 +38,7 @@ const empty = (): Progress => ({
   mistakes: {},
   streak: { count: 0, lastDay: null },
   daily: { day: null, answered: 0 },
+  days: {},
 });
 
 export function dayKey(ts = Date.now()): string {
@@ -75,7 +80,24 @@ export function todayAnswered(p: Progress, now = Date.now()): number {
   return p.daily.day === dayKey(now) ? p.daily.answered : 0;
 }
 
-export function recordAnswer(questionId: string, correct: boolean, now = Date.now()): Progress {
+/** Monday of the week containing `ts`, as a day key */
+export function weekKey(ts = Date.now()): string {
+  const d = new Date(ts);
+  const back = (d.getDay() + 6) % 7;
+  return dayKey(new Date(d.getFullYear(), d.getMonth(), d.getDate() - back).getTime());
+}
+
+/** Questions answered in the current week (Monday–Sunday) */
+export function weekAnswered(p: Progress, now = Date.now()): number {
+  const start = weekKey(now);
+  return Object.entries(p.days ?? {}).reduce((n, [day, c]) => (day >= start && day <= dayKey(now) ? n + c : n), 0);
+}
+
+export function totalAnswered(p: Progress): number {
+  return Object.values(p.attempts).reduce((n, a) => n + a.tries, 0);
+}
+
+export function recordAnswer(questionId: string, correct: boolean, ms?: number, now = Date.now()): Progress {
   const p = loadProgress();
   const today = dayKey(now);
 
@@ -85,9 +107,10 @@ export function recordAnswer(questionId: string, correct: boolean, now = Date.no
     correct: (prev?.correct ?? 0) + (correct ? 1 : 0),
     lastCorrect: correct,
     lastAt: now,
+    ...(ms && ms > 0 ? { ms: Math.round(ms) } : {}),
   };
 
-  // Xatonoma
+  // Mistake Log
   const m = p.mistakes[questionId];
   if (!correct) {
     p.mistakes[questionId] = {
@@ -110,8 +133,9 @@ export function recordAnswer(questionId: string, correct: boolean, now = Date.no
     p.streak = { count: continued ? p.streak.count + 1 : 1, lastDay: today };
   }
 
-  // Kunlik hisob
+  // Daily count
   p.daily = p.daily.day === today ? { day: today, answered: p.daily.answered + 1 } : { day: today, answered: 1 };
+  p.days = { ...(p.days ?? {}), [today]: (p.days?.[today] ?? 0) + 1 };
 
   save(p);
   return p;

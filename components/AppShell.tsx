@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Icon, type IconName } from "./Icons";
 import { LogoMark } from "./Logo";
@@ -12,8 +13,15 @@ const NAV: { href: string; label: string; short: string; icon: IconName }[] = [
   { href: "/practice", label: "Question bank", short: "Practice", icon: "book" },
   { href: "/mock", label: "Mock tests", short: "Mocks", icon: "clipboard" },
   { href: "/mistakes", label: "Mistake Log", short: "Mistakes", icon: "notebook" },
+  { href: "/vocab", label: "Vocabulary", short: "Vocab", icon: "cards" },
+  { href: "/progress", label: "Progress", short: "Progress", icon: "trend" },
+  { href: "/leaderboard", label: "Leaderboard", short: "Ranks", icon: "podium" },
   { href: "/official", label: "Official resources", short: "Official", icon: "landmark" },
 ];
+
+/** Mobile tab bar shows the first four; the rest live under "More" */
+const TABS = NAV.slice(0, 4);
+const MORE = NAV.slice(4);
 
 export const DAILY_GOAL = 5;
 
@@ -26,6 +34,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const goalPct = Math.min(100, (today / DAILY_GOAL) * 100);
   const { user, status } = useAuth();
   const isActive = (href: string) => path === href || path.startsWith(href + "/");
+  const [moreOpen, setMoreOpen] = useState(false);
+  const moreActive = MORE.some((n) => isActive(n.href));
 
   return (
     <div className="shell">
@@ -113,14 +123,31 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <main className="shell-content">{children}</main>
       </div>
 
+      {moreOpen && (
+        <div className="more-sheet" onClick={() => setMoreOpen(false)}>
+          <nav aria-label="More pages" onClick={(e) => e.stopPropagation()}>
+            {MORE.map((n) => (
+              <a key={n.href} href={n.href} className={isActive(n.href) ? "on" : ""}>
+                <Icon name={n.icon} size={22} />
+                <span>{n.label}</span>
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
+
       <nav className="tabbar" aria-label="Main menu">
-        {NAV.slice(0, 4).map((n) => (
+        {TABS.map((n) => (
           <a key={n.href} href={n.href} className={isActive(n.href) ? "on" : ""}>
             <Icon name={n.icon} size={22} />
             <span>{n.short}</span>
             {n.href === "/mistakes" && due > 0 && <b className="nav-badge">{due}</b>}
           </a>
         ))}
+        <button className={moreActive || moreOpen ? "on" : ""} onClick={() => setMoreOpen((o) => !o)} aria-expanded={moreOpen}>
+          <Icon name="dots" size={22} />
+          <span>More</span>
+        </button>
       </nav>
     </div>
   );

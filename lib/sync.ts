@@ -7,13 +7,17 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import { loadProgress, saveProgressRaw, type Progress } from "./progress";
 import { loadHistory, saveHistoryRaw } from "./mockStore";
 import type { MockResult } from "./mocks";
+import { loadVocab, mergeVocab, saveVocabRaw, type VocabState } from "./vocab";
+import { loadProfile, mergeProfile, pushLeaderboard, saveProfileRaw, type Profile } from "./leaderboard";
 
 export interface CloudRow {
   progress: Progress | null;
   mock_history: MockResult[] | null;
+  vocab?: VocabState | null;
+  profile?: Profile | null;
 }
 
-/** Ikki qurilmadagi progressni birlashtirish */
+/** Merge progress from two devices */
 export function mergeProgress(a: Progress, b: Progress): Progress {
   const attempts: Progress["attempts"] = { ...a.attempts };
   for (const [id, x] of Object.entries(b.attempts)) {
@@ -26,6 +30,7 @@ export function mergeProgress(a: Progress, b: Progress): Progress {
         correct: Math.max(x.correct, y.correct),
         lastCorrect: latest.lastCorrect,
         lastAt: latest.lastAt,
+        ...(latest.ms ? { ms: latest.ms } : {}),
       };
     }
   }
@@ -56,7 +61,10 @@ export function mergeProgress(a: Progress, b: Progress): Progress {
   if (!a.daily.day || (b.daily.day && b.daily.day > a.daily.day)) daily = b.daily;
   else if (a.daily.day === b.daily.day) daily = { day: a.daily.day, answered: Math.max(a.daily.answered, b.daily.answered) };
 
-  return { attempts, mistakes, streak, daily };
+  const days: Progress["days"] = { ...(a.days ?? {}) };
+  for (const [d, n] of Object.entries(b.days ?? {})) days[d] = Math.max(days[d] ?? 0, n);
+
+  return { attempts, mistakes, streak, daily, days };
 }
 
 export function mergeHistory(a: MockResult[], b: MockResult[]): MockResult[] {
@@ -67,25 +75,51 @@ export function mergeHistory(a: MockResult[], b: MockResult[]): MockResult[] {
 
 const isEmpty = (p: Progress) => !Object.keys(p.attempts).length && !p.streak.lastDay;
 
+/**
+ * The vocab and profile columns were added later (supabase/schema.sql). Until the
+ * migration has been run, sync keeps working without them.
+ */
+let extraColumns = true;
+const missingColumn = (e: { message?: string; code?: string } | null) =>
+  !!e && (e.code === "42703" || e.code === "PGRST204" || /column/i.test(e.message ?? ""));
+
 /** After sign-in: pull from cloud → merge → save to both */
 export async function pullAndMerge(sb: SupabaseClient, userId: string): Promise<void> {
-  const { data, error } = await sb.from("user_data").select("progress, mock_history").eq("user_id", userId).maybeSingle();
-  if (error) throw error;
-  const row = (data ?? { progress: null, mock_history: null }) as CloudRow;
+  let res = await sb
+    .from("user_data")
+    .select(extraColumns ? "progress, mock_history, vocab, profile" : "progress, mock_history")
+    .eq("user_id", userId)
+    .maybeSingle();
+  if (res.error && extraColumns && missingColumn(res.error)) {
+    extraColumns = false;
+    res = await sb.from("user_data").select("progress, mock_history").eq("user_id", userId).maybeSingle();
+  }
+  if (res.error) throw res.error;
+  const row = (res.data ?? { progress: null, mock_history: null }) as CloudRow;
   const local = loadProgress();
   const merged = row.progress ? (isEmpty(local) ? row.progress : mergeProgress(local, row.progress)) : local;
   const history = mergeHistory(loadHistory(), row.mock_history ?? []);
   saveProgressRaw(merged);
   saveHistoryRaw(history);
+  if (row.vocab) saveVocabRaw(mergeVocab(loadVocab(), row.vocab));
+  if (row.profile) saveProfileRaw(mergeProfile(loadProfile(), row.profile));
   await push(sb, userId);
 }
 
 export async function push(sb: SupabaseClient, userId: string): Promise<void> {
-  const { error } = await sb.from("user_data").upsert({
+  const base = {
     user_id: userId,
     progress: loadProgress(),
     mock_history: loadHistory(),
     updated_at: new Date().toISOString(),
-  });
+  };
+  let { error } = await sb
+    .from("user_data")
+    .upsert(extraColumns ? { ...base, vocab: loadVocab(), profile: loadProfile() } : base);
+  if (error && extraColumns && missingColumn(error)) {
+    extraColumns = false;
+    ({ error } = await sb.from("user_data").upsert(base));
+  }
   if (error) throw error;
+  await pushLeaderboard(sb, userId);
 }

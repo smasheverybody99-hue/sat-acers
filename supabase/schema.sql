@@ -5,6 +5,8 @@ create table if not exists public.user_data (
   user_id      uuid primary key references auth.users (id) on delete cascade,
   progress     jsonb,
   mock_history jsonb,
+  vocab        jsonb,
+  profile      jsonb,
   updated_at   timestamptz not null default now()
 );
 
@@ -23,3 +25,5 @@ create policy "own row insert" on public.user_data
 
 create policy "own row update" on public.user_data
   for update using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+-- The leaderboard table is in migration-2-leaderboard-vocab.sql (run it after this file).

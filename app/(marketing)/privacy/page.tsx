@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <h2>What we store</h2>
       <ul>
         <li>
-          <b>If you use the site without an account:</b> your answers, Mistake Log, streak and mock results are stored
+          <b>If you use the site without an account:</b> your answers, Mistake Log, vocabulary reviews, streak and mock results are stored
           only in your browser (localStorage). They are never sent to us.
         </li>
         <li>
@@ -22,6 +22,12 @@ export default function PrivacyPage() {
           practice data above are stored in the cloud so they stay the same on all your devices.
         </li>
       </ul>
+      <p>
+        <b>Leaderboard:</b> if you&apos;re signed in, the leaderboard shows a name you choose (by default
+        &quot;Acer&quot; plus a short code, never your email) with how many questions you answered this week, your
+        streak and your total answered. You can change the name or turn off &quot;Show me on the leaderboard&quot; at
+        any time, which removes your row.
+      </p>
       <p>
         When you sign in with Google, we only receive your name, email address and profile picture. We never access
         your Google Drive, contacts or any other data.

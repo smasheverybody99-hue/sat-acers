@@ -41,7 +41,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const syncedFor = useRef<string | null>(null);
   const timer = useRef<number | null>(null);
 
-  // Sessiyani kuzatish
+  // Watch the auth session
   useEffect(() => {
     const sb = getSupabase();
     if (!sb) return;
@@ -98,12 +98,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         }
       }, 1500);
     };
-    window.addEventListener("acers:progress", onChange);
-    window.addEventListener("acers:history", onChange);
-    return () => {
-      window.removeEventListener("acers:progress", onChange);
-      window.removeEventListener("acers:history", onChange);
-    };
+    const events = ["acers:progress", "acers:history", "acers:vocab", "acers:profile"];
+    events.forEach((ev) => window.addEventListener(ev, onChange));
+    return () => events.forEach((ev) => window.removeEventListener(ev, onChange));
   }, [user]);
 
   const signInEmail = useCallback(async (email: string) => {

@@ -20,13 +20,16 @@ For sign-in and cloud sync, copy `.env.example` to `.env.local` and fill in the 
 | `/` | Landing page |
 | `/dashboard` | Estimated score, streak, daily goal, recent mocks, mastery by domain |
 | `/practice` | Question bank: filter by section, domain, skill, difficulty and status; A–D and Enter shortcuts |
-| `/mock`, `/mock/[id]` | Bluebook-style mocks: modules, timer, Mark for Review, highlighter, answer eliminator, Desmos, reference sheet, break, score estimate and review. Mocks live in `data/mocks.json` |
+| `/mock`, `/mock/[id]` | Bluebook-style adaptive mocks: Module 1 decides whether Module 2 is harder or easier (`easierQuestionIds` in `data/mocks.json`). Timer, Mark for Review, highlighter, answer eliminator, Desmos, reference sheet, break, score estimate, timing and review |
 | `/mistakes` | Mistake Log: missed questions come back after 1, 3 and 7 days |
+| `/vocab` | 120 SAT words as flashcards with spaced review (`data/vocab.json`) |
+| `/progress` | Mock score history chart, time per question by domain, slowest skills |
+| `/leaderboard` | Weekly questions answered and streaks (Supabase `leaderboard` table) |
 | `/official` | Links to official College Board and Khan Academy resources |
 | `/login` | Email magic link and Google sign-in (Supabase) |
 | `/privacy`, `/terms` | Privacy Policy and Terms of Service |
 
-Progress is stored in `localStorage` (`lib/progress.ts`). When signed in, `lib/sync.ts` merges it with the `user_data` table in Supabase (schema: `supabase/schema.sql`).
+Progress is stored in `localStorage` (`lib/progress.ts`, `lib/vocab.ts`, `lib/leaderboard.ts`). When signed in, `lib/sync.ts` merges it with the `user_data` table in Supabase and publishes the leaderboard row. Database setup: run `supabase/schema.sql`, then `supabase/migration-2-leaderboard-vocab.sql`.
 
 ## Adding questions
 

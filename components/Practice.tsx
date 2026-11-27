@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Icon } from "./Icons";
 import { Figure } from "./Figure";
 import { RichText, renderMath } from "./MathText";
@@ -78,6 +78,12 @@ export function Practice({
   const finished = queue.length > 0 && index >= queue.length;
   const canCheck = q && !checked && (q.type === "mcq" ? picked !== null : spr.trim() !== "");
 
+  // Time on the current question (capped so an idle tab doesn't count)
+  const shownAt = useRef(Date.now());
+  useEffect(() => {
+    shownAt.current = Date.now();
+  }, [q?.id, index]);
+
   const check = useCallback(() => {
     if (!q || checked) return;
     const response = q.type === "mcq" ? picked : spr;
@@ -87,7 +93,7 @@ export function Practice({
     setChecked(true);
     setSession((s) => ({ answered: s.answered + 1, correct: s.correct + (ok ? 1 : 0) }));
     setResults((r) => [...r, ok]);
-    recordAnswer(q.id, ok);
+    recordAnswer(q.id, ok, Math.min(Date.now() - shownAt.current, 10 * 60_000));
   }, [q, checked, picked, spr]);
 
   const next = useCallback(() => {

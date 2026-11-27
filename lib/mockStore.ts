@@ -1,4 +1,4 @@
-import type { Answers, MockResult } from "./mocks";
+import type { Answers, MockResult, Routes } from "./mocks";
 
 /** An in-progress mock; resumes here even after a reload or closing the page */
 export interface MockSession {
@@ -8,12 +8,16 @@ export interface MockSession {
   qIndex: number;
   answers: Answers;
   flagged: Record<string, boolean>;
-  /** Chizib tashlangan variantlar (answer eliminator) */
+  /** Crossed-out choices (answer eliminator) */
   eliminated?: Record<string, number[]>;
   /** Highlighted ranges in the passage: [start, end] */
   highlights?: Record<string, [number, number][]>;
   /** When the current module or break ends (ms) */
   endsAt: number;
+  /** Adaptive mocks: Module 2 version per section, set when Module 1 ends */
+  routes?: Routes;
+  /** Time spent on each question, in ms */
+  times?: Record<string, number>;
 }
 
 const sessionKey = (id: string) => `acers:mock:${id}`;
@@ -56,7 +60,7 @@ export function addResult(r: MockResult) {
   notify(false);
 }
 
-/** Bulutdan kelgan tarixni saqlash */
+/** Save history that came from the cloud */
 export function saveHistoryRaw(list: MockResult[]) {
   write(HISTORY_KEY, list);
   notify(true);

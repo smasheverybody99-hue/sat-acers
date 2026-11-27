@@ -22,6 +22,10 @@ const PATHS: Record<string, string> = {
   pen: "M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4ZM13.5 6.5l4 4",
   globe: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9S9.5 5.5 12 3Z",
   play: "M7 4.5v15l12-7.5z",
+  trend: "M3 17l6-6 4 4 8-8M15 7h6v6",
+  cards: "M8 3h11a1 1 0 0 1 1 1v13M4 7h11a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1ZM7 12h6M7 16h4",
+  podium: "M9 21V9h6v12M3 21v-7h6M15 21v-5h6M2 21h20M12 3l.9 1.8 2 .3-1.45 1.4.35 2L12 7.6l-1.8.9.35-2L9.1 5.1l2-.3z",
+  dots: "M5 12h.01M12 12h.01M19 12h.01",
 };
 
 export type IconName = keyof typeof PATHS;

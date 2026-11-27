@@ -1,0 +1,842 @@
+[
+ {
+  "id": "abundant",
+  "word": "abundant",
+  "pos": "adjective",
+  "definition": "existing in large amounts; plentiful",
+  "example": "Fresh water was abundant in the valley, so early settlers built their farms there."
+ },
+ {
+  "id": "accessible",
+  "word": "accessible",
+  "pos": "adjective",
+  "definition": "easy to reach, use, or understand",
+  "example": "The museum added ramps and audio guides to make its exhibits accessible to more visitors."
+ },
+ {
+  "id": "adapt",
+  "word": "adapt",
+  "pos": "verb",
+  "definition": "to change in order to suit new conditions",
+  "example": "Some birds adapt to city life by nesting on tall buildings."
+ },
+ {
+  "id": "advocate",
+  "word": "advocate",
+  "pos": "verb",
+  "definition": "to publicly support or recommend",
+  "example": "The nurse advocated for longer breaks so that staff could rest between shifts."
+ },
+ {
+  "id": "ambiguous",
+  "word": "ambiguous",
+  "pos": "adjective",
+  "definition": "open to more than one interpretation; unclear",
+  "example": "The ending of the story is ambiguous: readers still argue about what happened to the narrator."
+ },
+ {
+  "id": "ambivalent",
+  "word": "ambivalent",
+  "pos": "adjective",
+  "definition": "having mixed or conflicting feelings",
+  "example": "She felt ambivalent about moving: excited by the new job but sad to leave her friends."
+ },
+ {
+  "id": "anomaly",
+  "word": "anomaly",
+  "pos": "noun",
+  "definition": "something that differs from what is normal or expected",
+  "example": "A warm week in January was an anomaly in the town's weather records."
+ },
+ {
+  "id": "arbitrary",
+  "word": "arbitrary",
+  "pos": "adjective",
+  "definition": "based on chance or personal whim rather than reason",
+  "example": "The referee's call seemed arbitrary, since the same move had been allowed earlier."
+ },
+ {
+  "id": "assert",
+  "word": "assert",
+  "pos": "verb",
+  "definition": "to state firmly and confidently",
+  "example": "The author asserts that reading aloud helps children learn new words."
+ },
+ {
+  "id": "attribute",
+  "word": "attribute",
+  "pos": "verb",
+  "definition": "to regard something as caused by a particular source",
+  "example": "Scientists attribute the drop in bee populations to several factors, including disease."
+ },
+ {
+  "id": "augment",
+  "word": "augment",
+  "pos": "verb",
+  "definition": "to make larger or greater by adding to",
+  "example": "The library augmented its collection with hundreds of new e-books."
+ },
+ {
+  "id": "benevolent",
+  "word": "benevolent",
+  "pos": "adjective",
+  "definition": "kind and generous; well-meaning",
+  "example": "A benevolent donor paid for every student's field trip."
+ },
+ {
+  "id": "bolster",
+  "word": "bolster",
+  "pos": "verb",
+  "definition": "to support or strengthen",
+  "example": "The new data bolster the theory that the comet came from outside our solar system."
+ },
+ {
+  "id": "candid",
+  "word": "candid",
+  "pos": "adjective",
+  "definition": "honest and direct, even when the truth is uncomfortable",
+  "example": "In a candid interview, the coach admitted the team had not prepared well."
+ },
+ {
+  "id": "coherent",
+  "word": "coherent",
+  "pos": "adjective",
+  "definition": "logical and consistent; easy to follow",
+  "example": "After a night's sleep, his arguments were far more coherent."
+ },
+ {
+  "id": "commend",
+  "word": "commend",
+  "pos": "verb",
+  "definition": "to praise formally or officially",
+  "example": "The mayor commended the volunteers for cleaning up the river."
+ },
+ {
+  "id": "compelling",
+  "word": "compelling",
+  "pos": "adjective",
+  "definition": "convincing or attention-grabbing",
+  "example": "The lawyer presented compelling evidence that the contract had been signed."
+ },
+ {
+  "id": "complacent",
+  "word": "complacent",
+  "pos": "adjective",
+  "definition": "too satisfied to see the need for improvement",
+  "example": "After winning three games, the team grew complacent and stopped practicing hard."
+ },
+ {
+  "id": "comprehensive",
+  "word": "comprehensive",
+  "pos": "adjective",
+  "definition": "including all or nearly all aspects",
+  "example": "The report offers a comprehensive review of the city's transportation needs."
+ },
+ {
+  "id": "concede",
+  "word": "concede",
+  "pos": "verb",
+  "definition": "to admit that something is true, often reluctantly",
+  "example": "The senator conceded that the plan would cost more than expected."
+ },
+ {
+  "id": "concise",
+  "word": "concise",
+  "pos": "adjective",
+  "definition": "giving a lot of information clearly in few words",
+  "example": "Her concise summary fit the entire study into a single paragraph."
+ },
+ {
+  "id": "consensus",
+  "word": "consensus",
+  "pos": "noun",
+  "definition": "general agreement among a group",
+  "example": "There is a growing consensus among doctors that sleep affects memory."
+ },
+ {
+  "id": "conspicuous",
+  "word": "conspicuous",
+  "pos": "adjective",
+  "definition": "clearly visible; attracting attention",
+  "example": "The bright red door was conspicuous on a street of gray houses."
+ },
+ {
+  "id": "contemporary",
+  "word": "contemporary",
+  "pos": "adjective",
+  "definition": "belonging to the present time; or living at the same time",
+  "example": "The museum shows contemporary art made in the last twenty years."
+ },
+ {
+  "id": "contend",
+  "word": "contend",
+  "pos": "verb",
+  "definition": "to argue or claim that something is true",
+  "example": "Some historians contend that the treaty was signed earlier than records show."
+ },
+ {
+  "id": "corroborate",
+  "word": "corroborate",
+  "pos": "verb",
+  "definition": "to confirm or support with evidence",
+  "example": "A second witness corroborated the driver's account of the accident."
+ },
+ {
+  "id": "credible",
+  "word": "credible",
+  "pos": "adjective",
+  "definition": "able to be believed; trustworthy",
+  "example": "Researchers need credible sources, not rumors, to support their claims."
+ },
+ {
+  "id": "cultivate",
+  "word": "cultivate",
+  "pos": "verb",
+  "definition": "to develop or encourage growth of something",
+  "example": "The teacher cultivated a love of reading by letting students choose their books."
+ },
+ {
+  "id": "curtail",
+  "word": "curtail",
+  "pos": "verb",
+  "definition": "to reduce or limit",
+  "example": "The city curtailed water use during the drought."
+ },
+ {
+  "id": "debunk",
+  "word": "debunk",
+  "pos": "verb",
+  "definition": "to show that a belief or claim is false",
+  "example": "The scientist debunked the myth that goldfish forget everything in seconds."
+ },
+ {
+  "id": "deference",
+  "word": "deference",
+  "pos": "noun",
+  "definition": "respectful agreement with someone's opinions or wishes",
+  "example": "Out of deference to her grandmother, she spoke quietly in the old church."
+ },
+ {
+  "id": "delineate",
+  "word": "delineate",
+  "pos": "verb",
+  "definition": "to describe or mark out precisely",
+  "example": "The map delineates the boundaries of each national park."
+ },
+ {
+  "id": "deliberate",
+  "word": "deliberate",
+  "pos": "adjective",
+  "definition": "done on purpose; careful and unhurried",
+  "example": "Every brushstroke in the painting looks deliberate, not accidental."
+ },
+ {
+  "id": "deter",
+  "word": "deter",
+  "pos": "verb",
+  "definition": "to discourage someone from acting",
+  "example": "Bright lights can deter animals from entering the campsite."
+ },
+ {
+  "id": "diligent",
+  "word": "diligent",
+  "pos": "adjective",
+  "definition": "showing careful and steady effort",
+  "example": "A diligent student, he reviewed his notes every evening."
+ },
+ {
+  "id": "discern",
+  "word": "discern",
+  "pos": "verb",
+  "definition": "to notice or recognize, often with difficulty",
+  "example": "In the fog, it was hard to discern the edge of the road."
+ },
+ {
+  "id": "disparate",
+  "word": "disparate",
+  "pos": "adjective",
+  "definition": "very different from one another",
+  "example": "The book brings together disparate ideas from music, physics, and art."
+ },
+ {
+  "id": "dubious",
+  "word": "dubious",
+  "pos": "adjective",
+  "definition": "doubtful; not to be relied upon",
+  "example": "The website made dubious claims about a miracle diet."
+ },
+ {
+  "id": "elicit",
+  "word": "elicit",
+  "pos": "verb",
+  "definition": "to draw out a response or reaction",
+  "example": "The comedian's joke elicited loud laughter from the audience."
+ },
+ {
+  "id": "eloquent",
+  "word": "eloquent",
+  "pos": "adjective",
+  "definition": "fluent and persuasive in speaking or writing",
+  "example": "Her eloquent speech convinced the board to fund the new library."
+ },
+ {
+  "id": "empirical",
+  "word": "empirical",
+  "pos": "adjective",
+  "definition": "based on observation or experiment rather than theory",
+  "example": "The claim needs empirical support from real classroom data."
+ },
+ {
+  "id": "endorse",
+  "word": "endorse",
+  "pos": "verb",
+  "definition": "to declare public approval or support",
+  "example": "Several scientists endorsed the plan to protect the wetlands."
+ },
+ {
+  "id": "enhance",
+  "word": "enhance",
+  "pos": "verb",
+  "definition": "to improve the quality or value of something",
+  "example": "Good lighting can enhance the colors in a photograph."
+ },
+ {
+  "id": "ephemeral",
+  "word": "ephemeral",
+  "pos": "adjective",
+  "definition": "lasting a very short time",
+  "example": "The beauty of cherry blossoms is ephemeral; they fall within a week."
+ },
+ {
+  "id": "erode",
+  "word": "erode",
+  "pos": "verb",
+  "definition": "to gradually wear away or weaken",
+  "example": "Years of broken promises eroded the public's trust in the company."
+ },
+ {
+  "id": "exacerbate",
+  "word": "exacerbate",
+  "pos": "verb",
+  "definition": "to make a problem worse",
+  "example": "Skipping meals can exacerbate stress during exam week."
+ },
+ {
+  "id": "exemplify",
+  "word": "exemplify",
+  "pos": "verb",
+  "definition": "to be a typical example of",
+  "example": "Her careful notes exemplify the habits of a strong researcher."
+ },
+ {
+  "id": "expedite",
+  "word": "expedite",
+  "pos": "verb",
+  "definition": "to make a process happen faster",
+  "example": "The new software expedited the processing of library loans."
+ },
+ {
+  "id": "explicit",
+  "word": "explicit",
+  "pos": "adjective",
+  "definition": "stated clearly and in detail, leaving no doubt",
+  "example": "The instructions were explicit: no phones during the test."
+ },
+ {
+  "id": "feasible",
+  "word": "feasible",
+  "pos": "adjective",
+  "definition": "possible and practical to do",
+  "example": "Building the bridge in six months was not feasible with so few workers."
+ },
+ {
+  "id": "fluctuate",
+  "word": "fluctuate",
+  "pos": "verb",
+  "definition": "to rise and fall irregularly",
+  "example": "Prices for fresh fruit fluctuate with the seasons."
+ },
+ {
+  "id": "foster",
+  "word": "foster",
+  "pos": "verb",
+  "definition": "to encourage the development of",
+  "example": "Group projects can foster teamwork among students."
+ },
+ {
+  "id": "frugal",
+  "word": "frugal",
+  "pos": "adjective",
+  "definition": "careful not to waste money or resources",
+  "example": "By being frugal, the family saved enough for a summer trip."
+ },
+ {
+  "id": "futile",
+  "word": "futile",
+  "pos": "adjective",
+  "definition": "having no useful result",
+  "example": "Trying to dry the clothes outside in the rain was futile."
+ },
+ {
+  "id": "hamper",
+  "word": "hamper",
+  "pos": "verb",
+  "definition": "to slow down or prevent progress",
+  "example": "Heavy snow hampered the rescue team's search."
+ },
+ {
+  "id": "hypothesis",
+  "word": "hypothesis",
+  "pos": "noun",
+  "definition": "a proposed explanation that can be tested",
+  "example": "Her hypothesis was that plants grow faster with music playing."
+ },
+ {
+  "id": "illuminate",
+  "word": "illuminate",
+  "pos": "verb",
+  "definition": "to make clear; to explain",
+  "example": "The diary illuminates what daily life was like during the war."
+ },
+ {
+  "id": "impartial",
+  "word": "impartial",
+  "pos": "adjective",
+  "definition": "treating all sides fairly; unbiased",
+  "example": "Judges are expected to be impartial."
+ },
+ {
+  "id": "implicit",
+  "word": "implicit",
+  "pos": "adjective",
+  "definition": "suggested but not directly stated",
+  "example": "There was an implicit warning in her calm reply."
+ },
+ {
+  "id": "incentive",
+  "word": "incentive",
+  "pos": "noun",
+  "definition": "something that motivates a person to act",
+  "example": "Free snacks were an incentive for students to attend the review session."
+ },
+ {
+  "id": "incongruous",
+  "word": "incongruous",
+  "pos": "adjective",
+  "definition": "not fitting in; out of place",
+  "example": "A fancy chandelier looked incongruous in the small wooden cabin."
+ },
+ {
+  "id": "indifferent",
+  "word": "indifferent",
+  "pos": "adjective",
+  "definition": "showing no interest or concern",
+  "example": "The cat seemed indifferent to the new toy."
+ },
+ {
+  "id": "inevitable",
+  "word": "inevitable",
+  "pos": "adjective",
+  "definition": "certain to happen; unavoidable",
+  "example": "With dark clouds overhead, rain seemed inevitable."
+ },
+ {
+  "id": "infer",
+  "word": "infer",
+  "pos": "verb",
+  "definition": "to conclude from evidence and reasoning",
+  "example": "From the wet streets, we inferred that it had rained overnight."
+ },
+ {
+  "id": "innovative",
+  "word": "innovative",
+  "pos": "adjective",
+  "definition": "introducing new ideas or methods",
+  "example": "The innovative design used recycled plastic for the walls."
+ },
+ {
+  "id": "integral",
+  "word": "integral",
+  "pos": "adjective",
+  "definition": "necessary to make a whole complete; essential",
+  "example": "Teamwork is integral to the success of any expedition."
+ },
+ {
+  "id": "intricate",
+  "word": "intricate",
+  "pos": "adjective",
+  "definition": "very detailed and complicated",
+  "example": "The rug was woven in an intricate pattern of tiny flowers."
+ },
+ {
+  "id": "intrinsic",
+  "word": "intrinsic",
+  "pos": "adjective",
+  "definition": "belonging naturally; essential to something's nature",
+  "example": "Curiosity is intrinsic to good science."
+ },
+ {
+  "id": "inundate",
+  "word": "inundate",
+  "pos": "verb",
+  "definition": "to overwhelm with a large amount",
+  "example": "After the announcement, the office was inundated with phone calls."
+ },
+ {
+  "id": "lucid",
+  "word": "lucid",
+  "pos": "adjective",
+  "definition": "expressed clearly; easy to understand",
+  "example": "The textbook gives a lucid explanation of photosynthesis."
+ },
+ {
+  "id": "meticulous",
+  "word": "meticulous",
+  "pos": "adjective",
+  "definition": "showing great attention to detail",
+  "example": "The meticulous editor checked every date and name in the book."
+ },
+ {
+  "id": "mitigate",
+  "word": "mitigate",
+  "pos": "verb",
+  "definition": "to make less severe or harmful",
+  "example": "Planting trees can mitigate the effects of summer heat in cities."
+ },
+ {
+  "id": "mundane",
+  "word": "mundane",
+  "pos": "adjective",
+  "definition": "ordinary and dull",
+  "example": "The novel turns a mundane trip to the grocery store into an adventure."
+ },
+ {
+  "id": "negligible",
+  "word": "negligible",
+  "pos": "adjective",
+  "definition": "so small as to be unimportant",
+  "example": "The difference in price between the two brands was negligible."
+ },
+ {
+  "id": "nostalgic",
+  "word": "nostalgic",
+  "pos": "adjective",
+  "definition": "feeling a fond longing for the past",
+  "example": "Old photographs made her nostalgic for childhood summers."
+ },
+ {
+  "id": "novel",
+  "word": "novel",
+  "pos": "adjective",
+  "definition": "new and unusual",
+  "example": "The engineers proposed a novel way to store solar energy."
+ },
+ {
+  "id": "objective",
+  "word": "objective",
+  "pos": "adjective",
+  "definition": "not influenced by personal feelings; factual",
+  "example": "A good news report gives an objective account of events."
+ },
+ {
+  "id": "obscure",
+  "word": "obscure",
+  "pos": "adjective",
+  "definition": "not well known; or hard to understand",
+  "example": "The poem refers to an obscure legend that few readers recognize."
+ },
+ {
+  "id": "obsolete",
+  "word": "obsolete",
+  "pos": "adjective",
+  "definition": "no longer used or needed; out of date",
+  "example": "Typewriters became nearly obsolete once computers were common."
+ },
+ {
+  "id": "ominous",
+  "word": "ominous",
+  "pos": "adjective",
+  "definition": "suggesting that something bad will happen",
+  "example": "Ominous clouds gathered over the mountains."
+ },
+ {
+  "id": "optimistic",
+  "word": "optimistic",
+  "pos": "adjective",
+  "definition": "hopeful and confident about the future",
+  "example": "Despite the setback, the team remained optimistic about the season."
+ },
+ {
+  "id": "paradox",
+  "word": "paradox",
+  "pos": "noun",
+  "definition": "a statement or situation that seems contradictory but may be true",
+  "example": "It is a paradox that the more choices we have, the harder it can be to choose."
+ },
+ {
+  "id": "paramount",
+  "word": "paramount",
+  "pos": "adjective",
+  "definition": "more important than anything else",
+  "example": "Safety is paramount when working with chemicals."
+ },
+ {
+  "id": "perpetuate",
+  "word": "perpetuate",
+  "pos": "verb",
+  "definition": "to make something continue indefinitely",
+  "example": "Repeating the rumor only perpetuates the misunderstanding."
+ },
+ {
+  "id": "pervasive",
+  "word": "pervasive",
+  "pos": "adjective",
+  "definition": "spreading widely through an area or group",
+  "example": "The smell of fresh bread was pervasive throughout the bakery."
+ },
+ {
+  "id": "plausible",
+  "word": "plausible",
+  "pos": "adjective",
+  "definition": "seeming reasonable or likely",
+  "example": "His excuse was plausible, so the teacher accepted it."
+ },
+ {
+  "id": "pragmatic",
+  "word": "pragmatic",
+  "pos": "adjective",
+  "definition": "dealing with things in a practical way",
+  "example": "Instead of a perfect plan, they chose a pragmatic one they could finish on time."
+ },
+ {
+  "id": "precarious",
+  "word": "precarious",
+  "pos": "adjective",
+  "definition": "not secure; dangerously likely to fall or fail",
+  "example": "The stack of books sat in a precarious tower on the desk."
+ },
+ {
+  "id": "predominant",
+  "word": "predominant",
+  "pos": "adjective",
+  "definition": "present as the strongest or main element",
+  "example": "Green is the predominant color in the painting."
+ },
+ {
+  "id": "preliminary",
+  "word": "preliminary",
+  "pos": "adjective",
+  "definition": "coming before the main part; early",
+  "example": "Preliminary results suggest the medicine works, but more testing is needed."
+ },
+ {
+  "id": "profound",
+  "word": "profound",
+  "pos": "adjective",
+  "definition": "very great or intense; showing deep insight",
+  "example": "The trip had a profound effect on how she viewed the environment."
+ },
+ {
+  "id": "proliferate",
+  "word": "proliferate",
+  "pos": "verb",
+  "definition": "to increase rapidly in number",
+  "example": "Food trucks proliferated downtown after the city changed its rules."
+ },
+ {
+  "id": "prominent",
+  "word": "prominent",
+  "pos": "adjective",
+  "definition": "important or famous; easy to see",
+  "example": "A prominent scientist spoke at the graduation."
+ },
+ {
+  "id": "prudent",
+  "word": "prudent",
+  "pos": "adjective",
+  "definition": "showing care and good judgment for the future",
+  "example": "It is prudent to save some money for emergencies."
+ },
+ {
+  "id": "reconcile",
+  "word": "reconcile",
+  "pos": "verb",
+  "definition": "to make two things consistent; or to restore friendship",
+  "example": "The report tries to reconcile two very different sets of data."
+ },
+ {
+  "id": "redundant",
+  "word": "redundant",
+  "pos": "adjective",
+  "definition": "unnecessary because it repeats something",
+  "example": "The editor removed redundant sentences to shorten the article."
+ },
+ {
+  "id": "refute",
+  "word": "refute",
+  "pos": "verb",
+  "definition": "to prove a statement or theory wrong",
+  "example": "New evidence refuted the claim that the bridge was safe."
+ },
+ {
+  "id": "relevant",
+  "word": "relevant",
+  "pos": "adjective",
+  "definition": "closely connected to the matter at hand",
+  "example": "Only include details that are relevant to your argument."
+ },
+ {
+  "id": "reluctant",
+  "word": "reluctant",
+  "pos": "adjective",
+  "definition": "unwilling and hesitant",
+  "example": "He was reluctant to speak in front of such a large crowd."
+ },
+ {
+  "id": "resilient",
+  "word": "resilient",
+  "pos": "adjective",
+  "definition": "able to recover quickly from difficulty",
+  "example": "Coral reefs can be resilient if water temperatures return to normal."
+ },
+ {
+  "id": "scrutinize",
+  "word": "scrutinize",
+  "pos": "verb",
+  "definition": "to examine very closely",
+  "example": "The committee scrutinized every line of the budget."
+ },
+ {
+  "id": "skeptical",
+  "word": "skeptical",
+  "pos": "adjective",
+  "definition": "not easily convinced; having doubts",
+  "example": "Many readers were skeptical of the article's surprising claims."
+ },
+ {
+  "id": "sparse",
+  "word": "sparse",
+  "pos": "adjective",
+  "definition": "thinly scattered; not dense",
+  "example": "Plants are sparse in the desert, with wide gaps between them."
+ },
+ {
+  "id": "speculate",
+  "word": "speculate",
+  "pos": "verb",
+  "definition": "to form a theory without firm evidence",
+  "example": "Fans speculated about the plot of the next movie."
+ },
+ {
+  "id": "stagnant",
+  "word": "stagnant",
+  "pos": "adjective",
+  "definition": "not flowing or changing; inactive",
+  "example": "Mosquitoes breed in stagnant water."
+ },
+ {
+  "id": "subtle",
+  "word": "subtle",
+  "pos": "adjective",
+  "definition": "delicate or slight, and so hard to notice",
+  "example": "There is a subtle difference between the two shades of blue."
+ },
+ {
+  "id": "substantiate",
+  "word": "substantiate",
+  "pos": "verb",
+  "definition": "to provide evidence to prove something true",
+  "example": "The journalist substantiated her story with official records."
+ },
+ {
+  "id": "superficial",
+  "word": "superficial",
+  "pos": "adjective",
+  "definition": "on the surface only; not thorough or deep",
+  "example": "The review was superficial and ignored the book's main ideas."
+ },
+ {
+  "id": "susceptible",
+  "word": "susceptible",
+  "pos": "adjective",
+  "definition": "likely to be affected or harmed by something",
+  "example": "Young plants are susceptible to frost."
+ },
+ {
+  "id": "sustain",
+  "word": "sustain",
+  "pos": "verb",
+  "definition": "to keep something going over time",
+  "example": "The town's economy is sustained by tourism."
+ },
+ {
+  "id": "tentative",
+  "word": "tentative",
+  "pos": "adjective",
+  "definition": "not certain or fixed; provisional",
+  "example": "They made tentative plans to meet on Saturday."
+ },
+ {
+  "id": "undermine",
+  "word": "undermine",
+  "pos": "verb",
+  "definition": "to weaken gradually or secretly",
+  "example": "Constant interruptions undermined the speaker's confidence."
+ },
+ {
+  "id": "unprecedented",
+  "word": "unprecedented",
+  "pos": "adjective",
+  "definition": "never done or known before",
+  "example": "The flood caused unprecedented damage to the city."
+ },
+ {
+  "id": "validate",
+  "word": "validate",
+  "pos": "verb",
+  "definition": "to confirm that something is true or correct",
+  "example": "The experiment validated the team's prediction."
+ },
+ {
+  "id": "versatile",
+  "word": "versatile",
+  "pos": "adjective",
+  "definition": "able to adapt to many different uses or activities",
+  "example": "A versatile tool, the knife can cut, open cans, and tighten screws."
+ },
+ {
+  "id": "viable",
+  "word": "viable",
+  "pos": "adjective",
+  "definition": "capable of working successfully",
+  "example": "The engineers found a viable way to bring water to the village."
+ },
+ {
+  "id": "vindicate",
+  "word": "vindicate",
+  "pos": "verb",
+  "definition": "to show that someone or something was right",
+  "example": "The test results vindicated the scientist who had been doubted."
+ },
+ {
+  "id": "volatile",
+  "word": "volatile",
+  "pos": "adjective",
+  "definition": "likely to change suddenly and unpredictably",
+  "example": "Prices in the volatile market rose and fell every hour."
+ },
+ {
+  "id": "wary",
+  "word": "wary",
+  "pos": "adjective",
+  "definition": "cautious about possible dangers",
+  "example": "Deer are wary of people and run at the slightest noise."
+ },
+ {
+  "id": "zealous",
+  "word": "zealous",
+  "pos": "adjective",
+  "definition": "showing great energy and enthusiasm for a cause",
+  "example": "Zealous fans waited in line all night for tickets."
+ }
+]

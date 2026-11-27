@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { MOCK_BY_ID, moduleQuestions, mockMinutes, mockQuestionCount, scoreMock, type MockResult } from "@/lib/mocks";
+import { MOCK_BY_ID, isAdaptive, moduleQuestions, mockMinutes, mockQuestionCount, routeAfter, scoreMock, type MockResult } from "@/lib/mocks";
 import { addResult, clearSession, loadHistory, loadSession, saveSession, type MockSession } from "@/lib/mockStore";
 import { recordAnswer } from "@/lib/progress";
 import { isCorrect } from "@/lib/questions";
@@ -41,11 +41,26 @@ export function MockRunner({ mockId }: { mockId: string }) {
     if (session) saveSession(session);
   }, [session]);
 
+  // Clock tick; also adds the elapsed time to the question on screen
+  const active = !!session;
   useEffect(() => {
-    if (!session) return;
-    const t = window.setInterval(() => setNow(Date.now()), 500);
+    if (!active) return;
+    let last = Date.now();
+    const t = window.setInterval(() => {
+      const n = Date.now();
+      const d = Math.min(n - last, 2000); // ignore gaps while the tab was asleep
+      last = n;
+      setNow(n);
+      setSession((s) => {
+        if (!s || s.phase !== "module") return s;
+        const q = moduleQuestions(mock.modules[s.moduleIndex], s.routes)[s.qIndex];
+        if (!q) return s;
+        const times = s.times ?? {};
+        return { ...s, times: { ...times, [q.id]: (times[q.id] ?? 0) + d } };
+      });
+    }, 500);
     return () => window.clearInterval(t);
-  }, [session]);
+  }, [active, mock]);
 
   const startModule = useCallback(
     (i: number, prev: MockSession) => ({
@@ -60,13 +75,13 @@ export function MockRunner({ mockId }: { mockId: string }) {
 
   const finishMock = useCallback(
     (s: MockSession) => {
-      const r = scoreMock(mock, s.answers);
+      const r = scoreMock(mock, s.answers, s.routes ?? {}, s.times);
       addResult(r);
       // Record every answer in the Mistake Log and stats
       for (const mod of mock.modules) {
-        for (const q of moduleQuestions(mod)) {
+        for (const q of moduleQuestions(mod, s.routes)) {
           const a = s.answers[q.id];
-          recordAnswer(q.id, a !== undefined && a !== "" && isCorrect(q, a));
+          recordAnswer(q.id, a !== undefined && a !== "" && isCorrect(q, a), s.times?.[q.id]);
         }
       }
       clearSession(mock.id);
@@ -81,6 +96,11 @@ export function MockRunner({ mockId }: { mockId: string }) {
     (s: MockSession) => {
       setNavOpen(false);
       const next = s.moduleIndex + 1;
+      const cur = mock.modules[s.moduleIndex];
+      // Adaptive: Module 1 performance decides which Module 2 comes next
+      if (cur.number === 1 && mock.modules[next]?.easierQuestionIds?.length) {
+        s = { ...s, routes: { ...(s.routes ?? {}), [cur.section]: routeAfter(cur, s.answers) } };
+      }
       if (next >= mock.modules.length) {
         finishMock(s);
         return;
@@ -127,6 +147,7 @@ export function MockRunner({ mockId }: { mockId: string }) {
         minutes={mockMinutes(mock)}
         breakMinutes={mock.breakMinutes}
         modules={mock.modules.map((m) => ({ section: m.section, number: m.number, count: m.questionIds.length, minutes: m.minutes }))}
+        adaptive={isAdaptive(mock)}
         history={history}
         onStart={() => {
           const base: MockSession = { mockId, phase: "module", moduleIndex: 0, qIndex: 0, answers: {}, flagged: {}, endsAt: 0 };
@@ -160,7 +181,7 @@ export function MockRunner({ mockId }: { mockId: string }) {
       setSession={setSession}
       sectionNumber={mock.modules[session.moduleIndex].section === "rw" ? 1 : 2}
       module={mock.modules[session.moduleIndex]}
-      questions={moduleQuestions(mock.modules[session.moduleIndex])}
+      questions={moduleQuestions(mock.modules[session.moduleIndex], session.routes)}
       remaining={remaining}
       timerHidden={timerHidden}
       setTimerHidden={setTimerHidden}
@@ -182,6 +203,7 @@ function MockIntro(props: {
   breakMinutes: number;
   modules: { section: "rw" | "math"; number: number; count: number; minutes: number }[];
   history: MockResult[];
+  adaptive: boolean;
   onStart: () => void;
 }) {
   const best = props.history.length ? Math.max(...props.history.map((r) => r.total)) : null;
@@ -196,6 +218,7 @@ function MockIntro(props: {
             <span><Icon name="book" size={16} /> {props.questions} questions</span>
             <span><Icon name="clock" size={16} /> {props.minutes} minutes</span>
             <span>☕ {props.breakMinutes}-minute break</span>
+            {props.adaptive && <span><Icon name="sparkle" size={16} /> Adaptive</span>}
             {best !== null && <span className="gold"><Icon name="trophy" size={16} /> Best: {best}</span>}
           </div>
         </div>
@@ -210,12 +233,22 @@ function MockIntro(props: {
             <span className="tl-dot">{i + 1}</span>
             <div>
               <b>{SECTION_TITLE[m.section]}</b>
-              <small>Module {m.number} · {m.count} questions · {m.minutes} min</small>
+              <small>
+                Module {m.number} · {m.count} questions · {m.minutes} min
+                {props.adaptive && m.number === 2 && " · adapts to you"}
+              </small>
             </div>
             {i === 1 && props.breakMinutes > 0 && <span className="tl-break">☕ {props.breakMinutes} min</span>}
           </div>
         ))}
       </div>
+
+      {props.adaptive && (
+        <p className="adaptive-note">
+          Like the real SAT, this mock is adaptive: how you do on Module 1 decides whether Module 2 is harder or
+          easier. Only the harder Module 2 can take you to the top of the score range.
+        </p>
+      )}
 
       <div className="rules-grid">
         <div className="rule"><Icon name="clock" /><p>Each module has its own timer. When time runs out, the module is submitted automatically.</p></div>

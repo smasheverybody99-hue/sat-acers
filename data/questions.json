@@ -9246,5 +9246,4186 @@
   "answer": 2,
   "explanation_en": "g(0) = 4 and each value is 3 times the previous: g(x) = 4(3)^x.",
   "id": "g-12"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The hikers were ______ to reach the shelter before the storm: they had walked for nine hours, and their legs ached with every step.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "exhausted",
+   "amused",
+   "forbidden",
+   "reluctant"
+  ],
+  "answer": 0,
+  "explanation_en": "Nine hours of walking and aching legs mean the hikers were very tired: \"exhausted.\"",
+  "id": "a1-rw2e-01"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Because the bakery's bread sold out by nine o'clock every morning, the owner decided to ______ production by hiring two more bakers.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "postpone",
+   "increase",
+   "conceal",
+   "reduce"
+  ],
+  "answer": 1,
+  "explanation_en": "Selling out early shows demand is higher than supply, so hiring more bakers is meant to raise output: \"increase.\"",
+  "id": "a1-rw2e-02"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The museum's new guide is ______ to visitors who know little about art: it avoids technical terms and explains each painting in plain language.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "accessible",
+   "indifferent",
+   "identical",
+   "hostile"
+  ],
+  "answer": 0,
+  "explanation_en": "Avoiding jargon and using plain language makes the guide easy for beginners to understand: \"accessible.\"",
+  "id": "a1-rw2e-03"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Although the team's first prototype failed several tests, the engineers remained ______, confident that small changes to the design would fix the problems.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "silent",
+   "careless",
+   "optimistic",
+   "discouraged"
+  ],
+  "answer": 2,
+  "explanation_en": "\"Although\" signals a contrast with the failures, and \"confident\" shows a hopeful attitude: \"optimistic.\"",
+  "id": "a1-rw2e-04"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Text structure and purpose",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Each spring, volunteers in the town of Millbrook carry hundreds of toads across a busy road. The toads travel from the woods to a pond to lay their eggs, and without help, many would be struck by cars. Since the program began, the number of toads reaching the pond has nearly doubled.",
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": [
+   "To describe a community effort and its positive result",
+   "To explain how toads choose where to lay their eggs",
+   "To argue that the town should close the road permanently",
+   "To compare toads with other animals that migrate"
+  ],
+  "answer": 0,
+  "explanation_en": "The text describes what volunteers do and reports a result (twice as many toads reach the pond). It doesn't explain toad behavior, argue for a road closure, or compare animals.",
+  "id": "a1-rw2e-05"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Text structure and purpose",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Many people assume that deserts are empty of life. In the Atacama Desert of Chile, one of the driest places on Earth, scientists have found bacteria living inside salt rocks. The bacteria survive by absorbing tiny amounts of water that the salt pulls from the air.",
+  "stem": "Which choice best describes the function of the second and third sentences in the overall structure of the text?",
+  "choices": [
+   "It describes a discovery that challenges the assumption mentioned in the first sentence.",
+   "It lists the dangers of living in a desert.",
+   "It provides a definition of the term \"desert.\"",
+   "It explains why scientists chose to study the Atacama Desert."
+  ],
+  "answer": 0,
+  "explanation_en": "The first sentence states a common assumption (deserts are lifeless); the rest describes bacteria living in an extremely dry desert, which challenges that assumption.",
+  "id": "a1-rw2e-06"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Cross-text connections",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Text 1\nSchool gardens are a pleasant activity, but they take time away from core subjects. Hours spent planting and weeding, some educators argue, would be better spent on math and reading instruction.\n\nText 2\nAt several elementary schools in Oregon, teachers use the school garden to teach math and science: students measure plant growth, record data, and calculate how much water each bed needs. Test scores in math rose at these schools in the two years after the gardens opened.",
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the educators in Text 1?",
+  "choices": [
+   "By arguing that reading is less important than science",
+   "By noting that gardens are expensive to maintain",
+   "By agreeing that gardens should be removed from schools",
+   "By pointing out that garden time can include instruction in a core subject such as math"
+  ],
+  "answer": 3,
+  "explanation_en": "Text 1 says gardens take time from core subjects. Text 2 shows gardens being used to teach math, with math scores rising, so the time is not necessarily lost.",
+  "id": "a1-rw2e-07"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Central ideas and details",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Sea otters often wrap themselves in long strands of kelp, a type of seaweed, before they sleep. The kelp is anchored to the ocean floor, so it keeps the otters from drifting away while they rest. Otters sometimes even hold paws with one another for the same reason.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "Sea otters use kelp and each other to avoid drifting while they sleep.",
+   "Kelp grows best in shallow ocean water.",
+   "Kelp is the main food source for sea otters.",
+   "Sea otters sleep only in large groups."
+  ],
+  "answer": 0,
+  "explanation_en": "Every detail (wrapping in anchored kelp, holding paws) explains how otters stay in place while sleeping.",
+  "id": "a1-rw2e-08"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Central ideas and details",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "When the city of Seoul removed a highway that covered the Cheonggyecheon stream in 2003, many residents worried about traffic. Instead, the restored stream became a popular public space. Air temperatures along the stream are now several degrees cooler than on nearby roads, and the number of bird and fish species in the area has grown.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "Streams are cooler than roads in every city.",
+   "Birds and fish are rare in most large cities.",
+   "Replacing a highway with a restored stream brought benefits that many people did not expect.",
+   "Seoul has more traffic today than it did before 2003."
+  ],
+  "answer": 2,
+  "explanation_en": "The text moves from residents' worries to unexpected benefits: a popular public space, cooler temperatures, and more wildlife.",
+  "id": "a1-rw2e-09"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (textual)",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "A student claims that in Charlotte Brontë's 1847 novel Jane Eyre, the narrator, Jane, values her independence even when she is poor.",
+  "stem": "Which quotation from Jane Eyre most effectively illustrates the student's claim?",
+  "choices": [
+   "\"Reader, I married him.\"",
+   "\"There was no possibility of taking a walk that day.\"",
+   "\"I am no bird; and no net ensnares me: I am a free human being with an independent will.\"",
+   "\"I would always rather be happy than dignified.\""
+  ],
+  "answer": 2,
+  "explanation_en": "Only the first quotation shows Jane insisting on her freedom and independent will.",
+  "id": "a1-rw2e-10"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (textual)",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Researchers hypothesized that honeybees can recognize individual human faces. They trained bees to associate a photo of one face with a sugar reward, then showed the bees that face alongside several others.",
+  "stem": "Which finding, if true, would most directly support the researchers' hypothesis?",
+  "choices": [
+   "The bees preferred photos printed in bright colors.",
+   "The bees flew most often to the photo of the trained face, even without a reward present.",
+   "The bees stopped flying after drinking the sugar water.",
+   "The bees ignored all of the photos equally."
+  ],
+  "answer": 1,
+  "explanation_en": "If bees pick out the trained face from others, they can tell that face apart, which supports the hypothesis.",
+  "id": "a1-rw2e-11"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (quantitative)",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Books borrowed from the Lakeview Library\n\nYear — Print books — E-books\n2021 — 52,000 — 18,000\n2022 — 49,000 — 26,000\n2023 — 47,000 — 35,000\n\nA librarian notes that e-books have become more popular at the Lakeview Library in recent years.",
+  "stem": "Which choice best uses data from the table to support the librarian's statement?",
+  "choices": [
+   "Print book borrowing fell from 2022 to 2023.",
+   "E-book borrowing rose each year, from 18,000 in 2021 to 35,000 in 2023.",
+   "Print books were borrowed 52,000 times in 2021.",
+   "More print books than e-books were borrowed in 2022."
+  ],
+  "answer": 1,
+  "explanation_en": "The claim is about e-books growing in popularity; only the first choice shows e-book borrowing rising every year.",
+  "id": "a1-rw2e-12"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (quantitative)",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Average daily screen time by age group (hours)\n\nAge group — Weekdays — Weekends\n13–15 — 4.1 — 6.0\n16–18 — 5.2 — 7.3\n19–21 — 5.8 — 6.9\n\nA researcher found that, for every age group in the survey, people spent more time on screens on weekends than on weekdays. For example, ______",
+  "stem": "Which choice most effectively uses data from the table to complete the example?",
+  "choices": [
+   "people aged 19–21 spent less time on screens on weekends than people aged 16–18.",
+   "people aged 13–15 had the lowest weekday screen time.",
+   "people aged 19–21 averaged 5.8 hours on weekdays.",
+   "people aged 16–18 averaged 5.2 hours on weekdays and 7.3 hours on weekends."
+  ],
+  "answer": 3,
+  "explanation_en": "An example must compare weekday and weekend time for one group, with weekends higher. Only the first choice does that.",
+  "id": "a1-rw2e-13"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Inferences",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Most volcanoes form where tectonic plates meet. The Hawaiian Islands, however, sit in the middle of the Pacific Plate, far from any plate boundary. Geologists explain that a fixed \"hot spot\" of melted rock lies beneath the plate. As the plate slowly moves over the hot spot, ______",
+  "stem": "Which choice most logically completes the text?",
+  "choices": [
+   "new volcanoes form in a chain, with the oldest islands farthest from the hot spot.",
+   "the hot spot travels across the ocean floor with the plate.",
+   "the plate boundary moves closer to Hawaii each year.",
+   "all of the Hawaiian volcanoes erupt at the same time."
+  ],
+  "answer": 0,
+  "explanation_en": "The hot spot stays fixed while the plate moves, so each new volcano forms in a new place, creating a chain in which older islands have moved farther away.",
+  "id": "a1-rw2e-14"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The Great Wall of China was not built all at ______ different dynasties added sections over roughly two thousand years.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "once and",
+   "once",
+   "once,",
+   "once;"
+  ],
+  "answer": 3,
+  "explanation_en": "Both parts are complete sentences, so a semicolon is needed. A comma alone or no punctuation creates a run-on.",
+  "id": "a1-rw2e-15"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Marie Tharp, a geologist and ______ created the first detailed maps of the Atlantic Ocean floor in the 1950s.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "mapmaker;",
+   "mapmaker:",
+   "mapmaker,",
+   "mapmaker"
+  ],
+  "answer": 2,
+  "explanation_en": "\"a geologist and mapmaker\" is a nonessential phrase that begins with a comma, so it must also end with a comma.",
+  "id": "a1-rw2e-16"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The recipe calls for three main ______ flour, butter, and sugar.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "ingredients,",
+   "ingredients:",
+   "ingredients",
+   "ingredients;"
+  ],
+  "answer": 1,
+  "explanation_en": "A colon correctly introduces the list that explains which three ingredients are needed. A semicolon must join two complete sentences.",
+  "id": "a1-rw2e-17"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Every year, thousands of monarch butterflies travel from Canada to central ______ some of them fly more than 4,000 kilometers to reach their winter home.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "Mexico,",
+   "Mexico",
+   "Mexico and,",
+   "Mexico, and"
+  ],
+  "answer": 3,
+  "explanation_en": "Two complete sentences can be joined with a comma plus a coordinating conjunction: \"Mexico, and some of them fly...\"",
+  "id": "a1-rw2e-18"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The players on the visiting team ______ nervous before the championship game, but they won easily.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "has been",
+   "was",
+   "were",
+   "is"
+  ],
+  "answer": 2,
+  "explanation_en": "The subject is \"players\" (plural), not \"team,\" and the sentence is in the past tense, so \"were\" is correct.",
+  "id": "a1-rw2e-19"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "When the scientists examined the ancient seeds, they discovered that ______ could still sprout after 2,000 years.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "this",
+   "they",
+   "he",
+   "it"
+  ],
+  "answer": 1,
+  "explanation_en": "The pronoun refers to \"the seeds,\" which is plural, so \"they\" is correct.",
+  "id": "a1-rw2e-20"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Last summer, the city opened a new swimming pool, ______ a skate park, and repaved several bike paths.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "will build",
+   "built",
+   "building",
+   "builds"
+  ],
+  "answer": 1,
+  "explanation_en": "The list uses past-tense verbs (\"opened,\" \"repaved\"), so the middle verb must be \"built\" to keep the series parallel.",
+  "id": "a1-rw2e-21"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Owls can turn their heads up to 270 degrees. ______ they can look behind them without moving their bodies.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "For instance,",
+   "However,",
+   "Meanwhile,",
+   "As a result,"
+  ],
+  "answer": 3,
+  "explanation_en": "Being able to look behind them is a consequence of turning their heads so far, so \"As a result\" fits.",
+  "id": "a1-rw2e-22"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Many people think tomatoes are vegetables. ______ scientists classify them as fruits because they develop from a flower and contain seeds.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "For example,",
+   "However,",
+   "Therefore,",
+   "Similarly,"
+  ],
+  "answer": 1,
+  "explanation_en": "The second sentence contrasts with the popular belief, so \"However\" is the logical transition.",
+  "id": "a1-rw2e-23"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The first bicycles, built in the early 1800s, had no pedals; riders pushed against the ground with their feet. ______ pedals were attached to the front wheel, which allowed riders to travel faster.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "Similarly,",
+   "In contrast,",
+   "For example,",
+   "Later,"
+  ],
+  "answer": 3,
+  "explanation_en": "The text describes the development of bicycles in time order, so \"Later\" signals the next stage.",
+  "id": "a1-rw2e-24"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• The Statue of Liberty was a gift from France to the United States.\n• It was dedicated in 1886.\n• It stands on Liberty Island in New York Harbor.\n• It is 93 meters tall from the ground to the tip of the torch.",
+  "stem": "The student wants to state where the Statue of Liberty is located. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "The Statue of Liberty stands on Liberty Island in New York Harbor.",
+   "The Statue of Liberty was a gift from France.",
+   "The Statue of Liberty is 93 meters tall.",
+   "The Statue of Liberty was dedicated in 1886."
+  ],
+  "answer": 0,
+  "explanation_en": "The goal is location, and only the first choice gives where the statue stands.",
+  "id": "a1-rw2e-25"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• Hedy Lamarr was a famous film actress in the 1930s and 1940s.\n• She was also an inventor.\n• During World War II, she helped develop a \"frequency hopping\" system to stop enemies from jamming radio signals.\n• Ideas from her system are used today in Wi-Fi and Bluetooth technology.",
+  "stem": "The student wants to emphasize the lasting impact of Hedy Lamarr's invention. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "During World War II, Hedy Lamarr helped develop a way to protect radio signals.",
+   "Hedy Lamarr acted in films in the 1930s and 1940s.",
+   "Hedy Lamarr's frequency-hopping system, developed during World War II, contributed ideas still used today in Wi-Fi and Bluetooth.",
+   "Hedy Lamarr was a famous actress who was also an inventor."
+  ],
+  "answer": 2,
+  "explanation_en": "\"Lasting impact\" requires a link to the present; only B mentions that her ideas are still used in Wi-Fi and Bluetooth.",
+  "id": "a1-rw2e-26"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "hard",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• The Nile and the Amazon are the two longest rivers in the world.\n• The Nile is about 6,650 kilometers long.\n• The Amazon is about 6,400 kilometers long.\n• The Amazon carries far more water than the Nile: about 209,000 cubic meters per second, compared with about 2,800.",
+  "stem": "The student wants to contrast the two rivers in terms of the amount of water they carry. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "The Nile, at about 6,650 kilometers, is slightly longer than the Amazon.",
+   "The Amazon carries about 209,000 cubic meters of water per second.",
+   "Although the Nile is slightly longer, the Amazon carries far more water: about 209,000 cubic meters per second, compared with the Nile's 2,800.",
+   "The Nile and the Amazon are the two longest rivers in the world."
+  ],
+  "answer": 2,
+  "explanation_en": "The goal is a contrast about water volume, which needs figures for both rivers. Only C gives both and contrasts them.",
+  "id": "a1-rw2e-27"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in one variable",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "If 3x + 4 = 19, what is the value of x?",
+  "choices": [
+   "3",
+   "5",
+   "7",
+   "15"
+  ],
+  "answer": 1,
+  "explanation_en": "Subtract 4: 3x = 15. Divide by 3: x = 5.",
+  "id": "a1-m2e-01"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in one variable",
+  "difficulty": "easy",
+  "type": "spr",
+  "stem": "If x/4 = 6, what is the value of x?",
+  "answer": [
+   "24"
+  ],
+  "explanation_en": "Multiply both sides by 4: x = 24.",
+  "id": "a1-m2e-02"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear functions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "The function g is defined by g(x) = 2x + 9. What is the value of g(5)?",
+  "choices": [
+   "11",
+   "16",
+   "19",
+   "28"
+  ],
+  "answer": 2,
+  "explanation_en": "g(5) = 2(5) + 9 = 10 + 9 = 19.",
+  "id": "a1-m2e-03"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear functions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "A taxi charges a fixed fee plus a cost per mile. A 4-mile ride costs $14 and a 10-mile ride costs $26. What is the cost per mile, in dollars?",
+  "choices": [
+   "1.40",
+   "2.00",
+   "2.60",
+   "3.50"
+  ],
+  "answer": 1,
+  "explanation_en": "The extra 6 miles cost 26 − 14 = 12 dollars, so each mile costs 12 ÷ 6 = 2 dollars.",
+  "id": "a1-m2e-04"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Systems of two linear equations",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "x + y = 10\nx − y = 4\n\nWhat is the solution (x, y) to the system of equations above?",
+  "choices": [
+   "(7, 3)",
+   "(6, 4)",
+   "(3, 7)",
+   "(8, 2)"
+  ],
+  "answer": 0,
+  "explanation_en": "Add the equations: 2x = 14, so x = 7. Then y = 10 − 7 = 3.",
+  "id": "a1-m2e-05"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Systems of two linear equations",
+  "difficulty": "medium",
+  "type": "spr",
+  "stem": "y = 3x\nx + y = 20\n\nIf (x, y) is the solution to the system of equations above, what is the value of y?",
+  "answer": [
+   "15"
+  ],
+  "explanation_en": "Substitute y = 3x: x + 3x = 20, so x = 5 and y = 3(5) = 15.",
+  "id": "a1-m2e-06"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in two variables",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "A gym charges $20 to join and $15 per month. Which equation gives the total cost C, in dollars, of joining and paying for m months?",
+  "choices": [
+   "C = 15m + 20",
+   "C = 35m",
+   "C = 15(m + 20)",
+   "C = 20m + 15"
+  ],
+  "answer": 0,
+  "explanation_en": "The monthly charge is 15m, and the $20 joining fee is added once: C = 15m + 20.",
+  "id": "a1-m2e-07"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear inequalities",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "A student has $50 and wants to buy notebooks that cost $4 each. Which inequality represents the number of notebooks n the student can buy?",
+  "choices": [
+   "n + 4 ≤ 50",
+   "4n ≤ 50",
+   "50n ≤ 4",
+   "4n ≥ 50"
+  ],
+  "answer": 1,
+  "explanation_en": "The total cost 4n cannot be more than $50, so 4n ≤ 50.",
+  "id": "a1-m2e-08"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Equivalent expressions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "Which expression is equivalent to 2(x + 5) + 3x?",
+  "choices": [
+   "5x + 5",
+   "2x + 15",
+   "5x + 10",
+   "6x + 10"
+  ],
+  "answer": 2,
+  "explanation_en": "2(x + 5) = 2x + 10. Adding 3x gives 5x + 10.",
+  "id": "a1-m2e-09"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Equivalent expressions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "Which expression is equivalent to (x + 3)(x − 3)?",
+  "choices": [
+   "x² + 9",
+   "x² − 9",
+   "x² − 6x − 9",
+   "x² + 6x − 9"
+  ],
+  "answer": 1,
+  "explanation_en": "This is a difference of squares: (x + 3)(x − 3) = x² − 9.",
+  "id": "a1-m2e-10"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear equations",
+  "difficulty": "easy",
+  "type": "spr",
+  "stem": "If x² = 49 and x > 0, what is the value of x?",
+  "answer": [
+   "7"
+  ],
+  "explanation_en": "The positive number whose square is 49 is 7.",
+  "id": "a1-m2e-11"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear equations",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "What are the solutions to x² − 7x + 12 = 0?",
+  "choices": [
+   "x = 1 and x = 12",
+   "x = 2 and x = 6",
+   "x = −3 and x = −4",
+   "x = 3 and x = 4"
+  ],
+  "answer": 3,
+  "explanation_en": "Factor: (x − 3)(x − 4) = 0, so x = 3 or x = 4.",
+  "id": "a1-m2e-12"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "The function f is defined by f(x) = x² + 1. What is the value of f(3)?",
+  "choices": [
+   "7",
+   "9",
+   "10",
+   "16"
+  ],
+  "answer": 2,
+  "explanation_en": "f(3) = 3² + 1 = 9 + 1 = 10.",
+  "id": "a1-m2e-13"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "A population of bacteria doubles every hour. If there are 300 bacteria now, how many will there be in 3 hours?",
+  "choices": [
+   "900",
+   "1,200",
+   "1,800",
+   "2,400"
+  ],
+  "answer": 3,
+  "explanation_en": "Doubling 3 times: 300 → 600 → 1,200 → 2,400.",
+  "id": "a1-m2e-14"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "hard",
+  "type": "spr",
+  "stem": "The function h is defined by h(x) = (x − 2)² + 5. What is the minimum value of h(x)?",
+  "answer": [
+   "5"
+  ],
+  "explanation_en": "(x − 2)² is never negative and equals 0 when x = 2, so the smallest value of h(x) is 0 + 5 = 5.",
+  "id": "a1-m2e-15"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Percentages",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "What is 20% of 85?",
+  "choices": [
+   "15",
+   "17",
+   "18.5",
+   "65"
+  ],
+  "answer": 1,
+  "explanation_en": "20% of 85 = 0.2 × 85 = 17.",
+  "id": "a1-m2e-16"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Ratios, rates, and proportions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "A car travels 180 miles in 3 hours at a constant speed. How many miles does it travel in 5 hours at the same speed?",
+  "choices": [
+   "240",
+   "270",
+   "300",
+   "360"
+  ],
+  "answer": 2,
+  "explanation_en": "The speed is 180 ÷ 3 = 60 miles per hour, so in 5 hours it travels 60 × 5 = 300 miles.",
+  "id": "a1-m2e-17"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "One-variable data",
+  "difficulty": "medium",
+  "type": "spr",
+  "stem": "The numbers of goals a soccer team scored in five games were 2, 4, 1, 3, and 5. What is the mean number of goals per game?",
+  "answer": [
+   "3"
+  ],
+  "explanation_en": "The total is 2 + 4 + 1 + 3 + 5 = 15, and 15 ÷ 5 = 3.",
+  "id": "a1-m2e-18"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Probability",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "A bag contains 4 red marbles, 6 blue marbles, and 10 green marbles. If one marble is chosen at random, what is the probability that it is blue?",
+  "choices": [
+   "1/5",
+   "3/10",
+   "1/2",
+   "3/5"
+  ],
+  "answer": 1,
+  "explanation_en": "There are 4 + 6 + 10 = 20 marbles, and 6 are blue: 6/20 = 3/10.",
+  "id": "a1-m2e-19"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Lines, angles, and triangles",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "Two angles of a triangle measure 50° and 60°. What is the measure of the third angle?",
+  "choices": [
+   "50°",
+   "60°",
+   "70°",
+   "110°"
+  ],
+  "answer": 2,
+  "explanation_en": "The angles of a triangle add up to 180°: 180 − 50 − 60 = 70°.",
+  "id": "a1-m2e-20"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Area and volume",
+  "difficulty": "medium",
+  "type": "spr",
+  "stem": "A rectangular box is 5 centimeters long, 4 centimeters wide, and 3 centimeters tall. What is the volume of the box, in cubic centimeters?",
+  "answer": [
+   "60"
+  ],
+  "explanation_en": "Volume = length × width × height = 5 × 4 × 3 = 60.",
+  "id": "a1-m2e-21"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Right triangles and trigonometry",
+  "difficulty": "hard",
+  "type": "mcq",
+  "stem": "A right triangle has legs of length 6 and 8. What is the length of the hypotenuse?",
+  "choices": [
+   "10",
+   "12",
+   "14",
+   "100"
+  ],
+  "answer": 0,
+  "explanation_en": "By the Pythagorean theorem, c² = 6² + 8² = 36 + 64 = 100, so c = 10.",
+  "id": "a1-m2e-22"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The puppy was so ______ that it chased every leaf, ball, and shadow in the yard for hours without stopping.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "sleepy",
+   "energetic",
+   "timid",
+   "elderly"
+  ],
+  "answer": 1,
+  "explanation_en": "Chasing things for hours without stopping shows a lot of energy: \"energetic.\"",
+  "id": "a2-rw2e-01"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "To protect the fragile manuscript, the library keeps it in a dark room and allows only a few researchers to ______ it each year.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "examine",
+   "sell",
+   "rewrite",
+   "destroy"
+  ],
+  "answer": 0,
+  "explanation_en": "Researchers are allowed to look closely at the manuscript, not harm or change it: \"examine.\"",
+  "id": "a2-rw2e-02"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The mayor's speech was ______: in just five minutes, she explained the new budget clearly and answered the main questions residents had raised.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "confusing",
+   "dishonest",
+   "concise",
+   "lengthy"
+  ],
+  "answer": 2,
+  "explanation_en": "Five minutes and a clear explanation describe a speech that is short but complete: \"concise.\"",
+  "id": "a2-rw2e-03"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "At first the two scientists' results seemed to ______, but further analysis showed that both studies actually supported the same conclusion.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "agree",
+   "repeat",
+   "vanish",
+   "conflict"
+  ],
+  "answer": 3,
+  "explanation_en": "\"At first ... but\" sets up a contrast with \"supported the same conclusion,\" so the results first seemed to disagree: \"conflict.\"",
+  "id": "a2-rw2e-04"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Text structure and purpose",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The ancient city of Pompeii was buried by ash when Mount Vesuvius erupted in 79 CE. Because the ash sealed the city so quickly, homes, paintings, and even loaves of bread were preserved. Today, these remains give historians a detailed picture of daily life in the Roman Empire.",
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": [
+   "To explain why Pompeii is valuable for understanding daily Roman life",
+   "To describe how volcanoes form",
+   "To argue that Mount Vesuvius will erupt again soon",
+   "To compare Pompeii with other ancient cities"
+  ],
+  "answer": 0,
+  "explanation_en": "The text explains how Pompeii was preserved and concludes that its remains show daily Roman life.",
+  "id": "a2-rw2e-05"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Text structure and purpose",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "For decades, scientists believed that only humans used tools. Then, in 1960, researcher Jane Goodall watched a chimpanzee strip leaves from a twig and use it to pull termites from a mound. Her observation forced scientists to rethink what makes humans unique.",
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": [
+   "To explain how chimpanzees find termite mounds",
+   "To present an observation that changed a long-held scientific belief",
+   "To describe Jane Goodall's childhood",
+   "To argue that chimpanzees are smarter than humans"
+  ],
+  "answer": 1,
+  "explanation_en": "The text states an old belief, describes Goodall's observation, and says it made scientists rethink that belief.",
+  "id": "a2-rw2e-06"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Cross-text connections",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Text 1\nElectric scooters are a convenient way to travel short distances in cities. Because they produce no exhaust, they are often promoted as an environmentally friendly choice.\n\nText 2\nA study of shared electric scooters found that many lasted less than a year before being replaced. When the energy used to build, charge, and collect the scooters was counted, their environmental benefit was smaller than many people assume.",
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1 that electric scooters are environmentally friendly?",
+  "choices": [
+   "By arguing that scooters are not convenient",
+   "By claiming that cars are better for the environment than scooters",
+   "By agreeing that scooters produce no environmental harm",
+   "By suggesting that the claim overlooks the environmental costs of making and maintaining the scooters"
+  ],
+  "answer": 3,
+  "explanation_en": "Text 2 adds costs that Text 1 ignores (building, charging, collecting, short lifespans), so it would say the claim leaves those out.",
+  "id": "a2-rw2e-07"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Central ideas and details",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Camels can go for days without drinking water. Their bodies lose very little water through sweat, and their kidneys conserve water efficiently. When camels do find water, they can drink more than 100 liters in a few minutes.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "Camels store water in their humps.",
+   "Camels live only in hot climates.",
+   "Camels sweat more than most other animals.",
+   "Camels have several features that help them survive with little water."
+  ],
+  "answer": 3,
+  "explanation_en": "Every detail (little sweating, efficient kidneys, drinking a lot at once) explains how camels manage with little water.",
+  "id": "a2-rw2e-08"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Central ideas and details",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "In 1928, scientist Alexander Fleming returned from vacation to find mold growing in one of his dishes of bacteria. Around the mold, the bacteria had died. Instead of throwing the dish away, Fleming studied the mold, and his work led to penicillin, one of the first antibiotics.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "A careful response to an accident led to an important medical discovery.",
+   "Fleming took long vacations during his research.",
+   "Mold is always harmful to bacteria.",
+   "Antibiotics were common before 1928."
+  ],
+  "answer": 0,
+  "explanation_en": "The central idea is that Fleming studied an accidental mold instead of discarding it, leading to penicillin.",
+  "id": "a2-rw2e-09"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (textual)",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "A biologist claims that some trees can warn nearby trees of insect attacks. When insects eat their leaves, the trees release chemicals into the air.",
+  "stem": "Which finding, if true, would most directly support the biologist's claim?",
+  "choices": [
+   "The chemicals have no smell to humans.",
+   "Trees grow faster in sunny areas.",
+   "Nearby trees that sensed the chemicals began producing substances that make their leaves taste bad to insects.",
+   "Insects prefer young leaves to old leaves."
+  ],
+  "answer": 2,
+  "explanation_en": "A \"warning\" means other trees react. Neighboring trees defending themselves after sensing the chemicals supports the claim.",
+  "id": "a2-rw2e-10"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (textual)",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "In Mark Twain's 1876 novel The Adventures of Tom Sawyer, Tom convinces other boys that painting a fence is fun, so they pay him for the chance to do his chore. A student claims that the episode shows Tom is clever at persuading others.",
+  "stem": "Which quotation from the novel best supports the student's claim?",
+  "choices": [
+   "\"The locust-trees were in bloom and the fragrance of the blossoms filled the air.\"",
+   "\"Saturday morning was come, and all the summer world was bright and fresh.\"",
+   "\"Tom said to himself that it was not such a hollow world, after all. He had discovered a great law of human action, without knowing it—namely, that in order to make a man or a boy covet a thing, it is only necessary to make the thing difficult to attain.\"",
+   "\"Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush.\""
+  ],
+  "answer": 2,
+  "explanation_en": "Only the first quotation shows Tom recognizing how to make others want something, which reflects his skill at persuasion.",
+  "id": "a2-rw2e-11"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (quantitative)",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Average monthly rainfall in Riverton (millimeters)\n\nMonth — Rainfall\nMarch — 62\nApril — 78\nMay — 95\nJune — 41\n\nA farmer notes that May was the wettest month shown in the table.",
+  "stem": "Which choice best uses data from the table to support the farmer's statement?",
+  "choices": [
+   "May had 95 millimeters of rain, more than any other month shown.",
+   "April had 78 millimeters of rain.",
+   "March and April together had 140 millimeters of rain.",
+   "June had less rain than March."
+  ],
+  "answer": 0,
+  "explanation_en": "To show May was wettest, you must compare May with the other months; only the first choice does.",
+  "id": "a2-rw2e-12"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (quantitative)",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Students choosing each after-school club\n\nClub — 2022 — 2023\nRobotics — 34 — 52\nArt — 40 — 38\nChess — 22 — 21\n\nA teacher claims that robotics was the only club in the table that grew in popularity from 2022 to 2023.",
+  "stem": "Which choice best uses data from the table to support the teacher's claim?",
+  "choices": [
+   "Art had the most students in 2022.",
+   "Robotics rose from 34 to 52 students, while Art fell from 40 to 38 and Chess fell from 22 to 21.",
+   "Robotics had 52 students in 2023.",
+   "Chess had the fewest students in both years."
+  ],
+  "answer": 1,
+  "explanation_en": "\"The only club that grew\" requires showing robotics grew and the others did not. Only the first choice covers all three clubs.",
+  "id": "a2-rw2e-13"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Inferences",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Seeds of many desert plants can stay inactive in the soil for years. They begin to grow only after a heavy rain soaks the ground. Because rain in the desert is rare and unpredictable, this strategy most likely helps the plants ______",
+  "stem": "Which choice most logically completes the text?",
+  "choices": [
+   "grow taller than plants in rainforests.",
+   "attract insects during dry seasons.",
+   "avoid sprouting at times when there is not enough water for them to survive.",
+   "survive in cold mountain climates."
+  ],
+  "answer": 2,
+  "explanation_en": "Waiting for heavy rain means the seeds sprout only when enough water is available, which protects them in dry periods.",
+  "id": "a2-rw2e-14"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Mount Everest is the tallest mountain above sea ______ Mauna Kea in Hawaii is taller if measured from its base on the ocean floor.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "level, however,",
+   "level, however",
+   "level; however,",
+   "level however"
+  ],
+  "answer": 2,
+  "explanation_en": "Two complete sentences are joined with \"however,\" so a semicolon must come before it and a comma after it.",
+  "id": "a2-rw2e-15"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The author's newest novel, which took her six years to ______ became a best seller within a month.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "write,",
+   "write;",
+   "write",
+   "write:"
+  ],
+  "answer": 0,
+  "explanation_en": "The clause \"which took her six years to write\" is nonessential and begins with a comma, so it must end with a comma.",
+  "id": "a2-rw2e-16"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Spiders are not ______ they are arachnids, a group that also includes scorpions and ticks.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "insects;",
+   "insects,",
+   "insects and",
+   "insects"
+  ],
+  "answer": 0,
+  "explanation_en": "Each part is a complete sentence, so a semicolon correctly joins them.",
+  "id": "a2-rw2e-17"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The festival will feature three kinds of ______ jazz, folk, and classical.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "music, which",
+   "music,",
+   "music;",
+   "music:"
+  ],
+  "answer": 3,
+  "explanation_en": "A colon introduces a list that explains \"three kinds of music.\"",
+  "id": "a2-rw2e-18"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Neither of the twins ______ ever visited the ocean before last summer's trip.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "have",
+   "has",
+   "are",
+   "were"
+  ],
+  "answer": 1,
+  "explanation_en": "\"Neither\" is singular, so the singular verb \"has\" is correct.",
+  "id": "a2-rw2e-19"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Yesterday the class ______ to the science museum and saw a model of a dinosaur skeleton.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "go",
+   "goes",
+   "went",
+   "will go"
+  ],
+  "answer": 2,
+  "explanation_en": "\"Yesterday\" and \"saw\" show the past tense, so \"went\" is correct.",
+  "id": "a2-rw2e-20"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Each of the paintings in the museum's new exhibit ______ been carefully restored by a team of conservators.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "are",
+   "were",
+   "has",
+   "have"
+  ],
+  "answer": 2,
+  "explanation_en": "The subject is \"Each\" (singular), not \"paintings,\" so the singular verb \"has\" is correct.",
+  "id": "a2-rw2e-21"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Penguins cannot fly. ______ they are excellent swimmers, reaching speeds of up to 35 kilometers per hour underwater.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "However,",
+   "Similarly,",
+   "For example,",
+   "Therefore,"
+  ],
+  "answer": 0,
+  "explanation_en": "Being excellent swimmers contrasts with being unable to fly, so \"However\" fits.",
+  "id": "a2-rw2e-22"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The town received more snow in January than in any month on record. ______ schools were closed for six days.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "In contrast,",
+   "As a result,",
+   "Nevertheless,",
+   "For instance,"
+  ],
+  "answer": 1,
+  "explanation_en": "School closures are a consequence of the record snow, so \"As a result\" is logical.",
+  "id": "a2-rw2e-23"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Some foods are rich in vitamin C. Oranges, ______ contain about 50 milligrams of vitamin C per 100 grams.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "in contrast,",
+   "however,",
+   "as a result,",
+   "for example,"
+  ],
+  "answer": 3,
+  "explanation_en": "Oranges are an example of a food rich in vitamin C, so \"for example\" fits.",
+  "id": "a2-rw2e-24"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• The Eiffel Tower is in Paris, France.\n• It was completed in 1889.\n• It was built for a world's fair.\n• It is about 330 meters tall.",
+  "stem": "The student wants to state when the Eiffel Tower was completed. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "The Eiffel Tower is in Paris.",
+   "The Eiffel Tower is about 330 meters tall.",
+   "The Eiffel Tower was built for a world's fair.",
+   "The Eiffel Tower was completed in 1889."
+  ],
+  "answer": 3,
+  "explanation_en": "The goal is the completion date; only B gives 1889.",
+  "id": "a2-rw2e-25"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• Katherine Johnson was a mathematician at NASA.\n• She calculated flight paths for early space missions.\n• In 1962, astronaut John Glenn asked that she personally check the computer's calculations before his orbit around Earth.\n• She received the Presidential Medal of Freedom in 2015.",
+  "stem": "The student wants to show how much astronauts trusted Katherine Johnson's work. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "Katherine Johnson received the Presidential Medal of Freedom in 2015.",
+   "Before orbiting Earth in 1962, John Glenn asked Katherine Johnson to personally check the computer's calculations.",
+   "Katherine Johnson worked on early space missions.",
+   "Katherine Johnson was a NASA mathematician who calculated flight paths."
+  ],
+  "answer": 1,
+  "explanation_en": "Glenn's request that Johnson check the computer shows how much an astronaut trusted her work.",
+  "id": "a2-rw2e-26"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "hard",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• Honeybees and bumblebees both pollinate crops.\n• Honeybees live in colonies of up to 60,000 bees.\n• Bumblebee colonies usually have fewer than 400 bees.\n• Bumblebees can fly in cooler temperatures than honeybees can.",
+  "stem": "The student wants to highlight a difference in colony size between the two types of bees. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "Bumblebees can fly in cooler temperatures than honeybees can.",
+   "While honeybee colonies can have up to 60,000 bees, bumblebee colonies usually have fewer than 400.",
+   "Honeybees and bumblebees both pollinate crops.",
+   "Honeybee colonies can reach 60,000 bees."
+  ],
+  "answer": 1,
+  "explanation_en": "A difference in colony size needs numbers for both kinds of bees; only D gives and contrasts them.",
+  "id": "a2-rw2e-27"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in one variable",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "If 7x − 2 = 26, what is the value of x?",
+  "choices": [
+   "3",
+   "4",
+   "5",
+   "24"
+  ],
+  "answer": 1,
+  "explanation_en": "Add 2: 7x = 28. Divide by 7: x = 4.",
+  "id": "a2-m2e-01"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in one variable",
+  "difficulty": "easy",
+  "type": "spr",
+  "stem": "If 5(x − 1) = 30, what is the value of x?",
+  "answer": [
+   "7"
+  ],
+  "explanation_en": "Divide by 5: x − 1 = 6, so x = 7.",
+  "id": "a2-m2e-02"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear functions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "The function f is defined by f(x) = 4x − 3. What is the value of f(2)?",
+  "choices": [
+   "1",
+   "5",
+   "8",
+   "11"
+  ],
+  "answer": 1,
+  "explanation_en": "f(2) = 4(2) − 3 = 8 − 3 = 5.",
+  "id": "a2-m2e-03"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear functions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "What is the slope of the line that passes through the points (1, 4) and (3, 10)?",
+  "choices": [
+   "2",
+   "3",
+   "6",
+   "7"
+  ],
+  "answer": 1,
+  "explanation_en": "Slope = (10 − 4)/(3 − 1) = 6/2 = 3.",
+  "id": "a2-m2e-04"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Systems of two linear equations",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "x + y = 12\ny = 2x\n\nWhat is the value of x in the solution to the system above?",
+  "choices": [
+   "3",
+   "4",
+   "6",
+   "8"
+  ],
+  "answer": 1,
+  "explanation_en": "Substitute: x + 2x = 12, so 3x = 12 and x = 4.",
+  "id": "a2-m2e-05"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Systems of two linear equations",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "At a store, 2 pens and 1 notebook cost $7, and 1 pen and 1 notebook cost $5. What is the cost of 1 pen?",
+  "choices": [
+   "$1",
+   "$2",
+   "$3",
+   "$4"
+  ],
+  "answer": 1,
+  "explanation_en": "Subtract the second purchase from the first: (2 pens + 1 notebook) − (1 pen + 1 notebook) = 1 pen = 7 − 5 = $2.",
+  "id": "a2-m2e-06"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in two variables",
+  "difficulty": "medium",
+  "type": "spr",
+  "stem": "The equation 3x + 2y = 24 relates x and y. What is the value of y when x = 4?",
+  "answer": [
+   "6"
+  ],
+  "explanation_en": "3(4) + 2y = 24, so 12 + 2y = 24, 2y = 12, and y = 6.",
+  "id": "a2-m2e-07"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear inequalities",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "Which value of x satisfies x − 5 > 3?",
+  "choices": [
+   "2",
+   "6",
+   "8",
+   "9"
+  ],
+  "answer": 3,
+  "explanation_en": "x − 5 > 3 means x > 8. Of the choices, only 9 is greater than 8.",
+  "id": "a2-m2e-08"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Equivalent expressions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "Which expression is equivalent to 4x² + 3x − x²?",
+  "choices": [
+   "3x² + 2x",
+   "3x² + 3x",
+   "6x³",
+   "5x² + 3x"
+  ],
+  "answer": 1,
+  "explanation_en": "Combine like terms: 4x² − x² = 3x², so the expression is 3x² + 3x.",
+  "id": "a2-m2e-09"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Equivalent expressions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "Which expression is equivalent to (x + 4)²?",
+  "choices": [
+   "x² + 8x + 16",
+   "x² + 4x + 16",
+   "x² + 16",
+   "x² + 8x + 8"
+  ],
+  "answer": 0,
+  "explanation_en": "(x + 4)² = x² + 2(4)x + 4² = x² + 8x + 16.",
+  "id": "a2-m2e-10"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear equations",
+  "difficulty": "easy",
+  "type": "spr",
+  "stem": "If 2x² = 50 and x > 0, what is the value of x?",
+  "answer": [
+   "5"
+  ],
+  "explanation_en": "Divide by 2: x² = 25. The positive solution is x = 5.",
+  "id": "a2-m2e-11"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear equations",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "What is the positive solution to x² + 2x − 15 = 0?",
+  "choices": [
+   "2",
+   "3",
+   "5",
+   "15"
+  ],
+  "answer": 1,
+  "explanation_en": "Factor: (x + 5)(x − 3) = 0. The solutions are −5 and 3; the positive one is 3.",
+  "id": "a2-m2e-12"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "The function g is defined by g(x) = 2^x. What is the value of g(4)?",
+  "choices": [
+   "6",
+   "8",
+   "16",
+   "32"
+  ],
+  "answer": 2,
+  "explanation_en": "g(4) = 2⁴ = 2 × 2 × 2 × 2 = 16.",
+  "id": "a2-m2e-13"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "The value of a car is $20,000 and decreases by 10% each year. Which expression gives the value of the car, in dollars, after t years?",
+  "choices": [
+   "20,000(0.1)^t",
+   "20,000 − 0.1t",
+   "20,000(0.9)^t",
+   "20,000(1.1)^t"
+  ],
+  "answer": 2,
+  "explanation_en": "Losing 10% each year leaves 90% of the value, so the value is multiplied by 0.9 each year: 20,000(0.9)^t.",
+  "id": "a2-m2e-14"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "hard",
+  "type": "spr",
+  "stem": "The function f is defined by f(x) = x² − 6x + 10. For what value of x does f(x) reach its minimum?",
+  "answer": [
+   "3"
+  ],
+  "explanation_en": "Complete the square: f(x) = (x − 3)² + 1. The minimum occurs when x − 3 = 0, so x = 3.",
+  "id": "a2-m2e-15"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Percentages",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "A shirt originally costs $40 and is on sale for 25% off. What is the sale price?",
+  "choices": [
+   "$10",
+   "$15",
+   "$30",
+   "$35"
+  ],
+  "answer": 2,
+  "explanation_en": "25% of 40 is 10, so the sale price is 40 − 10 = $30.",
+  "id": "a2-m2e-16"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Ratios, rates, and proportions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "A recipe uses 3 cups of flour for every 2 cups of sugar. How many cups of flour are needed for 8 cups of sugar?",
+  "choices": [
+   "6",
+   "9",
+   "12",
+   "16"
+  ],
+  "answer": 2,
+  "explanation_en": "8 cups of sugar is 4 times 2 cups, so the flour is 4 × 3 = 12 cups.",
+  "id": "a2-m2e-17"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "One-variable data",
+  "difficulty": "medium",
+  "type": "spr",
+  "stem": "What is the median of the data set 9, 3, 7, 5, 11?",
+  "answer": [
+   "7"
+  ],
+  "explanation_en": "In order: 3, 5, 7, 9, 11. The middle value is 7.",
+  "id": "a2-m2e-18"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Probability",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "A number is chosen at random from the whole numbers 1 through 10. What is the probability that the number is even?",
+  "choices": [
+   "1/10",
+   "1/5",
+   "1/2",
+   "2/3"
+  ],
+  "answer": 2,
+  "explanation_en": "The even numbers are 2, 4, 6, 8, 10, which is 5 of 10 numbers: 5/10 = 1/2.",
+  "id": "a2-m2e-19"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Lines, angles, and triangles",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "Two angles form a straight line. One angle measures 115°. What is the measure of the other angle?",
+  "choices": [
+   "45°",
+   "65°",
+   "75°",
+   "245°"
+  ],
+  "answer": 1,
+  "explanation_en": "Angles on a straight line add to 180°: 180 − 115 = 65°.",
+  "id": "a2-m2e-20"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Area and volume",
+  "difficulty": "easy",
+  "type": "spr",
+  "stem": "A rectangle has a length of 12 meters and a width of 5 meters. What is its area, in square meters?",
+  "answer": [
+   "60"
+  ],
+  "explanation_en": "Area = length × width = 12 × 5 = 60.",
+  "id": "a2-m2e-21"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Circles",
+  "difficulty": "hard",
+  "type": "mcq",
+  "stem": "A circle has a radius of 6. What is the circumference of the circle?",
+  "choices": [
+   "6π",
+   "36π",
+   "72π",
+   "12π"
+  ],
+  "answer": 3,
+  "explanation_en": "Circumference = 2πr = 2π(6) = 12π.",
+  "id": "a2-m2e-22"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The old bridge was declared ______ after inspectors found deep cracks in its supports, so the city closed it to all traffic.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "beautiful",
+   "popular",
+   "modern",
+   "unsafe"
+  ],
+  "answer": 3,
+  "explanation_en": "Deep cracks led the city to close the bridge, so it was dangerous: \"unsafe.\"",
+  "id": "a3-rw2e-01"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The new phone's battery is very ______: it can last for two full days without being charged.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "durable",
+   "heavy",
+   "noisy",
+   "weak"
+  ],
+  "answer": 0,
+  "explanation_en": "Lasting two days without charging shows the battery holds up well: \"durable.\"",
+  "id": "a3-rw2e-02"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Although the professor's lectures covered difficult material, students found them ______ because she used everyday examples to explain each idea.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "boring",
+   "brief",
+   "clear",
+   "puzzling"
+  ],
+  "answer": 2,
+  "explanation_en": "Everyday examples make difficult ideas easy to follow, so students found the lectures \"clear.\"",
+  "id": "a3-rw2e-03"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The rescue team had to ______ quickly: the river was rising, and the trapped hikers had only a few hours before the path would flood.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "rest",
+   "act",
+   "argue",
+   "hesitate"
+  ],
+  "answer": 1,
+  "explanation_en": "A rising river and limited time demand fast action, so the team had to \"act\" quickly.",
+  "id": "a3-rw2e-04"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Text structure and purpose",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Many cities now paint bike lanes bright green. The color makes the lanes easy for drivers to see, especially at busy intersections. Studies in several cities found that drivers were more likely to yield to cyclists in green lanes than in unpainted ones.",
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": [
+   "To argue that cars should be banned from cities",
+   "To describe the history of bicycles",
+   "To explain why some cities paint bike lanes green",
+   "To compare different types of paint"
+  ],
+  "answer": 2,
+  "explanation_en": "The text explains the reason for green bike lanes (visibility) and gives evidence that it works.",
+  "id": "a3-rw2e-05"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Text structure and purpose",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The Sahara Desert is known today for its sand and dry heat. Yet rock paintings found deep in the desert show giraffes, hippos, and people swimming. Scientists believe that about 8,000 years ago, the Sahara was green, with lakes and grasslands.",
+  "stem": "Which choice best describes the function of the second and third sentences in the overall structure of the text?",
+  "choices": [
+   "It explains why giraffes no longer live in Africa.",
+   "It repeats the claim made in the first sentence.",
+   "It presents evidence that the region described in the first sentence was once very different.",
+   "It describes how rock paintings are made."
+  ],
+  "answer": 2,
+  "explanation_en": "The first sentence describes the Sahara today; the rest uses paintings and scientific findings to show it was once green and wet.",
+  "id": "a3-rw2e-06"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Cross-text connections",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Text 1\nHomework is essential for students' success. Without regular practice at home, students quickly forget what they learn in class.\n\nText 2\nResearch on homework for young students has found little connection between the amount of homework and test performance in elementary school. For older students, moderate amounts of homework are linked to higher achievement, but very large amounts are not.",
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1?",
+  "choices": [
+   "By agreeing that all students need as much homework as possible",
+   "By arguing that students should never practice at home",
+   "By claiming that test scores are not important",
+   "By noting that the benefits of homework appear to depend on students' age and the amount assigned"
+  ],
+  "answer": 3,
+  "explanation_en": "Text 2's research shows homework helps older students in moderate amounts but shows little link for young students, so its value depends on age and amount.",
+  "id": "a3-rw2e-07"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Central ideas and details",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Hummingbirds beat their wings up to 80 times per second. This fast motion lets them hover in place in front of flowers while they drink nectar. Hummingbirds can even fly backward, something few other birds can do.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "Hummingbirds eat only one kind of flower.",
+   "Hummingbirds' fast wing beats allow them to fly in unusual ways.",
+   "Most birds can fly backward.",
+   "Hummingbirds are the smallest animals on Earth."
+  ],
+  "answer": 1,
+  "explanation_en": "The text focuses on how fast wing beats let hummingbirds hover and fly backward.",
+  "id": "a3-rw2e-08"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Central ideas and details",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "When the city of Curitiba, Brazil, could not afford a subway, planners designed a bus system that worked like one. Buses travel in their own lanes, and passengers pay before boarding at tube-shaped stations, so buses stop only briefly. The system now carries more than a million riders each day.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "Subways are always too expensive for large cities.",
+   "A city created an effective transit system by making buses work like a subway.",
+   "Curitiba has more cars than any other city in Brazil.",
+   "Passengers prefer buses to subways."
+  ],
+  "answer": 1,
+  "explanation_en": "The text describes how Curitiba designed buses to operate like a subway and shows the system succeeded.",
+  "id": "a3-rw2e-09"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (textual)",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "A researcher claims that background music helps people work faster on simple, repetitive tasks.",
+  "stem": "Which finding, if true, would most directly support the researcher's claim?",
+  "choices": [
+   "Workers sorting mail finished 15% more letters per hour while music played than when it was quiet.",
+   "Most workers said they enjoyed classical music.",
+   "Workers solving difficult puzzles made more mistakes with music playing.",
+   "The music was played at a low volume."
+  ],
+  "answer": 0,
+  "explanation_en": "Sorting mail is a simple, repetitive task, and faster sorting with music directly supports the claim.",
+  "id": "a3-rw2e-10"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (textual)",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "In Louisa May Alcott's 1868 novel Little Women, Jo March dreams of becoming a writer. A student claims that Jo is determined to pursue her ambition.",
+  "stem": "Which quotation from the novel best supports the student's claim?",
+  "choices": [
+   "\"The four young faces on which the firelight shone brightened at the cheerful words.\"",
+   "\"Margaret, the eldest of the four, was sixteen, and very pretty.\"",
+   "\"Christmas won't be Christmas without any presents.\"",
+   "\"I think I shall write books, and get rich and famous; that would suit me, so that is my favorite dream.\""
+  ],
+  "answer": 3,
+  "explanation_en": "Only the first quotation shows Jo stating her ambition to write books.",
+  "id": "a3-rw2e-11"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (quantitative)",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Visitors to Pine Ridge National Park\n\nSeason — Visitors\nWinter — 12,000\nSpring — 45,000\nSummer — 98,000\nFall — 51,000\n\nA park ranger states that summer is the park's busiest season.",
+  "stem": "Which choice best uses data from the table to support the ranger's statement?",
+  "choices": [
+   "The park had 98,000 visitors in summer, more than in any other season.",
+   "Fall had more visitors than spring.",
+   "The park had 12,000 visitors in winter.",
+   "Spring had 45,000 visitors."
+  ],
+  "answer": 0,
+  "explanation_en": "To support \"busiest season,\" the summer total must be compared with the others. Only the first choice does this.",
+  "id": "a3-rw2e-12"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (quantitative)",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Percentage of households with each pet\n\nPet — 2010 — 2020\nDogs — 36% — 38%\nCats — 30% — 25%\nFish — 10% — 8%\n\nA researcher notes that dogs were more common than cats in both 2010 and 2020.",
+  "stem": "Which choice best uses data from the table to support the researcher's statement?",
+  "choices": [
+   "In 2020, 38% of households had dogs.",
+   "In 2010, 36% of households had dogs and 30% had cats; in 2020, 38% had dogs and 25% had cats.",
+   "The share of households with cats fell from 30% to 25%.",
+   "Fish were the least common pet in both years."
+  ],
+  "answer": 1,
+  "explanation_en": "The statement compares dogs and cats in both years, so the evidence needs both pets in both years.",
+  "id": "a3-rw2e-13"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Inferences",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Arctic foxes have brown fur in summer and white fur in winter. Their white winter fur blends in with the snow, while their brown summer fur matches the rocks and plants. This change most likely helps arctic foxes ______",
+  "stem": "Which choice most logically completes the text?",
+  "choices": [
+   "stay hidden from predators and prey throughout the year.",
+   "swim in cold water.",
+   "find mates more easily in winter.",
+   "stay cool during the summer months."
+  ],
+  "answer": 0,
+  "explanation_en": "In both seasons the fur matches the surroundings, which helps the foxes stay hidden all year.",
+  "id": "a3-rw2e-14"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Koalas sleep up to 20 hours a ______ their diet of eucalyptus leaves provides very little energy.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "day",
+   "day,",
+   "day;",
+   "day, and,"
+  ],
+  "answer": 2,
+  "explanation_en": "Both parts are complete sentences, so they must be joined with a semicolon.",
+  "id": "a3-rw2e-15"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Ada Lovelace, often called the first computer ______ wrote notes in the 1840s describing how a machine could follow a set of instructions.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "programmer,",
+   "programmer;",
+   "programmer",
+   "programmer:"
+  ],
+  "answer": 0,
+  "explanation_en": "\"often called the first computer programmer\" is an extra phrase set off by commas, so a closing comma is needed.",
+  "id": "a3-rw2e-16"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The scientist packed only what she would need for the ______ a notebook, a camera, and a water bottle.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "trip,",
+   "trip:",
+   "trip, because",
+   "trip;"
+  ],
+  "answer": 1,
+  "explanation_en": "A colon introduces a list that explains what she needed.",
+  "id": "a3-rw2e-17"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Volcanic soil is very ______ many farmers live near active volcanoes despite the danger.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "fertile, so",
+   "fertile so,",
+   "fertile, so,",
+   "fertile so"
+  ],
+  "answer": 0,
+  "explanation_en": "Two complete sentences joined by \"so\" need a comma before the conjunction and none after it.",
+  "id": "a3-rw2e-18"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The box of old photographs ______ in the attic for many years before it was found.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "are sitting",
+   "had sat",
+   "have sat",
+   "were sitting"
+  ],
+  "answer": 1,
+  "explanation_en": "The subject is \"box\" (singular), and the action happened before it was found, so the past perfect \"had sat\" is correct.",
+  "id": "a3-rw2e-19"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "My grandmother and I ______ pancakes together every Sunday morning.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "has made",
+   "makes",
+   "is making",
+   "make"
+  ],
+  "answer": 3,
+  "explanation_en": "The compound subject \"My grandmother and I\" is plural, so the plural verb \"make\" is correct.",
+  "id": "a3-rw2e-20"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The scientists recorded the temperature, measured the wind speed, and ______ the clouds every hour.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "will photograph",
+   "photographing",
+   "photograph",
+   "photographed"
+  ],
+  "answer": 3,
+  "explanation_en": "The other verbs are in the past tense (\"recorded,\" \"measured\"), so \"photographed\" keeps the list parallel.",
+  "id": "a3-rw2e-21"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Bats are active mostly at night. ______ they sleep during the day, often hanging upside down in caves.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "Instead,",
+   "Similarly,",
+   "In addition,",
+   "For example,"
+  ],
+  "answer": 0,
+  "explanation_en": "The second sentence describes what bats do in place of being active during the day, so \"Instead\" fits.",
+  "id": "a3-rw2e-22"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The team practiced every day for three months. ______ they won the regional championship.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "In contrast,",
+   "Eventually,",
+   "However,",
+   "For instance,"
+  ],
+  "answer": 1,
+  "explanation_en": "Winning came after months of practice, so \"Eventually\" logically shows the outcome over time.",
+  "id": "a3-rw2e-23"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Some plants need very little water. Cacti, ______ can survive for months without rain.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "in contrast,",
+   "however,",
+   "for instance,",
+   "therefore,"
+  ],
+  "answer": 2,
+  "explanation_en": "Cacti are an example of plants that need little water.",
+  "id": "a3-rw2e-24"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• The Amazon rainforest covers about 5.5 million square kilometers.\n• It is located mostly in Brazil.\n• It is home to about 10% of the world's known species.\n• It produces about 20% of the world's river water that flows into oceans.",
+  "stem": "The student wants to state how many of the world's known species live in the Amazon rainforest. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "The Amazon produces a large share of the world's river water.",
+   "The Amazon rainforest is located mostly in Brazil.",
+   "The Amazon rainforest is home to about 10% of the world's known species.",
+   "The Amazon rainforest covers about 5.5 million square kilometers."
+  ],
+  "answer": 2,
+  "explanation_en": "The goal is the share of species; only C states it.",
+  "id": "a3-rw2e-25"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• Wangari Maathai was a Kenyan environmental activist.\n• In 1977, she founded the Green Belt Movement.\n• The movement has planted more than 50 million trees in Kenya.\n• In 2004, she became the first African woman to win the Nobel Peace Prize.",
+  "stem": "The student wants to emphasize the scale of the Green Belt Movement's work. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "Wangari Maathai was a Kenyan environmental activist.",
+   "Wangari Maathai founded the Green Belt Movement.",
+   "Wangari Maathai won the Nobel Peace Prize in 2004.",
+   "The Green Belt Movement, founded by Wangari Maathai in 1977, has planted more than 50 million trees in Kenya."
+  ],
+  "answer": 3,
+  "explanation_en": "\"More than 50 million trees\" shows the scale of the movement's work; only C includes it.",
+  "id": "a3-rw2e-26"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "hard",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• Mercury and Venus are the two planets closest to the Sun.\n• Mercury is about 58 million kilometers from the Sun.\n• Venus is about 108 million kilometers from the Sun.\n• Despite being farther away, Venus is hotter than Mercury because its thick atmosphere traps heat.",
+  "stem": "The student wants to explain a surprising difference between Mercury and Venus. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "Mercury and Venus are the two planets closest to the Sun.",
+   "Mercury is about 58 million kilometers from the Sun.",
+   "Although Venus is farther from the Sun than Mercury is, Venus is hotter because its thick atmosphere traps heat.",
+   "Venus is about 108 million kilometers from the Sun."
+  ],
+  "answer": 2,
+  "explanation_en": "The surprising difference is that the farther planet is hotter. D states it and gives the reason.",
+  "id": "a3-rw2e-27"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in one variable",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "If 4x + 6 = 30, what is the value of x?",
+  "choices": [
+   "4",
+   "6",
+   "9",
+   "24"
+  ],
+  "answer": 1,
+  "explanation_en": "Subtract 6: 4x = 24. Divide by 4: x = 6.",
+  "id": "a3-m2e-01"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in one variable",
+  "difficulty": "easy",
+  "type": "spr",
+  "stem": "If 3x − 8 = x + 4, what is the value of x?",
+  "answer": [
+   "6"
+  ],
+  "explanation_en": "Subtract x from both sides: 2x − 8 = 4. Add 8: 2x = 12, so x = 6.",
+  "id": "a3-m2e-02"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear functions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "The function h is defined by h(x) = 10 − 2x. What is the value of h(3)?",
+  "choices": [
+   "4",
+   "6",
+   "8",
+   "16"
+  ],
+  "answer": 0,
+  "explanation_en": "h(3) = 10 − 2(3) = 10 − 6 = 4.",
+  "id": "a3-m2e-03"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear functions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "A plant is 4 centimeters tall and grows 1.5 centimeters each week. How tall will the plant be after 6 weeks?",
+  "choices": [
+   "9 cm",
+   "10 cm",
+   "13 cm",
+   "15 cm"
+  ],
+  "answer": 2,
+  "explanation_en": "Height = 4 + 1.5(6) = 4 + 9 = 13 centimeters.",
+  "id": "a3-m2e-04"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Systems of two linear equations",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "x + y = 9\nx − y = 3\n\nWhat is the value of y in the solution to the system above?",
+  "choices": [
+   "3",
+   "4",
+   "6",
+   "12"
+  ],
+  "answer": 0,
+  "explanation_en": "Add the equations: 2x = 12, so x = 6. Then y = 9 − 6 = 3.",
+  "id": "a3-m2e-05"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Systems of two linear equations",
+  "difficulty": "medium",
+  "type": "spr",
+  "stem": "A farm has chickens and cows. There are 20 animals in all, with 56 legs total. Chickens have 2 legs and cows have 4 legs. How many cows are on the farm?",
+  "answer": [
+   "8"
+  ],
+  "explanation_en": "c + w = 20 and 2c + 4w = 56. Substitute c = 20 − w: 40 − 2w + 4w = 56, so 2w = 16 and w = 8 cows.",
+  "id": "a3-m2e-06"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in two variables",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "Which point lies on the line y = 2x − 1?",
+  "choices": [
+   "(4, 9)",
+   "(1, 3)",
+   "(2, 3)",
+   "(3, 4)"
+  ],
+  "answer": 2,
+  "explanation_en": "Check (2, 3): 2(2) − 1 = 3. ✓ The others fail: 2(1) − 1 = 1, 2(3) − 1 = 5, 2(4) − 1 = 7.",
+  "id": "a3-m2e-07"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear inequalities",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "Which of the following is a solution to 2x + 1 < 9?",
+  "choices": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "answer": 0,
+  "explanation_en": "2x < 8, so x < 4. Only 3 is less than 4.",
+  "id": "a3-m2e-08"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Equivalent expressions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "Which expression is equivalent to 5(2x − 3)?",
+  "choices": [
+   "10x + 15",
+   "10x − 3",
+   "7x − 8",
+   "10x − 15"
+  ],
+  "answer": 3,
+  "explanation_en": "Distribute: 5(2x) − 5(3) = 10x − 15.",
+  "id": "a3-m2e-09"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Equivalent expressions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "Which expression is equivalent to x² + 5x + 6?",
+  "choices": [
+   "(x − 2)(x − 3)",
+   "(x + 2)(x + 3)",
+   "(x + 5)(x + 1)",
+   "(x + 1)(x + 6)"
+  ],
+  "answer": 1,
+  "explanation_en": "Find two numbers that multiply to 6 and add to 5: 2 and 3. So x² + 5x + 6 = (x + 2)(x + 3).",
+  "id": "a3-m2e-10"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear equations",
+  "difficulty": "easy",
+  "type": "spr",
+  "stem": "If √x = 9, what is the value of x?",
+  "answer": [
+   "81"
+  ],
+  "explanation_en": "Square both sides: x = 9² = 81.",
+  "id": "a3-m2e-11"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear equations",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "What are the solutions to x² − 16 = 0?",
+  "choices": [
+   "x = 4 and x = −4",
+   "x = 16 and x = −16",
+   "x = 8 and x = −8",
+   "x = 4 only"
+  ],
+  "answer": 0,
+  "explanation_en": "x² = 16, so x = 4 or x = −4.",
+  "id": "a3-m2e-12"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "The function f is defined by f(x) = 3x². What is the value of f(2)?",
+  "choices": [
+   "6",
+   "12",
+   "18",
+   "36"
+  ],
+  "answer": 1,
+  "explanation_en": "f(2) = 3(2²) = 3(4) = 12.",
+  "id": "a3-m2e-13"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "An account starts with $500 and grows by 4% each year. Which expression gives the amount, in dollars, after t years?",
+  "choices": [
+   "500(0.04)^t",
+   "500(1.4)^t",
+   "500 + 4t",
+   "500(1.04)^t"
+  ],
+  "answer": 3,
+  "explanation_en": "Growing by 4% means multiplying by 1.04 each year: 500(1.04)^t.",
+  "id": "a3-m2e-14"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "hard",
+  "type": "spr",
+  "stem": "The function f is defined by f(x) = −(x + 1)² + 7. What is the maximum value of f(x)?",
+  "answer": [
+   "7"
+  ],
+  "explanation_en": "−(x + 1)² is never positive and equals 0 when x = −1, so the largest value of f(x) is 7.",
+  "id": "a3-m2e-15"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Percentages",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "A class has 30 students, and 60% of them walk to school. How many students walk to school?",
+  "choices": [
+   "12",
+   "16",
+   "18",
+   "20"
+  ],
+  "answer": 2,
+  "explanation_en": "60% of 30 = 0.6 × 30 = 18.",
+  "id": "a3-m2e-16"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Ratios, rates, and proportions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "A printer prints 45 pages in 3 minutes. At this rate, how many pages does it print in 8 minutes?",
+  "choices": [
+   "90",
+   "105",
+   "120",
+   "135"
+  ],
+  "answer": 2,
+  "explanation_en": "The rate is 45 ÷ 3 = 15 pages per minute, so in 8 minutes it prints 15 × 8 = 120 pages.",
+  "id": "a3-m2e-17"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "One-variable data",
+  "difficulty": "medium",
+  "type": "spr",
+  "stem": "The test scores of four students are 70, 80, 85, and 95. What is the mean score?",
+  "answer": [
+   "82.5"
+  ],
+  "explanation_en": "The total is 70 + 80 + 85 + 95 = 330, and 330 ÷ 4 = 82.5.",
+  "id": "a3-m2e-18"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Two-variable data",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "In a survey of 200 people, 120 said they prefer summer and the rest said they prefer winter. What fraction of the people prefer winter?",
+  "choices": [
+   "1/5",
+   "2/5",
+   "3/5",
+   "4/5"
+  ],
+  "answer": 1,
+  "explanation_en": "200 − 120 = 80 prefer winter, and 80/200 = 2/5.",
+  "id": "a3-m2e-19"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Lines, angles, and triangles",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "In an isosceles triangle, the two equal angles each measure 70°. What is the measure of the third angle?",
+  "choices": [
+   "20°",
+   "40°",
+   "70°",
+   "110°"
+  ],
+  "answer": 1,
+  "explanation_en": "180 − 70 − 70 = 40°.",
+  "id": "a3-m2e-20"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Area and volume",
+  "difficulty": "medium",
+  "type": "spr",
+  "stem": "A triangle has a base of 10 inches and a height of 7 inches. What is the area of the triangle, in square inches?",
+  "answer": [
+   "35"
+  ],
+  "explanation_en": "Area = (1/2) × base × height = (1/2)(10)(7) = 35.",
+  "id": "a3-m2e-21"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Right triangles and trigonometry",
+  "difficulty": "hard",
+  "type": "mcq",
+  "stem": "In right triangle ABC, angle C is the right angle, AC = 5, and AB = 13. What is the length of BC?",
+  "choices": [
+   "12",
+   "√194",
+   "18",
+   "8"
+  ],
+  "answer": 0,
+  "explanation_en": "AB is the hypotenuse: BC² = 13² − 5² = 169 − 25 = 144, so BC = 12.",
+  "id": "a3-m2e-22"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The child was ______ about the fireworks show: she had been talking about it all week and could hardly wait for it to begin.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "excited",
+   "bored",
+   "angry",
+   "confused"
+  ],
+  "answer": 0,
+  "explanation_en": "Talking about it all week and hardly being able to wait shows eagerness: \"excited.\"",
+  "id": "a4-rw2e-01"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The water in the mountain lake is so ______ that you can see the stones on the bottom more than five meters down.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "cloudy",
+   "clear",
+   "shallow",
+   "warm"
+  ],
+  "answer": 1,
+  "explanation_en": "Seeing stones five meters down means the water is easy to see through: \"clear.\"",
+  "id": "a4-rw2e-02"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The architect wanted the new school to be ______, so she designed classrooms with movable walls that can be rearranged for different activities.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "expensive",
+   "rigid",
+   "flexible",
+   "ancient"
+  ],
+  "answer": 2,
+  "explanation_en": "Movable walls that can be rearranged make the building adaptable: \"flexible.\"",
+  "id": "a4-rw2e-03"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Because the witness's account ______ the security camera footage in every detail, investigators were confident that her description was accurate.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "contradicted",
+   "delayed",
+   "ignored",
+   "matched"
+  ],
+  "answer": 3,
+  "explanation_en": "Investigators trusted her account because it agreed with the footage: \"matched.\"",
+  "id": "a4-rw2e-04"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Text structure and purpose",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Fireflies produce light through a chemical reaction inside their bodies. Different species flash in different patterns, and males and females use these patterns to find each other in the dark. Some species even flash in unison, lighting up entire fields at once.",
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": [
+   "To explain how and why fireflies produce light",
+   "To compare fireflies with other insects",
+   "To describe the best places to see fireflies",
+   "To argue that fireflies should be protected"
+  ],
+  "answer": 0,
+  "explanation_en": "The text explains the source of fireflies' light and its purpose (finding mates).",
+  "id": "a4-rw2e-05"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Text structure and purpose",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Some people believe that goldfish have a memory of only three seconds. Experiments, however, show otherwise. In one study, goldfish learned to push a lever to get food and still remembered how to do it three months later.",
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": [
+   "To argue that goldfish are smarter than dogs",
+   "To explain how to care for goldfish",
+   "To describe the history of goldfish as pets",
+   "To present evidence that contradicts a popular belief"
+  ],
+  "answer": 3,
+  "explanation_en": "The text states a popular belief and then gives experimental evidence against it.",
+  "id": "a4-rw2e-06"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Cross-text connections",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Text 1\nPlaying video games is a waste of time for young people. Hours spent in front of a screen could be used for reading or exercise.\n\nText 2\nA study of 2,000 children found that those who played certain strategy video games for about an hour a day showed small improvements in memory and problem-solving. Researchers noted, however, that the benefits disappeared when playing time exceeded three hours a day.",
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1?",
+  "choices": [
+   "By claiming that children should play as many hours as possible",
+   "By arguing that reading is a waste of time",
+   "By suggesting that a moderate amount of some video games may have benefits",
+   "By agreeing that all video games are harmful"
+  ],
+  "answer": 2,
+  "explanation_en": "Text 2 finds benefits from moderate play of strategy games, which complicates the claim that gaming is simply a waste of time.",
+  "id": "a4-rw2e-07"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Central ideas and details",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Elephants communicate with low-pitched sounds called rumbles. Many of these sounds are too low for humans to hear, but they can travel several kilometers. Elephants use rumbles to keep track of family members and to warn one another of danger.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "Humans can hear every sound elephants make.",
+   "Elephants live alone most of the time.",
+   "Elephants have poor hearing.",
+   "Elephants use low sounds to communicate over long distances."
+  ],
+  "answer": 3,
+  "explanation_en": "The text centers on rumbles: low sounds that travel far and help elephants communicate.",
+  "id": "a4-rw2e-08"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Central ideas and details",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "In the 1800s, many Dutch towns faced flooding from the sea. Rather than simply building walls higher, engineers designed systems of dikes, canals, and pumps that move water out of low-lying land. Today, about a quarter of the Netherlands lies below sea level, yet millions of people live and farm there safely.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "The Netherlands has no problems with flooding today.",
+   "Most countries have land below sea level.",
+   "Engineering systems have allowed people to live safely on land below sea level in the Netherlands.",
+   "Building higher walls is the only way to stop floods."
+  ],
+  "answer": 2,
+  "explanation_en": "The text describes the Dutch water-control systems and concludes that people live safely below sea level because of them.",
+  "id": "a4-rw2e-09"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (textual)",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "A scientist claims that crows can remember individual human faces for years.",
+  "stem": "Which finding, if true, would most directly support the scientist's claim?",
+  "choices": [
+   "Crows live in large groups during winter.",
+   "Crows can fly up to 40 kilometers per hour.",
+   "Crows eat both seeds and insects.",
+   "Crows scolded a researcher wearing a mask they had seen trap them five years earlier, but ignored people in other masks."
+  ],
+  "answer": 3,
+  "explanation_en": "Reacting to one specific mask years later, while ignoring others, shows long-term recognition.",
+  "id": "a4-rw2e-10"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (textual)",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "A nutrition researcher hypothesized that eating breakfast improves students' attention in morning classes. She compared students who ate breakfast with students who skipped it.",
+  "stem": "Which finding, if true, would most directly support the researcher's hypothesis?",
+  "choices": [
+   "Students who ate breakfast scored higher on attention tests given at 10 a.m. than students who skipped breakfast.",
+   "Students who skipped breakfast ate a larger lunch.",
+   "Most students preferred cereal to eggs.",
+   "Attention test scores were similar for both groups in the afternoon."
+  ],
+  "answer": 0,
+  "explanation_en": "The hypothesis is about morning attention, so higher morning attention scores among breakfast eaters directly support it.",
+  "id": "a4-rw2e-11"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (quantitative)",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Average high temperature in Fairview (°C)\n\nMonth — Temperature\nJune — 24\nJuly — 29\nAugust — 27\nSeptember — 21\n\nA resident states that July was the hottest month shown in the table.",
+  "stem": "Which choice best uses data from the table to support the resident's statement?",
+  "choices": [
+   "July's average high was 29°C, higher than any other month shown.",
+   "September was cooler than August.",
+   "June's average high was 24°C.",
+   "August's average high was 27°C."
+  ],
+  "answer": 0,
+  "explanation_en": "To show July was hottest, it must be compared with the other months, as in the first choice.",
+  "id": "a4-rw2e-12"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (quantitative)",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Daily water use per person (liters)\n\nCity — 2015 — 2022\nAshford — 160 — 132\nBelmont — 145 — 121\nCarlow — 170 — 150\n\nA city planner claims that daily water use per person fell in all three cities between 2015 and 2022.",
+  "stem": "Which choice best uses data from the table to support the planner's claim?",
+  "choices": [
+   "Ashford used less water than Carlow in both years.",
+   "From 2015 to 2022, use fell from 160 to 132 liters in Ashford, from 145 to 121 in Belmont, and from 170 to 150 in Carlow.",
+   "In 2022, Belmont used 121 liters per person.",
+   "Carlow had the highest water use in 2015."
+  ],
+  "answer": 1,
+  "explanation_en": "The claim covers all three cities, so the evidence must show a decrease in each one.",
+  "id": "a4-rw2e-13"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Inferences",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Many trees in cold climates lose their leaves in autumn. Leaves lose water through tiny openings, and in winter, frozen ground makes it hard for roots to take up water. Dropping their leaves therefore helps these trees ______",
+  "stem": "Which choice most logically completes the text?",
+  "choices": [
+   "attract animals that eat leaves.",
+   "avoid losing water during a season when it is hard to replace.",
+   "grow faster during the winter.",
+   "make more food from winter sunlight."
+  ],
+  "answer": 1,
+  "explanation_en": "Leaves lose water, and frozen ground makes water hard to get, so dropping leaves helps the trees save water.",
+  "id": "a4-rw2e-14"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The museum is closed on ______ it is open late on Fridays.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "Mondays, it",
+   "Mondays,",
+   "Mondays;",
+   "Mondays"
+  ],
+  "answer": 2,
+  "explanation_en": "Two complete sentences need a semicolon between them; a comma alone creates a comma splice.",
+  "id": "a4-rw2e-15"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The Wright brothers, who ran a bicycle shop in ______ made the first powered airplane flight in 1903.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "Ohio;",
+   "Ohio",
+   "Ohio,",
+   "Ohio:"
+  ],
+  "answer": 2,
+  "explanation_en": "\"who ran a bicycle shop in Ohio\" is a nonessential clause set off by commas, so a closing comma is needed.",
+  "id": "a4-rw2e-16"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Bring the following items to the ______ a sleeping bag, a flashlight, and warm clothes.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "campsite:",
+   "campsite,",
+   "campsite",
+   "campsite;"
+  ],
+  "answer": 0,
+  "explanation_en": "A colon introduces the list of items.",
+  "id": "a4-rw2e-17"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The storm knocked out power across the ______ crews worked through the night to restore it.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "region, but",
+   "region but,",
+   "region but",
+   "region, but,"
+  ],
+  "answer": 0,
+  "explanation_en": "Two complete sentences joined by \"but\" take a comma before the conjunction only.",
+  "id": "a4-rw2e-18"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The flowers in the garden ______ beautiful this spring.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "looks",
+   "has looked",
+   "look",
+   "is looking"
+  ],
+  "answer": 2,
+  "explanation_en": "The subject is \"flowers\" (plural), so the plural verb \"look\" is correct.",
+  "id": "a4-rw2e-19"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "When the students finished the experiment, ______ wrote a report about the results.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "she",
+   "it",
+   "they",
+   "he"
+  ],
+  "answer": 2,
+  "explanation_en": "The pronoun refers to \"the students,\" which is plural, so \"they\" is correct.",
+  "id": "a4-rw2e-20"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "By the time the guests arrived, the chef ______ the meal.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "has prepared",
+   "had prepared",
+   "will prepare",
+   "prepares"
+  ],
+  "answer": 1,
+  "explanation_en": "The cooking was finished before another past event (the guests arriving), so the past perfect \"had prepared\" is correct.",
+  "id": "a4-rw2e-21"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Sloths move very slowly. ______ they travel only about 40 meters a day.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "In fact,",
+   "In contrast,",
+   "Otherwise,",
+   "However,"
+  ],
+  "answer": 0,
+  "explanation_en": "The second sentence adds a striking detail that strengthens the first, so \"In fact\" fits.",
+  "id": "a4-rw2e-22"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The library was too small for the growing town. ______ the town built a new library twice the size.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "For example,",
+   "However,",
+   "Similarly,",
+   "Therefore,"
+  ],
+  "answer": 3,
+  "explanation_en": "Building a bigger library is the result of the old one being too small, so \"Therefore\" is logical.",
+  "id": "a4-rw2e-23"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Some animals change color to hide from predators. The chameleon, ______ can shift its skin from green to brown to match its surroundings.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "as a result,",
+   "however,",
+   "in contrast,",
+   "for example,"
+  ],
+  "answer": 3,
+  "explanation_en": "The chameleon is an example of an animal that changes color.",
+  "id": "a4-rw2e-24"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• The Great Barrier Reef is off the coast of Australia.\n• It is the largest coral reef system in the world.\n• It stretches about 2,300 kilometers.\n• It is home to about 1,500 species of fish.",
+  "stem": "The student wants to state the length of the Great Barrier Reef. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "The Great Barrier Reef is off the coast of Australia.",
+   "The Great Barrier Reef stretches about 2,300 kilometers.",
+   "The Great Barrier Reef is home to about 1,500 species of fish.",
+   "The Great Barrier Reef is the largest coral reef system."
+  ],
+  "answer": 1,
+  "explanation_en": "The goal is length, and only B gives it.",
+  "id": "a4-rw2e-25"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• Mae Jemison is a doctor and engineer.\n• In 1992, she flew aboard the space shuttle Endeavour.\n• She was the first African American woman to travel to space.\n• She later founded a company that develops new technologies.",
+  "stem": "The student wants to emphasize Mae Jemison's historic achievement. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "Mae Jemison is a doctor and engineer who founded a technology company.",
+   "In 1992, aboard the space shuttle Endeavour, Mae Jemison became the first African American woman to travel to space.",
+   "Mae Jemison is an engineer.",
+   "Mae Jemison flew aboard the space shuttle Endeavour."
+  ],
+  "answer": 1,
+  "explanation_en": "Being the first African American woman in space is the historic achievement, and only B includes it.",
+  "id": "a4-rw2e-26"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "hard",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• Cheetahs and lions are both large cats that live in Africa.\n• Cheetahs can run up to 110 kilometers per hour.\n• Lions can run up to about 80 kilometers per hour.\n• Lions usually hunt in groups, while cheetahs usually hunt alone.",
+  "stem": "The student wants to contrast how cheetahs and lions hunt. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "Lions can run up to about 80 kilometers per hour.",
+   "Lions usually hunt in groups, but cheetahs usually hunt alone.",
+   "Cheetahs can run up to 110 kilometers per hour.",
+   "Cheetahs and lions are both large cats that live in Africa."
+  ],
+  "answer": 1,
+  "explanation_en": "The goal is a contrast in hunting behavior, which only D gives.",
+  "id": "a4-rw2e-27"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in one variable",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "If 6x + 5 = 41, what is the value of x?",
+  "choices": [
+   "5",
+   "6",
+   "7",
+   "36"
+  ],
+  "answer": 1,
+  "explanation_en": "Subtract 5: 6x = 36. Divide by 6: x = 6.",
+  "id": "a4-m2e-01"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in one variable",
+  "difficulty": "easy",
+  "type": "spr",
+  "stem": "If x + 3/4 = 2, what is the value of x?",
+  "answer": [
+   "1.25",
+   "5/4"
+  ],
+  "explanation_en": "x = 2 − 3/4 = 5/4, or 1.25.",
+  "id": "a4-m2e-02"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear functions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "The function f is defined by f(x) = −3x + 7. What is the value of f(2)?",
+  "choices": [
+   "−1",
+   "1",
+   "4",
+   "13"
+  ],
+  "answer": 1,
+  "explanation_en": "f(2) = −3(2) + 7 = −6 + 7 = 1.",
+  "id": "a4-m2e-03"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear functions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "What is the y-intercept of the line y = 5x − 8?",
+  "choices": [
+   "(0, 5)",
+   "(−8, 0)",
+   "(8, 0)",
+   "(0, −8)"
+  ],
+  "answer": 3,
+  "explanation_en": "In y = mx + b, the y-intercept is (0, b). Here b = −8, so the y-intercept is (0, −8).",
+  "id": "a4-m2e-04"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Systems of two linear equations",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "x = y + 2\nx + y = 8\n\nWhat is the value of x in the solution to the system above?",
+  "choices": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "answer": 2,
+  "explanation_en": "Substitute: (y + 2) + y = 8, so 2y = 6 and y = 3. Then x = 3 + 2 = 5.",
+  "id": "a4-m2e-05"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Systems of two linear equations",
+  "difficulty": "medium",
+  "type": "spr",
+  "stem": "Tickets to a show cost $8 for students and $12 for adults. A group of 10 people paid $96 in all. How many students were in the group?",
+  "answer": [
+   "6"
+  ],
+  "explanation_en": "s + a = 10 and 8s + 12a = 96. Substitute a = 10 − s: 8s + 120 − 12s = 96, so −4s = −24 and s = 6.",
+  "id": "a4-m2e-06"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in two variables",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "A phone plan costs $25 per month plus $0.10 per text message. Which expression gives the monthly cost, in dollars, for t text messages?",
+  "choices": [
+   "0.10(25 + t)",
+   "25t + 0.10",
+   "25.10t",
+   "25 + 0.10t"
+  ],
+  "answer": 3,
+  "explanation_en": "The fixed $25 is added to 0.10 for each text: 25 + 0.10t.",
+  "id": "a4-m2e-07"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear inequalities",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "Which value of x is a solution to 3x ≥ 18?",
+  "choices": [
+   "3",
+   "4",
+   "5",
+   "7"
+  ],
+  "answer": 3,
+  "explanation_en": "3x ≥ 18 means x ≥ 6. Of the choices, only 7 is at least 6.",
+  "id": "a4-m2e-08"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Equivalent expressions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "Which expression is equivalent to x(x + 6)?",
+  "choices": [
+   "x² + 6",
+   "2x + 6",
+   "x² + 6x",
+   "x² + 6x²"
+  ],
+  "answer": 2,
+  "explanation_en": "Distribute: x · x + x · 6 = x² + 6x.",
+  "id": "a4-m2e-09"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Equivalent expressions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "Which expression is equivalent to (2x + 1)(x − 3)?",
+  "choices": [
+   "2x² − 6x + 1",
+   "2x² − 3",
+   "2x² − 5x − 3",
+   "2x² + 5x − 3"
+  ],
+  "answer": 2,
+  "explanation_en": "(2x + 1)(x − 3) = 2x² − 6x + x − 3 = 2x² − 5x − 3.",
+  "id": "a4-m2e-10"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear equations",
+  "difficulty": "easy",
+  "type": "spr",
+  "stem": "If x³ = 27, what is the value of x?",
+  "answer": [
+   "3"
+  ],
+  "explanation_en": "3 × 3 × 3 = 27, so x = 3.",
+  "id": "a4-m2e-11"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear equations",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "What are the solutions to x² − 5x = 0?",
+  "choices": [
+   "x = −5 only",
+   "x = 0 and x = 5",
+   "x = 0 and x = −5",
+   "x = 5 only"
+  ],
+  "answer": 1,
+  "explanation_en": "Factor: x(x − 5) = 0, so x = 0 or x = 5.",
+  "id": "a4-m2e-12"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "The function g is defined by g(x) = x² − 4. What is the value of g(−3)?",
+  "choices": [
+   "−13",
+   "−5",
+   "5",
+   "13"
+  ],
+  "answer": 2,
+  "explanation_en": "g(−3) = (−3)² − 4 = 9 − 4 = 5.",
+  "id": "a4-m2e-13"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "A ball is dropped from a height, and its height h, in feet, after t seconds is given by h(t) = 64 − 16t². How many seconds does it take for the ball to reach the ground?",
+  "choices": [
+   "1",
+   "2",
+   "4",
+   "8"
+  ],
+  "answer": 1,
+  "explanation_en": "Set h(t) = 0: 16t² = 64, so t² = 4 and t = 2 seconds.",
+  "id": "a4-m2e-14"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "hard",
+  "type": "spr",
+  "stem": "The graph of y = x² − 8x + 15 crosses the x-axis at two points. What is the sum of the x-coordinates of these points?",
+  "answer": [
+   "8"
+  ],
+  "explanation_en": "Factor: (x − 3)(x − 5) = 0, so the graph crosses at x = 3 and x = 5. Their sum is 8.",
+  "id": "a4-m2e-15"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Percentages",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "A town's population grew from 2,000 to 2,300. By what percent did the population increase?",
+  "choices": [
+   "13%",
+   "15%",
+   "30%",
+   "3%"
+  ],
+  "answer": 1,
+  "explanation_en": "The increase is 300, and 300 ÷ 2,000 = 0.15, or 15%.",
+  "id": "a4-m2e-16"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Ratios, rates, and proportions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "A map uses a scale of 1 centimeter to 5 kilometers. Two cities are 7 centimeters apart on the map. What is the actual distance between them?",
+  "choices": [
+   "12 km",
+   "25 km",
+   "35 km",
+   "70 km"
+  ],
+  "answer": 2,
+  "explanation_en": "7 × 5 = 35 kilometers.",
+  "id": "a4-m2e-17"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "One-variable data",
+  "difficulty": "medium",
+  "type": "spr",
+  "stem": "What is the range of the data set 14, 8, 21, 11, 17?",
+  "answer": [
+   "13"
+  ],
+  "explanation_en": "Range = largest − smallest = 21 − 8 = 13.",
+  "id": "a4-m2e-18"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Probability",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "A spinner has 8 equal sections numbered 1 through 8. What is the probability that the spinner lands on a number greater than 5?",
+  "choices": [
+   "1/8",
+   "1/4",
+   "3/8",
+   "5/8"
+  ],
+  "answer": 2,
+  "explanation_en": "The numbers greater than 5 are 6, 7, 8, which is 3 of 8 sections: 3/8.",
+  "id": "a4-m2e-19"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Lines, angles, and triangles",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "Two parallel lines are cut by a transversal. One of the angles formed measures 75°. Which of the following could be the measure of another angle formed by these lines?",
+  "choices": [
+   "15°",
+   "85°",
+   "105°",
+   "115°"
+  ],
+  "answer": 2,
+  "explanation_en": "Angles formed by a transversal with parallel lines are either equal (75°) or supplementary (180 − 75 = 105°).",
+  "id": "a4-m2e-20"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Area and volume",
+  "difficulty": "medium",
+  "type": "spr",
+  "stem": "A cube has edges of length 4 centimeters. What is the volume of the cube, in cubic centimeters?",
+  "answer": [
+   "64"
+  ],
+  "explanation_en": "Volume = 4 × 4 × 4 = 64.",
+  "id": "a4-m2e-21"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Circles",
+  "difficulty": "hard",
+  "type": "mcq",
+  "stem": "A circle has a diameter of 10. What is the area of the circle?",
+  "choices": [
+   "20π",
+   "10π",
+   "25π",
+   "100π"
+  ],
+  "answer": 2,
+  "explanation_en": "The radius is 10 ÷ 2 = 5, so the area is πr² = 25π.",
+  "id": "a4-m2e-22"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "After weeks without rain, the soil in the field was completely ______, and the young plants began to wilt.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "dry",
+   "fertile",
+   "frozen",
+   "muddy"
+  ],
+  "answer": 0,
+  "explanation_en": "Weeks without rain leave soil with no water: \"dry.\"",
+  "id": "a5-rw2e-01"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The teacher asked the students to ______ their essays carefully before turning them in, checking for spelling and grammar mistakes.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "copy",
+   "hide",
+   "erase",
+   "review"
+  ],
+  "answer": 3,
+  "explanation_en": "Checking for mistakes means reading the essays again closely: \"review.\"",
+  "id": "a5-rw2e-02"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The scientist's explanation was so ______ that even people with no background in physics could follow it.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "technical",
+   "lengthy",
+   "doubtful",
+   "straightforward"
+  ],
+  "answer": 3,
+  "explanation_en": "If people with no physics background could follow it, the explanation was simple and direct: \"straightforward.\"",
+  "id": "a5-rw2e-03"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Words in context",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Rather than ______ the old factory, the town turned it into apartments, a market, and an art studio, keeping its brick walls and tall windows.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "admire",
+   "visit",
+   "photograph",
+   "demolish"
+  ],
+  "answer": 3,
+  "explanation_en": "\"Rather than\" contrasts with reusing the building, so the town chose not to tear it down: \"demolish.\"",
+  "id": "a5-rw2e-04"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Text structure and purpose",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Every year, thousands of volunteers across the country count birds during a single weekend. They record each species they see and send the results to scientists. The data help researchers track which bird populations are growing and which are shrinking.",
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": [
+   "To describe a volunteer project and explain how its data are used",
+   "To argue that everyone should own a bird feeder",
+   "To compare different kinds of birds",
+   "To explain how birds migrate"
+  ],
+  "answer": 0,
+  "explanation_en": "The text describes the bird count and then explains how scientists use the data.",
+  "id": "a5-rw2e-05"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Text structure and purpose",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "It is often said that the Great Wall of China can be seen from space with the naked eye. Astronauts, however, report that the wall is very difficult to see from orbit, because it is narrow and similar in color to the land around it.",
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": [
+   "To argue that astronauts should take more photographs",
+   "To correct a common misconception using reports from people who have been to space",
+   "To describe how the Great Wall was built",
+   "To explain why the Great Wall is narrow"
+  ],
+  "answer": 1,
+  "explanation_en": "The text states a common belief and uses astronauts' reports to show it is mistaken.",
+  "id": "a5-rw2e-06"
+ },
+ {
+  "section": "rw",
+  "domain": "Craft and Structure",
+  "skill": "Cross-text connections",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Text 1\nZoos are outdated. Wild animals belong in their natural habitats, and keeping them in enclosures serves only to entertain visitors.\n\nText 2\nSome modern zoos run breeding programs for endangered species. The Arabian oryx, for example, became extinct in the wild in 1972, but animals bred in zoos were later released into protected areas, where wild herds now number more than 1,000.",
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1 that zoos serve only to entertain visitors?",
+  "choices": [
+   "By agreeing that all zoos should be closed",
+   "By claiming that visitors do not enjoy zoos",
+   "By pointing out that some zoos help preserve endangered species",
+   "By arguing that the Arabian oryx is not endangered"
+  ],
+  "answer": 2,
+  "explanation_en": "Text 2 gives an example of zoos saving a species, which challenges the idea that zoos only entertain.",
+  "id": "a5-rw2e-07"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Central ideas and details",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Beavers build dams across streams using sticks, mud, and stones. The dams create ponds that protect beavers from predators. These ponds also provide homes for fish, frogs, and birds.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "Most streams are blocked by dams.",
+   "Frogs build their own ponds.",
+   "Beaver dams create ponds that benefit beavers and other animals.",
+   "Beavers eat only fish."
+  ],
+  "answer": 2,
+  "explanation_en": "The text explains that the ponds from beaver dams help beavers and also many other animals.",
+  "id": "a5-rw2e-08"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Central ideas and details",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "In 2010, the town of Kamikatsu, Japan, set a goal of producing zero waste. Residents now sort their garbage into more than 40 categories, and a town recycling center reuses or recycles about 80 percent of it. Visitors from around the world come to learn from the town's approach.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "A small town has greatly reduced its waste through careful sorting and recycling.",
+   "Recycling centers are expensive to build.",
+   "Kamikatsu is the largest city in Japan.",
+   "Most towns sort their garbage into 40 categories."
+  ],
+  "answer": 0,
+  "explanation_en": "The text describes Kamikatsu's waste goal and the sorting system that lets it recycle or reuse most of its waste.",
+  "id": "a5-rw2e-09"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (textual)",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "A researcher claims that dogs can understand the meaning of some human words, not just the speaker's tone of voice.",
+  "stem": "Which finding, if true, would most directly support the researcher's claim?",
+  "choices": [
+   "Dogs barked louder at strangers than at family members.",
+   "Dogs preferred some toys to others.",
+   "Dogs responded to praise words spoken in a flat voice differently than to meaningless words spoken in the same flat voice.",
+   "Dogs wagged their tails when their owners came home."
+  ],
+  "answer": 2,
+  "explanation_en": "If dogs react differently to words even when the tone is the same, they must be responding to the words' meaning.",
+  "id": "a5-rw2e-10"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (textual)",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "An economist claims that a city's new free bus program increased the number of people using public transportation.",
+  "stem": "Which finding, if true, would most directly support the economist's claim?",
+  "choices": [
+   "Many riders said the buses were clean.",
+   "The number of bus riders rose by 35% in the year after fares were eliminated, while ridership in similar cities stayed the same.",
+   "The city bought ten new buses.",
+   "Bus drivers received a pay increase."
+  ],
+  "answer": 1,
+  "explanation_en": "A rise in riders after fares ended, while comparable cities saw no change, directly supports that the program increased ridership.",
+  "id": "a5-rw2e-11"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (quantitative)",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Number of students in each grade at Hillside School\n\nGrade — Students\n9th — 210\n10th — 195\n11th — 180\n12th — 172\n\nThe principal notes that the 9th grade has the most students.",
+  "stem": "Which choice best uses data from the table to support the principal's statement?",
+  "choices": [
+   "The 11th grade has 180 students.",
+   "The 10th grade has more students than the 11th grade.",
+   "The 9th grade has 210 students, more than any other grade.",
+   "The 12th grade has 172 students."
+  ],
+  "answer": 2,
+  "explanation_en": "To show the 9th grade is largest, it must be compared with the others; only the first choice does that.",
+  "id": "a5-rw2e-12"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Command of evidence (quantitative)",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Average time spent reading per day (minutes)\n\nGroup — 2019 — 2023\nChildren — 32 — 41\nTeenagers — 25 — 22\nAdults — 19 — 17\n\nA librarian states that children were the only group in the table whose daily reading time increased from 2019 to 2023.",
+  "stem": "Which choice best uses data from the table to support the librarian's statement?",
+  "choices": [
+   "Children's reading time rose from 32 to 41 minutes, while teenagers' fell from 25 to 22 and adults' fell from 19 to 17.",
+   "Adults read less than teenagers in both years.",
+   "Children read for 41 minutes a day in 2023.",
+   "Teenagers read for 25 minutes a day in 2019."
+  ],
+  "answer": 0,
+  "explanation_en": "The statement says children were the only group to increase, so the evidence must show the other groups decreased.",
+  "id": "a5-rw2e-13"
+ },
+ {
+  "section": "rw",
+  "domain": "Information and Ideas",
+  "skill": "Inferences",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Many desert animals are active mainly at night. During the day, desert temperatures can exceed 45°C, but at night they often drop below 20°C. Being active at night most likely helps these animals ______",
+  "stem": "Which choice most logically completes the text?",
+  "choices": [
+   "avoid the extreme heat of the daytime.",
+   "see better in bright sunlight.",
+   "grow thicker fur.",
+   "find more water during the day."
+  ],
+  "answer": 0,
+  "explanation_en": "Night is much cooler than day, so being active at night helps the animals avoid dangerous heat.",
+  "id": "a5-rw2e-14"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The library has more than a million ______ many of them are available online.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "books",
+   "books,",
+   "books, and,",
+   "books;"
+  ],
+  "answer": 3,
+  "explanation_en": "Both parts are complete sentences, so a semicolon is needed between them.",
+  "id": "a5-rw2e-15"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Frida Kahlo, a Mexican ______ is known for her vivid self-portraits.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "painter",
+   "painter:",
+   "painter;",
+   "painter,"
+  ],
+  "answer": 3,
+  "explanation_en": "\"a Mexican painter\" is a nonessential phrase set off by commas, so it needs a closing comma.",
+  "id": "a5-rw2e-16"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The hiking trail offers three main ______ a waterfall, a cave, and a mountain lake.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "attractions:",
+   "attractions;",
+   "attractions",
+   "attractions,"
+  ],
+  "answer": 0,
+  "explanation_en": "A colon introduces the list of attractions.",
+  "id": "a5-rw2e-17"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Boundaries",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The train was delayed by two ______ the passengers missed their connecting flights.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "hours, so",
+   "hours so,",
+   "hours so",
+   "hours, so,"
+  ],
+  "answer": 0,
+  "explanation_en": "Two complete sentences joined by \"so\" need a comma before the conjunction only.",
+  "id": "a5-rw2e-18"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The list of supplies for the camping trip ______ on the refrigerator door.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "were",
+   "is",
+   "have been",
+   "are"
+  ],
+  "answer": 1,
+  "explanation_en": "The subject is \"list\" (singular), not \"supplies,\" so the singular verb \"is\" is correct.",
+  "id": "a5-rw2e-19"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Tomorrow, the band ______ its first concert in the new stadium.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "plays",
+   "will play",
+   "played",
+   "has played"
+  ],
+  "answer": 1,
+  "explanation_en": "\"Tomorrow\" refers to the future, so \"will play\" is correct.",
+  "id": "a5-rw2e-20"
+ },
+ {
+  "section": "rw",
+  "domain": "Standard English Conventions",
+  "skill": "Form, structure, and sense",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "The volunteers cleaned the beach, sorted the trash, and ______ the recyclable items to the center.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "delivers",
+   "delivered",
+   "delivering",
+   "deliver"
+  ],
+  "answer": 1,
+  "explanation_en": "The other verbs are past tense (\"cleaned,\" \"sorted\"), so \"delivered\" keeps the series parallel.",
+  "id": "a5-rw2e-21"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "Giraffes have very long necks. ______ they can eat leaves from the tops of tall trees that other animals cannot reach.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "However,",
+   "For example,",
+   "As a result,",
+   "In contrast,"
+  ],
+  "answer": 2,
+  "explanation_en": "Reaching high leaves is a consequence of having long necks, so \"As a result\" fits.",
+  "id": "a5-rw2e-22"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "The weather forecast predicted sunshine. ______ it rained all afternoon.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "Similarly,",
+   "Instead,",
+   "Therefore,",
+   "For example,"
+  ],
+  "answer": 1,
+  "explanation_en": "Rain happened in place of the predicted sunshine, so \"Instead\" is logical.",
+  "id": "a5-rw2e-23"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Transitions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "Some metals are excellent conductors of electricity. Copper, ______ is widely used in electrical wires.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "in contrast,",
+   "nevertheless,",
+   "however,",
+   "for example,"
+  ],
+  "answer": 3,
+  "explanation_en": "Copper is an example of a metal that conducts electricity well.",
+  "id": "a5-rw2e-24"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "easy",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• The Panama Canal connects the Atlantic and Pacific Oceans.\n• It opened in 1914.\n• It is about 82 kilometers long.\n• About 14,000 ships pass through it each year.",
+  "stem": "The student wants to state how many ships use the Panama Canal each year. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "The Panama Canal opened in 1914.",
+   "About 14,000 ships pass through the Panama Canal each year.",
+   "The Panama Canal is about 82 kilometers long.",
+   "The Panama Canal connects the Atlantic and Pacific Oceans."
+  ],
+  "answer": 1,
+  "explanation_en": "The goal is the number of ships per year, which only D gives.",
+  "id": "a5-rw2e-25"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "medium",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• Garrett Morgan was an American inventor.\n• In 1923, he patented an improved traffic signal.\n• His signal added a warning position between \"stop\" and \"go.\"\n• This idea led to the yellow light used in traffic signals today.",
+  "stem": "The student wants to explain how Garrett Morgan's invention influenced modern traffic signals. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "Garrett Morgan was an American inventor who patented a traffic signal in 1923.",
+   "Garrett Morgan was an inventor.",
+   "Garrett Morgan's 1923 signal added a warning position between \"stop\" and \"go,\" an idea that led to today's yellow light.",
+   "In 1923, Garrett Morgan patented a traffic signal."
+  ],
+  "answer": 2,
+  "explanation_en": "To show influence on modern signals, the sentence must connect his idea to today's yellow light, as B does.",
+  "id": "a5-rw2e-26"
+ },
+ {
+  "section": "rw",
+  "domain": "Expression of Ideas",
+  "skill": "Rhetorical synthesis",
+  "difficulty": "hard",
+  "type": "mcq",
+  "passage": "While researching a topic, a student has taken the following notes:\n\n• Alligators and crocodiles are both large reptiles.\n• Alligators have wide, U-shaped snouts.\n• Crocodiles have narrow, V-shaped snouts.\n• Alligators live mainly in fresh water, while many crocodiles can live in salt water.",
+  "stem": "The student wants to contrast the snouts of alligators and crocodiles. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": [
+   "Alligators and crocodiles are both large reptiles.",
+   "Many crocodiles can live in salt water.",
+   "Alligators have wide, U-shaped snouts, whereas crocodiles have narrow, V-shaped snouts.",
+   "Alligators live mainly in fresh water."
+  ],
+  "answer": 2,
+  "explanation_en": "The goal is a contrast in snout shape, which needs both animals' snouts; only C gives both.",
+  "id": "a5-rw2e-27"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in one variable",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "If 2x + 11 = 25, what is the value of x?",
+  "choices": [
+   "5",
+   "7",
+   "14",
+   "18"
+  ],
+  "answer": 1,
+  "explanation_en": "Subtract 11: 2x = 14. Divide by 2: x = 7.",
+  "id": "a5-m2e-01"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in one variable",
+  "difficulty": "easy",
+  "type": "spr",
+  "stem": "If 9 − x = 2, what is the value of x?",
+  "answer": [
+   "7"
+  ],
+  "explanation_en": "Subtract 2 from 9: x = 9 − 2 = 7.",
+  "id": "a5-m2e-02"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear functions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "The function f is defined by f(x) = 6x + 1. What is the value of f(0)?",
+  "choices": [
+   "0",
+   "1",
+   "6",
+   "7"
+  ],
+  "answer": 1,
+  "explanation_en": "f(0) = 6(0) + 1 = 1.",
+  "id": "a5-m2e-03"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear functions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "A tank contains 200 liters of water and drains at a rate of 8 liters per minute. How much water is left in the tank after 15 minutes?",
+  "choices": [
+   "40 liters",
+   "80 liters",
+   "120 liters",
+   "185 liters"
+  ],
+  "answer": 1,
+  "explanation_en": "200 − 8(15) = 200 − 120 = 80 liters.",
+  "id": "a5-m2e-04"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Systems of two linear equations",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "y = x + 1\ny = 2x − 3\n\nWhat is the solution (x, y) to the system above?",
+  "choices": [
+   "(5, 6)",
+   "(2, 3)",
+   "(4, 5)",
+   "(1, 2)"
+  ],
+  "answer": 2,
+  "explanation_en": "Set them equal: x + 1 = 2x − 3, so x = 4. Then y = 4 + 1 = 5.",
+  "id": "a5-m2e-05"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Systems of two linear equations",
+  "difficulty": "medium",
+  "type": "spr",
+  "stem": "3x + y = 14\nx + y = 6\n\nIf (x, y) is the solution to the system above, what is the value of x?",
+  "answer": [
+   "4"
+  ],
+  "explanation_en": "Subtract the second equation from the first: 2x = 8, so x = 4.",
+  "id": "a5-m2e-06"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear equations in two variables",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "A baker makes cookies in batches of 24. Which equation gives the total number of cookies c made in b batches?",
+  "choices": [
+   "c = 24b",
+   "b = 24c",
+   "c = b/24",
+   "c = b + 24"
+  ],
+  "answer": 0,
+  "explanation_en": "Each batch adds 24 cookies, so c = 24b.",
+  "id": "a5-m2e-07"
+ },
+ {
+  "section": "math",
+  "domain": "Algebra",
+  "skill": "Linear inequalities",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "An elevator can carry at most 1,000 kilograms. If each box weighs 40 kilograms, which inequality gives the number of boxes b the elevator can carry?",
+  "choices": [
+   "40b ≥ 1,000",
+   "1,000b ≤ 40",
+   "b + 40 ≤ 1,000",
+   "40b ≤ 1,000"
+  ],
+  "answer": 3,
+  "explanation_en": "The total weight 40b must be no more than 1,000: 40b ≤ 1,000.",
+  "id": "a5-m2e-08"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Equivalent expressions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "Which expression is equivalent to 7x − 2(x − 4)?",
+  "choices": [
+   "9x + 8",
+   "5x − 4",
+   "5x − 8",
+   "5x + 8"
+  ],
+  "answer": 3,
+  "explanation_en": "−2(x − 4) = −2x + 8. So 7x − 2x + 8 = 5x + 8.",
+  "id": "a5-m2e-09"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Equivalent expressions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "Which expression is equivalent to x² − 25?",
+  "choices": [
+   "(x + 25)(x − 1)",
+   "(x + 5)(x − 5)",
+   "(x − 5)(x − 5)",
+   "(x − 5)²"
+  ],
+  "answer": 1,
+  "explanation_en": "x² − 25 is a difference of squares: (x + 5)(x − 5).",
+  "id": "a5-m2e-10"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear equations",
+  "difficulty": "easy",
+  "type": "spr",
+  "stem": "If x² + 9 = 45 and x > 0, what is the value of x?",
+  "answer": [
+   "6"
+  ],
+  "explanation_en": "Subtract 9: x² = 36, so the positive solution is x = 6.",
+  "id": "a5-m2e-11"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear equations",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "What is the negative solution to x² − x − 12 = 0?",
+  "choices": [
+   "−6",
+   "−4",
+   "−3",
+   "−2"
+  ],
+  "answer": 2,
+  "explanation_en": "Factor: (x − 4)(x + 3) = 0. The solutions are 4 and −3; the negative one is −3.",
+  "id": "a5-m2e-12"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "The function h is defined by h(x) = 5 · 3^x. What is the value of h(2)?",
+  "choices": [
+   "30",
+   "45",
+   "75",
+   "225"
+  ],
+  "answer": 1,
+  "explanation_en": "h(2) = 5 · 3² = 5 · 9 = 45.",
+  "id": "a5-m2e-13"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "The number of visitors to a website triples every month. If the site had 100 visitors in its first month, how many visitors did it have in its third month?",
+  "choices": [
+   "300",
+   "600",
+   "900",
+   "2,700"
+  ],
+  "answer": 2,
+  "explanation_en": "Month 1: 100. Month 2: 300. Month 3: 900.",
+  "id": "a5-m2e-14"
+ },
+ {
+  "section": "math",
+  "domain": "Advanced Math",
+  "skill": "Nonlinear functions",
+  "difficulty": "hard",
+  "type": "spr",
+  "stem": "The function f is defined by f(x) = x² + 4x + 1. What is the value of x at which f(x) reaches its minimum?",
+  "answer": [
+   "-2"
+  ],
+  "explanation_en": "Complete the square: f(x) = (x + 2)² − 3. The minimum occurs when x + 2 = 0, so x = −2.",
+  "id": "a5-m2e-15"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Percentages",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "A restaurant bill is $60. A customer leaves a 15% tip. How much is the tip?",
+  "choices": [
+   "$6",
+   "$9",
+   "$12",
+   "$15"
+  ],
+  "answer": 1,
+  "explanation_en": "15% of 60 = 0.15 × 60 = $9.",
+  "id": "a5-m2e-16"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Ratios, rates, and proportions",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "The ratio of boys to girls in a club is 2 to 3. If there are 12 girls, how many boys are there?",
+  "choices": [
+   "6",
+   "8",
+   "10",
+   "18"
+  ],
+  "answer": 1,
+  "explanation_en": "12 girls is 4 times 3, so there are 4 × 2 = 8 boys.",
+  "id": "a5-m2e-17"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "One-variable data",
+  "difficulty": "medium",
+  "type": "spr",
+  "stem": "The heights, in centimeters, of five plants are 12, 15, 15, 18, and 20. What is the mode of the data?",
+  "answer": [
+   "15"
+  ],
+  "explanation_en": "The mode is the value that appears most often: 15 appears twice.",
+  "id": "a5-m2e-18"
+ },
+ {
+  "section": "math",
+  "domain": "Problem-Solving and Data Analysis",
+  "skill": "Probability",
+  "difficulty": "medium",
+  "type": "mcq",
+  "stem": "A standard six-sided number cube is rolled once. What is the probability of rolling a number less than 3?",
+  "choices": [
+   "1/6",
+   "1/3",
+   "1/2",
+   "2/3"
+  ],
+  "answer": 1,
+  "explanation_en": "The numbers less than 3 are 1 and 2: 2 of 6 outcomes, or 1/3.",
+  "id": "a5-m2e-19"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Lines, angles, and triangles",
+  "difficulty": "easy",
+  "type": "mcq",
+  "stem": "One angle of a right triangle measures 35°. What is the measure of the other acute angle?",
+  "choices": [
+   "35°",
+   "45°",
+   "55°",
+   "145°"
+  ],
+  "answer": 2,
+  "explanation_en": "The angles add to 180°, and one is 90°: 180 − 90 − 35 = 55°.",
+  "id": "a5-m2e-20"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Area and volume",
+  "difficulty": "medium",
+  "type": "spr",
+  "stem": "A square has a perimeter of 36 inches. What is the area of the square, in square inches?",
+  "answer": [
+   "81"
+  ],
+  "explanation_en": "Each side is 36 ÷ 4 = 9 inches, so the area is 9 × 9 = 81.",
+  "id": "a5-m2e-21"
+ },
+ {
+  "section": "math",
+  "domain": "Geometry and Trigonometry",
+  "skill": "Right triangles and trigonometry",
+  "difficulty": "hard",
+  "type": "mcq",
+  "stem": "In a right triangle, the side opposite angle A has length 3 and the hypotenuse has length 5. What is sin A?",
+  "choices": [
+   "3/5",
+   "4/5",
+   "3/4",
+   "5/3"
+  ],
+  "answer": 0,
+  "explanation_en": "sin A = opposite/hypotenuse = 3/5.",
+  "id": "a5-m2e-22"
  }
 ]
