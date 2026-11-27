@@ -4,6 +4,7 @@ import { useState } from "react";
 import { moduleQuestions, type Mock, type MockResult } from "@/lib/mocks";
 import { correctAnswerLabel, isCorrect } from "@/lib/questions";
 import { SECTION_LABEL, type Question } from "@/lib/types";
+import { Ring } from "./Ring";
 
 function answerLabel(q: Question, a: number | string | undefined): string {
   if (a === undefined || a === "") return "—";
@@ -19,11 +20,17 @@ export function MockResults({ mock, result, onRetake }: { mock: Mock; result: Mo
   return (
     <div className="results">
       <div className="score-hero">
-        <div>
-          <span className="eyebrow"><span className="dot" /> {mock.title} · natija</span>
-          <div className="score-big">{result.total}</div>
-          <div className="score-sub">
-            taxminiy ball · {correct}/{total} to'g'ri
+        <div className="score-hero-main">
+          <Ring value={(result.total - 400) / 1200} size={180} stroke={14} id="ring-result">
+            <b className="score-big">{result.total}</b>
+            <small>taxminiy ball</small>
+          </Ring>
+          <div>
+            <span className="eyebrow"><span className="dot" /> {mock.title}</span>
+            <h2 className="score-title">
+              {result.total >= 1400 ? "Ajoyib natija! 🏆" : result.total >= 1100 ? "Yaxshi natija! 💪" : "Boshlanish yaxshi! 🌱"}
+            </h2>
+            <div className="score-sub">{correct}/{total} to'g'ri javob</div>
           </div>
         </div>
         <div className="score-sections">

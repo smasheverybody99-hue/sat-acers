@@ -15,9 +15,5 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function MockPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   if (!MOCK_BY_ID[id]) notFound();
-  return (
-    <div className="container" style={{ paddingTop: 32, paddingBottom: 40 }}>
-      <MockRunner mockId={id} />
-    </div>
-  );
+  return <MockRunner mockId={id} />;
 }

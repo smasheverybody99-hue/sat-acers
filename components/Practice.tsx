@@ -1,26 +1,29 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { Icon } from "./Icons";
 import { QUESTIONS, QUESTION_BY_ID, correctAnswerLabel, isCorrect } from "@/lib/questions";
 import { loadProgress, recordAnswer } from "@/lib/progress";
-import { DIFFICULTY_LABEL, DOMAINS, SECTION_LABEL, type Difficulty, type Question, type Section } from "@/lib/types";
+import { DIFFICULTY_LABEL, SECTION_LABEL, type Difficulty, type Question, type Section } from "@/lib/types";
 
-type StatusFilter = "all" | "new" | "wrong";
+export type StatusFilter = "all" | "new" | "wrong";
 
-interface Filters {
+export interface Filters {
   section: Section | "all";
   domain: string | "all";
+  skill: string | "all";
   difficulty: Difficulty | "all";
   status: StatusFilter;
 }
 
-const DEFAULT_FILTERS: Filters = { section: "all", domain: "all", difficulty: "all", status: "all" };
+const DEFAULT_FILTERS: Filters = { section: "all", domain: "all", skill: "all", difficulty: "all", status: "all" };
 
 function applyFilters(f: Filters): Question[] {
   const p = f.status === "all" ? null : loadProgress();
   return QUESTIONS.filter((q) => {
     if (f.section !== "all" && q.section !== f.section) return false;
     if (f.domain !== "all" && q.domain !== f.domain) return false;
+    if (f.skill !== "all" && q.skill !== f.skill) return false;
     if (f.difficulty !== "all" && q.difficulty !== f.difficulty) return false;
     if (p && f.status === "new" && p.attempts[q.id]) return false;
     if (p && f.status === "wrong" && !(p.attempts[q.id] && !p.attempts[q.id].lastCorrect)) return false;
@@ -28,12 +31,21 @@ function applyFilters(f: Filters): Question[] {
   });
 }
 
-export function Practice({ ids, onFinish }: { ids?: string[]; onFinish?: () => void }) {
-  const reviewMode = Boolean(ids);
-  const [filters, setFilters] = useState<Filters>(DEFAULT_FILTERS);
-  const [filtersOpen, setFiltersOpen] = useState(false);
+export function Practice({
+  initial,
+  ids,
+  title,
+  onFinish,
+}: {
+  initial?: Partial<Filters>;
+  ids?: string[];
+  title?: string;
+  onFinish?: () => void;
+}) {
+  const fixedList = Boolean(ids);
+  const [filters, setFilters] = useState<Filters>({ ...DEFAULT_FILTERS, ...initial });
   const [queue, setQueue] = useState<Question[]>(() =>
-    ids ? ids.map((id) => QUESTION_BY_ID[id]).filter(Boolean) : applyFilters(DEFAULT_FILTERS)
+    ids ? ids.map((id) => QUESTION_BY_ID[id]).filter(Boolean) : applyFilters({ ...DEFAULT_FILTERS, ...initial, status: "all" })
   );
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
@@ -42,18 +54,7 @@ export function Practice({ ids, onFinish }: { ids?: string[]; onFinish?: () => v
   const [correct, setCorrect] = useState(false);
   const [lang, setLang] = useState<"uz" | "en">("uz");
   const [session, setSession] = useState({ answered: 0, correct: 0 });
-
-  // Filtr o'zgarganda navbat qaytadan tuziladi (javob berish jarayonida emas — shunda savol "sakrab" ketmaydi)
-  useEffect(() => {
-    if (reviewMode) return;
-    setQueue(applyFilters(filters));
-    setIndex(0);
-    resetAnswer();
-    setSession({ answered: 0, correct: 0 });
-  }, [filters, reviewMode]);
-
-  const q = queue[index];
-  const finished = queue.length > 0 && index >= queue.length;
+  const [results, setResults] = useState<boolean[]>([]);
 
   function resetAnswer() {
     setPicked(null);
@@ -62,6 +63,18 @@ export function Practice({ ids, onFinish }: { ids?: string[]; onFinish?: () => v
     setCorrect(false);
   }
 
+  // Filtr o'zgarganda navbat qayta tuziladi
+  useEffect(() => {
+    if (fixedList) return;
+    setQueue(applyFilters(filters));
+    setIndex(0);
+    resetAnswer();
+    setSession({ answered: 0, correct: 0 });
+    setResults([]);
+  }, [filters, fixedList]);
+
+  const q = queue[index];
+  const finished = queue.length > 0 && index >= queue.length;
   const canCheck = q && !checked && (q.type === "mcq" ? picked !== null : spr.trim() !== "");
 
   const check = useCallback(() => {
@@ -72,6 +85,7 @@ export function Practice({ ids, onFinish }: { ids?: string[]; onFinish?: () => v
     setCorrect(ok);
     setChecked(true);
     setSession((s) => ({ answered: s.answered + 1, correct: s.correct + (ok ? 1 : 0) }));
+    setResults((r) => [...r, ok]);
     recordAnswer(q.id, ok);
   }, [q, checked, picked, spr]);
 
@@ -80,12 +94,10 @@ export function Practice({ ids, onFinish }: { ids?: string[]; onFinish?: () => v
     setIndex((i) => i + 1);
   }, []);
 
-  // Klaviatura: A–D variant tanlash, Enter — tekshirish / keyingi
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (!q) return;
-      const target = e.target as HTMLElement;
-      const typing = target.tagName === "INPUT";
+      const typing = (e.target as HTMLElement).tagName === "INPUT";
       if (e.key === "Enter") {
         e.preventDefault();
         if (checked) next();
@@ -101,148 +113,127 @@ export function Practice({ ids, onFinish }: { ids?: string[]; onFinish?: () => v
     return () => window.removeEventListener("keydown", onKey);
   }, [q, checked, check, next]);
 
-  const domainOptions = useMemo(
-    () => (filters.section === "all" ? [...DOMAINS.math, ...DOMAINS.rw] : DOMAINS[filters.section]),
-    [filters.section]
-  );
-
   const set = (patch: Partial<Filters>) => setFilters((f) => ({ ...f, ...patch }));
 
+  const crumbs = fixedList
+    ? [title ?? "Mashq"]
+    : [
+        filters.section === "all" ? "Barcha bo'limlar" : SECTION_LABEL[filters.section],
+        ...(filters.domain !== "all" ? [filters.domain] : []),
+        ...(filters.skill !== "all" ? [filters.skill] : []),
+        ...(filters.status === "wrong" && filters.section === "all" ? ["Xato qilinganlar"] : []),
+      ];
+
+  const progressPct = queue.length ? (Math.min(index + (checked ? 1 : 0), queue.length) / queue.length) * 100 : 0;
+
   return (
-    <div className="practice" style={reviewMode ? { gridTemplateColumns: "1fr" } : undefined}>
-      {!reviewMode && (
-        <div className="filters-wrap">
-        <button className="btn btn-light filters-toggle" onClick={() => setFiltersOpen(!filtersOpen)} aria-expanded={filtersOpen}>
-          ⚙️ Filtrlar · {queue.length} ta savol {filtersOpen ? "▲" : "▼"}
-        </button>
-        <aside className={`filters ${filtersOpen ? "" : "collapsed"}`} aria-label="Filtrlar">
-          <div className="filter-group">
-            <h4>Bo'lim</h4>
-            <div className="chips">
-              <Chip on={filters.section === "all"} onClick={() => set({ section: "all", domain: "all" })}>Hammasi</Chip>
-              {(Object.keys(SECTION_LABEL) as Section[]).map((s) => (
-                <Chip key={s} on={filters.section === s} onClick={() => set({ section: s, domain: "all" })}>
-                  {SECTION_LABEL[s]}
-                </Chip>
-              ))}
-            </div>
+    <div className="session">
+      <div className="session-top">
+        <div className="session-title">
+          {onFinish ? (
+            <button className="back" onClick={onFinish}><Icon name="arrowLeft" size={18} /> Xatonoma</button>
+          ) : (
+            <a className="back" href="/practice"><Icon name="arrowLeft" size={18} /> Question bank</a>
+          )}
+          <div className="crumbs">
+            {crumbs.map((c, i) => (
+              <span key={i}>{i > 0 && <Icon name="chevron" size={14} />}{c}</span>
+            ))}
           </div>
-          <div className="filter-group">
-            <h4>Domen</h4>
-            <div className="chips">
-              <Chip on={filters.domain === "all"} onClick={() => set({ domain: "all" })}>Hammasi</Chip>
-              {domainOptions.map((d) => (
-                <Chip key={d} on={filters.domain === d} onClick={() => set({ domain: d })}>{d}</Chip>
-              ))}
-            </div>
+        </div>
+        <div className="session-score">
+          <span className="pill good"><Icon name="check" size={14} /> {session.correct}</span>
+          <span className="pill bad"><Icon name="x" size={14} /> {session.answered - session.correct}</span>
+        </div>
+      </div>
+
+      {!fixedList && (
+        <div className="session-filters">
+          <div className="seg small">
+            {(["all", "easy", "medium", "hard"] as const).map((d) => (
+              <button key={d} className={filters.difficulty === d ? "on" : ""} onClick={() => set({ difficulty: d })}>
+                {d === "all" ? "Barcha qiyinlik" : DIFFICULTY_LABEL[d]}
+              </button>
+            ))}
           </div>
-          <div className="filter-group">
-            <h4>Qiyinlik</h4>
-            <div className="chips">
-              <Chip on={filters.difficulty === "all"} onClick={() => set({ difficulty: "all" })}>Hammasi</Chip>
-              {(Object.keys(DIFFICULTY_LABEL) as Difficulty[]).map((d) => (
-                <Chip key={d} on={filters.difficulty === d} onClick={() => set({ difficulty: d })}>
-                  {DIFFICULTY_LABEL[d]}
-                </Chip>
-              ))}
-            </div>
+          <div className="seg small">
+            {([["all", "Hammasi"], ["new", "Yechilmagan"], ["wrong", "Xatolar"]] as const).map(([v, l]) => (
+              <button key={v} className={filters.status === v ? "on" : ""} onClick={() => set({ status: v })}>
+                {l}
+              </button>
+            ))}
           </div>
-          <div className="filter-group">
-            <h4>Holat</h4>
-            <div className="chips">
-              <Chip on={filters.status === "all"} onClick={() => set({ status: "all" })}>Hammasi</Chip>
-              <Chip on={filters.status === "new"} onClick={() => set({ status: "new" })}>Yechilmagan</Chip>
-              <Chip on={filters.status === "wrong"} onClick={() => set({ status: "wrong" })}>Xato qilinganlar</Chip>
-            </div>
-          </div>
-          <div className="filter-count">
-            Topildi: <b>{queue.length}</b> ta savol
-            {session.answered > 0 && (
-              <>
-                <br />
-                Bu sessiyada: <b>{session.correct}/{session.answered}</b> to'g'ri
-              </>
-            )}
-          </div>
-        </aside>
         </div>
       )}
 
-      <section>
-        {queue.length === 0 ? (
-          <div className="empty">
-            <div className="big">🔍</div>
-            <h3>Bu filtr bo'yicha savol yo'q</h3>
-            <p>Filtrlarni kengaytirib ko'ring.</p>
-            <button className="btn btn-navy" onClick={() => setFilters(DEFAULT_FILTERS)}>Filtrlarni tozalash</button>
+      {queue.length > 0 && !finished && (
+        <div className="session-progress">
+          <div className="dots">
+            {queue.length <= 30 ? (
+              queue.map((_, i) => (
+                <i key={i} className={i < results.length ? (results[i] ? "ok" : "no") : i === index ? "cur" : ""} />
+              ))
+            ) : (
+              <div className="bar thin wide"><i className="solid" style={{ width: `${progressPct}%` }} /></div>
+            )}
           </div>
-        ) : finished ? (
-          <div className="empty">
-            <div className="big">{session.correct === session.answered ? "🏆" : "💪"}</div>
-            <h3>
-              Barakalla! {session.correct}/{session.answered} to'g'ri
-            </h3>
-            <p>
-              {session.correct === session.answered
-                ? "Hammasi to'g'ri — siz haqiqiy Acer'siz!"
-                : "Xato qilgan savollaringiz Xatonomaga tushdi — ular 1, 3 va 7 kundan keyin qaytib keladi."}
-            </p>
-            <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
-              {reviewMode ? (
-                <button className="btn btn-navy" onClick={onFinish}>Xatonomaga qaytish</button>
-              ) : (
-                <>
-                  <button
-                    className="btn btn-navy"
-                    onClick={() => {
-                      setQueue(applyFilters(filters));
-                      setIndex(0);
-                      resetAnswer();
-                      setSession({ answered: 0, correct: 0 });
-                    }}
-                  >
-                    Qaytadan boshlash
-                  </button>
-                  <a className="btn btn-light" href="/mistakes">Xatonomani ochish</a>
-                </>
-              )}
-            </div>
-          </div>
-        ) : (
-          <QuestionCard
-            q={q}
-            index={index}
-            total={queue.length}
-            picked={picked}
-            setPicked={setPicked}
-            spr={spr}
-            setSpr={setSpr}
-            checked={checked}
-            correct={correct}
-            lang={lang}
-            setLang={setLang}
-            canCheck={Boolean(canCheck)}
-            onCheck={check}
-            onNext={next}
-          />
-        )}
-      </section>
-    </div>
-  );
-}
+          <span>{index + 1} / {queue.length}</span>
+        </div>
+      )}
 
-function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; children: React.ReactNode }) {
-  return (
-    <button type="button" className={`chip ${on ? "on" : ""}`} onClick={onClick} aria-pressed={on}>
-      {children}
-    </button>
+      {queue.length === 0 ? (
+        <div className="empty">
+          <div className="big">🔍</div>
+          <h3>Bu tanlov bo'yicha savol yo'q</h3>
+          <p>Qiyinlik yoki holat filtrini o'zgartirib ko'ring.</p>
+          <button className="btn btn-navy" onClick={() => set({ difficulty: "all", status: "all" })}>Filtrlarni tozalash</button>
+        </div>
+      ) : finished ? (
+        <div className="finish-card">
+          <div className="finish-emoji">{session.correct === session.answered ? "🏆" : "💪"}</div>
+          <h2>{session.correct}/{session.answered} to'g'ri</h2>
+          <p>
+            {session.correct === session.answered
+              ? "Hammasi to'g'ri — siz haqiqiy Acer'siz!"
+              : "Xato qilgan savollaringiz Xatonomaga tushdi: ular 1, 3 va 7 kundan keyin qaytib keladi."}
+          </p>
+          <div className="dots big">
+            {results.map((r, i) => <i key={i} className={r ? "ok" : "no"} />)}
+          </div>
+          <div className="finish-actions">
+            {onFinish ? (
+              <button className="btn btn-navy" onClick={onFinish}>Xatonomaga qaytish</button>
+            ) : (
+              <>
+                <a className="btn btn-primary" href="/practice">Boshqa mavzu tanlash</a>
+                <a className="btn btn-light" href="/mistakes">Xatonomani ochish</a>
+              </>
+            )}
+          </div>
+        </div>
+      ) : (
+        <QuestionCard
+          q={q}
+          picked={picked}
+          setPicked={setPicked}
+          spr={spr}
+          setSpr={setSpr}
+          checked={checked}
+          correct={correct}
+          lang={lang}
+          setLang={setLang}
+          canCheck={Boolean(canCheck)}
+          onCheck={check}
+          onNext={next}
+          isLast={index + 1 === queue.length}
+        />
+      )}
+    </div>
   );
 }
 
 interface CardProps {
   q: Question;
-  index: number;
-  total: number;
   picked: number | null;
   setPicked: (i: number) => void;
   spr: string;
@@ -254,11 +245,11 @@ interface CardProps {
   canCheck: boolean;
   onCheck: () => void;
   onNext: () => void;
+  isLast: boolean;
 }
 
 function QuestionCard(props: CardProps) {
-  const { q, index, total, picked, setPicked, spr, setSpr, checked, correct, lang, setLang, canCheck, onCheck, onNext } = props;
-  const hasPassage = Boolean(q.passage);
+  const { q, picked, setPicked, spr, setSpr, checked, correct, lang, setLang, canCheck, onCheck, onNext, isLast } = props;
 
   const questionPart = (
     <div>
@@ -270,34 +261,21 @@ function QuestionCard(props: CardProps) {
             if (checked) {
               if (i === q.answer) cls += " right";
               else if (i === picked) cls += " wrong";
+              else cls += " dim";
             } else if (i === picked) cls += " picked";
             return (
-              <button
-                key={i}
-                type="button"
-                role="radio"
-                aria-checked={picked === i}
-                className={cls}
-                disabled={checked}
-                onClick={() => setPicked(i)}
-              >
+              <button key={i} type="button" role="radio" aria-checked={picked === i} className={cls} disabled={checked} onClick={() => setPicked(i)}>
                 <span className="letter">{String.fromCharCode(65 + i)}</span>
                 <span>{c}</span>
+                {checked && i === q.answer && <Icon name="check" size={18} className="choice-mark" />}
+                {checked && i === picked && i !== q.answer && <Icon name="x" size={18} className="choice-mark" />}
               </button>
             );
           })}
         </div>
       ) : (
         <div>
-          <input
-            className="spr-input"
-            value={spr}
-            onChange={(e) => setSpr(e.target.value)}
-            disabled={checked}
-            placeholder="Javobingiz"
-            inputMode="decimal"
-            aria-label="Javobingiz"
-          />
+          <input className="spr-input" value={spr} onChange={(e) => setSpr(e.target.value)} disabled={checked} placeholder="Javobingiz" inputMode="decimal" aria-label="Javobingiz" />
           <div className="spr-hint">Butun son, o'nli kasr (2.5) yoki oddiy kasr (5/2) yozishingiz mumkin.</div>
         </div>
       )}
@@ -305,33 +283,30 @@ function QuestionCard(props: CardProps) {
       {checked && (
         <div className={`result ${correct ? "ok" : "no"}`} aria-live="polite">
           <div className="result-head">
-            <strong>{correct ? "✅ To'g'ri!" : `❌ Xato. To'g'ri javob: ${correctAnswerLabel(q)}`}</strong>
+            <strong>{correct ? "To'g'ri! 🎉" : `Javob: ${correctAnswerLabel(q)}`}</strong>
             <span className="lang-toggle">
               <button className={lang === "uz" ? "on" : ""} onClick={() => setLang("uz")}>O'zbekcha</button>
               <button className={lang === "en" ? "on" : ""} onClick={() => setLang("en")}>English</button>
             </span>
           </div>
           <p>{lang === "uz" ? q.explanation_uz : q.explanation_en}</p>
+          {!correct && <span className="chip-added">📒 Xatonomaga qo'shildi</span>}
         </div>
       )}
     </div>
   );
 
   return (
-    <article className="qcard">
+    <article className={`qcard ${q.section}`}>
       <div className="qcard-top">
         <div className="qmeta">
-          <span className="tag">{SECTION_LABEL[q.section]}</span>
-          <span className="tag">{q.domain}</span>
-          <span style={{ color: "var(--muted)" }}>{q.skill}</span>
+          <span className={`tag sec-${q.section}`}>{SECTION_LABEL[q.section]}</span>
+          <span className="qskill">{q.skill}</span>
           <span className={`tag ${q.difficulty}`}>{DIFFICULTY_LABEL[q.difficulty]}</span>
         </div>
-        <span className="qcounter">
-          {index + 1} / {total}
-        </span>
       </div>
 
-      {hasPassage ? (
+      {q.passage ? (
         <div className="qbody split">
           <div className="passage">{q.passage}</div>
           {questionPart}
@@ -341,17 +316,13 @@ function QuestionCard(props: CardProps) {
       )}
 
       <div className="qactions">
-        <span style={{ fontSize: 13, color: "var(--muted)" }}>
-          Maslahat: A–D tugmalari bilan tanlang, Enter bilan tekshiring
-        </span>
+        <span className="kbd-hint"><kbd>A</kbd>–<kbd>D</kbd> tanlash · <kbd>Enter</kbd> tekshirish</span>
         {checked ? (
           <button className="btn btn-navy" onClick={onNext}>
-            {index + 1 === total ? "Yakunlash" : "Keyingi savol"}
+            {isLast ? "Yakunlash" : "Keyingi savol"} <Icon name="arrowRight" size={16} />
           </button>
         ) : (
-          <button className="btn btn-navy" onClick={onCheck} disabled={!canCheck}>
-            Tekshirish
-          </button>
+          <button className="btn btn-navy" onClick={onCheck} disabled={!canCheck}>Tekshirish</button>
         )}
       </div>
     </article>

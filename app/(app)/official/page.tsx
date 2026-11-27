@@ -42,10 +42,12 @@ const STEPS = [
 
 export default function OfficialPage() {
   return (
-    <div className="container" style={{ paddingBottom: 40 }}>
-      <div className="page-title">
-        <h1>🏛 Rasmiy mashq resurslari</h1>
-        <p>College Board'ning bepul rasmiy materiallari — bir joyda, o'zbekcha izoh bilan.</p>
+    <div className="official">
+      <div className="page-head">
+        <div>
+          <h1>Rasmiy mashq resurslari</h1>
+          <p>College Board'ning bepul rasmiy materiallari — bir joyda, o'zbekcha izoh bilan.</p>
+        </div>
       </div>
 
       <div className="official-grid">

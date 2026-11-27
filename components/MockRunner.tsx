@@ -8,6 +8,8 @@ import { isCorrect } from "@/lib/questions";
 import type { Question } from "@/lib/types";
 import { MockResults } from "./MockResults";
 import { DesmosSplit } from "./DesmosPanel";
+import { Icon } from "./Icons";
+import { uzDate } from "@/lib/format";
 
 const SECTION_TITLE = { rw: "Reading and Writing", math: "Math" } as const;
 
@@ -121,7 +123,7 @@ export function MockRunner({ mockId }: { mockId: string }) {
         questions={mockQuestionCount(mock)}
         minutes={mockMinutes(mock)}
         breakMinutes={mock.breakMinutes}
-        modules={mock.modules.map((m) => `${SECTION_TITLE[m.section]} — Module ${m.number}: ${m.questionIds.length} savol, ${m.minutes} daqiqa`)}
+        modules={mock.modules.map((m) => ({ section: m.section, number: m.number, count: m.questionIds.length, minutes: m.minutes }))}
         history={history}
         onStart={() => {
           const base: MockSession = { mockId, phase: "module", moduleIndex: 0, qIndex: 0, answers: {}, flagged: {}, endsAt: 0 };
@@ -175,46 +177,62 @@ function MockIntro(props: {
   questions: number;
   minutes: number;
   breakMinutes: number;
-  modules: string[];
+  modules: { section: "rw" | "math"; number: number; count: number; minutes: number }[];
   history: MockResult[];
   onStart: () => void;
 }) {
+  const best = props.history.length ? Math.max(...props.history.map((r) => r.total)) : null;
   return (
     <div className="mock-intro">
-      <div className="qcard" style={{ padding: 28 }}>
-        <h2 style={{ fontSize: 28 }}>{props.title}</h2>
-        {props.description && <p style={{ color: "var(--muted)", marginTop: 8 }}>{props.description}</p>}
-        <div className="stats" style={{ margin: "20px 0" }}>
-          <div className="stat"><span>Savollar</span><b>{props.questions}</b></div>
-          <div className="stat"><span>Vaqt</span><b>{props.minutes} daq</b></div>
-          <div className="stat"><span>Tanaffus</span><b>{props.breakMinutes} daq</b></div>
+      <a className="back" href="/mock"><Icon name="arrowLeft" size={18} /> Mock testlar</a>
+      <section className="intro-hero">
+        <div>
+          <h1>{props.title}</h1>
+          {props.description && <p>{props.description}</p>}
+          <div className="intro-chips">
+            <span><Icon name="book" size={16} /> {props.questions} savol</span>
+            <span><Icon name="clock" size={16} /> {props.minutes} daqiqa</span>
+            <span>☕ {props.breakMinutes} daqiqa tanaffus</span>
+            {best !== null && <span className="gold"><Icon name="trophy" size={16} /> Eng yaxshi: {best}</span>}
+          </div>
         </div>
-        <ol className="intro-list">
-          {props.modules.map((m) => <li key={m}>{m}</li>)}
-        </ol>
-        <ul className="intro-rules">
-          <li>⏱ Har bir modulning o'z taymeri bor. Vaqt tugasa modul avtomatik topshiriladi.</li>
-          <li>🚩 Ishonchingiz komil bo'lmagan savolni "Mark for Review" bilan belgilang va oxirida qaytib ko'ring.</li>
-          <li>🧮 Math bo'limida Desmos ochilganda ekran ikkiga bo'linadi: chapda kalkulyator, o'ngda savol. O'rtadagi chiziqni surib, nisbatni o'zgartirasiz.</li>
-          <li>💾 Sahifani yopib qo'ysangiz ham test shu joyidan davom etadi, lekin taymer to'xtamaydi.</li>
-        </ul>
-        <button className="btn btn-primary" style={{ marginTop: 20 }} onClick={props.onStart}>
-          Testni boshlash
+        <button className="btn btn-primary btn-lg" onClick={props.onStart}>
+          <Icon name="play" size={18} /> Testni boshlash
         </button>
+      </section>
+
+      <div className="timeline">
+        {props.modules.map((m, i) => (
+          <div key={i} className={`tl-step ${m.section}`}>
+            <span className="tl-dot">{i + 1}</span>
+            <div>
+              <b>{SECTION_TITLE[m.section]}</b>
+              <small>Module {m.number} · {m.count} savol · {m.minutes} daq</small>
+            </div>
+            {i === 1 && props.breakMinutes > 0 && <span className="tl-break">☕ {props.breakMinutes} daq</span>}
+          </div>
+        ))}
+      </div>
+
+      <div className="rules-grid">
+        <div className="rule"><Icon name="clock" /><p>Har bir modulning o'z taymeri bor. Vaqt tugasa modul avtomatik topshiriladi.</p></div>
+        <div className="rule"><Icon name="target" /><p>Ishonchingiz komil bo'lmagan savolni "Mark for Review" bilan belgilab, oxirida qayting.</p></div>
+        <div className="rule"><Icon name="calc" /><p>Math'da Desmos ochilsa ekran ikkiga bo'linadi: chapda kalkulyator, o'ngda savol.</p></div>
+        <div className="rule"><Icon name="repeat" /><p>Sahifani yopsangiz ham test shu joyidan davom etadi, lekin taymer to'xtamaydi.</p></div>
       </div>
 
       {props.history.length > 0 && (
-        <div style={{ marginTop: 24 }}>
-          <h3 style={{ fontSize: 18, marginBottom: 10 }}>Oldingi urinishlar</h3>
-          <div className="mistake-list">
+        <section className="tile-card" style={{ marginTop: 20 }}>
+          <div className="card-label"><Icon name="trophy" size={18} /> Oldingi urinishlar</div>
+          <div className="recent-list">
             {props.history.map((r) => (
-              <div key={r.finishedAt} className="mistake">
-                <span>{new Date(r.finishedAt).toLocaleString("uz-UZ")}</span>
-                <b style={{ fontFamily: "var(--font-display)", fontSize: 18 }}>{r.total}</b>
+              <div key={r.finishedAt} className="recent-row">
+                <div><b>{uzDate(r.finishedAt)}</b><small>{r.sections.map((s) => s.score).join(" + ")}</small></div>
+                <span className="recent-score">{r.total}</span>
               </div>
             ))}
           </div>
-        </div>
+        </section>
       )}
     </div>
   );

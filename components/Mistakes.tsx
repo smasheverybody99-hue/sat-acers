@@ -1,102 +1,110 @@
 "use client";
 
 import { useState } from "react";
+import { Icon } from "./Icons";
 import { Practice } from "./Practice";
 import { QUESTION_BY_ID } from "@/lib/questions";
-import { REVIEW_INTERVALS_DAYS, currentStreak, todayAnswered } from "@/lib/progress";
+import { REVIEW_INTERVALS_DAYS, type MistakeEntry } from "@/lib/progress";
 import { useProgress } from "@/lib/useProgress";
+import { SECTION_LABEL } from "@/lib/types";
 
-const DAILY_GOAL = 5;
+const DAY = 86400000;
 
-function dueLabel(due: number, now: number): string {
-  if (due <= now) return "Hozir takrorlang";
-  const days = Math.ceil((due - now) / (24 * 60 * 60 * 1000));
-  return days === 1 ? "Ertaga" : `${days} kundan keyin`;
+function bucket(due: number, now: number): "now" | "soon" | "later" {
+  if (due <= now) return "now";
+  if (due - now <= DAY) return "soon";
+  return "later";
+}
+
+function dueLabel(due: number, now: number) {
+  if (due <= now) return "Hozir";
+  const d = Math.ceil((due - now) / DAY);
+  return d === 1 ? "Ertaga" : `${d} kundan keyin`;
 }
 
 export function Mistakes() {
   const progress = useProgress();
   const [reviewIds, setReviewIds] = useState<string[] | null>(null);
 
-  if (!progress) return null; // localStorage o'qilguncha
-
-  if (reviewIds) {
-    return <Practice ids={reviewIds} onFinish={() => setReviewIds(null)} />;
-  }
+  if (!progress) return null;
+  if (reviewIds) return <Practice ids={reviewIds} title="Xatonoma: takrorlash" onFinish={() => setReviewIds(null)} />;
 
   const now = Date.now();
   const entries = Object.entries(progress.mistakes)
     .filter(([id]) => QUESTION_BY_ID[id])
     .sort((a, b) => a[1].due - b[1].due);
-  const dueIds = entries.filter(([, m]) => m.due <= now).map(([id]) => id);
-
-  const attempts = Object.values(progress.attempts);
-  const solved = attempts.length;
-  const accuracy = solved ? Math.round((attempts.filter((a) => a.lastCorrect).length / solved) * 100) : 0;
-  const today = todayAnswered(progress);
+  const cols = {
+    now: entries.filter(([, m]) => bucket(m.due, now) === "now"),
+    soon: entries.filter(([, m]) => bucket(m.due, now) === "soon"),
+    later: entries.filter(([, m]) => bucket(m.due, now) === "later"),
+  };
+  const mastered = Object.entries(progress.attempts).filter(([id, a]) => a.tries > 1 && a.lastCorrect && !progress.mistakes[id]).length;
 
   return (
-    <div style={{ paddingBottom: 40 }}>
-      <div className="stats">
-        <div className="stat">
-          <span>🔥 Streak</span>
-          <b>{currentStreak(progress)} kun</b>
+    <div className="xn">
+      <div className="page-head">
+        <div>
+          <h1>Xatonoma</h1>
+          <p>Xatoing — eng yaxshi ustozing. Har bir xato 1, 3 va 7 kundan keyin qaytib keladi; uch marta to'g'ri yechsangiz, o'zlashtirilgan bo'ladi.</p>
         </div>
-        <div className="stat">
-          <span>Bugungi maqsad</span>
-          <b>
-            {Math.min(today, DAILY_GOAL)}/{DAILY_GOAL} {today >= DAILY_GOAL ? "✅" : ""}
-          </b>
-        </div>
-        <div className="stat">
-          <span>Yechilgan savollar · aniqlik</span>
-          <b>
-            {solved} · {accuracy}%
-          </b>
-        </div>
+        <button className="btn btn-primary" disabled={!cols.now.length} onClick={() => setReviewIds(cols.now.map(([id]) => id))}>
+          <Icon name="play" size={16} /> {cols.now.length ? `${cols.now.length} ta savolni takrorlash` : "Bugun takrorlash yo'q"}
+        </button>
+      </div>
+
+      <div className="xn-stats">
+        <div className="xn-stat hot"><b>{cols.now.length}</b><span>bugun</span></div>
+        <div className="xn-stat"><b>{entries.length}</b><span>daftarda</span></div>
+        <div className="xn-stat good"><b>{mastered}</b><span>o'zlashtirilgan</span></div>
       </div>
 
       {entries.length === 0 ? (
         <div className="empty">
           <div className="big">📒</div>
           <h3>Xatonoma hozircha bo'sh</h3>
-          <p>Xato qilgan har bir savolingiz shu yerga tushadi va 1, 3, 7 kundan keyin qayta so'raladi.</p>
+          <p>Xato qilgan har bir savolingiz shu yerga tushadi va kerakli kunda qaytib keladi.</p>
           <a className="btn btn-navy" href="/practice">Mashqni boshlash</a>
         </div>
       ) : (
-        <>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", margin: "8px 0 14px", gap: 12, flexWrap: "wrap" }}>
-            <div style={{ color: "var(--muted)" }}>
-              Jami <b style={{ color: "var(--ink)" }}>{entries.length}</b> ta, bugun takrorlash kerak:{" "}
-              <b style={{ color: "var(--ink)" }}>{dueIds.length}</b> ta
-            </div>
-            <button className="btn btn-primary" disabled={dueIds.length === 0} onClick={() => setReviewIds(dueIds)}>
-              {dueIds.length ? `${dueIds.length} ta savolni takrorlash` : "Bugun takrorlash yo'q 🎉"}
-            </button>
-          </div>
-          <div className="mistake-list">
-            {entries.map(([id, m]) => {
-              const q = QUESTION_BY_ID[id];
-              return (
-                <div key={id} className="mistake">
-                  <div style={{ minWidth: 0 }}>
-                    <div className="txt">{q.passage ?? q.stem}</div>
-                    <div className="sub">
-                      {q.domain} · {q.skill}
-                      <span className="stage-dots" title={`${m.stage}/${REVIEW_INTERVALS_DAYS.length} bosqich`}>
-                        {REVIEW_INTERVALS_DAYS.map((_, i) => (
-                          <i key={i} className={i < m.stage ? "on" : ""} />
-                        ))}
-                      </span>
-                    </div>
-                  </div>
-                  <span className={`due ${m.due <= now ? "now" : "later"}`}>{dueLabel(m.due, now)}</span>
-                </div>
-              );
-            })}
-          </div>
-        </>
+        <div className="kanban">
+          <Column title="Bugun" tone="now" items={cols.now} now={now} />
+          <Column title="Ertaga" tone="soon" items={cols.soon} now={now} />
+          <Column title="Keyinroq" tone="later" items={cols.later} now={now} />
+        </div>
       )}
     </div>
+  );
+}
+
+function Column({ title, tone, items, now }: { title: string; tone: string; items: [string, MistakeEntry][]; now: number }) {
+  return (
+    <section className={`kcol ${tone}`}>
+      <header>
+        <span className="kdot" />
+        <h3>{title}</h3>
+        <span className="kcount">{items.length}</span>
+      </header>
+      <div className="kitems">
+        {items.length === 0 && <p className="kempty">Bo'sh</p>}
+        {items.map(([id, m]) => {
+          const q = QUESTION_BY_ID[id];
+          return (
+            <article key={id} className={`kcard ${q.section}`}>
+              <div className="kcard-top">
+                <span className={`tag sec-${q.section}`}>{SECTION_LABEL[q.section]}</span>
+                <span className="kdue">{dueLabel(m.due, now)}</span>
+              </div>
+              <p className="ktext">{q.passage ?? q.stem}</p>
+              <div className="kcard-foot">
+                <small>{q.skill}</small>
+                <span className="stage-dots" title={`${m.stage}/${REVIEW_INTERVALS_DAYS.length} bosqich`}>
+                  {REVIEW_INTERVALS_DAYS.map((_, i) => <i key={i} className={i < m.stage ? "on" : ""} />)}
+                </span>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
   );
 }

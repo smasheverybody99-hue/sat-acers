@@ -1,6 +1,7 @@
 "use client";
 
 import { Logo } from "./Logo";
+import { Icon } from "./Icons";
 import { useProgress } from "@/lib/useProgress";
 import { currentStreak } from "@/lib/progress";
 
@@ -13,16 +14,17 @@ export function Header() {
       <div className="container header-inner">
         <Logo />
         <nav className="nav">
-          <a href="/practice" title="Question bank">🎯 <span className="nav-label">Question bank</span></a>
-          <a href="/mock" title="Mock test">📝 <span className="nav-label">Mock test</span></a>
-          <a href="/mistakes" title="Xatonoma">📒 <span className="nav-label">Xatonoma</span></a>
-          <a href="/official" title="Rasmiy resurslar">🏛 <span className="nav-label">Rasmiy</span></a>
-          <span
-            className={`streak-badge ${streak ? "" : "off"}`}
-            title={streak ? `${streak} kun ketma-ket mashq qildingiz` : "Bugun bitta savol yeching — streak boshlanadi"}
-          >
-            🔥 {streak}
-          </span>
+          <a href="/practice" className="hide-sm">Question bank</a>
+          <a href="/mock" className="hide-sm">Mock testlar</a>
+          <a href="/official" className="hide-sm">Rasmiy</a>
+          {streak > 0 && (
+            <span className="streak-badge">
+              <Icon name="flame" size={16} /> {streak}
+            </span>
+          )}
+          <a href="/dashboard" className="btn btn-primary btn-sm nav-cta">
+            Bosh panel
+          </a>
         </nav>
       </div>
     </header>
